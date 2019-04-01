@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>封装</title>
+</head>
+
+<body>
+    <script>
+        //封装是利用js的闭包 在函数内部创建局部变量，通过内部的函数调用，外部不能直接调用，给外部提供一个接口进行调用
+
+        function test() {
+            var n = 1;
+
+            function A() {
+                return ++n;
+            }
+            // 通过该接口调用内部变量
+            this.sub = function () {
+                return A;
+            }
+        }
+
+        var obj = new test();
+        alert(obj.sub()());
+
+        // 练习
+        /*  1创建一个构造函数student，student中使用字面式定义一个空对象privateStore，用来存放私有的数据。
+            2. student中定义一个函数_set , 用来设置学生的信息 (姓名，性别和年龄) 。
+            3. student中定义一个函数_get , 用来获取信息 。
+            4. student中定义一个方法get ，方法中返回函数_get。
+            5. student中定义一个方法set， 方法中返回函数_set。
+            6.实例化对象student，并调用set方法为student添加信息 。如 ( "小明", "男", 23 )
+            7.调用get方法输出student的所有信息。 */
+
+
+        function student() {
+            var privateStore = {};
+
+            function _set(name, sex, age) {
+                privateStore.name = name;
+                privateStore.sex = sex;
+                privateStore.age = age;
+            }
+
+            function _get() {
+                /* for (var i in privateStore) {
+                    console.log(i, privateStore[i]);
+                } */
+                console.log( privateStore);
+
+            }
+            this.get = function () {
+                return _get;
+            };
+            this.set = function () {
+                return _set;
+            }
+
+        }
+        var s = new student();
+        s.set()('xm', 'male', 25);
+        s.get()();
+    </script>
+</body>
+
+</html>
