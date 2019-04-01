@@ -1,0 +1,521 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+//布局样式
+#layout(@name) {
+	& when (@name=header) {
+		height: 60px;
+		background-color: #000;
+	}
+	& when (@name=banner) {
+		height: 560px;
+		background-color: #00A8F7;
+	}
+	& when (@name=recommend) {
+		height: 190px;
+		background-color: white;
+	}
+	& when (@name=courses) {
+		height: 686px;
+		background-color: #f3f5f7;
+	}
+	& when (@name=footer) {
+		height: 98px;
+		background-color: #000;
+	}
+	//所有的layout都有这个样式
+	position: relative;
+}
+
+//banner下的课程推荐模块跟课程列表
+#course-box(@name) {
+	//小推荐块
+	& when (@name=recommend) {
+		width: 285px;
+		height: 302px;
+		#center-h(285px);
+		position: absolute;
+		top: -210px;
+		box-shadow: 0 8px 16px rgba(7, 17, 27, .2);
+		//background-color:
+		#bottom-line();
+		//background: #fff url("../imgs/b1.jpg") no-repeat;
+	}
+	//推荐列表
+	& when (@name=stand-course) {
+		width: 224px;
+		height: 206px;
+		float: left;
+		position: relative;
+		margin: 0 20px 34px 0;
+		box-shadow: 0 8px 16px rgba(7, 17, 27, .1);
+		#bottom-line();
+		background: #fff;
+		//一行5个  第五个没有右外边距
+		&:nth-child(5n) {
+			margin-right: 0;
+		}
+	}
+}
+
+//功能样式
+//1、清除浮动
+#clearfix() {
+	&:after {
+		content: ' ';
+		display: block;
+		height: 0;
+		line-height: 0;
+		clear: both;
+		zoom: 1;
+	}
+}
+
+//2、添加课程列表的2条下划线
+#bottom-line() {
+	&:before {
+		content: ' ';
+		display: block;
+		width: 98%;
+		height: 3px;
+		background-color: #fff;
+		position: absolute;
+		bottom: -5px;
+		left: 1%;
+		box-shadow: 0 8px 16px rgba(7, 17, 27, .2);
+		border-radius: 4px;
+	}
+	&:after {
+		content: ' ';
+		display: block;
+		width: 96%;
+		height: 3px;
+		background-color: #fff;
+		position: absolute;
+		bottom: -11px;
+		left: 2%;
+		box-shadow: 0 8px 16px rgba(7, 17, 27, .1);
+		border-radius: 4px;
+	}
+}
+
+//3、line-height
+#line-height(@h) {
+	height: @h;
+	line-height: @h;
+}
+
+//4、块元素水平居中
+#center-h(@width) {
+	left: 50%;
+	margin-left: @width*-.5;
+}
+//5、宽度等于高度
+#square(@w){
+	width: @w;
+	height: @w;
+}
+//背景颜色  是否有必要？
+
+//字体颜色
+//字体大小
+
+.header {
+	#layout(header);
+	overflow: hidden;
+	
+	.logo {
+		width: 128px;
+		height: 40px;
+		margin: 10px 25px 0 25px;
+		background: url("../imgs/logo.png");
+		float: left;
+	}
+	
+	.nav {
+		height: 100%;
+		float: left;
+		
+		&__item {
+			display: block;
+			float: left;
+			#line-height(60px);
+			padding: 0 25px;
+			color: #fff;
+			font-size: 14px;
+			
+			&:hover {
+				color: #fbfbfb;
+				background-color: #363c41;
+			}
+			
+			&_icon {
+				background-color: #363c41;
+			}
+		}
+	}
+	
+	.search {
+		float: right;
+		//填充搜索小图标
+		padding-right: 25px;
+		//height: 38px; 高度让input撑起来
+		margin: 11px 15px 0 0;
+		position: relative;
+		
+		&__input {
+			width: 242px;
+			#line-height(38px);
+			border-bottom: 1px solid #606468;
+			color: #5c646b;
+			font-size: 12px;
+			background-color: #000;
+			#line-height(38px);
+		}
+		
+		//文字前端入门 实际是从服务器获取的? input是行内元素
+		&::before {
+			content: "前端入门";
+			display: block;
+			width: 72px;
+			#line-height(30px);
+			background-color: #2b333b;
+			font-size: 12px;
+			position: absolute;
+		}
+		
+		//  提交按钮
+		&__submit {
+			display: block;
+			width: 22px;
+			height: 22px;
+			position: absolute;
+			right: 25px;
+			top: 8px;
+			background: url("../imgs/icon-1-sprite_w22.png") 0 0 no-repeat;
+		}
+	}
+	
+	.profile {
+		float: right;
+		//宽等于高，可设置一个函数进行调用
+		&__item {
+			display: block;
+			float: left;
+			width: 60px;
+			height: 60px;
+			position: relative;
+			//三个图标利用伪类插入，第一个属性里不能设置bg-position属性
+			&_iphone::before,
+			&_msg::before,
+			&_email::before {
+				content: ' ';
+				display: block;
+				position: absolute;
+				width: 22px;
+				height: 22px;
+				top: 19px;
+				left: 19px;
+				background: url("../imgs/icon-1-sprite_w22.png");
+			}
+			&_iphone::before{
+				background-position-Y: -22px;
+			}
+			&_msg::before{
+				background-position-Y: -44px;
+			}
+			&_email::before{
+				background-position-Y: -66px;
+			}
+		//	用户圆形图标
+			&_ava{
+				width: 36px;
+				height: 36px;
+				margin: 12px;
+				border-radius: 50%;
+				background-color: #363c41;
+			}
+		}
+	}
+}
+
+.banner {
+	#layout(banner);
+	background: url("../imgs/banner.jpg") center;
+	background-size: cover;
+	.caption{
+		text-align: center;
+		padding-top: 75px;
+		font-size: 34px;
+		letter-spacing: 8px;
+		color: #fff;
+		img{
+			vertical-align: middle;
+		}
+		&__text{
+			display: inline-block;
+		}
+	}
+	.tips{
+		width: 602px;
+		position: absolute;
+		top: 168px;
+		#center-h(602px);
+		//background-color: #00A8F7;
+		text-align: center;
+		&__item{
+			position: relative;
+			width: 64px;
+			height: 64px;
+			float: left;
+			margin-right: 202px;
+			background: url("../imgs/propaganda-h64.png");
+			&_i_2{
+				background-position: -80px 0;
+			}
+			&_i_3{
+				background-position: -156px 0;
+			}
+		}
+		&__item:last-of-type{
+			margin-right: 0;
+		}
+		&__title{
+			margin-top: 74px;
+			//200% 因为上面的标题64 这样他128在左偏移-50% 和图片居中
+			width: 200%;
+			position: absolute;
+			margin-left: -50%;
+			color: yellow;
+			font-size: 22px;
+		}
+		&__text{
+			margin-top: 106px;
+			width: 200%;
+			position: absolute;
+			margin-left: -50%;
+			color: yellow;
+			font-size: 14px;
+		}
+	}
+}
+
+.recommend {
+	#layout(recommend);
+	.recommend-course{
+		#course-box(recommend);
+		background-color: #fff;
+		&__cover{
+			width: 100%;
+			height:172px;
+			overflow: hidden;
+			img{
+				width: 100%;
+			}
+		}
+		//推荐课程列表
+		&__plan{
+			width: 100%;
+			position: absolute;
+			top: 135px;
+			padding: 30px 0 20px 0;
+			background: url("../imgs/course-b-bg.png");
+			//过渡动画
+			transition: top 1s;
+			.caption{
+				font-size: 14px;
+				#line-height(24px);
+				color: #000;
+				padding: 0 35px;
+			}
+		}
+		&__times{
+			#line-height(22px);
+			padding: 0 35px 8px 35px;
+			color: #999;
+			font-size: 12px;
+		}
+		&__preson{
+			//父元素字体的大小
+			padding-left: 1em;
+		}
+		//文字描述
+		&__desc{
+			margin: 8px 35px 0 35px;
+			#line-height(24px);
+			font-size: 12px;
+			color: #999;
+			border-top: 1px solid #d9dde1;
+		}
+		//价格
+		&__price{
+			position: absolute;
+			bottom: 20px;
+			left: 35px;
+			color: red;
+			font-size: 12px;
+			#line-height(30px);
+		//	人民币符号的样式
+			i{
+				font-style: normal;
+				//上标
+				vertical-align: super;
+				padding: 0 3px;
+			}
+		}
+		
+		//	鼠标滑过recommend-course时.recommend-course__plan上滑 top减小
+		&:hover .recommend-course__plan{
+			top: 80px;
+		}
+	}
+	
+}
+//课程列表
+.courses {
+	#layout(courses);
+	overflow: hidden;
+	&__header{
+		text-align: center;
+		padding: 30px 0 34px 0;
+	}
+	&__item{
+		display: inline-block;
+		padding: 0 12px;
+		margin: 0 12px;
+		color: #14191e;
+		#line-height(32px);
+		//第一个 跟滑过时的效果
+		&:nth-child(1) , &:hover{
+			color: #fff;
+			background-color: #4d555d;
+		}
+	}
+	&__list{
+		width: 1200px;
+		margin: 0 auto;
+		#clearfix();
+		.stand-course{
+			#course-box(stand-course);
+			&__cover{
+				width: 100%;
+				height: 106px;
+				img{
+					width: 100%;
+					height: 100%;
+				}
+			}
+			//添加图片下边的遮罩
+			&__plan{
+				position: absolute;
+				top: 90px;
+				width: 224px - 40px;
+				padding: 16px 20px 0 20px;
+				background: url("../imgs/course-s-bg.png");
+			}
+			&__caption{
+				color: #1f2831;
+				font-size:12px;
+				#line-height(18px);
+				//padding: 16px 0 0 20px;
+			}
+			&__string{
+				color: #93999f;
+				font-size:12px;
+				#line-height(34px);
+				//text-indent: 20px;
+			}
+			&__times{
+				color: #949aa0;
+				font-size:12px;
+				#line-height(34px);
+				//text-indent: 20px;
+			}
+			&__preson{
+				float: right;
+			}
+		}
+		
+	}
+	.pagination{
+		text-align: center;
+		padding: 40px 0 60px 0;
+		#line-height(32px);
+	//	文字整体样式
+		&__page{
+			display: inline-block;
+			margin: 0 12px;
+			color: #4d555d;
+			//文字不可选
+			&_status_disable{
+				color: #d6dade;
+			}
+			&_status_current{
+				color: #fefefe;
+				background-color: #4d555d;
+			}
+		}
+		&__number{
+			#square(32px);
+			border-radius: 50%;
+			//&:nth-child(1),
+			&:hover{
+				color: #fefefe;
+				background-color: #4d555d;
+			}
+		}
+		
+	}
+}
+
+.footer {
+	#layout(footer);
+	.footer-link{
+		width: 1200px;
+		margin: 0 auto;
+		padding: 30px 0 16px 40px;
+		&__item{
+			display: inline-block;
+			//解决行内元素之间的空隙
+			float: left;
+			margin-right: 30px;
+			font-size: 12px;
+			#line-height(12px);
+			color: #c8cdd2;
+		}
+	}
+	.footer-copy{
+		width: 1200px;
+		margin: 0 auto;
+		padding-left: 40px;
+		font-size: 12px;
+		#line-height(12px);
+		color: #787d82;
+	}
+	.footer-share{
+		position: absolute;
+		top:28px;
+		right: 38px;
+		width: 135px;
+		height: 32px;
+		&__item{
+			float: left;
+			margin-right: 13px;
+			#square(32px);
+			background: url("../imgs/icon-6-sprit_w32.png");
+			&_i_2{
+				background-position-y: -32px;
+			}
+			&_i_3{
+				background-position-y: -64px;
+			}
+		}
+	}
+}

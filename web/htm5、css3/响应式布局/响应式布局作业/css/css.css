@@ -1,0 +1,194 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    list-style: none;
+    outline: 0;
+}
+a{
+    text-decoration: none;
+}
+body{
+    font-size: 14px;
+}
+/*head部分*/
+.head{
+    width: 100%;
+    /*height: 5rem;*/
+    background-color: #B2C5CC;
+    text-align: center;
+    position: relative;
+}
+.head .caption{
+    height: .5rem;
+}
+
+.caption .caption-link{
+    display: inline-block;
+    color: #757575;
+    margin: 0 .1rem;
+    line-height: .5rem;
+}
+.caption .active-a{
+    color: #afafaf;
+}
+.head .pic{
+    margin-top: .7rem;
+}
+.head .title{
+    margin-top: .2rem;
+    color: #fff;
+}
+/*开始按钮*/
+.head .start{
+    padding-bottom: .5rem;
+}
+.head .start-text{
+    width: 1.5rem;
+    height: .4rem;
+    line-height: .4rem;
+    margin: .4rem auto;
+    background-color: #fff;
+    cursor: pointer;
+}
+/*响应式下的第一部分样式*/
+.caption1{
+    height: .7rem;
+    line-height: .7rem;
+    color: #fff;
+    position: relative;
+    /*比下拉菜单级别要高*/
+    z-index: 3;
+    background-color: #7EA6B1;
+}
+.caption1 .btn{
+    width: .25rem;
+    height: .25rem;
+    border: 1px solid #fff;
+    position: absolute;
+    top: 50%;
+    right: .5rem;
+    transform: translateY(-50%);
+    cursor: pointer;
+    /*z-index: 4;*/
+}
+/*显示/隐藏*/
+.hide{
+    display: none;
+}
+/*第二区域标题*/
+nav.title{
+    display: flex;
+    border-bottom: 1px solid #bababa;
+    height: .5rem;
+    justify-content: space-around;
+    align-items: center;
+}
+nav.title .title-link{
+    display: block;
+    color: #bababa;
+}
+nav.title .active-title-link{
+    color: #545454;
+}
+/*文章区域*/
+.article{
+    width: 60%;
+    margin: .8rem auto;
+    text-align: center;
+}
+.article h1{
+    margin: .1rem 0;
+}
+.article p{
+    color: #bababa;
+    line-height: .3rem;
+    text-align: left;
+}
+/*第四区域*/
+section.info{
+    display: flex;
+    height: .5rem;
+    padding: 0 .2rem;
+    background-color: #f4f4f4;
+    justify-content: space-between;
+    align-items: center;
+}
+section.info span{
+    color: #bababa;
+}
+section.info a{
+    color: #000;
+}
+/*第五区域*/
+section.main{
+    margin-top: .5rem;
+    padding-bottom: .5rem;
+    background: url("../img/bg.jpg") no-repeat;
+    /*background-size: 100% 100%;*/
+}
+section.main h3{
+    width: 100%;
+    padding-left: .1rem;
+}
+section.piclist{
+    display: flex;
+    padding: .1rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+section.piclist .piclist-item{
+    /*width: 2rem;*/
+    /*height:2rem;*/
+    width: 30%;
+    margin: 0.08rem;
+    flex-grow: 1;
+}
+section.piclist .piclist-item img{
+    width: 100%;
+    height: 100%;
+}
+/*第六区域*/
+footer{
+    height: .4rem;
+    line-height: .4rem;
+    text-align: center;
+    background-color: #f4f6fa;
+}
+/*响应式*/
+@media screen and (max-width: 420px){
+    /*第一部分导航变化*/
+    .head .caption{
+        position: absolute;
+        width: 100%;
+        height: auto;
+        /*高度这样设置有问题吗？*/
+        top:-18%;
+        left: 0;
+        z-index: 2;
+        transition: all .7s;
+    }
+    .head .caption-top{
+        top:.7rem;
+    }
+    .caption .caption-link{
+        display: block;
+        background-color: #7EA6B1;
+        border-bottom: 1px solid #B2C5CC;
+        color: #fff;
+        font-size: 12px;
+        height: .3rem;
+        line-height: .3rem;
+        margin: 0;
+    }
+    /*第四部分高度、排版变化*/
+    section.info{
+        height: 1rem;
+        flex-direction: column;
+        justify-content: center;
+    }
+    /*第五部分 图片宽度变化，一行2列*/
+    section.piclist .piclist-item {
+        width: 40%;
+    }
+}

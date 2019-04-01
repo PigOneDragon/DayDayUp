@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BOM基础</title>
+</head>
+<body>
+    <!--1、点击按钮，通过输入框改变按钮文本-->
+    <!--2、通过确认框改变文本颜色-->
+    <input type="button" id="btn" value="点击" />
+    <script type="text/javascript">
+       
+        var B=document.getElementsByTagName("input")[0];
+        // function change() {
+        //     //设置一个变量接收输入框返回值
+        //     var results=prompt("请输入文本\n点击确认改变按键值"),
+        //         btn=document.getElementById("btn");
+        //     if (results){
+        //         btn.value=results;
+        //     }
+        // }
+        // //给input绑定一个点击事件
+        // B.onclick=change;
+        B.onclick=function () {
+            var results=confirm("确认删除吗？\n不可恢复");
+            if (results){
+                B.style.color="red";
+            } else{
+                B.style.color="green";
+            }
+        }
+    </script>
+</body>
+</html>

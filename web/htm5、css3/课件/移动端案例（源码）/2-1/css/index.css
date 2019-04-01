@@ -1,0 +1,20 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+
+.footer{
+	position: fixed;
+	bottom: 0;
+	height: 54px;
+	width: 100%;
+	display: flex;
+	text-align: center;
+	font-size: 12px;
+	border-top: 1px solid #ccc;
+	background: #fff;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>2-3</title>
+    <style type="text/css">
+        /* 此处写代码*/
+        .red {
+            width: 300px;
+            height: 200px;
+            background: red;
+            position: relative;
+        }
+
+        .star {
+            width: 0;
+            height: 0;
+            border-top: yellow 40px solid;
+            border-left: transparent 60px solid;
+            border-right: transparent 60px solid;
+            position: absolute;
+            top: 45px;
+        }
+
+        .star::before {
+            width: 0;
+            height: 0;
+            content: "";
+            border-top: yellow 40px solid;
+            border-left: transparent 60px solid;
+            border-right: transparent 60px solid;
+            position: absolute;
+            left: -60px;
+            top: -40px;
+            transform: rotate(72deg);
+        }
+
+        .star::after {
+            width: 0;
+            height: 0;
+            content: "";
+            border-top: yellow 40px solid;
+            border-left: transparent 60px solid;
+            border-right: transparent 60px solid;
+            position: absolute;
+            left: -60px;
+            top: -40px;
+            transform: rotate(-71deg);
+        }
+
+        .size-1 {
+            transform: scale(0.5);
+            position: absolute;
+            left: -10px;
+            top: 40px;
+        }
+
+        .size-2 {
+            transform: scale(0.3) rotate(30deg) translateX(-146px) translateY(-585px);
+        }
+
+        .size-3 {
+            transform: scale(0.3) rotate(60deg) translateX(-237px) translateY(-460px);
+        }
+
+        .size-4 {
+            transform: scale(0.3) translateX(285px) translateY(-250px);
+        }
+
+        .size-5 {
+            transform: scale(0.3) rotate(30deg) translateX(140px) translateY(-172px);
+        }
+    </style>
+</head>
+<body>
+<!-- 此处写代码 -->
+<div class="red">
+    <div class="star size-1">
+        <div class="star size-2"></div>
+        <div class="star size-3"></div>
+        <div class="star size-4"></div>
+        <div class="star size-5"></div>
+    </div>
+</div>
+</body>
+</html>

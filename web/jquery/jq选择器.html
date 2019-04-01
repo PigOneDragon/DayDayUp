@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery选择器</title>
+    <style>
+        p:first-child {
+            background-color: yellow;
+        }
+
+        /*匹配p标签的父元素的第一个子元素，在这是h2，p不会变黄*/
+        p:first-of-type {
+            background-color: red;
+        }
+
+        /*匹配p标签的父元素的第一个p类型的子元素，在这是p*/
+        span:last-of-type {
+            background-color: #333333;
+        }
+
+        /*返回div中最后一个span类型的标签*/
+        h2:first-child {
+            background-color: #9a6e3a;
+        }
+
+        /*.bb {*/
+            /*background-color: lightyellow;*/
+            /*padding: 10px;*/
+            /*border: 1px double yellow;*/
+        /*}*/
+
+        .cc {
+            background-color: #07CBC9;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <h2 id="h2">h2</h2>
+    <p><span>sdsdd</span>gg</p>
+    <p><input type="radio" name="man" value="男" checked/>男</p>
+    <span>s1</span>
+    <span>s2</span>
+    <input type="radio" name="man" value="女" style="display: none;"/>女
+    <ul>
+        <li>li1</li>
+        <li>li2</li>
+        <li>li3</li>
+        <li>li4</li>
+        <li>li5</li>
+    </ul>
+</div>
+<script src="jquery-1.12.4.js"></script>
+<script>
+    // console.log($(':checked').parent().addClass('bb'));//给checked父元素添加样式
+    // console.log($(':lang(en)').addClass('cc'));//语言是en英文的
+    // console.log($(':hidden').addClass('cc'));//选择display:none跟type=”hidden“的 不包含透明度为0\或其他的占位不可见元素
+    // console.log($('p:has(span)'));//包含span标签的
+    //console.log($('ul li:nth-child(odd)').addClass('cc'));//css中有的方法，odd奇数项，从1开始选择li下的第奇数个元素
+    // console.log($('ul li:even').addClass('cc'));//jQuery中有的方法  索引为偶数 从0开始
+    // console.log($('ul li:nth-child(even)').addClass('cc'));//css中有的方法，even偶数项，从1开始，选择li下的第偶数个元素
+    console.log($('ul li:odd').addClass('cc'));//jQuery中有的方法  索引为奇数 从0开始
+    console.log(document.querySelectorAll('ul li:nth-child(odd)'));//速度最快，返回结果不是jQuery对象，是节点列表
+    var DOMobj=document.getElementById("h2");
+    var JQUobj=$('#h2');
+    console.log(DOMobj);
+    console.log(JQUobj);
+    //dom与jQuery类型互换
+    console.log($(DOMobj));
+    console.log(JQUobj.get(0));  //索引从0开始
+
+    console.log(DOMobj.nodeType);
+    console.log(JQUobj.jquery);//jQuery的版本
+
+    //动态添加元素 方法1、
+    var link1=$('<a>百度</a>').attr({   //arrt是个函数，需要()，其中的属性直接属性名:值， 多个属性之间用逗号隔开，不可在最后写分号
+    target:'_blank',
+    href:"https://www.baidu.com",
+    title:"go to baidu" //最后不写标点符号
+    });
+    link1.appendTo('body');
+    //动态添加元素 方法2、$(空标签，{属性}) 注：标签必须为空标签，否则属性设置无效
+    var link2=$('<a>',{
+        text:'baidu',
+        target:'_blank',
+        href:"https://www.baidu.com",
+        title:"go to baidu"
+    });
+    link2.appendTo('body');
+</script>
+
+</body>
+</html>

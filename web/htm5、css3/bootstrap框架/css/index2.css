@@ -1,0 +1,233 @@
+#page-head{
+    width: 100%;
+    height: 100px;
+    background-color: #f9f9f9;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+}
+#page-head + *{margin-top: 100px;}
+/*去除bs的填充*/
+.navbar{border: 0}
+.navbar-nav{
+    margin-left: 80px;
+}
+.navbar-nav li{
+    width: 98px;
+    height: 100px;
+    text-align: center;
+    margin-left: 40px;
+}
+.navbar-nav li a{
+    line-height: 100px;
+    padding: 0;
+    margin: 0;
+    color: #666;
+}
+.navbar-default li.active a{
+    background: url("../images/index_02.png");
+}
+/*logo*/
+.head-logo{
+    margin-top: 15px;
+}
+/*电话*/
+.nav-tell{
+    float: right;
+    width: 187px;
+    height: 47px;
+    line-height: 47px;
+    font-size: 16px;
+    color: #ef200d;
+    background: url("../images/index_08.png");
+    text-indent: 50px;
+    margin-top: 27px;
+}
+
+
+/*banner*/
+.banner img{
+    width: 100%;
+    min-height: 200px;
+}
+/*主体的第一部分*/
+.page-title{
+    margin-top: 78px;
+    text-align: center;
+    width: 100%;
+}
+.page-title h3{
+    font-size: 30px;
+    color: #666;
+}
+.page-title p{
+    font-size: 16px;
+    color: #999;
+    margin-top: 25px;
+}
+/*图片的间距*/
+.one-pic{
+    margin-top: 122px;
+    text-align: center;
+    margin-bottom: 106px;
+}
+.one-pic img{
+    width: 100%;
+}
+/*第二部分*/
+.page-two{
+    background-color: #eff4f7;
+    border-top: 1px solid #eeeff0;
+}
+.page-two a{text-decoration: none;}
+.two-pic .two-pic-item{
+    width: 100%;
+    height: 350px;
+    color: #999;
+    border: 1px solid #e5e5e5;
+    margin-top: 10px;
+    background: #fff url("../images/index_25.png") no-repeat 50% 20%;
+    margin-bottom: 30px;
+}
+.two-pic-item:hover{
+    color: #fff;
+    border: 1px solid #ef200d;
+    background: #f00 url("../images/index_h_03.png") no-repeat 50% 20%;
+    box-shadow: 0 0 10px #ef200d;
+}
+.two-pic-item h3{
+    margin-top: 190px;
+    font-size: 20px;
+    text-align: center;
+}
+.btn-danger{
+    width: 35%;
+    margin-top: 26px;
+}
+/*第三部分*/
+.page-three{
+    border-top:1px solid #eeeff0;
+}
+.page-three img{
+    width: 100%;
+    max-width: 811px;
+}
+/*第四部分*/
+.page-four{
+    background: #eff4f7;
+    border-top: 1px solid #eeeff0;
+    margin-top: 30px;
+}
+.page-four-info{
+    margin: 127px 0 90px;
+}
+.page-four-info img {
+    width: 100%;
+    max-width: 544px;
+}
+.info-text{
+    list-style: none;
+}
+.info-text li{
+    line-height: 38px;
+    min-height: 38px;
+    font-size: 14px;
+    float: left;
+    width: 100%;
+}
+.info-text li:hover{
+    color: #ef200d;
+}
+/*页脚*/
+.footer{
+    background: #f7f7f7;
+    border-top: 1px solid #eeeff0;
+    min-height: 397px;
+}
+.footer-pic{
+    margin-top: 85px;
+}
+.leftpic{
+    float: right;
+    margin-right: 90px;
+}
+.rightpic{
+    float: left;
+    margin-left: 90px;
+}
+.copy-info{
+    width: 100%;
+    text-align: center;
+    color: #999999;
+    line-height: 25px;
+    font-size: 14px;
+    margin-top: 50px;
+}
+/*返回顶部按钮*/
+.back-up-btn{
+    /*width: 50px;*/
+    /*height: 50px;*/
+    border-radius: 5px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+/*头部的响应式,要保证手机样式覆盖平板 平板覆盖电脑*/
+@media screen and (max-width: 992px){
+    .navbar-nav{
+        margin-left: 0;
+    }
+}
+@media screen and (max-width:768px){
+    /*导航条高度减小，电话隐藏，展开菜单按钮居中，导航link的width100%，无填充*/
+    #page-head{
+        height: 80px;
+    }
+    #page-head + *{margin-top: 80px;}
+    /*按钮下移*/
+    .navbar-toggle{margin-top: 22px;}
+    /*导航link 100%*/
+    .navbar-nav li{width: 100%;height:50px;margin-left: 0;}
+    .navbar-nav li a{line-height: 50px;}
+    /*logo下移*/
+    .head-logo{
+        margin-top: 8px;
+    }
+    .navbar-nav{margin: 0;}
+    .full-padding{padding: 0;}
+
+    /*第一部分字体的响应式*/
+    .page-title{
+        margin-top: 28px;
+    }
+    .page-title h3{
+        font-size: 22px;
+    }
+    .page-title p{
+        font-size: 16px;
+        margin-top: 15px;
+    }
+    /*间距缩小*/
+    .one-pic{
+        margin-top: 22px;
+        margin-bottom: 26px;
+    }
+    /*第二部分变化  图片高度变低*/
+
+    .two-pic .two-pic-item{
+        height: 200px;
+        background-size: auto 80px;
+        background-position: center 10px;
+    }
+    .two-pic-item h3{
+        margin-top: 100px;
+    }
+    .two-pic-item:hover{
+        background-size:35% 55%;
+    }
+    /*第四部分图片上边距减小*/
+    .page-four-info{
+        margin-top: 27px;
+        margin-bottom: 20px;
+    }
+}

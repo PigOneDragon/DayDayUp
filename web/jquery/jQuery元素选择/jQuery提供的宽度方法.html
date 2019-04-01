@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>盒子宽度</title>
+    <style type="text/css">
+        .box{
+            width: 100px;
+            height: 80px;
+            border: 5px solid ;
+            padding: 10px;
+            margin: 10px;
+            background: #07CBC9;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box">div</div>
+    <script src="../jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            //直接利用css('width')获取到的属性值带单位，jQuery给了一下几种函数
+            var box=$('div');
+            console.log(box.css('width'));
+            console.log(box.css('height'));
+            console.log(box.width()); //内容
+            console.log(box.height());
+            console.log(box.innerWidth());  //包含内边距+ 内容
+            console.log(box.innerHeight());
+            console.log(box.outerWidth());  //包含边框，不包含外边距
+            console.log(box.outerHeight());
+            console.log(box.outerWidth(true)); //包含外边距
+            console.log(box.outerHeight(true));
+        })
+    </script>
+</body>
+</html>

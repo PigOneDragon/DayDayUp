@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>给元素添加类</title>
+    <style type="text/css">
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            border: 5px solid red;
+        }
+        .bg1 {
+            background-color: green;
+        }
+        .border {
+            border: 5px solid yellow;
+        }
+
+    </style>
+</head>
+<body>
+<div class="box" id="box"></div>
+<button class="btn">切换背景和边框颜色</button>
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    //当点击按钮时，div元素的背景和边框能在.box与.bg1和.border中进行切换
+
+    $(function () {
+        var div=$('#box'),
+            btn=$('.btn').get(0);
+        //1、利用jQuery对象的attr("class")获取
+        // btn.onclick=function () {
+        //     if (div.attr('class')==="box"){
+        //         div.attr("class","box bg1 border");
+        //     } else{
+        //         div.attr("class","box");
+        //     }
+        // }
+        //2、利用jQuery对象的toggleClass("class")获取
+        btn.onclick=function () {
+            div.toggleClass("bg1 border");  //有则删除，没有的话添加属性
+        }
+    })
+</script>
+</html>

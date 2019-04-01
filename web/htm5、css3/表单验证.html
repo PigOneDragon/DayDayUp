@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单验证</title>
+    <style type="text/css">
+        input[name='text2']:-webkit-autofill {
+            -webkit-box-shadow: 0 0 0 1000px #fff inset;
+
+        }
+        /*去除默认的数字框的上下箭头  需要双冒号*/
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button{
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!--通过事件控制input的type属性-->
+    <input type="text" placeholder="请输入日期" onfocus="this.type='date'" onblur="this.type='text'"/>
+    <!--改变记住密码后的文本框默认填充样式：1、autocomplete设置off 2、控制浏览器的自动填充样式 -webkit-autofill-->
+    <form action="">
+        <input type="text" name="text" autocomplete="on" />
+        <input type="text" name="text1" autocomplete="off"  placeholder="去除自动黄色填充"/>
+        <input type="text" name="text2" id="col" autocomplete="on" placeholder="通过修改浏览器默认样式去除自动黄色填充"/>
+        <input type="submit" />
+    </form>
+
+<!--label中的for用法 多用于单选框 复选框点击事件，点击文字时自动选中绑定的id-->
+    <label for="man">男</label>
+    <input type="radio" name="sex" id="man" />
+    <label for="woman">女</label>
+    <input type="radio" name="sex" id="woman" />
+    <input type="text" maxlength="4">
+    <!--type为number的  maxlength不起作用-->
+    <input type="number" oninput = "checkLength(this,5);">
+    <script>
+        var valiaity = document.getElementById('col');
+        console.log(valiaity.validity);
+
+
+        function checkLength(obj,length) {
+            if (obj.value.length > length){
+                obj.value = obj.value.substr(0,length);
+            }
+        }
+    </script>
+
+    <form action="">
+        <input type="text" id="username"  required pattern="^\d{5}" oninput="checkit(this);">
+        <input type="submit" value="提交">
+    </form>
+    <script>
+        // var names = document.getElementById("username");
+        // //补充完整！
+        // if(names.checkValidity()){
+        //     alert("符合验证条件");
+        // }else{
+        //     alert("不符合验证条件");
+        // }
+
+        function checkit(obj) {
+            var it = obj.validity;
+            console.log(it);
+            //自定义事件 1、判断值是否为空
+            if ( true === it.valueMissing){
+                obj.setCustomValidity("不能为空，请输入5个数字");
+            }
+            //判断正则约束是否满足
+            else if(it.patternMismatch === true){
+                obj.setCustomValidity("格式错误，请输入5个数字");
+            }
+            else{
+                obj.setCustomValidity("");
+            }
+        }
+    </script>
+</body>
+</html>

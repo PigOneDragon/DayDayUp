@@ -1,0 +1,220 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+.header{
+    width: 100%;
+    height: 68px;
+    background-color: #5d4b33;
+}
+.navbar-default .head-nav{
+    float: left;
+    margin-left: 40px;
+}
+.head-nav{
+    border: none;
+    background-color: #5d4b33;
+    height: 68px;
+
+}
+.head-nav .container-fluid{
+    padding-left: 0;
+}
+.head-logo{margin-top: 15px;}
+.navbar-default .navbar-nav li a{
+    height: 68px;
+    line-height: 68px;
+    padding: 0 25px;
+    color: #fff;
+}
+/*激活的首页*/
+.navbar-default .navbar-nav li.active a{
+    background-color: #f07819;
+    color: #fff;
+}
+.navbar-default .navbar-nav li.active a:hover,
+.navbar-default .navbar-nav li>a:hover{
+    background-color: #f07819;
+    color: #fff;
+}
+/*修改菜单展开的默认样式*/
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:focus,
+.navbar-default .navbar-nav > .open > a:hover {
+    background-color: #f07819;
+    color: #fff;
+}
+/*下拉菜单的2列*/
+.menu-items{
+    padding: 20px 15px;
+    width: 542px;
+}
+.menu-items .col1{
+    width: 150px;
+    margin-right: 20px;
+    box-sizing: border-box;
+}
+.menu-items h3{
+    color: #f07819;
+    font-size: 25px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    margin: 0;
+    padding-bottom: 5px;
+}
+.menu-items .col1 p{
+    color: #999;
+    font-size: 16px;
+    height: 25px;
+    line-height: 25px;
+    text-align: left;
+    margin: 5px 0;
+}
+/*头部右侧的搜索  可以用js做*/
+.alertbar{
+    line-height: 68px;
+}
+.alertbar .btn-info{
+    height: 68px;
+    padding-left:30px;
+    padding-right:30px;
+    border: none;
+    border-left: 1px solid #999;
+    border-radius: 0;
+    /*margin: 0;*/
+    background-color: #5d4b33;
+}
+.input-group-addon{
+    background-color: #f07819;
+}
+/*banner*/
+section.banner{
+    width: 100%;
+    background-color: #f2f6f7;
+    height: 600px;
+}
+
+section.banner .banner-body{
+    margin-top: 180px;
+
+}
+/*文字*/
+.banner-text h1{
+    color: #5d4b33;
+    font-size: 80px;
+}
+.banner-text h1 > span{
+    color: #f27719;
+}
+.banner-text p{
+    color: #f27719;
+    letter-spacing: 10px;
+}
+section.banner .picbox{
+    width: 380px;
+    height: 380px;
+    float: right;
+}
+/*文字下的按钮框*/
+.banner-text .text-btn{
+    width: 255px;
+    height: 60px;
+    line-height: 44px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #5d4b33;
+    box-sizing: border-box;
+    border: 8px solid #5d4b33;
+    text-align: center;
+    cursor: pointer;
+}
+.banner-text .text-btn:hover{
+    color: #f07819;
+    border-color: #f07819;
+}
+/*subscribe*/
+section.subscribe{
+    background: rgba(0,0,0,0.7) url("../img/slid.jpg")  no-repeat fixed;
+    background-size: cover;
+    height: 335px;
+}
+.subscribe-body{
+    width: 100%;
+    padding-top: 100px;
+    text-align: center;
+}
+.subscribe-body h2{
+    color: #fff;
+    font-size: 30px;
+    letter-spacing: 18px;
+}
+.subscribe-input1{
+    width: 424px;
+    height: 45px;
+    background-color: rgba(255,255,255,0.3);
+    text-indent: 20px;
+    color: #fff;
+}
+.subscribe-input2{
+     width: 140px;
+     height: 45px;
+     line-height: 43px;
+     border: 1px solid #f07819;
+     background-color: #f07819;
+     text-align: center;
+     color: #fff;
+}
+.subscribe-input2:hover{
+    border-color: rgba(255,255,255,0.3);
+    background-color: rgba(255,255,255,0.3);
+}
+/*友情链接*/
+section.blogroll{
+    height: 370px;
+    background-color: #f2f6f7;
+}
+.blogroll-items{
+    margin-top: 70px;
+}
+section.blogroll .item{
+    float: left;
+    margin-right: 70px;
+}
+section.blogroll .item h3{
+    color: #f07819;
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+section.blogroll .item ul{
+    list-style: none;
+}
+section.blogroll .item li{
+    margin-bottom: 20px;
+}
+section.blogroll .item li>a{
+    color: #a9a8b6;
+    font-size: 14px;
+}
+.footer{
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    background-color: #5d4b33;
+}
+/*.banner-pic{*/
+  /*position: relative;*/
+/*}*/
+/*响应式布局*/
+@media screen and (max-width: 768px){
+    .navbar-toggle{
+        transform: translate(-50px,10px);
+    }
+    /*cake*/
+    section.banner .picbox{
+        width: 200px;
+        height: 200px;
+    }
+}

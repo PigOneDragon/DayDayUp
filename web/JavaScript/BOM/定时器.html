@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>定时器</title>
+    <style type="text/css">
+        div{width:400px;height:120px;margin-top:50px;border:2px solid gray;padding:10px;}
+    </style>
+</head>
+<body>
+    <input type="button" value="删除">
+    <input type="button" value="取消删除">
+    <div>点击"删除"按钮后，里面的内容将在3秒钟后消失；<br/><br/>如点击了"删除"后又不想删除内容，请在点击"删除"按钮3秒之内点击"取消删除"按钮即可</div>
+    <script type="text/javascript">
+       //先获取两个按钮DOM对象及要清除的text对象
+        var del=document.getElementsByTagName("input")[0],
+            Esc=document.getElementsByTagName("input")[1],
+            Txt=document.getElementsByTagName("div")[0];
+        function Del () {
+            Txt.innerHTML = "";
+        }
+        //点击删除后3秒删除内容，设置一个变量来获取延时事件的ID值
+      //  var timer=setTimeout(Del, 3000);//这样设置定时变量不对，这样相当于直接执行了一次
+        var timer=null;
+        del.onclick=function () {
+            timer=setTimeout(Del, 3000)
+        };
+        //点击取消按钮清除timer事件执行
+        Esc.onclick=function ESC() {
+            clearTimeout(timer);
+        }
+    </script>
+</body>
+</html>

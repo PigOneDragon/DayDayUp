@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>磁贴</title>
+	<style type="text/css">
+		.body{width: 100%;
+			height: 1500px;
+			background: red;
+			/*overflow: scroll; 滚动条*/
+			}
+		.sr{width: 200px;
+			height: 150px;
+			background: blue;
+			/*position: fixed;
+			top:10px;固定模块*/
+		/*方法二：磁贴属性，偏移量从最近一个可滚动的父元素计算，从偏移量至设置磁贴属性的元素的一块区域作为定位，若往上找不到可滚动的父元素或为<body>，则偏移量从可视窗口计算，当设置磁贴属性的元素进入到保留的矩形区域顶部重合时，即到达偏移量（固定的定位）捕获该元素，呈现定位效果*/
+		/*当clas="body"overflow滚动属性不为scroll时，从可视窗口计算，为true时，从div class="body"的距离开始计算偏移量。*/
+		position: sticky;
+		top:10px;}
+	</style>
+</head>
+<body>
+	<div class="body">
+		<div class="sr">
+			
+		</div>
+
+	</div>
+	
+</body>
+</html>

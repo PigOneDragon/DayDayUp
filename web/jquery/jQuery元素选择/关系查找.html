@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.12.4.js"></script>
+</head>
+<body>
+    <div id="to">
+        <div>
+            <p id="ff">sdafdsfdsfsfsdfdsf</p>
+        </div>
+    </div>
+    <script>
+        $(function () {
+            var elements=$('#ff').parent(),
+                el=$('#ff').parents('div'),
+                tt=$('#ff').contents(),//第一个直属子元素，包含文本节点  都可以加选择器
+                cs=$('#to').children();//第一个直属子元素，不包含文本节点
+
+
+            console.log(elements);//直属第一个父元素
+            console.log(el);//所有为div的父元素
+            console.log(cs);
+            console.log(tt);
+
+        })
+    </script>
+</body>
+</html>

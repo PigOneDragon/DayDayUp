@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>数组练习</title>
+</head>
+<body>
+	 <script>
+    //此处补充代码
+	    // var books=new Array(3);
+	    // books[0]="《三国演义》";
+	    // books[1]="《红楼梦》";
+	    // books[2]="《西游记》";
+	    // books[3]="《水浒传》";
+	    // console.log(books);
+	    //可以通过length来增加/减小数组的长度，length等于其数组最后的索引值加1，下例中length=11，arr[0]=1,arr[1]=2,arr[2]=3,arr[10]=a
+	    // var arr=[1,2,3,4];
+	    // arr[10]='a';
+	    // console.log(arr.length);
+	    // console.log(arr);
+	   //  var strs=["HTML","CSS","JAVASCRIPT","HTML5","CSS3"];
+  		// for(var i=0;i<strs.length;i++){
+    //     console.log(strs[i]); }
+    // var gz=new Array(),i=0;
+
+    // while(true){
+    // 	 gz[i]=prompt("请输入工资");
+    // 	 if(gz[i]=="退出"){
+    // 	 	gz.length=i;
+    // 	 	document.write(gz);
+    // 	 	break;
+    // 	 }
+    // 	 i++;
+    // }
+
+    //利用循环实现数组反转
+   //    function arrReverse(arr){
+   //      var newArr=[];
+   //      for(var i=arr.length;i>0;i--){
+   //      	newArr.push(arr.pop());
+   //      }
+   //     return newArr;
+   //  }
+   // document.write(arrReverse([1,2,3,4,5,6,7,8,88,99,9]));
+//sort降序
+//    var input;
+//     var arr=[ ];
+//     while(input!="-1"){
+//         input=Number(prompt("请输入您想排序的数字"));
+//         //补充代码
+//         arr.push(input);
+//      }
+//     //补充代码
+//     arr.length-1;
+//     arr.sort(function(a,b){return b-a}); //补充代码
+// document.write(arr);
+   //替换输入的前2个字符
+	// 	 function replaceTwo() {
+	// 		 var newarr=[],arr=[];
+	// 		 while (true){
+	// 		 	var i=prompt("请输入任意字符");
+	// 		 	if (i!=-1){
+	// 		 		arr.push(i);
+	// 			}
+	// 		 	else{
+	// 		 		newarr=arr.splice(0,2,"hello");
+	// 		 		document.write(newarr);
+	// 		 		break;
+	// 			}
+	// 		 }
+	// 	 }
+   //
+	// 	 replaceTwo();
+	//封装indexof 兼容低版本浏览器
+	// function arrIndexof(arr,num,ind) {
+	// 	var ini;
+	// 	if (arguments[2]){
+	// 		ini=ind;
+	// 	} else {
+	// 		ini=0;
+	// 	}
+	// 	for (var i=ini;i<arr.length;i++) {
+	// 		if(arr[i]===num){
+	// 			return i;
+	// 		}
+	// 	}
+	// 	return -1;
+	// }
+	// arr=[1,5,6,8,9,7,2,1,2];
+	// console.log(arrIndexof(arr,5));
+
+	//获取某字符出现的第一次位置，返回其编码
+	// var str="Work hard, earn money."
+    // var strKey=str.indexOf("a");//补充代码
+    // document.write(str.charCodeAt(strKey));
+   	// document.write(str.charAt(strKey));
+   	// document.write(strKey);
+	//搜索内容是否有敏感字"草"返回位置
+	// 	var tet=prompt("你要发送什么信息");
+	// 	if (tet.indexOf("草")!=-1){
+	// 		for (var i=0;i<tet.length;i++){
+	// 			if (tet.charAt(i)=="草"){
+	// 				document.write("草出现的位置是"+i+"<br />");
+	// 			}
+	// 		}
+	// 		document.write("第一次出现的位置是"+tet.indexOf("草")+"<br />");
+	// 	} else {
+	// 		document.write("没有敏感字草");
+	// 	}
+	//检测某单词出现的位置及次数
+	//  function jc(str) {
+	//  	var sum=0;
+	// 	 for (var i=0;i<str.length;i++){
+	// 	 	var str1="";
+	// 	 	if (str.charAt(i)=="J"){
+	// 	 		for (var j=i;j<10+i;j++){
+	// 	 			str1+=str.charAt(j);
+	// 			}
+	// 	 		if (str1=="JavaScript"){
+	// 	 			sum=sum+1;
+	// 	 			document.write("JavaScript出现第"+sum+"次的位置是"+i+"<br />");
+	//
+	// 			}
+	// 		}
+	// 	 }
+	// 	 document.write("共出现了"+sum+"次");
+	//  }
+	// 	 var str="JavaScript 是属于网络的脚本语言！JavaScript 被数百万计的网页用来改进设计、验证表单、检测浏览器、创建cookies，以及更多的应用。JavaScript 是因特网上最流行的脚本语言。JavaScript很容易使用！你一定会喜欢它的！";
+   	// 	 jc(str);
+	//检测某单词出现的位置及次数，利用substr
+	// 	function jcs(strs,str) {
+	// 		var sum=0,j=str.length;
+	// 		if (strs.indexOf(str)!=-1){
+	// 			for (var i=0;i<strs.length;i++){
+	// 				if (strs.substr(i,j)==str){
+	// 					sum+=1;
+	// 					document.write(str+"出现第"+sum+"次的位置是"+i+"<br />");
+	// 				}
+	// 			}
+	// 			document.write("共出现了"+sum+"次");
+	// 		} else {
+	// 			document.write("段落里没有要找的字符串");
+	// 		}
+	// 	}
+	// 	var strs="JavaScript 是属于网络的脚本语言！JavaScript 被数百万计的网页用来改进设计、验证表单、检测浏览器、创建cookies，以及更多的应用。JavaScript 是因特网上最流行的脚本语言。JavaScript很容易使用！你一定会喜欢它的！";
+	// 	jcs(strs,"JavaScript");
+		 //解析邮箱名跟域名
+		 // function jx(email) {
+			//  var email=prompt("请输入邮箱");
+			//  var i=email.indexOf("@");
+			//  var name=email.slice(0,i);
+			//  var y=email.substr(i);
+			//  console.log("名称是"+name);
+			//  console.log("域名是"+y);
+		 // }
+		 // jx();
+// 		  var str="a/b/c/d/e/f/g/h";
+// var arr= str.split("/") ;//补充代码
+// var strNew=arr.join("-");//补充代码
+//     document.write(arr);
+//     document.write("<br/>");
+//     document.write(strNew);
+		 //截取电话前7位，替换成*
+		 // var tel=prompt("请输入电话");
+		 // var th=tel.substr(0,7);
+		 // var newtel=tel.replace(th,"*******");
+		 // console.log(newtel);
+// 		  var str="Never deter till tomorrow that which you can do today";
+// 	var index=str.indexOf("tomorrow");//补充代码
+// 	var strNew=str.substr(index,8);//补充代码
+// 	var upperStr=strNew.toUpperCase();//补充代码
+// document.write(str.substr(0,index)+upperStr+str.substr(index+8));
+// 		  var str= "If you would have a thing well done,do it yourself";
+// 	var strUpper=str.toUpperCase();//补充代码
+// 	document.write(strUpper);
+// 	document.write("<br/>")
+// 	var strLower=str.toLowerCase();//补充代码
+// 	document.write(strLower);
+//首字母大写
+// 		function uplow(str) {
+// 			//首字母大写，先将单词以空格分割，遍历每个单词
+// 			var newStr=str.split(" "),newArr=[];
+// 			for (var i=0;i<newStr.length;i++){
+// 				//将首字母大写后连接上未大写的字符
+// 				newArr[i]=newStr[i].charAt(0).toUpperCase()+newStr[i].substr(1);
+// 			}
+// 			document.write(newArr.join(" "));
+// 		}
+// 		uplow("all time is no time when it is past");
+		 //mach操作  min  max  ceil  round floor
+		 // var Time=prompt("请输入运动时间"),newTime=null;
+		 // if (isNaN(Time) || Time<0){
+		 // 	alert("时间不能为负数或非数字！")
+		 // }else{
+		 // 	 if (Time<=20){
+		 // 		newTime=Math.floor(Time);
+		 // 		document.write("本次运动时间为"+newTime+"分钟");
+			//  }else {
+		 // 	 	newTime=Math.ceil(Time);
+		 // 	 	document.write("本次运动时间为"+newTime+"分钟");
+			//  }
+		 //
+		 // }
+		 // //随机产生一组整数，打印其最大最小值，并对组数进行降序排序
+		 // function getM(arr) {
+		 // 	 document.write(arr);
+		 // 	 //max min 不能操作数组对象，fuck
+			//  // var Max=Math.max(arr);
+			//  // var Min=Math.min(arr);
+			//  var j=arr.length-1;
+			//  var newArr=[];
+			//  newArr=arr.sort(function (a,b) {
+			// 	 return b-a;
+			//  });
+			//  document.write("最大的数是"+newArr[0]+",最小的数是"+newArr[j]+"<br />"+"降序排序后"+newArr);
+		 // }
+		 // var arr=[];
+		 // var n=prompt("请输入起点数值");
+		 // var m=prompt("请输入终点数值");
+		 // for (var i=0;i<10;i++){
+		 // 	arr[i]=(Math.floor(Math.random()*(m-n+1)+n));
+		 // }
+		 // getM(arr);
+		 // //利用随机数random猜数字游戏
+		 // var num=Math.floor(Math.random()*9+1);
+		 // var i=null;
+		 // // while (true){
+		 // for (var j=0;j<3;j++) {
+		 // 	 i=prompt("请输入你猜的整数（1-9之间），你有3次机会");
+			//  if (i==num){
+			//  	alert("恭喜你猜对了，数字是"+num);
+			//  	break;
+			//  } else if (i<num){
+			//  	alert("你猜小了");
+			//  } else {
+			//  	alert("你猜大了");
+			//  }
+		 // }
+		 // if (j==3){
+		 // 	alert("你失败了");
+		 // }
+	// function daTetr(time) {
+	//
+	//
+	// 	  var weeks=["星期日","星期一","星期二","星期三","星期四","星期五","星期六"],
+    // 	  time=new Date(),
+  	//   	  year=time.getFullYear(),
+	// 	  mon=time.getMonth()+1,
+   	// 	  day=time.getDate(),
+   	// 	  week=time.getDay();
+   	// 	  console.log("今天是"+year+"年"+mon+"月"+day+"日"+weeks[week]);
+   	// 	  }
+   	// 	  daTetr();
+		 员工合同3年后
+		 function His() {
+			 var year=parseInt(prompt("入职年份"));
+			 var mon=parseInt(prompt("入职月份"));
+			 var day=parseInt(prompt("入职日期"));
+			 var rztime=new Date(year,mon,day);
+			 var dqtime=new Date((year+3),mon,day);
+			 console.log("入职日期为"+rztime.getFullYear()+"-"+rztime.getMonth()
+			 +"-"+rztime.getDate());
+			 console.log("合同到期日期为"+dqtime.getFullYear()+"-"+dqtime.getMonth()
+			 +"-"+dqtime.getDate());
+		 }
+		 His();
+
+    </script>
+</body>
+</html>

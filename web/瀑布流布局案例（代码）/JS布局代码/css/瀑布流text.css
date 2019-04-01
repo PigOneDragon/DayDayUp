@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+}
+body{background-color: #ddd;}
+.main{
+    position: relative;
+    /*overflow: hidden;*/
+    height: auto;
+    width: auto;
+    margin: 0 auto;
+}
+.box{
+    float: left;
+    box-sizing: border-box;/*从border开始计算宽度，盒子默认宽度包括border跟外边距，此时宽度是内容加内填充*/
+    width: 280px;
+    height: auto;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #fff;
+}
+.box a{
+    font: 16px bold;
+    color: #666;
+}
+.box a:hover{
+    color: #999;
+}
+.box img{
+    width: 100%;
+}

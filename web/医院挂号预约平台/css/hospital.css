@@ -1,0 +1,220 @@
+.nav .link{
+    padding: 0 10px;
+}
+.link_focus{
+    background: #1fa4f0;
+}
+/*医院搜索条件分类*/
+/*.hospital-class{*/
+    /*background-color: #fbfbfb;*/
+    /*margin: 40px 0;*/
+/*}*/
+/*.hospital-class-item .title{*/
+    /*display: inline-block;*/
+    /*width: 250px;*/
+    /*height: 70px;*/
+    /*line-height: 70px;*/
+    /*font-size: 15px;*/
+    /*color: #4c4948;*/
+    /*padding-left: 50px;*/
+/*}*/
+/*.hospital-class-item span{*/
+    /*color: #4c4948;*/
+    /*width: 1px;*/
+    /*display: inline-block;*/
+/*}*/
+/*.hospital-class-item>.link{*/
+    /*font-size: 15px;*/
+    /*color: #4c4948;*/
+    /*margin: 0 20px;*/
+/*}*/
+
+/*.hospital-class-item .link_focus{*/
+    /*color: #fff;*/
+    /*background-color: #60bff2;*/
+/*}*/
+.filter{
+    min-height: 100px;
+    background-color: #fbfbfb;
+    margin: 20px auto;
+}
+
+.filter .group{
+    padding: 15px 60px 15px 180px;
+    color: #4c4948;
+    font-size: 12px;
+    line-height: 18px;
+    min-height: 30px;
+    position: relative;
+}
+.filter .group .caption{
+    position: absolute;
+    left: 30px;
+    top: 21px;
+    width: 150px;
+}
+.filter .group .condition{
+    color: #4c4948;
+    display: inline-block;
+    position: relative;
+    margin: 6px 24px 6px 0px;
+    padding:  0 5px;
+}
+.filter .group .caption .condition{
+    position: absolute;
+    right: 0;
+    top: -6px;
+}
+.filter .group .caption .condition::before,
+.filter .group .condition::after{
+    content: ' ';
+    display:block;
+    width: 1px;
+    height: 18px;
+    background-color: #dcdddd;
+    top: 0;
+    right: -12px;
+    position: absolute;
+
+}
+.filter .group .caption .condition::before{
+    left: -12px;
+}
+
+.filter .group .condition_focus,
+.filter .group .condition:hover{
+    color: #fff;
+    background-color: #60bff2;
+}
+/*医院介绍*/
+.hospital-item{
+    /*background-color: #fbfbfb;*/
+    padding: 30px 140px 30px 30px;
+    border-top: 1px solid #dcdddd;
+    border-left: 1px solid #dcdddd;
+    border-right: 1px solid #dcdddd;
+    position: relative;
+}
+.hospital-item:hover{background-color: #fbfbfb;}
+.hospital-item-pic,.hospital-item-intro{
+    display: inline-block;
+}
+.hospital-item-pic{
+    width: 200px;
+    height: 150px;
+}
+.hospital-item-intro{
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+    left: 231px;
+    padding-left: 30px;
+}
+.hospital-item-intro .hospital-item-intro-name{
+    font-size: 15px;
+    font-weight: bold;
+    color: #000;
+}
+.hospital-item-intro-name>span{
+    color: #f7b52c;
+    font-size: 13px;
+    padding-left: 30px;
+}
+.hospital-item-intro-time,.hospital-item-intro-tel,.hospital-item-intro-address{
+    /*padding-left: 22px;*/
+    position: relative;
+    color: #888888;
+    font-size: 13px;
+    padding: 16px 0 0 22px;
+}
+.hospital-item-intro-time:before,.hospital-item-intro-tel:before,.hospital-item-intro-address:before{
+    content: ' ';
+    display: inline-block;
+    width: 16px;
+    height: 18px;
+    position: absolute;
+    top: 14px;
+    left: 1px;
+    background: url("../img/icon-tel.png") 0 -105px;
+}
+.hospital-item-intro-tel:before{
+    background-position-y: 0;
+}
+.hospital-item-intro-address:before{
+    background-position-y: -18px;
+}
+/*现在预约按钮*/
+.hospital-item-btn{
+    display: block;
+    width: 105px;
+    height: 37px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+    right: 80px;
+    background: url("../img/button-now.png") 0 0 no-repeat;
+}
+.hospital-item-btn:hover{
+    background-position: -105px 0;
+}
+/*分页*/
+.pagination{
+    height: 45px;
+    line-height: 25px;
+    border: 1px solid #f4f6fa;
+    text-align: center;
+    color: #666;
+    font-size: 15px;
+    margin-bottom: 200px;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+
+.pagination .item{
+    margin-left: 14px;
+    color: #666;
+}
+.pagination .item_icon{
+    background: url(../img/icon-pagination-arrow.png) no-repeat;
+}
+.pagination .item_icon:hover{
+    background-color: #00b3ec;
+}
+.pagination .item_prev{
+    background-position: 6px -15px;
+}
+.pagination .item_prev:hover{
+    background-position: -20px -15px;
+}
+.pagination .item_next{
+    background-position: 8px 4px;
+}
+.pagination .item_next:hover{
+    background-position: -18px 4px;
+}
+.pagination .input_page,
+.pagination .item_page,
+.pagination .item_icon{
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    line-height: 23px;
+    border:solid 1px #dcdddd;
+    border-radius: 3px;
+}
+.pagination .item_page_focus{
+    background: #00b3ec;
+    color: #fff;
+}
+.pagination .input_page{
+    width: 45px;
+    text-align: center;
+}
+.pagination .input_submit{
+    width: 34px;
+    height: 25px;
+    display: inline-block;
+    margin-left: 10px;
+    background: url(../img/icon-pagination-go.png);
+    vertical-align: middle;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        section > div + p{
+            color : red;
+        }
+        div[class]{
+            color:red;
+        }
+        div[class="pwd"]{
+            background-color:yellow;
+        }
+        /* Elemrnt[attribute|=”value”]匹配的是指定的属性，并且属性值是以“value-“开头的元素*/
+        div[class|=s]{
+            color: yellow;
+            font-size: 18px;
+        }
+        div:last-child{
+            background-color: yellow;
+        }
+        /*ol > li:first-child{*/
+            /*color:green;*/
+        /*}*/
+        ol > li:nth-child(2n+1){
+            color:red;
+        }
+        /*ol > li:last-child{*/
+            /*color:blue;*/
+        /*}*/
+    </style>
+</head>
+<body>
+<!--<section>-->
+    <!--<div>我是div</div>-->
+    <!--<p>我是p1</p>-->
+    <!--<p>我是p2</p>-->
+
+<!--</section>-->
+<!--<div class="name">name</div>-->
+<!--<div class="pwd">pwd</div>-->
+<!--<div class="one">one</div>-->
+<!--<div class="one s">one s</div>-->
+<!--<div class="s one">s one</div>-->
+<!--<div class="s">s</div>-->
+<!--<div class="s-one">s-one</div>-->
+<div>0-1</div>
+<div>0-2</div>
+<div>0-3</div>
+<section>
+    <div>1-1</div>
+    <div>1-2</div>
+    <div>1-3</div>
+</section>
+<section>
+    <div>2-1</div>
+    <div>2-2</div>
+    <div>2-3</div>
+</section>
+<ul>
+    <li>家用电器
+        <ol>
+            <li>冰箱</li>
+            <li>洗衣机</li>
+            <li>空调</li>
+        </ol>
+    </li>
+    <li>清洁用品
+        <ol>
+            <li>冰箱</li>
+            <li>洗衣机</li>
+            <li>空调</li>
+        </ol>
+    </li>
+    <li>妇婴用品
+        <ol>
+            <li>冰箱</li>
+            <li>洗衣机</li>
+            <li>空调</li>
+        </ol>
+    </li>
+</ul>
+</body>
+</html>

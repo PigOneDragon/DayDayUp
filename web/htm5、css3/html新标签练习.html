@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新标签</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            border: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .clear:after {
+            content: '';
+            display: block;
+            height: 0;
+            line-height: 0;
+            clear: both;
+            zoom: 1;
+        }
+
+        header {
+            height: 80px;
+            min-width: 1200px;
+            background-color: #000;
+        }
+
+        .wrap {
+            width: 1200px;
+            margin: 0 auto;
+            font-size: 14px;
+        }
+
+        header .logo {
+            display: block;
+            float: left;
+            margin: 20px 20px;
+            color: #fff;
+            font-size: 18px;
+        }
+
+        nav {
+            float: right;
+        }
+
+        nav > a {
+            display: block;
+            float: left;
+            width: 80px;
+            height: 73px;
+            line-height: 73px;
+            text-align: center;
+            color: #fff;
+        }
+
+        nav > a:nth-child(1) {
+            background-color: red;
+        }
+
+        nav > a:nth-child(2) {
+            background-color: orange;
+        }
+
+        nav > a:nth-child(3) {
+            background-color: green;
+        }
+
+        nav > a:nth-child(4) {
+            background-color: blue;
+        }
+
+        nav > a:nth-child(5) {
+            background-color: orangered;
+        }
+
+        nav > a:nth-child(6) {
+            background-color: blueviolet;
+        }
+
+        nav > a.active {
+            padding-bottom: 7px;
+        }
+
+        nav > a:hover {
+            padding-bottom: 7px;
+        }
+
+        aside > dl {
+            position: relative;
+            height: 74px;
+            margin-bottom: 17px;
+        }
+
+        /*侧边栏排版*/
+        section {
+            width: 1200px;
+            height: 473px;
+            margin: 34px auto 0;
+        }
+
+        section h1 {
+            font-size: 30px;
+            font-weight: lighter;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        section h1 > span {
+            color: #7c7c7c;
+        }
+
+        aside {
+            width: 450px;
+            float: left;
+        }
+
+        aside > dl > dt {
+            position: absolute;
+            top: -1px;
+            left: 70px;
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 16px;
+            text-decoration: underline;
+        }
+
+        aside > dl > dd {
+            position: absolute;
+            top: 20px;
+            left: 70px;
+        }
+
+        aside > dl .order {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            display: block;
+            border-radius: 50%;
+            background-color: red;
+        }
+
+        article {
+            width: 720px;
+            float: right;
+        }
+
+        article > img {
+            width: 100%;
+            height: 190px;
+        }
+
+        article > p, article > img {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="wrap clear">
+        <a href="#home" class="logo"><img src="http://climg.mukewang.com/582e5f160001b17100400040.png" alt="logo">MYMOOC</a>
+        <nav>
+            <a href="#1" class="active">Home</a>
+            <a href="#1">Course</a>
+            <a href="#1">Actual</a>
+            <a href="#1">Plan</a>
+            <a href="#1">FAQ</a>
+            <a href="#1">Notes</a>
+        </nav>
+    </div>
+
+</header>
+
+<section>
+
+    <aside>
+        <h1>Recent <span>Course</span></h1>
+        <dl>
+            <dt>Hyper Text Markup Language</dt>
+            <dd class="order">1</dd>
+            <dd>HTML is the standard markup language used to create web pages and its elements form the building blocks
+                of all websites.
+            </dd>
+        </dl>
+        <dl>
+            <dt>Cascading Style Sheets</dt>
+            <dd class="order">2</dd>
+            <dd>Cascading Style Sheets (CSS) is a simple mechanism for adding style (e.g., fonts, colors, spacing) to
+                Web documents.
+            </dd>
+        </dl>
+        <dl>
+            <dt>JavaScript</dt>
+            <dd class="order">3</dd>
+            <dd>JavaScript is a high-level, dynamic, untyped, and interpreted programming language.</dd>
+        </dl>
+        <dl>
+            <dt>AngularJS</dt>
+            <dd class="order">4</dd>
+            <dd>AngularJS is an open-source web application framework mainly maintained by Google and by a community of
+                individuals and...
+            </dd>
+        </dl>
+    </aside>
+    <article>
+        <h1>Welcome to <span>Massive Open Online Course!</span></h1>
+        <p>We provide the latest knowledge to help you cope with the changing world!</p>
+        <img src="http://climg.mukewang.com/582e61180001ede703300130.jpg">
+        <p>We hope that all the students who love the Internet can be more convenient access to learning resources,
+            using the Internet thinking to change our learning.</p>
+        <p>Focus on IT skills education MOOC, consistent with the development trend of the Internet down to earth's
+            MOOC. We are free, we only teach useful, we concentrate on education.</p>
+    </article>
+
+</section>
+</body>
+</html>

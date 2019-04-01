@@ -1,0 +1,231 @@
+
+/*清除默认样式*/
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+a{text-decoration: none;}
+.clear:after{
+    content: '';
+    display: block;
+    height: 0;
+    line-height: 0;
+    clear: both;
+    zoom: 1;
+}
+input,
+textarea{
+    outline: 0;
+}
+body{
+    font-family: "Microsoft YaHei UI";
+    min-width: 800px;
+}
+header,
+section,
+footer{
+    display: block;
+    background: no-repeat;
+}
+/*头部*/
+header{
+    width: 100%;
+    height: 93px;
+    background-color: #2e2e2e;
+}
+header>a{
+    display: block;
+    float: left;
+    margin: 31px 0 0 170px;
+}
+/*头部导航条*/
+nav.header-nav{
+    float: right;
+    margin-right: 150px;
+}
+.header-nav>a{
+    color: #fff;
+    display: inline-block;
+    font-size: 18px;
+    margin-left: 40px;
+    line-height: 93px;
+}
+.header-nav>a:hover{
+    color: #f46208;
+}
+/*banner区*/
+section.banner{
+    height: 670px;
+    position: relative;
+}
+section.banner .banner-pic{
+    width: 100%;
+    height: 100%;
+}
+/*banner区标题部分*/
+section.banner .caption{
+    width: 670px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -50px 0 0 -335px;
+    /*background-color: red;*/
+}
+section.banner .caption>h2,
+section.banner .caption>h5
+{
+    font-size: 53px;
+    text-align: center;
+    color: #fff;
+}
+section.banner .caption>h5{
+    font-size: 13px;
+}
+/*portfolio*/
+
+/*.portfolio-text{
+    height: 410px;
+}*/
+/*文字样式*/
+.title{
+    font-size: 48px;
+    color: #f46208;
+    text-align: center;
+    letter-spacing:8px;
+    padding-top: 120px;
+}
+.text{
+    width: 790px;
+    font-size: 14px;
+    color: #000;
+    text-align: center;
+    margin: 40px auto 60px;
+}
+/*portfolio-text下的导航条*/
+.portfolio-text nav.items{
+    margin-top: 60px;
+}
+.portfolio-text nav.items a.link{
+    display: inline-block;
+    padding: 7px;
+    color: #f46208;
+    border: 1px solid #f46208;
+    margin: 0 7px;
+}
+.portfolio-text nav.items a:hover{
+    background-color: #f46208;
+    color: #fff;
+}
+.portfolio-pic>img{
+    width: 100%;
+    height: 560px;
+}
+/*stats区*/
+/*图标区域*/
+.stats .list{
+    margin-top: 70px;
+}
+.stats .list dl{
+    width: 150px;
+    height: 150px;
+    float: left;
+    text-align: center;
+    padding-right: 63px;
+}
+.stats .list .tex{
+    margin-top: 20px;
+}
+.stats .list .number{
+    color: #f46208;
+    letter-spacing:8px;
+    margin-top: 20px;
+}
+/*Team*/
+section.team{
+    background-color: #2e2e2e;
+    height: 665px;
+}
+section.team .list{
+    margin: 65px 0 100px;
+}
+section.team .list dl{
+    float: left;
+    width: 250px;
+    padding-right: 20px;
+    color: #fff;
+}
+/*contact*/
+.contact-form{
+    margin-top: 70px;
+    margin-bottom: 100px;
+}
+/*两个input框*/
+.contact-form .fullname,
+.contact-form .email{
+    float: left;
+    width: 373px;
+    height: 50px;
+    border: 1px solid #bfbfbf;
+}
+.contact-form .email {
+    margin-left: 40px;
+}
+.contact-form .submit{
+    width: 200px;
+    height: 58px;
+    line-height: 58px;
+    background-color: #f46208;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 20px auto 0;
+}
+/*文本框*/
+.contact-form .mytextarea{
+    width: 788px;
+    height: 273px;
+    margin-top: 20px;
+    border: 1px solid #bfbfbf;
+    /*不可拖拽*/
+    resize:none;
+}
+/*利用伪类修改placeholder样式 -百度*/
+/*1、谷歌*/
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder{
+    color: #bbd6ff;
+    text-indent: 10px;
+}
+textarea::-webkit-input-placeholder{
+    line-height: 273px;
+}
+/*2、火狐*/
+input::-moz-placeholder,
+textarea::-moz-placeholder{
+    color: #bbd6ff;
+    /*不支持？*/
+    text-indent: 10px;
+}
+textarea::-moz-placeholder{
+    line-height: 273px;
+}
+/*3、IE*/
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder{
+    color: #bbd6ff;
+    text-indent: 10px;
+}
+textarea:-ms-input-placeholder{
+    line-height: 273px;
+}
+/*footer*/
+footer{
+    height: 110px;
+    line-height: 110px;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    background-color: #000;
+}

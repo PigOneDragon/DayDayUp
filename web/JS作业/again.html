@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/again.css">
+</head>
+<body>
+<!--做一个4张图片轮播，带小圆点，小圆点滑过对应的图片显示，图片左边做个主菜单跟二级菜单，图片上边有标签跟作业一致-->
+    <div class="main">
+        <!--tab标签-->
+        <div class="tab" id="tab">
+            <span class="active-span">首页</span><span>我的网站</span><span>随便看看</span><span>关于</span>
+        </div>
+        <!--图片轮播-->
+        <div class="pics" id="pics">
+            <a href="">
+                <img class="slide-pic" style="display: block" src="img/1.jpg" alt="1" />
+            </a><a href="">
+                <img class="slide-pic" src="img/3.jpg" alt="3" />
+            </a><a href="">
+                <img class="slide-pic" src="img/4.jpg" alt="4" />
+            </a><a href="">
+                <img class="slide-pic" src="img/5.jpg" alt="5" />
+            </a>
+            <!--小圆点-->
+            <div class="dots" id="dots">
+                <span class="Active"></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <!--按钮-->
+            <a href="javascript:void(0)" class="button next" id="next"><i class="iconfont">&#xe604;</i></a>
+            <a href="javascript:void(0)" class="button" id="before"><i class="iconfont">&#xe604;</i></a>
+               <!--主菜单-->
+            <div class="menu" id="menu">
+                <ul class="main-list">
+                    <li><a href="#">家用电器</a></li>
+                    <li><a href="#">手机</a><i>/</i><a href="#">运营商</a><i>/</i><a href="#">数码</a></li>
+                    <li><a href="#">电脑</a><i>/</i><a href="#">办公</a></li>
+                    <li><a href="#">家俱</a></li>
+                </ul>
+            </div>
+            <!--二级菜单-->
+            <div class="sub-menu" id="sub-menu">
+                <!--二级菜单下的块-->
+                <div class="menu-items">
+                    <!--标题1-->
+                    <div class="title">
+                        <a href="">家电馆<i class="iconfont">&#xe604;</i></a>
+                        <a href="">乡镇专卖<i class="iconfont">&#xe604;</i></a>
+                        <a href="">家电服务<i class="iconfont">&#xe604;</i></a>
+                    </div>
+                    <!--自定义列表-->
+                    <div class="menu-item">
+                        <dl class="zdy">
+                            <dt class="item-t"><a href="">电视<i class="iconfont">&#xe604;</i></a></dt>
+                            <dd><a href="">曲面电视</a></dd>
+                            <dd><a href="">超薄电视</a></dd>
+                            <dd><a href="">55英寸</a></dd>
+                        </dl>
+                        <dl class="zdy">
+                            <dt class="item-t"><a href="">空调<i class="iconfont">&#xe604;</i></a></dt>
+                            <dd><a href="">立式</a></dd>
+                            <dd><a href="">中央空调</a></dd>
+                            <dd><a href="">静音</a></dd>
+                            <dd><a href="">空调</a></dd>
+                            <dd><a href="">55英寸</a></dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="menu-items">
+                    <!--标题1-->
+                    <div class="title">
+                        <a href="">手机馆<i class="iconfont">&#xe604;</i></a>
+                        <a href="">华为专卖<i class="iconfont">&#xe604;</i></a>
+                        <a href="">售后服务<i class="iconfont">&#xe604;</i></a>
+                    </div>
+                    <!--自定义列表-->
+                    <div class="menu-item">
+                        <dl class="zdy">
+                            <dt class="item-t"><a href="">手机<i class="iconfont">&#xe604;</i></a></dt>
+                            <dd><a href="">超薄</a></dd>
+                            <dd><a href="">三摄</a></dd>
+                            <dd><a href="">双面屏</a></dd>
+                        </dl>
+                        <dl class="zdy">
+                            <dt class="item-t"><a href="">空调<i class="iconfont">&#xe604;</i></a></dt>
+                            <dd><a href="">立式</a></dd>
+                            <dd><a href="">中央空调</a></dd>
+                            <dd><a href="">静音</a></dd>
+                            <dd><a href="">空调</a></dd>
+                            <dd><a href="">55英寸</a></dd>
+                        </dl>
+                    </div>
+                </div> <div class="menu-items">
+                    <!--标题1-->
+                    <div class="title">
+                        <a href="">家电馆<i class="iconfont">&#xe604;</i></a>
+                        <a href="">乡镇专卖<i class="iconfont">&#xe604;</i></a>
+                        <a href="">家电服务<i class="iconfont">&#xe604;</i></a>
+                    </div>
+                    <!--自定义列表-->
+                    <div class="menu-item">
+                        <dl class="zdy">
+                            <dt class="item-t"><a href="">电视<i class="iconfont">&#xe604;</i></a></dt>
+                            <dd><a href="">曲面电视</a></dd>
+                            <dd><a href="">超薄电视</a></dd>
+                            <dd><a href="">55英寸</a></dd>
+                        </dl>
+                        <dl class="zdy">
+                            <dt class="item-t"><a href="">空调<i class="iconfont">&#xe604;</i></a></dt>
+                            <dd><a href="">立式</a></dd>
+                            <dd><a href="">中央空调</a></dd>
+                            <dd><a href="">静音</a></dd>
+                            <dd><a href="">空调</a></dd>
+                            <dd><a href="">55英寸</a></dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="menu-items">
+                    <!--标题1-->
+                    <div class="title">
+                        <a href="">手机馆<i class="iconfont">&#xe604;</i></a>
+                        <a href="">华为专卖<i class="iconfont">&#xe604;</i></a>
+                        <a href="">售后服务<i class="iconfont">&#xe604;</i></a>
+                    </div>
+                    <!--自定义列表-->
+                    <div class="menu-item">
+                        <dl class="zdy">
+                            <dt class="item-t"><a href="">手机<i class="iconfont">&#xe604;</i></a></dt>
+                            <dd><a href="">超薄</a></dd>
+                            <dd><a href="">三摄</a></dd>
+                            <dd><a href="">双面屏</a></dd>
+                        </dl>
+                        <dl class="zdy">
+                            <dt class="item-t"><a href="">空调<i class="iconfont">&#xe604;</i></a></dt>
+                            <dd><a href="">立式</a></dd>
+                            <dd><a href="">中央空调</a></dd>
+                            <dd><a href="">静音</a></dd>
+                            <dd><a href="">空调</a></dd>
+                            <dd><a href="">55英寸</a></dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../jquery/jquery-1.12.4.js"></script>
+    <script src="JS/again.js"></script>
+</body>
+</html>

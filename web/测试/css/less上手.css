@@ -1,0 +1,33 @@
+body {
+  padding: 0;
+  margin: 1px;
+}
+.header {
+  height: 60px;
+  background: #000;
+}
+.banner {
+  height: 560px;
+}
+.courses {
+  height: 200px;
+}
+.footer {
+  height: 60px;
+  background: #000;
+}
+.fr {
+  float: right;
+}
+.logo {
+  float: left;
+}
+.nav_item_icon_new {
+  width: 30px;
+  height: 30px;
+  background-color: #00b3ea;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+/*# sourceMappingURL=less上手.css.map */

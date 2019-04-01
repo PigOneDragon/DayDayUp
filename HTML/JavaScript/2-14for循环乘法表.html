@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>9*9乘法表</title>
+</head>
+<body>
+	<script>
+		//99乘法表
+		// for(var i=1;i<10;i++)
+		// 	{
+		// 		for (var j = 1; j<=i; j++) {
+		// 			document.write(i+"*"+j+"="+i*j+"&nbsp;&nbsp;")
+		// 		}
+		// 		document.write("<br />")
+		// 	}
+		//游戏得分
+		// for(i=1;i<=5;i++){
+		// 	document.write("游戏第"+i+"轮，得分："+"<br />");
+		// 	for(j=10;j<=100;j+=10){
+		// 		document.write(j+"分"+"&nbsp;")
+
+		// 	}
+		// 	document.write("<hr />")
+		// }
+		//*型图
+		// for(i=1;i<=9;i++){
+		// 	for(j=1;j<=i;j++){
+		// 		document.write("*")
+
+		// 	}
+		// 	document.write("<br />")
+		// }
+		//水仙花
+		// var i,a,b,c,e;
+		// i=456;
+		// a=parseInt(i/100);
+		// b=parseInt(i/10%10);
+		// c=i%10;
+		// e=a*a*a+b*b*b+c*c*c
+		// document.write(a+"<br/>"+b+"<br/>"+c+"<br/>"+e)
+		// document.write(typeof a+"<br/>"+typeof b+"<br/>"+typeof c+"<br/>")
+		// for(i=100;i<1000;i++){
+		//   	a=parseInt(i/100),b=parseInt(i/10%10),c=i%10;
+		// 	if(((a*a*a)+(b*b*b)+(c*c*c))==i){
+		// 		document.write(i+"<br />")
+		// 	}
+		// }
+		// var i=0,j=1;
+		// while(j<=100){
+		// 	i=i+j
+		// 	j++
+		// }
+		// document.write(i)
+		//猜数字
+		// var dn=5;
+
+		// for(var j=1;j<=3;j++){
+		// 	var c=prompt("请猜一个1-10的数字，可以猜三次");
+		// 	if(c!=dn){
+				
+		// 			if(c>dn){
+		// 				alert("猜大了");
+		// 			}else{
+		// 				alert("猜小了");
+		// 			}
+		// 	}
+		// 	else{
+		// 		alert("猜对了，答案是"+dn);
+		// 		}
+		// }
+		// var dn=5,n=1;
+		// while(n<=3){
+			
+		// 		var c=prompt("请猜一个1-10的数字，可以猜三次");
+		// 		if(isNaN(c)||c==""){
+		// 			n=1;
+		// 			continue;
+		// 		}
+		// 		if(c>dn){
+		// 				alert("猜大了");
+		// 	 	}else if(c<dn){
+		// 	 			alert("猜小了");
+		// 	 			}
+				 	
+		// 		else{
+		// 		 	alert("猜对了，答案是"+dn);
+		// 		 	break;
+		// 		 	}
+		// 		n++;
+		// 	}
+		// if(n>3){
+		// 	alert("你失败了！")
+
+		// }
+		//密码验证
+		// var pwd=prompt("请输入密码");
+		// while(true){
+		// 	var pwdAgain=prompt("请再次输入密码");
+		// 	if(pwd==pwdAgain){
+		// 		alert("密码已设置");
+		// 		break;
+		// 	}
+		// 	else{
+		// 		alert("两次密码不一致，请重新输入！");
+		// 		continue;
+		// 	}
+		// }
+		
+
+		// for(var i=2;i<=100;i+=2){
+  //           if(i==22||i==44||i==66||i==88){
+  //               continue;
+  //           }
+  //           document.write(i+"<br />");
+  //       }
+
+   //       function cf(m,n){
+   //      var x=m*n;
+   //      document.write(m+'*'+n+'='+x+"<br />");
+	  // }
+	  // cf(3,4);
+	  // cf(5,6);
+	  // cf(7,7);
+	var input=prompt("请输入您的密码");
+	//判断输入密码是否6~12位
+    function funName(pwd){
+    	var len=pwd.length
+    	if(len>=6 && len<=12){
+    		return "密码格式正确"
+
+    	}
+    	else if(len<6){
+    		return "密码不小于6位"
+    	}
+    	else{
+    		return "密码不大于12位"
+    	}
+
+    }
+    alert(funName(input));
+
+	</script>
+</body>
+</html>

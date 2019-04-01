@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>习题</title>
+</head>
+<body>
+
+<h1>筛选和遍历jQuery对象</h1>
+
+<ul>
+    <li class="item1">item1</li>
+    <li class="item2">item2</li>
+    <li class="item3">item3</li>
+    <li class="item4">item4</li>
+    <li class="item5">item5</li>
+    <li class="item6">item6</li>
+    <li class="item7">item7</li>
+    <li class="item8">item8</li>
+    <li class="item9">item9</li>
+</ul>
+
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $(function () {
+
+        //map方法
+        var arr=[],lis=$('li');
+        // console.log(lis.map(function () {
+        //     return this.innerText;
+        // }));
+        lis.map(function (index,domElement) {
+            arr.push(this.innerText);
+           // return arr;
+        });
+        //each方法
+        // lis.each(function (index,domElement) {
+        //     arr.push(this.innerText);
+        // });
+        
+        console.log(arr);
+        console.log(lis.map(function () {
+            return this.innerHTML;
+        }));
+        console.log(lis.each(function () {
+            return this.innerHTML;
+        }));
+
+    });
+</script>
+</body>
+</html>

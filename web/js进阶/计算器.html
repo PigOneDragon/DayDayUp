@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>简易计算器</title>
+</head>
+<body>
+    <!--<input type="text" class="one">-->
+    <!--<span id="run">+</span>-->
+    <!--<input type="text" class="two">-->
+    <!--<span>=</span>-->
+    <!--<span class="value"></span>-->
+    <!--<br>-->
+    <!--<button class="add">+</button>-->
+    <!--<button class="jian">-</button>-->
+    <!--<button class="cheng">*</button>-->
+    <!--<button class="chu">/</button>-->
+
+    <p>
+        请选择菜单：
+        <select id="menu">
+            <option>请选择</option>
+            <option value="fruit">水果</option>
+            <option value="cake">蛋糕</option>
+            <option value="nuts">坚果</option>
+        </select>
+    </p>
+    <p>该系列有：<span></span></p>
+    <script>
+        // 此处写代码
+
+        var s = document.querySelector('#menu');
+        var spanT = document.getElementsByTagName('span')[0];
+
+        s.onchange = function () {
+            spanT.innerHTML = Obj[this.value];
+        };
+
+        var Obj ={
+            '请选择':' ',
+            'fruit':"苹果",
+            'cake':'生日蛋糕',
+            'nuts':'碧根果'
+        };
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    border: none;
+}
+body {
+    min-width: 900px;
+    min-height: 600px;
+}
+.out {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 900px;
+    height: 600px;
+    margin: auto;
+    background: url('../img/out_bg.png') repeat-x;
+}
+.wrap {
+    position: relative;
+    width: 900px;
+    height: 600px;
+}
+.in {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 540px;
+    height: 330px;
+    margin: -165px 0 0 -270px;
+    background-color: #000;
+    box-shadow: 0 0 4px #595f6b;
+}
+.controls {
+    position: relative;
+    width: 100%;
+    height: 26px;
+    background: url('../img/ctr_bg.png') repeat-x;
+}
+.play {
+    float: left;
+    width: 13px;
+    height: 15px;
+    margin: 5px 14px;
+    cursor: pointer;
+    background: url('../img/play.png') no-repeat;
+}
+.pause{
+    float: left;
+    width: 13px;
+    height: 15px;
+    margin: 5px 14px;
+    cursor: pointer;
+    background: url('../img/pause.png') no-repeat;
+}
+.videobar {
+    position: relative;
+    float: left;
+    width: 267px;
+    height: 10px;
+    margin-top: 7px;
+    background: url('../img/load_bg.png') repeat-x;
+}
+.videobar > .left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 10px;
+    background: url('../img/lt.png') no-repeat;
+}
+.videobar > .right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3px;
+    height: 10px;
+    background: url('../img/rt.png') no-repeat;
+}
+/*拖动小圆点*/
+.videobar > .dot {
+    position: absolute;
+    top: -2.5px;
+    left: -5px;
+    width: 15px;
+    height: 15px;
+    background: url('../img/tuodd.png') no-repeat;
+    z-index: 2;
+    cursor: pointer;
+}
+.videobar >.lineNode{
+    width: 10%;
+    height: 7px;
+    border-radius: 3px;
+    position: absolute;
+    top: 1px;
+    left: 0;
+    background: url("../img/line_bg.png") repeat-x;
+}
+/*播放进度*/
+.controls > .time {
+    float: left;
+    width: 60px;
+    height: 9px;
+    margin: 7px 0 0 9px;
+}
+.controls > .time > span {
+    font-size: 10px;
+    line-height: 10px;
+    float: left;
+    color: #fff;
+}
+/*小喇叭*/
+.controls > .voice {
+    position: relative;
+    float: left;
+    width: 82px;
+    height: 16px;
+    margin: 5px 0 0 15px;
+    background: url('../img/laba.png') left no-repeat;
+}
+.voice > .voice-bar {
+    position: absolute;
+    top: 4px;
+    left: 25px;
+    width: 61px;
+    height: 8px;
+    background: url('../img/voicebar_bg.png') repeat-x;
+}
+.voice-dot {
+    position: absolute;
+    top: 1.5px;
+    left: 25px;
+    width: 13px;
+    height: 13px;
+    background: url('../img/voicedot.png') no-repeat;
+}
+/*全屏*/
+.fullscreen {
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    width: 13px;
+    height: 15px;
+    background: url('../img/fulls.png') no-repeat;
+}

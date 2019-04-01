@@ -1,0 +1,42 @@
+<!doctype html> 
+<html> 
+<head> 
+    <meta charset="utf-8"> 
+    <title></title> 
+</head>
+<body>
+	<!-- video 标签 -API- duration -->
+	<video controls src='data/imooc.mp4' id='myVideo'></video>
+	<div id='playNode'>播放</div>
+	<div id='stopNode'>暂停</div>
+	<script type="text/javascript">
+		//选中video标签
+		var VideoNode = document.getElementById('myVideo');
+
+		//看一下视频的长度 以分钟：秒的形式显示
+		//console.log(VideoNode.duration)
+		setTimeout(function(){
+			//console.log(VideoNode.duration)
+			var min = parseInt(VideoNode.duration/60);
+			var sec = parseInt(VideoNode.duration%60);
+			console.log(min+':'+sec);
+		},100);
+
+		stopNode.onclick = function(){
+			VideoNode.pause();
+		};
+
+		/* 给playNode-div一个播放video的事件 */
+		playNode.onclick = function(){
+			VideoNode.play();
+		};
+		
+
+	</script>
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,105 @@
+	<!doctype html> 
+<html> 
+<head> 
+    <meta charset="utf-8"> 
+    <title></title> 
+</head>
+<body>
+	<!-- video 标签 -API- loop -->
+	<video id='myVideo' src='data/imooc.mp4'></video>
+	<input type="range" name="" min=0 max=100 value=50 id='range'>
+	<div id='playNode'>播放</div>
+	<div id='stopNode'>暂停</div>
+	<div id='gogogo'>快进</div>
+	<div id='loopNode'>不循环</div>
+	<script type="text/javascript">
+		//选中video标签
+		var VideoNode = document.getElementById('myVideo');
+		//src控制视频的来源
+		VideoNode.src = 'data/imooc.ogv';
+
+
+		//loop的设置
+		//console.log(VideoNode.loop)
+		//VideoNode.loop = true;
+		loopNode.onclick = function(){
+			if(VideoNode.loop == false){
+				this.innerHTML = '循环';
+				VideoNode.loop = true;
+			}
+			else{
+				this.innerHTML = '不循环';
+				VideoNode.loop = false;
+			}
+		};
+
+		//src返回的数据
+		//console.log('src='+VideoNode.src);
+
+		//ended
+		//console.log(VideoNode.ended)
+		//监听ended事件
+		/*
+		VideoNode.addEventListener('ended',function(){
+			//console.log('视频播放结束了');
+			VideoNode.play();
+		})
+		*/
+
+
+
+		//currentSrc返回的数据
+		//console.log('currentSrc='+VideoNode.currentSrc);
+		/*
+		setTimeout(function(){
+			//console.log('currentSrc='+VideoNode.currentSrc);
+			VideoNode.currentSrc = 'data/imooc.mp4';
+		},100);
+		*/
+
+
+		//查看一下目前视频的一个网络状态
+		/*
+		console.log(VideoNode.networkState)
+		setTimeout(function(){
+			console.log(VideoNode.networkState)
+		},100)
+		*/
+
+		//手动去设置这个控件 controls
+		VideoNode.controls = true;
+
+		//手动去设置这个静音 muted
+		VideoNode.muted = true;
+
+		VideoNode.volume = 0.5;
+		//console.log(VideoNode.volume)
+		range.oninput = function(){
+			VideoNode.volume = this.value/100;
+		}
+
+		/* 快进 */
+		gogogo.onclick = function(){
+			VideoNode.currentTime = VideoNode.currentTime + 3;
+		};
+		
+
+		/* 给playNode-div一个暂停video的事件 */
+		stopNode.onclick = function(){
+			VideoNode.pause();
+		};
+
+		/* 给playNode-div一个播放video的事件 */
+		playNode.onclick = function(){
+			VideoNode.play();
+		};
+		
+
+	</script>
+</body>
+</html>
+
+
+
+
+

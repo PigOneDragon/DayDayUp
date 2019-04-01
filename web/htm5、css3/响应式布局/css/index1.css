@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+input{
+    outline: 0;
+}
+body{
+    background-color: blue;
+}
+.content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 450px;
+    height: 600px;
+    background-color: #fff;
+}
+/*logo区*/
+.header{
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+.header .logo{
+    width: 110px;
+    height: 60px;
+    margin: 0 auto;
+    background: url("../img/1a.png") 0 -60px no-repeat;
+}
+/*表单区*/
+.main .form{
+    width: 90%;
+    margin: 15px auto 0;
+    display: flex;
+    flex-direction: column;
+}
+.main .form input{
+    display: block;
+    /*width: 100%;*/
+    padding: 12px;
+}
+.main .form input:first-child{
+    border: 1px solid #666;
+    border-radius: 3px 3px 0 0;
+}
+.main .form input:nth-child(2){
+    border: 1px solid #666;
+    border-top: none;
+    border-radius: 0 0 3px 3px;
+}
+.main .form input:nth-child(3){
+    border: 1px solid #666;
+    border-radius: 3px;
+    background-color: blue;
+    color: #fff;
+    margin-top: 15px;
+}
+/*记住密码*/
+.main .box{
+    width: 90%;
+    margin: 5px auto;
+    display: flex;
+    justify-content: space-between;
+}
+.main .box span{
+    display: block;
+}
+.main .box span,
+.main .box span > a{
+    color: #666;
+}
+/*3大图标*/
+
+.footer ul{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+.footer ul li img{
+    display: block;
+    width: 60%;
+    margin: auto;
+}
+/*响应式 当屏幕尺寸小于420px时样式变化*/
+@media screen and (max-width: 420px){
+    /*背景变化*/
+    .content{
+        width: 100%;
+        height: 100%;
+        background-color: blue;
+    }
+    /*logo变化*/
+    .header .logo{
+        background-position-y: 0;
+    }
+    /*登录按钮背景变化*/
+    .main .form input:nth-child(3){
+        background-color: darkblue;
+    }
+    /*忘记密码字体颜色变化*/
+    .main .box span,
+    .main .box span > a{
+        color: #fff;
+    }
+}

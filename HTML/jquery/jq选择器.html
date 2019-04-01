@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery选择器</title>
+    <style>
+        p:first-child{background-color: yellow;} /*匹配p标签的父元素的第一个子元素，在这是h2，p不会变黄*/
+        p:first-of-type{background-color: red;}/*匹配p标签的父元素的第一个p类型的子元素，在这是p*/
+        span:last-of-type{background-color: #333333;}/*返回div中最后一个span类型的标签*/
+        h2:first-child{background-color: #9a6e3a;}
+        .bb{background-color:lightyellow;
+            padding: 10px;
+            border: 1px double yellow;}
+        .cc{background-color: #07CBC9;}
+    </style>
+</head>
+<body>
+    <div>
+        <h2>h2</h2>
+        <p><pggbh<span>sdsdd<span></p>
+        <p><input type="radio" name="man" value="男" checked/>男</p>
+        <span>s1</span>
+        <span>s2</span>
+        <input type="radio" name="man" value="女" style="display: none;"/>女
+    </div>
+<script src="jquery-1.12.4.js"></script>
+    <script>
+        // console.log($(':checked').parent().addClass('bb'));//给checked父元素添加样式
+        // console.log($(':checked')[0].addClass('bb'));
+        // console.log($(':lang(en)').addClass('cc'));
+        console.log($(':hidden').addClass('cc'));
+        console.log($('p:has(span)'));
+    </script>
+
+</body>
+</html>

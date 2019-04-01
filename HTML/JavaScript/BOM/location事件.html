@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>location方法</title>
+    </head>
+    <body>
+        <input type="button" value="操作页面" id="ck">
+        <script type="text/javascript">
+           //“确定”时，重新加载当前显示的页面,当点击确认框的”取消”时，打开慕课网网站，当前网页不能后退
+           //重新加载使用location.reload 不产生历史记录location.replace
+            var btn=document.getElementById("ck");
+            btn.onclick=function () {
+                var results=confirm("确定刷新吗？");
+                if (results){
+                    location.reload();//参数为true，强制从服务器端重新加载
+                } else {
+                    location.replace("http://www.imooc.com");
+                }
+            }
+        </script>
+    </body>
+</html>

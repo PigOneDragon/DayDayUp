@@ -1,0 +1,493 @@
+a {
+    text-decoration: none;
+}
+input {
+    border: none;
+    outline: none;
+}
+.clear:after {
+    line-height: 0;
+    display: block;
+    clear: both;
+    zoom: 1;
+    height: 0;
+    content: '';
+}
+/*top样式*/
+.top {
+    font-size: 14px;
+    color: #868686;
+}
+.top-call {
+    float: left;
+    padding-left: 20px;
+    background: url('../img/icon-call.png') no-repeat left;
+}
+.top-welcome {
+    float: right;
+}
+.top-welcome-link {
+    margin-left: 20px;
+    color: #2da5e1;
+}
+.ml40 {
+    margin-left: 40px;
+}
+/*logo区*/
+.logo-pic {
+    display: inline-block;
+    width: 350px;
+    height: 60px;
+    padding: 15px 0;
+}
+.logo-pic > img {
+    width: 100%;
+    height: 100%;
+}
+/*logo左侧搜索区*/
+.logo-search {
+    position: absolute;
+    top: 26px;
+    right: 0;
+    width: 326px;
+    height: 38px;
+    background: url('../img/ui-search.jpg') no-repeat;
+}
+.logo-search-where {
+    font-size: 16px;
+    line-height: 38px;
+    width: 46px;
+    height: 38px;
+    padding-left: 10px;
+    cursor: pointer;
+    color: #fff;
+}
+.logo-search-where-item {
+    position: relative;
+    z-index: 1;
+    width: 70px;
+    background-color: #fff;
+}
+.logo-search-where-item > span {
+    display: block;
+    padding-left: 10px;
+    color: #a5a2a2;
+}
+.logo-search-where-item > span:hover {
+    cursor: pointer;
+    background-color: #ebeef5;
+}
+/**/
+.logo-search-input {
+    font-size: 14px;
+    position: absolute;
+    top: 2px;
+    left: 70px;
+    width: 216px;
+    height: 34px;
+    color: #868686;
+}
+.logo-search-submit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: inline-block;
+    width: 38px;
+    height: 38px;
+    border-radius: 3px;
+}
+/*nav导航样式*/
+.nav-item {
+    font-size: 16px;
+    padding: 0 15px;
+    text-align: center;
+    color: #fff;
+}
+.nav-item:hover {
+    color: #d7f3ff;
+    /*cursor: pointer;*/
+}
+.right {
+    float: right;
+    padding-right: 0;
+}
+/*header区*/
+.header {
+    padding: 0 20px;
+}
+.header-caption {
+    font-family: '宋体';
+    line-height: 50px;
+    height: 50px;
+    border-bottom: 1px solid #dcdddd;
+}
+.header-caption .title {
+    font-size: 18px;
+    float: left;
+    color: #000;
+}
+.header-caption .title > a {
+    font-size: 13px;
+    padding-left: 12px;
+    color: #f29600;
+}
+.header-caption .info {
+    font-size: 13px;
+    float: right;
+}
+.header-caption .info > span {
+    color: #00f;
+}
+/*医院简介*/
+.header-body {
+    position: relative;
+}
+/*这里为什么用左浮动的话图片不会到最左边？*/
+.header-body-pic1 {
+    position: absolute;
+    top: 12px;
+    left: 0;
+    /*float: left;*/
+}
+.header-body-info {
+    font-size: 12px;
+    padding: 12px 20px 0 225px;
+    color: #888;
+}
+.header-body-info > div {
+    line-height: 30px;
+    position: relative;
+    height: 30px;
+    padding-right: 260px;
+    padding-left: 30px;
+}
+/*图标添加*/
+.header-body-info > div:before {
+    position: absolute;
+    top: 5px;
+    left: 2px;
+    display: block;
+    width: 20px;
+    height: 20px;
+    content: '';
+    background: url('../img/icon-web.png') 0 0 no-repeat;
+}
+.header-body-info .http:before {
+    background-position-y: -20px;
+}
+.header-body-info .phone:before {
+    background-position-y: -40px;
+}
+.header-body-info .traffic:before {
+    background-position-y: -60px;
+}
+.header-body-pic2 {
+    position: absolute;
+    top: 12px;
+    right: 0;
+    width: 250px;
+    height: 160px;
+}
+/*预约挂号主体*/
+.content {
+    display: none;
+}
+/*主体下的导航*/
+.content-nav {
+    line-height: 30px;
+    height: 30px;
+    color: #00b3ec;
+    border-bottom: 2px solid #60bff2;
+}
+.content-nav .link {
+    display: inline-block;
+    height: 30px;
+    padding: 0 15px;
+}
+.content-nav .link_focus {
+    color: #fff;
+    background-color: #60bff2;
+}
+/*主体*/
+.content-main {
+    margin-top: 20px;
+}
+.content-main-item {
+    display: none;
+}
+.show {
+    display: block;
+}
+/*科室*/
+.hospital_detail {
+    float: left;
+    width: 710px;
+    height: 408px;
+}
+.hospital_detail-title {
+    font-size: 15px;
+    line-height: 40px;
+    height: 40px;
+    padding-left: 20px;
+    color: #000;
+    background-color: #f4f6fa;
+}
+.hospital_detail-item {
+    height: 96px;
+    border: 1px solid #f4f6fa;
+    border-top: none;
+}
+.hospital_detail-item .detail {
+    float: left;
+    width: 140px;
+    height: 96px;
+    text-align: center;
+    color: #888;
+    background-color: #f2fbff;
+}
+.hospital_detail-item .detail-item {
+    float: left;
+    width: 568px;
+}
+.hospital_detail-item .detail-item > .link {
+    display: inline-block;
+    padding: 5px 20px;
+    color: #000;
+}
+/*医院介绍*/
+.content-main-item > p.text {
+    margin-bottom: 20px;
+    padding: 0 10px;
+    text-indent: 20px;
+}
+/*预约须知*/
+/*.content-main-item:nth-child(3),.content-main-item:nth-child(5){*/
+/*font-family: "Microsoft YaHei";*/
+/*}*/
+.content-main-item .info {
+    margin-top: 20px;
+}
+.content-main-item:nth-child(3) > p {
+    font-size: 13px;
+}
+.content-main-item .center {
+    margin: 20px auto;
+    text-align: center;
+}
+/*停诊信息*/
+.content-main-item:nth-child(4) table.table {
+    width: 999px;
+    margin: 0 auto;
+    border-right: 1px solid #dcdddd;
+    border-bottom: 1px solid #dcdddd;
+}
+.content-main-item:nth-child(4) table.table caption {
+    margin-bottom: 15px;
+}
+.content-main-item:nth-child(4) table.table td {
+    font-size: 14px;
+    text-align: center;
+    color: #000;
+    border-top: 1px solid #dcdddd;
+    border-left: 1px solid #dcdddd;
+}
+/*单号查询*/
+.content-main-item:nth-child(5) .query {
+    line-height: 25px;
+    height: 25px;
+    margin-top: 60px;
+    padding: 80px 0;
+    text-align: center;
+    border-top: 1px solid #dcdddd;
+    border-bottom: 1px solid #dcdddd;
+    /*height: 250px;*/
+}
+.content-main-item:nth-child(5) input {
+    width: 180px;
+    height: 23px;
+    border: 1px solid #dcdddd;
+}
+.content-main-item:nth-child(5) a {
+    font-size: 14px;
+    display: inline-block;
+    padding: 0 15px;
+    text-align: center;
+    /*height: 25px;*/
+    /*line-height: 25px;*/
+    color: #fff;
+    background-color: #60bff2;
+}
+/*公告*/
+.content-notice {
+    font-size: 14px;
+    float: right;
+    width: 275px;
+    padding-left: 15px;
+    color: #555;
+}
+.content-notice-title {
+    line-height: 38px;
+    height: 38px;
+    text-indent: 15px;
+    background-color: #f4f6fa;
+}
+.content-notice-title > span {
+    font-size: 12px;
+    color: #00b3ea;
+}
+.content-notice-items {
+    overflow: auto;
+    height: 240px;
+    border-bottom: 1px solid #f4f6fa;
+    border-left: 1px solid #f4f6fa;
+}
+.content-notice-item {
+    font-size: 13px;
+    padding: 10px 0 0 10px;
+}
+.content-notice-item .text {
+    float: left;
+    padding-right: 10px;
+}
+.content-notice-item > span {
+    font-size: 12px;
+    display: block;
+    padding: 0 10px 0 70px;
+    color: #888;
+}
+/*科室挂号排班*/
+.scheduling-top {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+.scheduling-top > a {
+    font-size: 14px;
+    padding-left: 15px;
+    color: #00b3ec;
+}
+/*科室挂号排班表左侧部分*/
+.scheduling-left,
+.scheduling-right {
+    float: left;
+    width: 36px;
+    height: 325px;
+    border-bottom: 1px solid #dcdddd;
+    border-left: 1px solid #dcdddd;
+    background-color: #f2f8ff;
+}
+.scheduling-left > .link {
+    font-size: 14px;
+    line-height: 94px;
+    display: block;
+    width: 100%;
+    height: 94px;
+    text-align: center;
+    color: #000;
+}
+.scheduling-left > .prev {
+    line-height: 45px;
+    height: 45px;
+    background: url('../img/icon-scheduling-left.jpg') no-repeat;
+}
+/*设置不可点击*/
+.notclick {
+    pointer-events: none;
+}
+/*科室挂号排班表右侧部分*/
+.scheduling-right {
+    float: left;
+    border-right: 1px solid #dcdddd;
+    border-bottom: 1px solid #dcdddd;
+}
+.scheduling-right > .next {
+    line-height: 45px;
+    display: block;
+    height: 45px;
+    background: url('../img/icon-scheduling-right.jpg') no-repeat;
+}
+/*中间*/
+.scheduling-middle {
+    position: relative;
+    float: left;
+    overflow: hidden;
+    width: 655px;
+    height: 326px;
+}
+.scheduling-middle-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#scheduling-info {
+    /*width: auto;*/
+    /*height: 100%;*/
+    /*border-right:1px solid #dcdddd;*/
+    border-bottom: 1px solid #dcdddd;
+}
+#scheduling-info .first-tr th {
+    font-size: 14px;
+    width: 93px;
+    height: 44px;
+    color: #868686;
+    border-top: 1px solid #dcdddd;
+    border-left: 1px solid #dcdddd;
+    background-color: #f8fafc;
+}
+#scheduling-info .week {
+    width: 92px;
+}
+#scheduling-info tr > td {
+    /*width: 89px;*/
+    height: 93px;
+    text-align: center;
+    color: #4ab4ed;
+    border-top: 1px solid #dcdddd;
+    border-left: 1px solid #dcdddd;
+}
+#scheduling-info tr.pm td {
+    background-color: #e0eefd;
+}
+/*预约规则*/
+.scheduling-notice {
+    float: left;
+    overflow: auto;
+    width: 268px;
+    height: 324px;
+    border: 1px solid #f4f6fa;
+}
+.scheduling-notice-title {
+    font-size: 18px;
+}
+.scheduling-notice-item {
+    margin-top: 10px;
+    padding-left: 10px;
+}
+.scheduling-notice-item > span {
+    font-size: 12px;
+    display: block;
+    /*padding:0 10px 0 70px;*/
+    color: #888;
+}
+/*科室预约最下方*/
+.scheduling-bottom {
+    line-height: 65px;
+    float: left;
+    width: 100%;
+    height: 65px;
+    text-align: center;
+    border: 1px solid #dcdddd;
+    border-top: none;
+}
+.scheduling-bottom-text {
+    width: 165px;
+    height: 65px;
+    margin: 0 auto;
+    padding-left: 25px;
+    color: #9f9f9f;
+    background: url('../img/icon-info.jpg') left no-repeat;
+}
+/*页脚*/
+.footer {
+    text-align: center;
+    color: #acacac;
+}

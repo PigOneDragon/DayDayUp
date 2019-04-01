@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>习题</title>
+</head>
+<body>
+<h1>处理表单元素值</h1>
+
+<form>
+    <p>
+        <label>用户名：</label>
+        <input type="text" name="username" value="John">
+    </p>
+    <p>
+        <label>密码：</label>
+        <input type="password" name="password" value="123456">
+    </p>
+    <p>
+        <label>性别：</label>
+        <input type="radio" name="sex" value="男">
+        <input type="radio" name="sex" value="女" checked>
+    </p>
+    <p>
+        <label>学历：</label>
+        <select name="education">
+            <option value="0">大学以上</option>
+            <option value="1" selected>大学</option>
+            <option value="2">大专</option>
+            <option value="3">高中</option>
+            <option value="4">高中以下</option>
+        </select>
+    </p>
+    <p>
+        <label>签名：</label>
+        <textarea name="sign">小可爱~</textarea>
+    </p>
+</form>
+
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $(function () {
+        //获取下列HTML文档中表单元素的值，并放入到一个对象中，对象由表单项的name和value组成。
+        var username = $('[name="username"]').val(),
+            password = $('[name="password"]').val(),
+            sex = $('[name="sex"]:checked').val(),  //注意单选框跟多选框需要添加checked
+            edu = $('[name="education"]').val(),  //or $('select option:selected').val()
+            sign = $('[name="sign"]').val();
+        obj = {
+            Username: username,
+            Password: password,
+            Sex: sex,
+            Edu: edu,
+            Sign: sign
+        };
+        console.log(obj);
+
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>index2</title>
+</head>
+<body>
+    <a href="index3.html">跳转第三个页面</a>
+    <input type="button" value="回到第一个页面">
+	<p>第二个页面</p>
+    <script>
+        var btn=document.getElementsByTagName("input")[0];
+        btn.onclick=function () {
+            history.back();
+            //或history.go(-1);
+        }
+    </script>
+</body>
+</html>

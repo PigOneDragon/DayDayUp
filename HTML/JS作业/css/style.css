@@ -1,0 +1,54 @@
+*{margin: 0;padding: 0;text-decoration: none;font-family: "Microsoft YaHei";}
+.main{
+    width: 1200px;
+    height: 520px;
+    margin: 0 auto;
+  /*  overflow:hidden;*/}
+/*菜单栏*/
+.menu{
+    width: 1200px;
+    height: 60px;
+    text-align: center;
+}
+.menu span{
+    display: inline-block;
+    width: 300px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 22px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.menu span.active{
+    background-color: #fc0;
+    color: #666;
+}
+/*图片容器*/
+.main .pic-box{
+    width: 1200px;
+    height: 460px;
+    overflow: hidden;
+}
+
+.slide-pic{
+    width: 1200px;
+    height: 460px;
+    display: none;
+}
+/*图片背景*/
+.slide1{
+    background: url("../img/1.jpg") no-repeat center;
+}
+.slide2{
+    background: url("../img/3.jpg") no-repeat center;
+}
+.slide3{
+    background: url("../img/4.jpg") no-repeat center;
+}
+.slide4{
+    background: url("../img/5.jpg") no-repeat center;
+}
+/*激活态下的图片*/
+.pic-box .Active{
+    display: block;
+}

@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>幕淘网 5-2作业</title>
+    <link rel="stylesheet" href="css/mutaowang.css">
+</head>
+<body>
+<div class="header">
+    <div class="top">
+        <!--<hr>-->
+        <div class="nav-login">
+            <a href=""><span>亲，请登录</span></a>
+            <a href="">免费注册</a>
+            <a href="">手机慕课网</a><br/>
+        </div>
+        <!--顶部导航菜单-->
+        <ul>
+            <li class="list">
+                <div class="nav-main">
+                    <a href="">我的慕课</a>
+                    <img src="img/icon/22.png" height="16" width="16"/>
+                </div>
+                <div class="nav-item">
+                    <a href="">已买到的宝贝</a>
+                    <a href="">我的足迹</a>
+                </div>
+            </li>
+            <li class="list">
+                <div class="nav-main">
+                    <a href="">收藏夹</a>
+                    <img src="img/icon/22.png" height="16" width="16"/>
+                </div>
+                <div class="nav-item">
+                    <a href="">收藏的宝贝</a>
+                    <a href="">收藏的店铺</a>
+                </div>
+            </li>
+            <li>
+                <div class="nav-main">
+                    <a href="">商品分类</a>
+                </div>
+            </li>
+            <li class="list">
+                <div class="nav-main">
+                    <a href="">卖家中心</a>
+                    <img src="img/icon/22.png" height="16" width="16"/>
+                </div>
+                <div class="nav-item">
+                    <a href="">免费开店</a>
+                    <a href="">已卖出的宝贝</a>
+                    <a href="">出售中的宝贝</a>
+                    <a href="">卖家服务市场</a>
+                    <a href="">卖家培训中心</a>
+                    <a href="">体验中心</a>
+                </div>
+            </li>
+            <li class="list">
+                <div class="nav-main">
+                    <a href="">联系客服</a>
+                    <img src="img/icon/22.png" height="16" width="16"/>
+                </div>
+                <div class="nav-item">
+                    <a href="">消费者客服</a>
+                    <a href="">卖家客服</a>
+                </div>
+            </li>
+        </ul>
+        <div class="clear"></div>
+        <hr style="height:1px;border-top:1px solid #555555;"/>
+    </div>
+    <div class="logo">
+        <div class="logo_pic">
+            <div class="picimg"><a href=""><img src="img/logo.png" alt="logo"/></a></div>
+            <div class="ssk">
+                <input type="text" name="select" placeholder="灵魂美食"/>
+                <input type="submit" name="Submit" value="搜索"
+                       style="width: 80px;background-color: #000;cursor: pointer;color: #fff;"/>
+            </div>
+            <div class="gwc">
+                <div class="gwc_z">
+                    <div id="gwc_t"><img id="gwc_red" src="img/icon/26.png"/></div>
+                    <a href="" class="pl25">购物车</a>
+                    <span> | </span>
+                    <span>0</span>
+                    <img id="gwc_jt" src="img/icon/23.png"/>
+                </div>
+                <!--购物车内商品-->
+                <div class="xddw" style="display: none">
+                    <div class="gwc_sp">
+                        <div class="title">最近加入购物车的物品</div>
+                        <ul style="list-style: none;">
+                            <li class="single-item">
+                                <div class="item">
+                                    <div class="single-img">
+                                        <a href=""><img src="img/cart/1.png"/></a>
+                                    </div>
+                                    <div class="single-name">
+                                        <div class="single-name-lk"><a href="">Adidas 阿迪达斯外套男士</a></div>
+                                        <div class="single-price">￥335 x 1</div>
+                                    </div>
+                                    <div class="single-del">
+                                        <a href="">X</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="single-item">
+                                <div class="item">
+                                    <div class="single-img">
+                                        <a href=""><img src="img/cart/2.png"/></a>
+                                    </div>
+                                    <div class="single-name">
+                                        <div class="single-name-lk"><a href="">玉兰油OLAY护肤品套装新生塑颜礼盒化妆品套装4件套</a></div>
+                                        <div class="single-price">￥335 x 1</div>
+                                    </div>
+                                    <div class="single-del">
+                                        <a href="">X</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="single-item">
+                                <div class="item">
+                                    <div class="single-img">
+                                        <a href=""><img src="img/cart/3.png"/></a>
+                                    </div>
+                                    <div class="single-name">
+                                        <div class="single-name-lk"><a href="">iphone7 (A1661)</a></div>
+                                        <div class="single-price">￥3358 x 1</div>
+                                    </div>
+                                    <div class="single-del">
+                                        <a href="">X</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="single-item">
+                                <div class="item">
+                                    <div class="single-img">
+                                        <a href=""><img src="img/cart/4.png"/></a>
+                                    </div>
+                                    <div class="single-name">
+                                        <div class="single-name-lk"><a href="">小爱音响</a></div>
+                                        <div class="single-price">￥135 x 1</div>
+                                    </div>
+                                    <div class="single-del">
+                                        <a href="">X</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="single-item">
+                                <div class="item">
+                                    <div class="single-img">
+                                        <a href=""><img src="img/cart/5.png"/></a>
+                                    </div>
+                                    <div class="single-name">
+                                        <div class="single-name-lk"><a href="">阿迪达斯外套</a></div>
+                                        <div class="single-price">￥335 x 1</div>
+                                    </div>
+                                    <div class="single-del">
+                                        <a href="">X</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="single-item">
+                                <div class="item">
+                                    <div class="single-img">
+                                        <a href=""><img src="img/cart/book.jpg"/></a>
+                                    </div>
+                                    <div class="single-name">
+                                        <div class="single-name-lk"><a href="">冰与火之歌全册</a></div>
+                                        <div class="single-price">￥535 x 1</div>
+                                    </div>
+                                    <div class="single-del">
+                                        <a href="">X</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="goto_gwc">
+                            <div class="gwc_sum">共<span>6</span>件商品,共计<span>￥958.00</span></div>
+                            <a href="">去购物车</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="nav">
+    <!--导航栏-->
+    <div class="nav-list">
+        <a href="">数码城</a>
+        <a href="">聚划算</a>
+        <a href="">电器城</a>
+        <a href="">智能生活</a>
+        <a href="">慕课超市</a>
+        <a href="">二手特惠</a>
+    </div>
+</div>
+
+<div class="banner">
+
+    <div class="banner-slide">
+        <!--轮播图-->
+        <div class="banner-body">
+            <a href="#">
+                <div class="pic one active"></div>
+            </a>
+            <a href="#">
+                <div class="pic two"></div>
+            </a>
+            <a href="#">
+                <div class="pic three"></div>
+            </a>
+            <a href="#">
+                <div class="pic four"></div>
+            </a>
+            <a href="#">
+                <div class="pic five"></div>
+            </a>
+            <a href="#">
+                <div class="pic six"></div>
+            </a>
+            <!--两边按钮-->
+            <div class="button" id="btn-left">
+                <img src="img/focus-carousel/pre2.png" alt="left">
+            </div>
+            <div class="button right" id="btn-right">
+                <img src="img/focus-carousel/pre.png" alt="right">
+            </div>
+            <!--右下方圆点-->
+            <div class="dots">
+                <span class="Active"></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+        </div>
+    </div>
+    <div class="banner-menu">
+        <!--主菜单-->
+        <div class="main-menu">
+            <div class="menu-nav">
+                <img src="img/icon/18.png"/><a href="">商品分类</a>
+            </div>
+            <ul class="main-list" style="list-style: none;">
+                <li><a href="#">家用电器</a><span class="menu-jt">></span></li>
+                <li><a href="#">手机</a><span>、</span><a href="#">运营商</a><span>、</span><a href="#">数码</a><span
+                        class="menu-jt">></span></li>
+                <li><a href="#">电脑</a><span>、</span><a href="#">办公</a><span class="menu-jt">></span></li>
+                <li><a href="#">家俱</a><span>、</span><a href="">厨具</a><span class="menu-jt">></span></li>
+                <li><a href="#">男装</a><span>、</span><a href="">女装</a><a href="#">童装</a><span>、</span><a
+                        href="">内衣</a><span class="menu-jt">></span></li>
+                <li><a href="#">化妆</a><span>、</span><a href="">清洁</a><a href="#">宠物</a><span class="menu-jt">></span>
+                </li>
+                <li><a href="#">运动户外</a><span>、</span><a href="">钟表</a><span class="menu-jt">></span></li>
+                <li><a href="#">汽车</a><span>、</span><a href="">汽车周边</a><span class="menu-jt">></span></li>
+                <li><a href="#">母婴</a><span>、</span><a href="">玩具</a><span class="menu-jt">></span></li>
+                <li><a href="#">食品</a><span>、</span><a href="">酒类</a><span>、</span><a href="#">生鲜</a><span>、</span><a
+                        href="">特产</a><span class="menu-jt">></span></li>
+                <li><a href="#">医疗保健</a><span class="menu-jt">></span></li>
+                <li><a href="#">图书</a><span>、</span><a href="">音像</a><span>、</span><a href="">电子书</a><span
+                        class="menu-jt">></span></li>
+                <li><a href="">彩票</a><span>、</span><a href="">旅行</a><span>、</span><a href="">充值</a><span>、</span><a
+                        href="">票务</a><span class="menu-jt">></span></li>
+                <li><a href="">理财</a><span>、</span><a href="">众筹</a><span>、</span><a href="">白条</a><span>、</span><a
+                        href="">保险</a><span class="menu-jt">></span></li>
+            </ul>
+        </div>
+    </div>
+    <!--二级菜单-->
+    <div class="sub-menu" style="display: none">
+        <div class="sub-item">
+            <dl class="sub-row">
+                <dt><a href="">电视</a></dt>
+                <dd>
+                    <a href="">曲面电视</a>
+                    <a href="">超薄电视</a>
+                    <a href="">OLED电视</a>
+                    <a href="">4K超清电视</a>
+                    <a href="">55英寸</a>
+                    <a href="">65英寸</a>
+                    <a href="">电视配件</a>
+                </dd>
+            </dl>
+            <dl class="sub-row">
+                <dt><a href="">空调</a></dt>
+                <dd>
+                    <a href="">壁挂式空调</a>
+                    <a href="">柜式空调</a>
+                    <a href="">中央空调</a>
+                    <a href="">变频空调</a>
+                    <a href="">1.5匹</a>
+                    <a href="">一级能效空调</a>
+                    <a href="">以旧换新</a>
+                </dd>
+            </dl>
+            <dl class="sub-row">
+                <dt><a href="">洗衣机</a></dt>
+                <dd>
+                    <a href="">滚筒洗衣机</a>
+                    <a href="">一体机</a>
+                    <a href="">迷你洗衣机</a>
+                    <a href="">烘干机</a>
+                    <a href="">洗衣机配件</a>
+                    <a href="">波纹洗衣机</a>
+                </dd>
+            </dl>
+            <dl class="sub-row">
+                <dt><a href="">冰箱</a></dt>
+                <dd>
+                    <a href="">多门</a>
+                    <a href="">对开门</a>
+                    <a href="">双门</a>
+                    <a href="">三门</a>
+                    <a href="">酒柜</a>
+                    <a href="">洗衣机配件</a>
+                    <a href="">冰箱配件</a>
+                </dd>
+            </dl>
+            <dl class="sub-row">
+                <dt><a href="">厨卫大电</a></dt>
+                <dd>
+                    <a href="">油烟机</a>
+                    <a href="">燃气灶</a>
+                    <a href="">集成炤</a>
+                    <a href="">消毒柜</a>
+                    <a href="">洗碗机</a>
+                    <a href="">电热水器</a>
+                    <a href="">燃气热水器</a>
+                    <a href="">嵌入式厨电</a>
+                </dd>
+            </dl>
+            <dl class="sub-row">
+                <dt><a href="">厨卫小电</a></dt>
+                <dd>
+                    <a href="">破壁机</a>
+                    <a href="">电烤箱</a>
+                    <a href="">电饭煲</a>
+                    <a href="">电压力锅</a>
+                    <a href="">电炖锅</a>
+                    <a href="">豆浆机</a>
+                    <a href="">料理机</a>
+                    <a href="">咖啡机</a>
+                    <a href="">电饼铛</a>
+                    <a href="">榨汁机/原浆机</a>
+                    <a href="">电水壶/热水瓶</a>
+                    <a href="">微波炉</a>
+                    <a href="">电火锅</a>
+                    <a href="">养生壶</a>
+                    <a href="">电磁炉</a>
+                    <a href="">面包机</a>
+                </dd>
+            </dl>
+        </div>
+        <div class="sub-item">
+            <dl class="sub-row">
+                <dt><a href="">手机通讯</a></dt>
+                <dd>
+                    <a href="">手机</a>
+                    <a href="">游戏手机</a>
+                    <a href="">老人机</a>
+                    <a href="">对讲机</a>
+                    <a href="">以旧换新</a>
+                    <a href="">手机维修</a>
+                </dd>
+            </dl>
+            <dl class="sub-row">
+                <dt><a href="">运营商</a></dt>
+                <dd>
+                    <a href="">合约机</a>
+                    <a href="">选号码</a>
+                    <a href="">固话宽带</a>
+                    <a href="">办套餐</a>
+                    <a href="">中国电信</a>
+                    <a href="">中国移动</a>
+                    <a href="">中国联通</a>
+                </dd>
+            </dl>
+        </div>
+        <div class="sub-item">
+            <dl class="sub-row">
+                <dt><a href="">手机通讯</a></dt>
+                <dd>
+                    <a href="">手机</a>
+                    <a href="">游戏手机</a>
+                    <a href="">老人机</a>
+                    <a href="">对讲机</a>
+                    <a href="">以旧换新</a>
+                    <a href="">手机维修</a>
+                </dd>
+            </dl>
+            <dl class="sub-row">
+                <dt><a href="">运营商</a></dt>
+                <dd>
+                    <a href="">合约机</a>
+                    <a href="">选号码</a>
+                    <a href="">固话宽带</a>
+                    <a href="">办套餐</a>
+                    <a href="">中国电信</a>
+                    <a href="">中国移动</a>
+                    <a href="">中国联通</a>
+                </dd>
+            </dl>
+        </div>
+        <div class="sub-item">
+            <dl class="sub-row">
+                <dt><a href="">电视</a></dt>
+                <dd>
+                    <a href="">曲面电视</a>
+                    <a href="">超薄电视</a>
+                    <a href="">OLED电视</a>
+                    <a href="">4K超清电视</a>
+                    <a href="">55英寸</a>
+                    <a href="">65英寸</a>
+                    <a href="">电视配件</a>
+                </dd>
+            </dl>
+            <dl class="sub-row">
+                <dt><a href="">空调</a></dt>
+                <dd>
+                    <a href="">壁挂式空调</a>
+                    <a href="">柜式空调</a>
+                    <a href="">中央空调</a>
+                    <a href="">变频空调</a>
+                    <a href="">1.5匹</a>
+                    <a href="">一级能效空调</a>
+                    <a href="">以旧换新</a>
+                </dd>
+            </dl>
+        </div>
+        <div class="sub-item">
+            <dl class="sub-row">
+                <dt><a href="">手机通讯</a></dt>
+                <dd>
+                    <a href="">手机</a>
+                    <a href="">游戏手机</a>
+                    <a href="">老人机</a>
+                    <a href="">对讲机</a>
+                    <a href="">以旧换新</a>
+                    <a href="">手机维修</a>
+                </dd>
+            </dl>
+            <dl class="sub-row">
+                <dt><a href="">运营商</a></dt>
+                <dd>
+                    <a href="">合约机</a>
+                    <a href="">选号码</a>
+                    <a href="">固话宽带</a>
+                    <a href="">办套餐</a>
+                    <a href="">中国电信</a>
+                    <a href="">中国移动</a>
+                    <a href="">中国联通</a>
+                </dd>
+            </dl>
+        </div>
+        <div class="sub-item">
+            <dl class="sub-row">
+                <dt><a href="">手机通讯</a></dt>
+                <dd>
+                    <a href="">手机</a>
+                    <a href="">游戏手机</a>
+                    <a href="">老人机</a>
+                    <a href="">对讲机</a>
+                    <a href="">以旧换新</a>
+                    <a href="">手机维修</a>
+                </dd>
+            </dl>
+            <dl class="sub-row">
+                <dt><a href="">运营商</a></dt>
+                <dd>
+                    <a href="">合约机</a>
+                    <a href="">选号码</a>
+                    <a href="">固话宽带</a>
+                    <a href="">办套餐</a>
+                    <a href="">中国电信</a>
+                    <a href="">中国移动</a>
+                    <a href="">中国联通</a>
+                </dd>
+            </dl>
+        </div>
+        <div class="sub-item">
+            <dl class="sub-row">
+                <dt><a href="">电视</a></dt>
+                <dd>
+                    <a href="">曲面电视</a>
+                    <a href="">超薄电视</a>
+                    <a href="">OLED电视</a>
+                    <a href="">4K超清电视</a>
+                    <a href="">55英寸</a>
+                    <a href="">65英寸</a>
+                    <a href="">电视配件</a>
+                </dd>
+            </dl>
+            <dl class="sub-row">
+                <dt><a href="">空调</a></dt>
+                <dd>
+                    <a href="">壁挂式空调</a>
+                    <a href="">柜式空调</a>
+                    <a href="">中央空调</a>
+                    <a href="">变频空调</a>
+                    <a href="">1.5匹</a>
+                    <a href="">一级能效空调</a>
+                    <a href="">以旧换新</a>
+                </dd>
+            </dl>
+        </div>
+        <div class="sub-item">
+            <dl class="sub-row">
+                <dt><a href="">手机通讯</a></dt>
+                <dd>
+                    <a href="">手机</a>
+                    <a href="">游戏手机</a>
+                    <a href="">老人机</a>
+                    <a href="">对讲机</a>
+                    <a href="">以旧换新</a>
+                    <a href="">手机维修</a>
+                </dd>
+            </dl>
+            <dl class="sub-row">
+                <dt><a href="">运营商</a></dt>
+                <dd>
+                    <a href="">合约机</a>
+                    <a href="">选号码</a>
+                    <a href="">固话宽带</a>
+                    <a href="">办套餐</a>
+                    <a href="">中国电信</a>
+                    <a href="">中国移动</a>
+                    <a href="">中国联通</a>
+                </dd>
+            </dl>
+        </div>
+        <div class="sub-item">
+            <dl class="sub-row">
+                <dt><a href="">手机通讯</a></dt>
+                <dd>
+                    <a href="">手机</a>
+                    <a href="">游戏手机</a>
+                    <a href="">老人机</a>
+                    <a href="">对讲机</a>
+                    <a href="">以旧换新</a>
+                    <a href="">手机维修</a>
+                </dd>
+            </dl>
+            <dl class="sub-row">
+                <dt><a href="">运营商</a></dt>
+                <dd>
+                    <a href="">合约机</a>
+                    <a href="">选号码</a>
+                    <a href="">固话宽带</a>
+                    <a href="">办套餐</a>
+                    <a href="">中国电信</a>
+                    <a href="">中国移动</a>
+                    <a href="">中国联通</a>
+                </dd>
+            </dl>
+        </div>
+        <div class="sub-item">
+            <dl class="sub-row">
+                <dt><a href="">电视</a></dt>
+                <dd>
+                    <a href="">曲面电视</a>
+                    <a href="">超薄电视</a>
+                    <a href="">OLED电视</a>
+                    <a href="">4K超清电视</a>
+                    <a href="">55英寸</a>
+                    <a href="">65英寸</a>
+                    <a href="">电视配件</a>
+                </dd>
+            </dl>
+            <dl class="sub-row">
+                <dt><a href="">空调</a></dt>
+                <dd>
+                    <a href="">壁挂式空调</a>
+                    <a href="">柜式空调</a>
+                    <a href="">中央空调</a>
+                    <a href="">变频空调</a>
+                    <a href="">1.5匹</a>
+                    <a href="">一级能效空调</a>
+                    <a href="">以旧换新</a>
+                </dd>
+            </dl>
+        </div>
+        <div class="sub-item">
+            <dl class="sub-row">
+                <dt><a href="">手机通讯</a></dt>
+                <dd>
+                    <a href="">手机</a>
+                    <a href="">游戏手机</a>
+                    <a href="">老人机</a>
+                    <a href="">对讲机</a>
+                    <a href="">以旧换新</a>
+                    <a href="">手机维修</a>
+                </dd>
+            </dl>
+            <dl class="sub-row">
+                <dt><a href="">运营商</a></dt>
+                <dd>
+                    <a href="">合约机</a>
+                    <a href="">选号码</a>
+                    <a href="">固话宽带</a>
+                    <a href="">办套餐</a>
+                    <a href="">中国电信</a>
+                    <a href="">中国移动</a>
+                    <a href="">中国联通</a>
+                </dd>
+            </dl>
+        </div>
+        <div class="sub-item">
+            <dl class="sub-row">
+                <dt><a href="">手机通讯</a></dt>
+                <dd>
+                    <a href="">手机</a>
+                    <a href="">游戏手机</a>
+                    <a href="">老人机</a>
+                    <a href="">对讲机</a>
+                    <a href="">以旧换新</a>
+                    <a href="">手机维修</a>
+                </dd>
+            </dl>
+            <dl class="sub-row">
+                <dt><a href="">运营商</a></dt>
+                <dd>
+                    <a href="">合约机</a>
+                    <a href="">选号码</a>
+                    <a href="">固话宽带</a>
+                    <a href="">办套餐</a>
+                    <a href="">中国电信</a>
+                    <a href="">中国移动</a>
+                    <a href="">中国联通</a>
+                </dd>
+            </dl>
+        </div>
+        <div class="sub-item">
+            <dl class="sub-row">
+                <dt><a href="">电视</a></dt>
+                <dd>
+                    <a href="">曲面电视</a>
+                    <a href="">超薄电视</a>
+                    <a href="">OLED电视</a>
+                    <a href="">4K超清电视</a>
+                    <a href="">55英寸</a>
+                    <a href="">65英寸</a>
+                    <a href="">电视配件</a>
+                </dd>
+            </dl>
+            <dl class="sub-row">
+                <dt><a href="">空调</a></dt>
+                <dd>
+                    <a href="">壁挂式空调</a>
+                    <a href="">柜式空调</a>
+                    <a href="">中央空调</a>
+                    <a href="">变频空调</a>
+                    <a href="">1.5匹</a>
+                    <a href="">一级能效空调</a>
+                    <a href="">以旧换新</a>
+                </dd>
+            </dl>
+        </div>
+        <div class="sub-item">
+            <dl class="sub-row">
+                <dt><a href="">手机通讯</a></dt>
+                <dd>
+                    <a href="">手机</a>
+                    <a href="">游戏手机</a>
+                    <a href="">老人机</a>
+                    <a href="">对讲机</a>
+                    <a href="">以旧换新</a>
+                    <a href="">手机维修</a>
+                </dd>
+            </dl>
+            <dl class="sub-row">
+                <dt><a href="">运营商</a></dt>
+                <dd>
+                    <a href="">合约机</a>
+                    <a href="">选号码</a>
+                    <a href="">固话宽带</a>
+                    <a href="">办套餐</a>
+                    <a href="">中国电信</a>
+                    <a href="">中国移动</a>
+                    <a href="">中国联通</a>
+                </dd>
+            </dl>
+        </div>
+    </div>
+
+    <div class="banner-right">
+        <div class="right-content">
+            <div class="mkb">
+                <div class="mkb-title">幕快报</div>
+                <a id="mkb-more" href="">更多></a>
+                <div class="mkb-new">
+                    <ul style="list-style: none;">
+                        <li><span>[特惠] &nbsp;</span><a href="">精选图书每满150减50</a></li>
+                        <li><span>[公告] &nbsp;</span><a href="">因广州图书仓库搬迁配送延时</a></li>
+                        <li><span>[特惠] &nbsp;</span><a href="">爆款手机12期免息</a></li>
+                        <li><span>[公告] &nbsp;</span><a href="">受台风影响，配送延迟</a></li>
+                        <li><span>[特惠] &nbsp;</span><a href="">大闸蟹领券低至180一斤</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mkb-fwzx">
+                <ul class="mkb-ul" style="list-style: none;overflow: hidden;">
+                    <li>
+                        <a href=""><img src="img/icon/1.png">话费</a>
+                    </li>
+                    <li>
+
+                        <a href=""> <img src="img/icon/2.png">机票</a>
+                    </li>
+                    <li>
+
+                        <a href=""><img src="img/icon/3.png">电影票</a>
+                    </li>
+                    <li>
+
+                        <a href=""><img src="img/icon/4.png">游戏</a>
+                    </li>
+                    <li>
+
+                        <a href=""><img src="img/icon/5.png">彩票</a>
+                    </li>
+                    <li>
+
+                        <a href=""><img src="img/icon/6.png">加油卡</a>
+                    </li>
+                    <li>
+
+                        <a href=""><img src="img/icon/7.png">酒店</a>
+                    </li>
+                    <li>
+
+                        <a href=""><img src="img/icon/8.png">火车票</a>
+                    </li>
+                    <li>
+
+                        <a href=""> <img src="img/icon/9.png">众筹</a>
+                    </li>
+                    <li>
+
+                        <a href=""> <img src="img/icon/10.png">理财</a>
+                    </li>
+                    <li>
+                        <a href=""><img src="img/icon/11.png">礼品卡</a>
+                    </li>
+                    <li>
+                        <a href=""><img src="img/icon/12.png">白条</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="mkb-bottom">
+                <a href=""><img src="img/ad.png" style="width: 241px;height: 84px;"/></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content">
+    <!--楼层一-->
+    <div class="cont_top">
+        <div class="top-title">
+            <div class="title-index">
+                <span class="title-tb">1F</span>
+                <span class="title-fl">服装鞋包</span>
+            </div>
+            <div class="title-nav">
+                <span id="color_red">大牌</span>
+                <span class="lr-brd">男装</span>
+                <span>女装</span>
+            </div>
+            <img class="cont-jtzs" src="img/floor-arrow.png"/>
+        </div>
+            <div class="goods-list goods-list-act">
+                <ul style="list-style: none;">
+                    <li><a href=""><img src="img/floor/1.png"/>匡威男装外套</a><span class="goods-price">￥479</span></li>
+                    <li><img src="img/floor/1.png"/><a href="">阿迪达斯训练</a><span class="goods-price">￥335</span></li>
+                    <li><img src="img/floor/1.jpg"/><a href="">跑步短袖</a><span class="goods-price">￥159</span></li>
+                    <li><img src="img/floor/1.jpg"/><a href="">夜跑步短袖</a><span class="goods-price">￥335</span></li>
+                    <li><img src="img/floor/1.png"/><a href="">特步官方运动帽男女帽子</a><span class="goods-price">￥479</span></li>
+                    <li><img src="img/floor/1.png"/><a href="">阿迪达斯训练运动服</a><span class="goods-price">￥335</span></li>
+                    <li><img src="img/floor/2.jpg"/><a href="">匡威男装外套</a><span class="goods-price">￥479</span></li>
+                    <li><img src="img/floor/3.jpg"/><a href="">阿迪达斯训练</a><span class="goods-price">￥335</span></li>
+                    <li><img src="img/floor/5.jpg"/><a href="">跑步短袖</a><span class="goods-price">￥159</span></li>
+                    <li><img src="img/floor/6.jpg"/><a href="">夜跑步短袖</a><span class="goods-price">￥335</span></li>
+                    <li><img src="img/floor/2.jpg"/><a href="">特步官方运动帽男女帽子</a><span class="goods-price">￥479</span></li>
+                    <li><img src="img/floor/5.jpg"/><a href="">阿迪达斯训练运动服</a><span class="goods-price">￥335</span></li>
+                </ul>
+            </div>
+            <div class="goods-list">
+                <ul style="list-style: none;">
+                    <li><img src="img/floor/2.jpg"/><a href="">匡威男装外套</a><span class="goods-price">￥479</span></li>
+                    <li><img src="img/floor/3.jpg"/><a href="">阿迪达斯训练</a><span class="goods-price">￥335</span></li>
+                    <li><img src="img/floor/5.jpg"/><a href="">跑步短袖</a><span class="goods-price">￥159</span></li>
+                    <li><img src="img/floor/6.jpg"/><a href="">夜跑步短袖</a><span class="goods-price">￥335</span></li>
+                    <li><img src="img/floor/2.jpg"/><a href="">特步官方运动帽男女帽子</a><span class="goods-price">￥479</span></li>
+                    <li><img src="img/floor/5.jpg"/><a href="">阿迪达斯训练运动服</a><span class="goods-price">￥335</span></li>
+                </ul>
+            </div>
+            <div class="goods-list">
+                <ul style="list-style: none;">
+                    <li><img src="img/floor/1.png"/><a href="">匡威男装外套</a><span class="goods-price">￥479</span></li>
+                    <li><img src="img/floor/1.png"/><a href="">阿迪达斯训练</a><span class="goods-price">￥335</span></li>
+                    <li><img src="img/floor/1.jpg"/><a href="">跑步短袖</a><span class="goods-price">￥159</span></li>
+                    <li><img src="img/floor/1.jpg"/><a href="">夜跑步短袖</a><span class="goods-price">￥335</span></li>
+                </ul>
+            </div>
+    </div>
+    <!--二楼-->
+    <div class="cont_top">
+        <div class="top-title">
+            <div class="title-index">
+                <span class="title-tb">2F</span>
+                <span class="title-fl">个性美妆</span>
+            </div>
+            <div class="title-nav">
+                <span id="color_red">热门</span><img src=""/>
+                <span class="lr-brd">国际大牌</span>
+                <span>国际名品</span>
+            </div>
+            <img class="cont-jtzs" src="img/floor-arrow.png"/>
+        </div>
+            <div class="goods-list goods-list-act">
+                <ul style="list-style: none;">
+                    <li><img src="img/floor/1.png"/><a href="">匡威男装外套</a><span class="goods-price">￥479</span></li>
+                    <li><img src="img/floor/1.png"/><a href="">阿迪达斯训练</a><span class="goods-price">￥335</span></li>
+                    <li><img src="img/floor/1.jpg"/><a href="">跑步短袖</a><span class="goods-price">￥159</span></li>
+                    <li><img src="img/floor/1.jpg"/><a href="">夜跑步短袖</a><span class="goods-price">￥335</span></li>
+                    <li><img src="img/floor/1.png"/><a href="">特步官方运动帽男女帽子</a><span class="goods-price">￥479</span></li>
+                    <li><img src="img/floor/1.png"/><a href="">阿迪达斯训练运动服</a><span class="goods-price">￥335</span></li>
+                    <li><img src="img/floor/2.jpg"/><a href="">匡威男装外套</a><span class="goods-price">￥479</span></li>
+                    <li><img src="img/floor/3.jpg"/><a href="">阿迪达斯训练</a><span class="goods-price">￥335</span></li>
+                    <li><img src="img/floor/5.jpg"/><a href="">跑步短袖</a><span class="goods-price">￥159</span></li>
+                    <li><img src="img/floor/6.jpg"/><a href="">夜跑步短袖</a><span class="goods-price">￥335</span></li>
+                    <li><img src="img/floor/2.jpg"/><a href="">特步官方运动帽男女帽子</a><span class="goods-price">￥479</span></li>
+                    <li><img src="img/floor/5.jpg"/><a href="">阿迪达斯训练运动服</a><span class="goods-price">￥335</span></li>
+                </ul>
+            </div>
+            <div class="goods-list">
+                <ul style="list-style: none;">
+                    <li><img src="img/floor/2.jpg"/><a href="">匡威男装外套</a><span class="goods-price">￥479</span></li>
+                    <li><img src="img/floor/3.jpg"/><a href="">阿迪达斯训练</a><span class="goods-price">￥335</span></li>
+                    <li><img src="img/floor/5.jpg"/><a href="">跑步短袖</a><span class="goods-price">￥159</span></li>
+                    <li><img src="img/floor/6.jpg"/><a href="">夜跑步短袖</a><span class="goods-price">￥335</span></li>
+                    <li><img src="img/floor/2.jpg"/><a href="">特步官方运动帽男女帽子</a><span class="goods-price">￥479</span></li>
+                    <li><img src="img/floor/5.jpg"/><a href="">阿迪达斯训练运动服</a><span class="goods-price">￥335</span></li>
+                </ul>
+            </div>
+            <div class="goods-list">
+                <ul style="list-style: none;">
+                    <li><img src="img/floor/1.png"/><a href="">匡威男装外套</a><span class="goods-price">￥479</span></li>
+                    <li><img src="img/floor/1.png"/><a href="">阿迪达斯训练</a><span class="goods-price">￥335</span></li>
+                    <li><img src="img/floor/1.jpg"/><a href="">跑步短袖</a><span class="goods-price">￥159</span></li>
+                    <li><img src="img/floor/1.jpg"/><a href="">夜跑步短袖</a><span class="goods-price">￥335</span></li>
+                </ul>
+            </div>
+    </div>
+</div>
+<div class="Link">
+    <div class="link-b">
+        <h4>消费者保障</h4>
+        <p><a href="">保障范围</a><a href="">退货退款流程</a><a href="">服务中心</a></p>
+        <p><a href="">更多特色服务</a></p>
+    </div>
+    <div class="link-b">
+        <h4>新手上路</h4>
+        <p><a href="">新手专区</a><a href="">消费警示</a><a href="">交易安全</a></p>
+        <p><a href="">24小时在线帮助</a><a href="">免费开店</a></p>
+    </div>
+    <div class="link-b">
+        <h4>付款方式</h4>
+        <p><a href="">快捷支付</a><a href="">信用卡</a><a href="">余额宝</a><a href="">蚂蚁花呗</a></p>
+        <p><a href="">货到付款</a></p>
+    </div>
+    <div class="link-b">
+        <h4>幕淘特色</h4>
+        <p><a href="">手机慕淘</a><a href="">慕淘信</a><a href="">大众评审</a><a href="">B格指南</a></p>
+    </div>
+
+</div>
+<div class="footer">
+    <div><a href="">关于慕淘</a><a href="">合作伙伴</a><a href="">营销中心</a><a href="">廉政举报</a><a href="">联系客服</a><a
+            href="">开放平台</a><a href="">诚招英才</a><a href="">联系我们</a><a href="">网站地图</a><a href="">法律声明</a><a
+            href="">知识产权</a></div>
+    <p>&copy; 2018 ;imooc.com All Rights Reserved</p>
+</div>
+<div class="cb-nav">
+    <div class="cb-nav-item">
+        <div class="cb-nav-pic"><img src="img/icon/13.png"/></div>
+        <div class="cb-nav-lk" style="top: 0;"><a href="">会员</a></div>
+    </div>
+    <div class="cb-nav-item">
+        <div class="cb-nav-pic"><img src="img/icon/14.png"/></div>
+        <div class="cb-nav-lk" style="top: 34px;"><a href="">购物车</a></div>
+    </div>
+    <div class="cb-nav-item">
+        <div class="cb-nav-pic"><img src="img/icon/15.png"/></div>
+        <div class="cb-nav-lk" style="top: 68px;"><a href="">我的关注</a></div>
+    </div>
+    <div class="cb-nav-item">
+        <div class="cb-nav-pic"><img src="img/icon/16.png"/></div>
+        <div class="cb-nav-lk" style="top: 102px;"><a href="">我的消息</a></div>
+    </div>
+    <div class="cb-nav-item">
+        <div class="cb-nav-pic"><img src="img/icon/17.png"/></div>
+        <div class="cb-nav-lk" style="top: 136px;"><a href="">顶部</a></div>
+    </div>
+
+</div>
+
+<script src="JS/jquery-1.12.4.js"></script>
+<script src="JS/mutaowang.js"></script>
+</body>
+</html>

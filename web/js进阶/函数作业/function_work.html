@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>购物车结算功能模块函数</title>
+	<link rel="stylesheet" href="css/index.css" />
+</head>
+
+<body>
+	<div class="header">
+		<div class="logo">
+			<a href=""><img src="img/logo.png" /></a>
+		</div>
+		<div class="nav">
+			<a href="" class="nav__item">课程</a>
+			<a href="" class="nav__item on">
+				职业路径
+				<sup><img src="img/icon-new.png" /></sup>
+			</a>
+			<a href="" class="nav__item">实战</a>
+			<a href="" class="nav__item">猿问</a>
+			<a href="" class="nav__item">手记</a>
+		</div>
+
+		<div class="icon">
+			<a href="" class="icon__item icon-1"></a>
+			<a href="" class="icon__item icon-2"></a>
+			<a href="" class="icon__item icon-3"></a>
+		</div>
+		<div class="so">
+			<input type="text" class="inp" />
+			<input type="submit" value="" class="btn" />
+		</div>
+	</div>
+	<div class="banner">
+		<!--<a href="">-->
+		<!--<img src="img/cart-header-bg.jpg" alt="">-->
+		<!--</a>-->
+	</div>
+	<div class="main">
+		<div class="tit">我的购物车</div>
+		<div class="shopcar">
+			<div class="container">
+				<div class="top">
+					<div class="all">
+						<input type="checkbox" value="" id="all" checked />全选
+						<span>商品名称</span>
+						<span>总价</span>
+						<span>单价</span>
+						<span>数量</span>
+						<span>操作</span>
+					</div>
+				</div>
+				<!--列表-->
+				<div class="item">
+					<div class="pic">
+						<input type="checkbox" class="alone" checked />
+						<img src="img/g1.jpg" alt="" />
+					</div>
+					<div class="txt">前端小白成长记</div>
+					<p class="box"><i>￥</i><span class="prices">395</span></p>
+					<p class="box"><i>￥</i><span class="price">395</span></p>
+					<p class="box">
+						<a href="#3" class="subtract">-</a>
+						<input type="text" value="1" class="count" />
+						<a href="#3" class="add">+</a>
+					</p>
+					<p class="box"><a href="#">删除</a></p>
+				</div>
+				<div class="item">
+					<div class="pic">
+						<input type="checkbox" class="alone" checked />
+						<img src="img/g1.jpg" alt="" />
+					</div>
+					<div class="txt">前端小白成长记</div>
+					<p class="box"><i>￥</i><span class="prices">395</span></p>
+					<p class="box"><i>￥</i><span class="price">395</span></p>
+					<p class="box">
+						<a href="#3" class="subtract">-</a>
+						<input type="text" value="1" class="count" />
+						<a href="#3" class="add">+</a>
+					</p>
+					<p class="box"><a href="#">删除</a></p>
+				</div>
+				<div class="item">
+					<div class="pic">
+						<input type="checkbox" class="alone" checked />
+						<img src="img/g1.jpg" alt="" />
+					</div>
+					<div class="txt">前端小白成长记</div>
+					<p class="box"><i>￥</i><span class="prices">395</span></p>
+					<p class="box"><i>￥</i><span class="price">395</span></p>
+					<p class="box">
+						<a href="#3" class="subtract">-</a>
+						<input type="text" value="1" class="count" />
+						<a href="#3" class="add">+</a>
+					</p>
+					<p class="box"><a href="#">删除</a></p>
+				</div>
+				<div class="item">
+					<div class="pic">
+						<input type="checkbox" class="alone" id="onee" checked />
+						<img src="img/g1.jpg" alt="" />
+					</div>
+
+					<div class="txt">前端小白成长记</div>
+					<p class="box"><i>￥</i><span class="prices">395</span></p>
+					<p class="box"><i>￥</i><span class="price">395</span></p>
+					<p class="box">
+						<a href="#3" class="subtract">-</a>
+						<input type="text" value="1" class="count" />
+						<a href="#3" class="add">+</a>
+					</p>
+					<p class="box"><a href="#">删除</a></p>
+				</div>
+				<!--结算-->
+				<div class="clear">
+					<a href="#">去结算</a>
+					<p>
+						应付金额
+						<i>￥</i><span class="cash"></span>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer class="footer">
+		<div class="footer-link">
+			<a href="" class="footer-link__item">网站首页</a>
+			<a href="" class="footer-link__item">企业合作</a>
+			<a href="" class="footer-link__item">人才招聘</a>
+			<a href="" class="footer-link__item">联系我们</a>
+			<a href="" class="footer-link__item">讲师招募</a>
+			<a href="" class="footer-link__item">常见问题</a>
+			<a href="" class="footer-link__item">意见反馈</a>
+			<a href="" class="footer-link__item">慕课大学</a>
+			<a href="" class="footer-link__item">友情链接</a>
+		</div>
+		<div class="footer-copy">
+			Copyright © 2016 imooc.com All Rights Reserved | 京ICP备 13046642号-2
+		</div>
+		<div class="footer-share">
+			<a href="" class="footer-share__item footer-share__item_i_1"></a>
+			<a href="" class="footer-share__item footer-share__item_i_4"></a>
+			<a href="" class="footer-share__item footer-share__item_i_2"></a>
+			<a href="" class="footer-share__item footer-share__item_i_3"></a>
+		</div>
+	</footer>
+
+	<script src="js/jquery-1.12.4.js"></script>
+	<script src="js/index.js"></script>
+</body>
+
+</html>

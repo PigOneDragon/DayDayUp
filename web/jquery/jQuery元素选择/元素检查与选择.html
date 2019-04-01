@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>检查获取元素</title>
+    <style>
+        .item1{color: #9a6e3a;}
+    </style>
+    <script src="../jquery-1.12.4.js"></script>
+</head>
+<body>
+    <ul>
+        <li class="item1">1<P>s</P></li>
+        <li class="item1">2</li>
+        <li class="item1">3</li>
+        <li class="item1">4</li>
+        <li class="item1">5</li>
+        <li class="item1">6</li>
+        <li class="item1">7</li>
+        <li class="item1">8</li>
+        <li class="item1">9</li>
+    </ul>
+    <script>
+        //get(n)  [n] 返回jQuery对象的索引n的DOM对象，从0开始，get()为空，返回DOM集合
+        var items=$('.item1');
+        // console.log(items[3]);
+        // console.log(items.get(0));
+        // console.log(items.get());
+        // console.log(items.first());//返回的是个jQuery对象
+        // console.log(items.last());//返回的是个jQuery对象
+        // console.log(items.eq());//为空返回一个空jQuery对象
+        // console.log(items.eq(5));//返回索引为5的li，是个jQuery对象
+        //$('li:eq(0)') 是通过选择器的方式来获取jQuery对象，$('li').eq(0) 是通过eq方法提取出对应索引的jQuery对象，两个的原理
+        // 不同，效率也不同，eq方法的性能比eq选择器要高很多。两种方式获取到的返回值也不一样，虽然都是jQuery对象，但是包含不同的属性，
+        // 比如$('li:eq(0)')包含一个selector属性，存储着选择器的值"li:eq(0)"。而且由于两个对象并不指向同一个对象，指针不同，所以即使属性一模一样，也不完全相等
+        console.log($('li')[0]);//返回li下得第一个，是个DOM对象
+        console.log(items.eq(0)[0]);//返回eq(0)jQuery对象里的第一个DOM对象
+        console.log(items.eq(0)[0]===$('li')[0]);//true
+        console.log($('li:eq(0)'));//选择li下的索引为0的jQuery对象
+        console.log($('li').eq(0));//jQuery的eq方法选择的第一个li
+        console.log($('li').eq(0)===$('li:eq(0)'));//flase
+        console.log($('li').eq(0)[0]);//jQuery选择器选择li下的索引为0的jQuery对象的第一个DOM对象
+        console.log($('li').first());//jQuery选择器选择li下的第一个jQuery对象
+        console.log($('li').first()[0]);//jQuery选择器选择li下的第一个jQuery对象下的第一个DOM对象
+
+        console.log($('li').first());
+        console.log($('li').eq(0));
+        console.log($('li').eq(0)===$('li').first());
+        console.log($('li').eq(0).index());//返回索引值
+
+
+    </script>
+</body>
+</html>

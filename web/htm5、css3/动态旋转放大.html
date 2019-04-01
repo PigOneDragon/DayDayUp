@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3-1作业</title>
+    <style>
+        div {
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 50px;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 200px;
+            height: 50px;
+            margin: auto;
+            cursor: pointer;
+            text-align: center;
+            background: #abcdef;
+            /*此处写代码*/
+            transform: rotateZ(0deg) scale(1);
+            transition: transform 1s ease-in-out;
+            /*animation-name: key;*/
+            /*animation-duration: 5s;*/
+
+        }
+        /*此处写代码*/
+        div:hover{
+            transform: rotateZ(360deg) scale(2);
+            /*transition: transform 1s ease-in-out;*/
+        }
+            /*@keyframes key{*/
+                /*from {rotate(0deg);}*/
+                /*to {transform: rotateZ(360deg) scale(2);}*/
+
+            /*}*/
+    </style>
+</head>
+<body>
+<div>www.imooc.com</div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+.container {
+  width: 600px;
+  height: 400px;
+}
+.sky {
+  height: 240px;
+  background: linear-gradient(#c4e4fd, #ffffff);
+  position: relative;
+}
+.sky__cloud {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #fff;
+  position: relative;
+  float: left;
+}
+.ground {
+  height: 160px;
+  background: linear-gradient(#ffffff, #94be59);
+  position: relative;
+}
+.ground img {
+  display: block;
+  width: 30%;
+  height: 97%;
+  position: absolute;
+  right: 10%;
+  bottom: 0;
+}
+/*# sourceMappingURL=云朵css3动画.css.map */

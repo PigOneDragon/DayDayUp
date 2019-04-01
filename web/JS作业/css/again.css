@@ -1,0 +1,178 @@
+*{margin: 0;padding: 0;text-decoration: none;}
+.main{
+    width: 1200px;
+    height: 520px;
+    min-width: 700px;
+    margin: 0 auto  ;
+    overflow: hidden;
+}
+/*tab标签*/
+.tab{
+    width: 1200px;
+    height: 60px;
+    text-align: center;
+    cursor: pointer;
+}
+.tab span{
+    display: inline-block;
+    font: 22px "微软雅黑";
+    line-height: 60px;
+    width: 300px;
+    height: 60px;
+    border-radius: 8px;
+}
+.active-span{
+    background-color: #fc0;
+    color: #93999f;
+}
+/*轮播图*/
+.pics{
+    width: 1200px;
+    height: 460px;
+    /*font-size: 0;//去除行标签缝隙*/
+    overflow: hidden;
+    position: relative;
+}
+.pics img{display: none;}
+
+/*轮播图下的4个小圆点*/
+.pics .dots{
+    width: 100px;
+    height: 25px;
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+}
+.pics .dots span{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: transparent;
+    margin: 0 5px;
+    box-shadow: 0 0 0 1px rgba(255,255,255,0.5) inset;
+    /*cursor: default;*/
+}
+.pics .dots span.Active{
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(255,255,255,0.6);
+}
+/*图片两边按钮*/
+.pics .button{
+    width: 20px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 200px;
+    margin-top: -25px;
+    background-color: rgba(255,255,255,0.3);
+    color: rgba(255,255,255,0.6);
+    /*background-color: white;*/
+
+    /*vertical-align: middle;*/
+    text-align: center;
+}
+.pics .next{
+    transform: rotate(180deg);/*旋转，负号逆时针旋转*/
+    right: 10px;
+    margin-left: auto;/*整体已设置了左边距离，要想实现在右边需将margin-left设成auto*/
+}
+.pics .button:hover{background-color: rgba(0,0,0,0.3);}
+/*自定义图标*/
+@font-face {
+  font-family: 'iconfont';
+  src: url('font/iconfont.eot');
+  src: url('font/iconfont.eot?#iefix') format('embedded-opentype'),
+      url('font/iconfont.woff2') format('woff2'),
+      url('font/iconfont.woff') format('woff'),
+      url('font/iconfont.ttf') format('truetype'),
+      url('font/iconfont.svg#iconfont') format('svg');
+}
+.button i{
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 50px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/*主菜单*/
+.menu{
+    width: 200px;
+    height: 460px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255,255,255,0.6);
+}
+.menu .main-list{
+    width: 200px;
+    height: 450px;
+    margin-top: 10px;
+}
+.menu .main-list li{
+    width: 188px;
+    height: 20px;
+    padding: 5px 6px;
+}
+.menu .main-list li a,.menu .main-list li i{
+    font-size: 16px;
+    line-height: 20px;
+    color: #fff;
+}
+.menu .main-list li.list-li{background-color: rgba(0,0,0,0.6);}
+/*二级菜单*/
+.sub-menu{
+    width: 500px;
+    height: 460px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 200px;
+    display: none;
+    overflow: hidden;
+}
+.menu-items{
+    width: 500px;
+    height: 460px;
+    position: relative;
+    display: none;
+    /*top: 0;*/
+    /*left: 200px;*/
+}
+.menu-items .title{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    /*background-color: #5e5e5e;*/
+    z-index: 5;
+}
+.menu-items .title a{
+    display: inline-block;
+    color: #fff;
+    font-size: 12px;
+    margin: 0 10px;
+    background-color: #5e5e5e;
+}
+.menu-items .title i{
+    font-family: "iconfont";
+    font-size: 12px;
+}
+.menu-items .menu-item{
+    position: absolute;
+    top: 50px;
+    left: 30px;
+}
+.menu-item .zdy {
+    overflow: hidden;
+}
+.menu-item .zdy dt,dd{
+    float: left;
+    margin-right: 10px;
+}
+.menu-item .zdy a{color: #93999f}
+dt i.iconfont{
+    font-family: "iconfont";
+    /*font-size: 12px;*/
+}

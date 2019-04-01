@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>清除浮动</title>
+	<style type="text/css">
+	div{border:3px black solid;}
+		.one{background-color: blue;
+			width: 50px;
+			height: 50px;
+			float: left;
+		}
+		.two{background-color: green;
+			width: 50px;
+			height: 50px;
+			float: left;
+		}
+		.three{background-color: orange;
+			width: 50px;
+			height: 50px;
+			float: left;
+		}
+		.four{background-color: red;
+			width: 150px;
+			height: 150px;
+
+		}
+		/*方法四：给父容器添加固定的高度，防止子元素浮动带来的高度塌陷*/
+		/*方法三：常用，在浮动元素的容器中添加一个after伪类，设置内容为空，高度为0，清除两边浮动，转换为块元素，显示(visibility)：隐藏，考虑低版本IE的兼容性，还需在父容器添加zoom:1属性*/
+		.clear:after{content: '.';
+				height: 0;
+				clear: both;
+				display: block;
+				visibility: hidden;}
+		/*.clear1{clear: both;}*/   /*方法二：在浮动元素容器的最后添加一个空的块级标签，设置清除属性，清除子元素浮动带来的父容器高度坍塌，此时的效果是父元素容器高度被一个新的空盒子从上至下撑起，原来塌陷的内容挤压在下方*/
+
+		/*.clear{overflow: hidden;
+				zoom:1;}*/
+		/*方法一：在父容器中设置浮动溢出（overflow）隐藏，考虑低版本IE的兼容性，还需添加zoom:1属性，与方法三一致坍塌的内容在父容器上方，然后再加一个空盒子撑起父容器高度*/
+	</style>
+</head>
+<body>
+	<div class="clear">
+		<div class="one">1111</div>
+		<div class="two">2222</div>
+		<div class="three">3333</div>
+		<div class="clear1"></div>
+	</div>
+	<div class="four">4444</div>
+</body>
+</html>

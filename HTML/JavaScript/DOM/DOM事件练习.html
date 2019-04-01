@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM事件练习</title>
+    <style>
+        button  {
+            width: 100px;height: 50px;}
+    </style>
+</head>
+<body>
+
+<!--<input type="button" value="点我试试" onclick="this.style.backgroundColor='green'"/>-->
+    <!--<button onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">开 始</button>-->
+    <!--<button onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">结 束</button>-->
+<!--点击全选变反选，点击反选变全选，可利用innerHTML,跟className属性实现-->
+<input type="button" class="all" value="全选">
+<script>
+    // function mouseOver(over) {
+    //     over.style.color="pink";
+    // }
+    // function mouseOut(out) {
+    //     out.style.color="yellow";
+    // }
+    //DOM 0级事件，先找到document对象，在进行绑定，getelementsbytagname返回的是一个数组对象
+    var btn=document.getElementsByTagName("input")[0];
+    console.log(btn);
+    function clickON() {
+        if (this.value=="全选") {
+            this.style.color="yellow";
+            this.value="反选";
+        }else {
+            this.style.color="red";
+            this.value="全选";
+        }
+
+    }
+    btn.onclick=clickON;
+</script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*div{*/
+        /*width: 100px;*/
+        /*height: 100px;*/
+        /*border-bottom: 1px red solid;*/
+        /*}*/
+        .txt {
+            background-color: #9a6e3a;
+        }
+
+        .cb-nav-item {
+            width: 32px;
+            height: 36px;
+            overflow: hidden;
+            position: fixed;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+
+        .cb-nav-pic {
+            width: 32px;
+            height: 36px;
+            background-color: #55a532;
+            float: right;
+            /*display: none;*/
+        }
+
+        .cb-nav-lk {
+            width: 68px;
+            height: 36px;
+            float: left;
+        }
+    </style>
+
+</head>
+<body>
+<div class="right-nav">
+    <div class="info"></div>
+    <div class="txt">文字</div>
+</div>
+<p>sssssss</p>
+<div class="cb-nav-item">
+    <div class="cb-nav-pic">图片</div>
+    <div class="cb-nav-lk"><a href="">会员</a></div>
+</div>
+<script src="../jquery/jquery-1.12.4.js"></script>
+<script>
+    $('.right-nav').hover(function () {
+            $('.txt').animate({
+                'width': 100
+            }, 100)
+        }, function () {
+            $('.txt').animate({
+                'width': 50
+            })
+        }
+    );
+    $('.cb-nav-item').hover(function () {
+            $('.cb-nav-item').animate({
+                'width': 100
+            }, 100)
+        }, function () {
+            $('.cb-nav-item').animate({
+                'width': 32
+            })
+        }
+    );
+    $('p').fadeIn(("slow");
+</script>
+</body>
+</html>

@@ -1,0 +1,257 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+a{
+    text-decoration: none;
+}
+.clearfix:after{
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    zoom: 1;
+}
+.wrap{
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+/*头部*/
+header.header{
+    height: 95px;
+    line-height: 95px;
+    border-top: 4px solid #ea5c27;
+    font-size: 14px;
+}
+/*logo*/
+.header-logo{
+    float: left;
+    width: 186px;
+    height: 100%;
+    margin-top: 25px;
+}
+.header-logo a{
+    display: block;
+    width: 188px;
+    height: 44px;
+}
+.header-logo a img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+/*头部的导航区*/
+.header-nav{
+    float: right;
+}
+.header-nav a{
+    color: #000;
+    margin-left: 65px;
+}
+.header-nav a.active{
+    color: #ea5c27;
+}
+/*banner图*/
+.banner{
+    height: 320px;
+    /*background-color: orange;*/
+}
+.banner img{
+    width: 100%;
+    height: 100%;
+}
+/*新闻列表*/
+.news{
+    position: relative;
+    float: left;
+}
+.news h3{
+    position: absolute;
+    top: -120px;
+    left: 0;
+    width:240px;
+    height: 85px;
+    font-size: 30px;
+    padding-top: 35px;
+    text-indent: 20px;
+    color: #fff;
+    background-color: rgba(0,0,0,.7);
+}
+.news ul{
+    list-style: none;
+}
+.news ul li{
+    width: 238px;
+    height: 77px;
+    line-height: 80px;
+    text-indent: 30px;
+    margin-bottom: 10px;
+    border: 1px solid #eee;
+    border-bottom: 2px solid #eee;
+    /*box-shadow: 0 5px 1px #db5523;*/
+}
+.news ul li.active_li{
+    background-color: #ea5c27;
+    border: 1px solid #db5523;
+    border-bottom: 2px solid #db5523;
+}
+.news ul li.active_li a{
+    color: #fff;
+}
+.news ul li a{
+    color: #000;
+}
+.news ul li i{
+    float: right;
+    padding-right: 20px;
+    color: #e0e0e0;
+}
+/*新闻主体*/
+.items{
+    float: left;
+    width: 930px;
+    margin-left: 30px;
+}
+.items-title{
+    box-sizing: border-box;
+    height: 60px;
+    /*line-height: 60px;*/
+    padding-top: 25px;
+    border: 1px solid #eee;
+    border-top: none;
+    /*padding-left: 30px;*/
+    /*background: url("../img/home.png") left center no-repeat;*/
+}
+.items-title nav{
+    background: url("../img/home.png") left center no-repeat;
+    padding-left: 30px;
+}
+.items-title a{
+    color: #999;
+    font-size: 14px;
+}
+/*新闻列表*/
+.item{
+    border: 1px solid #eee;
+    border-top: none;
+    border-bottom: 1px dotted #eee;
+    width: 930px;
+    height: 260px;
+    box-sizing: border-box;
+}
+.item .item-pic{
+    float: left;
+    padding: 30px 30px 30px 0;
+}
+.item .info{
+    float: left;
+    width: 637px;
+    padding-top: 50px;
+}
+/*鼠标滑过新闻*/
+.item .info:hover h3
+{
+    color: #ea5c27;
+}
+.item .info:hover .icon{
+    background-color: #ea5c27;
+}
+.item .info h3{
+    font-size: 28px;
+    color: #000;
+}
+.item .info h3 .icon{
+    display: block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    background-color: #b0785c;
+    float: right;
+    color: #fff;
+}
+.item .info .time{
+    padding-left: 25px;
+    color: #999;
+    font-size: 12px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    background: url("../img/clock.png") left center no-repeat;
+}
+.item .info p{
+    color: #666;
+}
+/*新闻区分页*/
+.pages{
+    margin-top: 40px;
+    margin-left: 216px;
+}
+.link{
+    display: block;
+    float: left;
+    width: 44px;
+    height: 44px;
+    line-height: 44px;
+    border:1px solid #e6e6e6;
+    margin: 0 5px;
+    text-align: center;
+    color: #cbcbcb;
+}
+.pages .active_a{
+    background-color: #ea5c27;
+}
+.pages .more{
+    border: none;
+}
+/*上一页 下一页*/
+.pages .prev,
+.pages .next
+{
+    width: 100px;
+    background-color: #fafafa;
+}
+/*页脚*/
+.footer{
+    margin-top: 80px;
+}
+.footer .ships{
+    height: 60px;
+    line-height: 60px;
+    background-color: #ea5c27;
+    text-align: center;
+}
+.footer .ships a{
+    color: #fff;
+    padding: 0 50px;
+    position: relative;
+}
+.footer .ships a:not(:first-child)::before{
+    content: '|';
+    position: absolute;
+    left: 5px;
+    color: #f3915b;
+}
+.footer .location{
+    height: 210px;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 45px 0;
+    position: relative;
+}
+.footer .location p{
+    color: #a3a3a3;
+    font-size: 14px;
+    line-height: 24px;
+}
+.footer .location p:last-of-type{
+    margin-top: 20px;
+}
+.footer .weicon{
+    position: absolute;
+    top:45px;
+    right: 300px;
+    width: 160px;
+    height: 160px;
+}

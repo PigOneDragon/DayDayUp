@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>3-3编程练习</title>
+    <style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+    }
+	body{min-width: 700px;}
+    .header {
+        width: 100%;
+        height: 100px;
+        background: black;
+        position: fixed;
+        top: 0;
+        z-index: 1;
+        /*设置了定位的元素优先级比自然流高，相邻定位元素需设置z-index控制堆叠顺序*/
+        clear: both;
+        zoom: 1;
+    }
+
+    .logo {
+        float: left;
+    }
+    .list1 {
+        float: right;
+    }
+    .list1 li {
+        float: left;
+        line-height: 100px;
+        padding-right: 50px;
+    }
+
+    a {
+        color: #fff;
+        font-family: "微软雅黑";
+    }
+    a:hover {
+        color: orange;
+    }
+
+
+    .main {
+        padding: 0 350px;
+        margin-top: 100px;
+        min-width: 700px;
+        clear: both;
+        zoom: 1;
+    }
+
+    .middle,
+    .left,
+    .right {
+        float: left;
+        position: relative;
+        min-height: 800px;
+    }
+
+    .middle {
+        width: 100%;
+        background-color: green;
+        clear: both;
+
+    }
+
+    .main_body{ /*宽度已知*/
+    	position: absolute;
+    	left: 0;	
+    	right: 0;
+    	top:85px;
+    	margin-left:auto;
+    	margin-right:auto;
+    	width: 600px;
+
+    	/*position: absolute;
+    	left: 50%;
+    	top:50%;
+    	transform: translate(-50%,50%);
+    	text-align: center;  宽度未知方法二*/
+    	}
+
+    .left {
+        width: 300px;
+        background-color: blue;
+        margin-left: -100%;
+        left: -300px;
+        padding-top: 70px;
+    }
+
+    .left p{line-height: 2em;}
+
+    .left span{background-color: red;}
+
+    .right {
+        width: 280px;
+        background-color: red;
+        margin-right: -300px;
+        padding-top: 70px;
+      	padding-left: 20px;
+        /*left: 300px;*/
+    }
+
+    .right input {
+        width: 200px;
+        height: 30px;
+        border: 1px solid;
+    }
+
+    .footer {
+        width: 100%;
+        height: 70px;
+        background: black;
+        text-align: center;
+        float: left;
+        position: fixed;
+        bottom: 0;
+    }
+
+    .list2 li {
+        display: inline-block;
+        line-height: 70px;
+        padding: 0 40px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo"><a href="#"><img src="http://climg.mukewang.com/590037f600016ce303000100.png" alt="logo"></a></div>
+        <ul class="list1">
+            <li><a href="#">课程</a></li>
+            <li><a href="#">职业规划</a></li>
+            <li><a href="#">猿问</a></li>
+            <li><a href="#">实战</a></li>
+            <li><a href="#">手记</a></li>
+        </ul>
+    </div>
+    <div class="main">
+        <div class="middle">
+        	<div class="main_body"><img src="http://climg.mukewang.com/590037e00001fab706000400.jpg" alt="body"></div>
+        </div>
+        <div class="left">
+            <h3>课程推荐</h3>
+            <p><span>职业路径</span>&nbsp;&nbsp;HTML与CSS3实现动态网页</p>
+            <p><span>职业路径</span>&nbsp;&nbsp;零基础入门Android语法与界面</p>
+            <p><span>职业路径</span>&nbsp;&nbsp;IOS基础语法与常用控件</p>
+            <p><span>职业路径</span>&nbsp;&nbsp;PHP入门开发</p>
+            <p><span>职业路径</span>&nbsp;&nbsp;JAVA入门开发</p>
+        </div>
+        <div class="right">
+            <h3>登录</h3>
+            <form class="load">
+                <input type="text" placeholder="请输入登录邮箱/手机号" /><br /><br />
+                <input type="password" placeholder="6-12位密码" /><br /><br />
+                <input type="submit" value="登录" style="background: #000; color: #fff" />
+            </form>
+        </div>
+    </div>
+    <div class="footer">
+        <ul class="list2">
+            <li><a href="#">网页</a></li>
+            <li><a href="#">友情链接</a></li>
+            <li><a href="#">快速通道</a></li>
+            <li><a href="#">联系我们</a></li>
+            <li><a href="#">常见问题</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>

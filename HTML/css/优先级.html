@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css优先级</title>
+	<link rel="stylesheet" type="text/css" href="css.css">
+	<style type="text/css">
+	.red{
+		color:red;
+	}
+	div.c{
+		color:red;
+		text-decoration: underline;
+	}
+	p.s{
+		font-size: 20px;
+		color: red;
+	}
+
+	</style>
+	<style type="text/css">
+	 .red{
+        color:red;
+    }
+    #blue{
+        color:blue;
+    }
+    #green{
+        color:green;
+    }
+    p{
+        color:pink;
+    }
+    
+    </style>
+
+<body>
+	<h3 class="red">我是标题3里面的文字</h3>
+	<div id="blue">我是div1里面的文字</div>
+	<div id="green">我是div2里面的文字</div>
+	<p>我是P里面的文字</p>
+
+	<h3 class="red">css选择的艺术h3</h3>
+	<div class="c">div1</div>
+	<div id="blue">div2</div>
+	<p class="s">p标签</p>
+</body>
+</html>
+p.class a em

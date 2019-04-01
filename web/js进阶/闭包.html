@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>2-1闭包</title>
+    <style>
+        /*补充代码*/
+    </style>
+</head>
+
+<body>
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+</ul>
+<script>
+    var li = document.getElementsByTagName("li");
+    for (var i = 0, len = li.length; i < len; i++) {
+        (function (a) {
+            // 补充代码
+            li[a].onclick = function () {
+                debugger;
+                alert(++a);
+            }
+
+        })(i)
+    }
+
+    //(function(){})()  立即执行函数
+
+    var add = new Function('num1', 'num2', 'return num1+num2');
+    var subtract = new Function('num1', 'num2', 'return num1-num2');
+    var multiply = new Function('num1', 'num2', 'return num1*num2');
+    var divide = new Function('num1', 'num2', 'return num1/num2');
+
+    alert(subtract(add(multiply(21, 32), divide(24, 3)), 5));
+
+
+    function add1(a, b) {
+        return a + b;
+    }
+
+    function subtract1(a, b) {
+        return a + b;
+    }
+
+    document.write(subtract1(add1(21, 32), 24));
+</script>
+</body>
+
+</html>

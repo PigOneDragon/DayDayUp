@@ -1,0 +1,49 @@
+body{ padding:0;margin:1px;}
+//定义变量
+@header-height:60px;
+@banner-height:560px;
+@courses-height:200px;
+@footer-height:686px;
+
+@header-bottom-bgcolor:#000;
+
+.header{
+  height:@header-height;
+  background:@header-bottom-bgcolor;
+}
+.banner{
+  height:@banner-height;
+}
+.courses{
+  height:@courses-height;
+}
+.footer{
+  height:@header-height;
+  background:@header-bottom-bgcolor;
+}
+//fl是自定义的类名，@后面一般声明的是变量，而.fl直接写的是一个属性。
+//
+//.fl和.fl()的区别：
+//如果使用.fl()，不会编译到css文件中：
+.fl(){
+  float: left;
+}
+//.fr设置的时候，会在css文件中编译出来，如下：
+.fr{
+  float: right;
+}
+.logo{
+  .fl();
+}
+//参数混合  : 后跟默认值。若无默认值使用时必须赋值，否则会报错
+.border-radius(@radius:50%){
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+          border-radius: @radius;
+}
+.nav_item_icon_new{
+  width:30px;
+  height:30px;
+  background-color: #00b3ea;
+  .border-radius();
+}

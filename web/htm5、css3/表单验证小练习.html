@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--修改约束条件不满足提示信息-->
+<form action="" method="post">
+    <input type="text" id="username"  required pattern="^\d{5}" />
+    <input type="submit" value="提交" onclick="checkit()" />
+</form>
+
+<!--验证url信息-->
+<form action="" method="get">
+    <input type="url" id="urlNode" oninput="checkUrl(this)" />
+    <input type="submit" value="提交"  />
+</form>
+<script>
+  var username = document.getElementById('username');
+  var urlNode = document.getElementById('urlNode');
+
+  function checkUrl(obj) {
+      var url = obj.validity;
+      console.log(url);
+      //如果格式不正确，返回true
+      if (url.typeMismatch){
+          urlNode.setCustomValidity("请输入www.");
+      }else{
+          urlNode.setCustomValidity("222");
+      }
+  }
+    function checkit() {
+        var it = username.validity;
+        console.log(it);
+        console.log(it.valueMissing);
+        //自定义事件 1、判断值是否为空
+        if ( true === it.valueMissing){
+            username.setCustomValidity("不能为空，请输入5个数字");
+            debugger
+        }
+        //判断正则约束是否满足
+        else if(it.patternMismatch === true){
+            username.setCustomValidity("格式错误，请输入5个数字");
+        }
+        else{
+            username.setCustomValidity("");
+        }
+    }
+</script>
+</body>
+</html>

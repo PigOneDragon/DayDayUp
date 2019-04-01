@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{margin: 0; padding: 0;}
+    </style>
+    <script src="../jquery-1.12.4.js"></script>
+</head>
+<body>
+    <p>safasfaf</p>
+    <script>
+        console.log($('p').offset(({ top: 10, left: 30 })));   //设置top left
+        // 获取第一个匹配元素在当前视口的相对偏移。返回的对象包含两个整型属性：top 和 left。此方法只对可见元素有效。
+        console.log($('p').offset());
+
+    </script>
+</body>
+</html>

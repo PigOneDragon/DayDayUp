@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .form{
+            margin: 50px;
+            position: relative;
+        }
+        .form input{
+            width: 200px;
+            height: 30px;
+            line-height: 30px;
+            text-indent: 28px;
+        }
+        .form .title{
+            display: block;
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 40px;
+            line-height: 30px;
+            font-size: 14px;
+            transition: all .3s;
+        }
+        /*给一个动画效果*/
+        input:focus,
+        input:hover{
+            text-indent: 2px;
+        }
+        /* + input的第一个兄弟元素*/
+        input:focus + span.title,
+        input:hover + span.title{
+            /*transform: translateX(-100%);*/
+            left: -30px;
+        }
+        /*简单验证,改变label的文本*/
+        /*1、通过验证*/
+        input:valid ~label::after{
+             content:"通过验证";
+        }
+        /*2、未通过验证*/
+        input:invalid ~label::after{
+            content:"格式未通过验证";
+        }
+
+    </style>
+</head>
+<body>
+<div class="form">
+    <form action="">
+        <input type="email" required placeholder="请输入邮箱地址" id="email"/>
+        <span class="title">邮箱</span>
+        <label for="email"></label>
+
+    </form>
+</div>
+</body>
+</html>

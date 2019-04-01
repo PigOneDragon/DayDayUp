@@ -1,0 +1,35 @@
+*{
+	margin:0;
+	padding: 0;
+	border: none;
+}
+.container{
+	width: 600px;
+	height: 400px;
+}
+.sky{
+	height: 240px;
+	background: linear-gradient(rgb(196, 228, 253), rgb(255, 255, 255));
+	position: relative;
+	&__cloud{
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		background: #fff;
+		position: relative;
+		float: left;
+	}
+ }
+.ground{
+	height: 160px;
+	background: linear-gradient(rgb(255,255,255),rgb(148, 190, 89));
+	position: relative;
+	img{
+		display: block;
+		width: 30%;
+		height: 97%;
+		position: absolute;
+		right: 10%;
+		bottom: 0;
+	}
+}

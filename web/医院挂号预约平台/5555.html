@@ -1,0 +1,819 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title></title>
+    <script src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            border:0;
+        }
+        /*此处填写css样式*/
+        /*清除浮动*/
+        /*.clearfix:after{
+            content: " ";
+            display: block;
+            height: 0;
+            line-height: 0;
+            clear: both;
+            zoom:1;
+        }*/
+        /*layout中css样式*/
+        .wrap{
+            width: 1000px;
+            margin:0 auto;
+            position: relative;
+        }
+        .top{
+            height: 30px;
+            background-color:#f5f5f5;
+        }
+        .header{
+            height: 93px;
+        }
+        .nav{
+            height: 36px;
+            background-color: #60bff2;
+        }
+        .content{
+            display: none;
+        }
+        .content_fouse{
+            display: block;
+        }
+        .content .content-title{
+            height: 30px;
+            margin-top:20px;
+        }
+        .content .content-short{
+            height: 70px;
+            border:1px solid #dcdddd;
+            border-top:2px solid #49a6d8;
+            margin-bottom: 18px;
+        }
+        .content .content-long{
+            width: 1000px;
+            display: none;
+        }
+        .content .content-long .left{
+            float: left;
+            width: 208px;
+            height: auto;
+            border:1px solid #dcdddd;
+        }
+        .content .content-long .right{
+            float: right;
+            width: 762px;
+            /*height: 50px;*/
+            border:1px solid #dcdddd;
+        }
+        /*静态页面css样式*/
+        /*通用设置*/
+        p{
+            margin:0;
+            padding:0;
+            display: inline-block;
+        }
+        a{
+            text-decoration: none;
+        }
+        select,input{
+            border:none;
+            outline: none;
+        }
+        /*top样式设置*/
+        .top{
+            line-height: 30px;
+            color:#868686;
+            font-size:13px;
+        }
+        .top .call{
+            float: left;
+            padding-left:22px;
+            background: url('http://climg.mukewang.com/58c61b9d0001e02d00170017.png') center left no-repeat;
+        }
+        .top .welcom{
+            float:right;
+        }
+        .top .welcom a{
+            display: inline-block;
+            padding-left:15px;
+            color:#2da5e1;
+        }
+        /*header样式设置*/
+        .header .logo{
+            display: block;
+            float:left;
+        }
+        .header .logo img{
+            display: block;
+            width:360px;
+            height: 74px;
+            padding-top:9px;
+        }
+        .header .search{
+            width: 326px;
+            height: 38px;
+            background-color:orange;
+            float:right;
+            margin-top:28px;
+        }
+        .nav a{
+            display: inline-block;
+            line-height: 36px;
+            width:100px;
+            margin-right:3px;
+            font-size:16px;
+            color:#fff;
+            text-align: center;
+        }
+        .nav .special{
+            float:right;
+        }
+        .nav .a_focus{
+            background-color: #1fa4f0;
+        }
+        /*content-title样式设置*/
+        .content .content-title{
+            background:url('http://climg.mukewang.com/58c61a4f0001967a01380030.jpg') no-repeat;
+            line-height: 30px;
+            font-size:16px;
+            color:#fff;
+            padding-left:20px;
+        }
+        /*content-short样式设置*/
+        .content .content-short .items{
+            width: 760px;
+            margin-left:18px;
+            line-height: 35px;
+            font-size:14px;
+        }
+        .content .content-short .items a{
+            color:#555555;
+            display: inline-block;
+            width:120px;
+        }
+        /*交互UI*/
+        .content .content-short .items a:hover{
+            color:#5fbff2;
+        }
+        .content .content-short .whole:hover{
+            color:#5fbff2;
+        }
+        .content .content-short .whole{
+            display: block;
+            position: absolute;
+            right:53px;
+            top:70px;
+            text-decoration: underline;
+            color:#0000ff;
+        }
+        /*content-long left样式设置*/
+        .content .content-long .left-item{
+            height: 22px;
+            line-height: 22px;
+            margin-left:2px;
+            padding:8px 5px 9px 6px;;
+        }
+        .content .content-long .left-item:hover{
+            background-color: #1fa4f0;
+            color:#fff;
+        }
+        .content .content-long .left-item .name{
+            float: left;
+            color:#555555;
+            height: 22px;
+            line-height: 22px;
+            position: relative;
+            padding-left:3px;
+            font-size: 14px;
+        }
+
+        .name:before{
+            content:' ';
+            width: 22px;
+            height: 21px;
+            display: block;
+            float: left;
+            left:0;
+            top:1px;
+            background: url('http://climg.mukewang.com/58c61b610001c58300440638.jpg') 1px 0 no-repeat;
+        }
+        .content .content-long .left-item:hover .name:before{
+            background-position-x:-23px;
+        }
+        .content .content-long .left-item:hover .name{
+            color:#fff;
+        }
+        .content .content-long .left-item .arrow{
+            float:right;
+            color:#cacaca;
+        }
+        .content .content-long .left-item:hover .arrow{
+            color:#fff;
+        }
+        /*content-long right样式设置*/
+        .content .right .right-item{
+            width: 734px;
+            margin:15px 14px 15px 14px;
+        }
+        .content .right .right-item .right-item-caption{
+            height: 35px;
+            line-height: 35px;
+            font-size: 14px;
+            color:#00b3ea;
+            padding-left:20px;
+            border-bottom: 1px dashed #dcdddd;
+        }
+        .content .right .right-item .right-item-cons a{
+            display: inline-block;
+            width: 100px;
+            height: 35px;
+            line-height: 35px;
+            font-size:13px;
+            color:#555555;
+            padding-left:22px;
+        }
+        .content .right .right-item .right-item-cons a:hover{
+            color:#5fbff2;
+        }
+        /*ui-search*/
+        .ui-search{
+            position: relative;
+            background: url('http://climg.mukewang.com/58c61b7e00012b9303260038.jpg') no-repeat;
+        }
+        .ui-search .ui-search-selected{
+            float: left;
+            width: 56px;
+            height:38px;
+            line-height: 38px;
+            padding-left:13px;
+            color:#fff;
+            font-size:16px;
+        }
+        .ui-search .ui-search-list{
+            display: none;
+            width: 66px;
+            position: absolute;
+            top:38px;
+            left:0;
+            background-color: #fff;
+            box-shadow: 3px 3px 5px rgba(0,0,0,0.2);
+            z-index: 9;
+        }
+        .ui-search .ui-search-list a{
+            display:block;
+            width: 65px；
+            line-height: 20px;
+            height: 20px;
+            font-size:14px;
+            color:#555555;
+            text-align: center;
+        }
+        .ui-search .ui-search-list a:hover{
+            color:#fff;
+            background-color:#60bff2;
+        }
+        .ui-search input{
+            float: left;
+            width: 210px;
+            padding-left:4px;
+            height: 34px;
+            margin-top:2px;
+            color:#868686;
+        }
+        .ui-search .submit{
+            float: right;
+            width: 40px;
+            height:38px;
+        }
+        /*回到顶部*/
+        .ui-backtop{
+            display:none;
+            width: 40px;
+            height: 40px;
+            position: fixed;
+            right:10px;
+            bottom:10px;
+            background: url('http://climg.mukewang.com/58c61bb900013e2c00230023.png') center center no-repeat;
+            background-color: #ddd;
+        }
+        .ui-backtop:hover{
+            background:gray;
+        }
+        .ui-backtop:hover:after{
+            content:'回到顶部';
+            display: block;
+            width: 40px;
+            height: 40px;
+            line-height: 20px;
+            font-size:14px;
+            color:#fff;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<!--此处填写HTML代码-->
+<!-- top区域 -->
+<div class="top" id="top">
+    <div class="wrap">
+        <p class="call">010-114/116电话预约</p>
+        <p class="welcom">欢迎来到城市预约挂号统一平台&nbsp;请&nbsp;
+            <a href="#">登录</a>
+            <a href="#">注册</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#">帮助中心</a></p>
+    </div>
+</div>
+<!-- 头部区域 -->
+<div class="header" id="header">
+    <div class="wrap">
+        <a class="logo" href="#1"><img src="http://climg.mukewang.com/58c61b2f0001f5c008400172.png"></a>
+        <div class="search ui-search">
+            <div class="ui-search-selected">医院</div>
+            <div class="ui-search-list">
+                <a href="#">科室</a>
+                <a href="#">疾病</a>
+                <a href="#">医院</a>
+            </div>
+            <input type="text" name="input" class="input" placeholder="请输入搜索内容">
+            <a href="#" class="submit">&nbsp;</a>
+        </div>
+    </div>
+</div>
+<!-- 导航区域 -->
+<div class="nav" id="nav">
+    <div class="wrap">
+        <a href="#1">首页</a>
+        <a href="#2">按医院挂号</a>
+        <a href="#3" class="a_focus">按科室挂号</a>
+        <a href="#4">按疾病挂号</a>
+        <a href="#5">最新公告</a>
+        <a href="#6" class="special">社会知名医院</a>
+    </div>
+</div>
+<!-- 内容区域 -->
+<div class="content"><div class="wrap">首页内容</div></div>
+<div class="content"><div class="wrap">按医院挂号内容</div></div>
+<div class="content content_fouse" id="content">
+    <div class="wrap">
+        <div class="content-title">热门科室</div>
+        <div class="content-short">
+            <div class="items">
+                <a href="#">神经外科</a>
+                <a href="#">妇科</a>
+                <a href="#">产科</a>
+                <a href="#">儿科</a>
+                <a href="#">骨科</a>
+                <a href="#">眼科</a>
+                <a href="#">耳鼻喉</a>
+                <a href="#">肿瘤外科</a>
+                <a href="#">肿瘤综合科</a>
+                <a href="#">皮肤美容</a>
+                <a href="#">心理咨询</a>
+                <a href="#">中医科</a>
+            </div>
+            <a href="" class="whole">展开全部</a>
+        </div>
+        <div class="content-long">
+            <div class="left">
+                <div class="left-item">
+                    <a href="#neike" class="name">内科</a>
+                    <a href="#" class="arrow">></a>
+                </div>
+                <div class="left-item">
+                    <a href="#waike" class="name">外科</a>
+                    <a href="#" class="arrow">></a>
+                </div>
+                <div class="left-item">
+                    <a href="#fuchanke" class="name">妇产科</a>
+                    <a href="#" class="arrow">></a>
+                </div>
+                <div class="left-item">
+                    <a href="#shengzhi" class="name">生殖中心</a>
+                    <a href="#" class="arrow">></a>
+                </div>
+                <div class="left-item">
+                    <a href="#erke" class="name">儿科</a>
+                    <a href="#" class="arrow">></a>
+                </div>
+                <div class="left-item">
+                    <a href="#guwaike" class="name">骨外科</a>
+                    <a href="#" class="arrow">></a>
+                </div>
+                <div class="left-item">
+                    <a href="#yanke" class="name">眼科</a>
+                    <a href="#" class="arrow">></a>
+                </div>
+                <div class="left-item">
+                    <a href="#kouqiangke" class="name">口腔科</a>
+                    <a href="#" class="arrow">></a>
+                </div>
+                <div class="left-item">
+                    <a href="#erbiyan" class="name">耳鼻咽喉头颈科</a>
+                    <a href="#" class="arrow">></a>
+                </div>
+                <div class="left-item">
+                    <a href="#zhongliuke" class="name">肿瘤科</a>
+                    <a href="#" class="arrow">></a>
+                </div>
+                <div class="left-item">
+                    <a href="#pifubing" class="name">皮肤性病科</a>
+                    <a href="#" class="arrow">></a>
+                </div>
+                <div class="left-item">
+                    <a href="#nanxing" class="name">男性学科</a>
+                    <a href="#" class="arrow">></a>
+                </div>
+                <div class="left-item">
+                    <a href="#pifumeirong" class="name">皮肤美容</a>
+                    <a href="#" class="arrow">></a>
+                </div>
+                <div class="left-item">
+                    <a href="#shaoshang" class="name">烧伤科</a>
+                    <a href="#" class="arrow">></a>
+                </div>
+                <div class="left-item">
+                    <a href="#jingshenbing" class="name">精神心理科</a>
+                    <a href="#" class="arrow">></a>
+                </div>
+                <div class="left-item">
+                    <a href="#zhongyike" class="name">中医科</a>
+                    <a href="#" class="arrow">></a>
+                </div>
+                <div class="left-item">
+                    <a href="#zhongyijiehe" class="name">中西医结合科</a>
+                    <a href="#" class="arrow">></a>
+                </div>
+                <div class="left-item">
+                    <a href="#chuanranbing" class="name">传染病科</a>
+                    <a href="#" class="arrow">></a>
+                </div>
+                <div class="left-item">
+                    <a href="#jiehebing" class="name">结核病科</a>
+                    <a href="#" class="arrow">></a>
+                </div>
+                <div class="left-item">
+                    <a href="#jieruyixue" class="name">介入医学科</a>
+                    <a href="#" class="arrow">></a>
+                </div>
+                <div class="left-item">
+                    <a href="#kangfuyixue" class="name">康复医学科</a>
+                    <a href="#" class="arrow">></a>
+                </div>
+                <div class="left-item">
+                    <a href="#yudongyixue" class="name">运动医学科</a>
+                    <a href="#" class="arrow">></a>
+                </div>
+                <div class="left-item">
+                    <a href="#mazuiyixue" class="name">麻醉医学科</a>
+                    <a href="#" class="arrow">></a>
+                </div>
+                <div class="left-item">
+                    <a href="#zhiyebing" class="name">职业病科</a>
+                    <a href="#" class="arrow">></a>
+                </div>
+                <div class="left-item">
+                    <a href="#difangbing" class="name">地方病科</a>
+                    <a href="#" class="arrow">></a>
+                </div>
+                <div class="left-item">
+                    <a href="#yingyangke" class="name">营养科</a>
+                    <a href="#" class="arrow">></a>
+                </div>
+                <div class="left-item">
+                    <a href="#yixueyingxiang" class="name">医学影像学</a>
+                    <a href="#" class="arrow">></a>
+                </div>
+                <div class="left-item">
+                    <a href="#binglike
+
+
+                        " class="name">病理科</a>
+                    <a href="#" class="arrow">></a>
+                </div>
+                <div class="left-item">
+                    <a href="#others" class="name">其他科室</a>
+                    <a href="#" class="arrow">></a>
+                </div>
+            </div>
+            <div class="right">
+                <div class="right-item" id="neike">
+                    <div class="right-item-caption">内科</div>
+                    <div class="right-item-cons">
+                        <a href="">血管内科</a>
+                        <a href="">神经内科</a>
+                        <a href="">消化内科</a>
+                        <a href="">内分泌科</a>
+                        <a href="">免疫科</a>
+                        <a href="">呼吸科</a>
+                        <a href="">肾病内科</a>
+                        <a href="">血液科</a>
+                        <a href="">感染内科</a>
+                        <a href="">过敏反应科</a>
+                        <a href="">老年病科</a>
+                        <a href="">普通内科</a>
+                        <a href="">高压氧科</a>
+                    </div>
+                </div>
+                <div class="right-item" id="waike">
+                    <div class="right-item-caption">外科</div>
+                    <div class="right-item-cons">
+                        <a href="">血管内科</a>
+                        <a href="">神经内科</a>
+                        <a href="">消化内科</a>
+                        <a href="">内分泌科</a>
+                        <a href="">免疫科</a>
+                        <a href="">呼吸科</a>
+                        <a href="">肾病内科</a>
+                        <a href="">血液科</a>
+                        <a href="">感染内科</a>
+                        <a href="">过敏反应科</a>
+                        <a href="">老年病科</a>
+                        <a href="">普通内科</a>
+                        <a href="">高压氧科</a>
+                    </div>
+                </div>
+                <div class="right-item" id="fuchanke">
+                    <div class="right-item-caption">妇产科</div>
+                    <div class="right-item-cons">
+                        <a href="">血管内科</a>
+                        <a href="">神经内科</a>
+                        <a href="">消化内科</a>
+                        <a href="">内分泌科</a>
+                        <a href="">免疫科</a>
+                        <a href="">呼吸科</a>
+                        <a href="">肾病内科</a>
+                    </div>
+                </div>
+                <div class="right-item" id="shengzhi">
+                    <div class="right-item-caption">生殖中心</div>
+                    <div class="right-item-cons">
+                        <a href="">血管内科</a>
+                    </div>
+                </div>
+                <div class="right-item" id="erke">
+                    <div class="right-item-caption">儿科</div>
+                    <div class="right-item-cons">
+                        <a href="">血管内科</a>
+                        <a href="">神经内科</a>
+                        <a href="">消化内科</a>
+                        <a href="">内分泌科</a>
+                        <a href="">免疫科</a>
+                        <a href="">呼吸科</a>
+                        <a href="">肾病内科</a>
+                        <a href="">血管内科</a>
+                        <a href="">神经内科</a>
+                        <a href="">消化内科</a>
+                        <a href="">内分泌科</a>
+                        <a href="">免疫科</a>
+                    </div>
+                </div>
+                <div class="right-item" id="guwaike">
+                    <div class="right-item-caption">骨外科</div>
+                    <div class="right-item-cons">
+                        <a href="">血管内科</a>
+                        <a href="">神经内科</a>
+                        <a href="">消化内科</a>
+                        <a href="">内分泌科</a>
+                        <a href="">免疫科</a>
+                        <a href="">呼吸科</a>
+                        <a href="">肾病内科</a>
+                        <a href="">血管内科</a>
+                    </div>
+                </div>
+                <div class="right-item" id="yanke">
+                    <div class="right-item-caption">眼科</div>
+                    <div class="right-item-cons">
+                        <a href="">血管内科</a>
+                        <a href="">神经内科</a>
+                        <a href="">消化内科</a>
+                        <a href="">内分泌科</a>
+                        <a href="">免疫科</a>
+                        <a href="">呼吸科</a>
+                        <a href="">肾病内科</a>
+                        <a href="">血管内科</a>
+                        <a href="">肾病内科</a>
+                        <a href="">血管内科</a>
+                    </div>
+                </div>
+                <div class="right-item" id="kouqiangke">
+                    <div class="right-item-caption">口腔科</div>
+                    <div class="right-item-cons">
+                        <a href="">血管内科</a>
+                        <a href="">神经内科</a>
+                        <a href="">消化内科</a>
+                        <a href="">内分泌科</a>
+                        <a href="">免疫科</a>
+                        <a href="">呼吸科</a>
+                        <a href="">肾病内科</a>
+                        <a href="">血管内科</a>
+                        <a href="">肾病内科</a>
+                        <a href="">血管内科</a>
+                        <a href="">肾病内科</a>
+                        <a href="">血管内科</a>
+                    </div>
+                </div>
+                <div class="right-item" id="erbiyan">
+                    <div class="right-item-caption">耳鼻咽喉头颈科</div>
+                    <div class="right-item-cons">
+                        <a href="">血管内科</a>
+                        <a href="">神经内科</a>
+                    </div>
+                </div>
+                <div class="right-item" id="zhongliuke">
+                    <div class="right-item-caption">肿瘤科</div>
+                    <div class="right-item-cons">
+                        <a href="">血管内科</a>
+                        <a href="">神经内科</a>
+                        <a href="">血管内科</a>
+                        <a href="">神经内科</a>
+                        <a href="">消化内科</a>
+                        <a href="">内分泌科</a>
+                        <a href="">免疫科</a>
+                    </div>
+                </div>
+                <div class="right-item" id="pifubing">
+                    <div class="right-item-caption">皮肤性病科</div>
+                    <div class="right-item-cons">
+                        <a href="">血管内科</a>
+                        <a href="">神经内科</a>
+                    </div>
+                </div>
+                <div class="right-item" id="nanxing">
+                    <div class="right-item-caption">男性学科</div>
+                    <div class="right-item-cons">
+                        <a href="">血管内科</a>
+                    </div>
+                </div>
+                <div class="right-item" id="pifumeirong">
+                    <div class="right-item-caption">皮肤美容</div>
+                    <div class="right-item-cons">
+                        <a href="">血管内科</a>
+                    </div>
+                </div>
+                <div class="right-item" id="shaoshang">
+                    <div class="right-item-caption">烧伤科</div>
+                    <div class="right-item-cons">
+                        <a href="">血管内科</a>
+                    </div>
+                </div>
+                <div class="right-item" id="jingshenbing">
+                    <div class="right-item-caption">精神心理科</div>
+                    <div class="right-item-cons">
+                        <a href="">血管内科</a>
+                    </div>
+                </div>
+                <div class="right-item" id="zhongyike">
+                    <div class="right-item-caption">中医科</div>
+                    <div class="right-item-cons">
+                        <a href="">血管内科</a>
+                        <a href="">血管内科</a>
+                        <a href="">血管内科</a>
+                        <a href="">血管内科</a>
+                        <a href="">血管内科</a>
+                        <a href="">血管内科</a>
+                        <a href="">血管内科</a>
+                        <a href="">血管内科</a>
+                        <a href="">血管内科</a>
+                        <a href="">血管内科</a>
+                        <a href="">血管内科</a>
+                        <a href="">血管内科</a>
+                        <a href="">血管内科</a>
+                        <a href="">血管内科</a>
+                        <a href="">血管内科</a>
+                        <a href="">血管内科</a>
+                        <a href="">血管内科</a>
+                        <a href="">血管内科</a>
+                        <a href="">血管内科</a>
+                        <a href="">血管内科</a>
+                        <a href="">血管内科</a>
+                        <a href="">血管内科</a>
+                        <a href="">血管内科</a>
+                        <a href="">血管内科</a>
+                        <a href="">血管内科</a>
+                        <a href="">血管内科</a>
+                        <a href="">血管内科</a>
+                    </div>
+                </div>
+                <div class="right-item" id="zhongyijiehe">
+                    <div class="right-item-caption">中西医结合科</div>
+                    <div class="right-item-cons">
+                        <a href="">血管内科</a>
+                    </div>
+                </div>
+                <div class="right-item" id="chuanranbing">
+                    <div class="right-item-caption">传染病科</div>
+                    <div class="right-item-cons">
+                        <a href="">血管内科</a>
+                    </div>
+                </div>
+                <div class="right-item" id="jiehebing">
+                    <div class="right-item-caption">结合病科</div>
+                    <div class="right-item-cons">
+                        <a href="">血管内科</a>
+                    </div>
+                </div>
+                <div class="right-item" id="jieruyixue">
+                    <div class="right-item-caption">介入医学科</div>
+                    <div class="right-item-cons">
+                        <a href="">血管内科</a>
+                    </div>
+                </div>
+                <div class="right-item" id="kangfuyixue">
+                    <div class="right-item-caption">康复医学科</div>
+                    <div class="right-item-cons">
+                        <a href="">血管内科</a>
+                    </div>
+                </div>
+                <div class="right-item" id="yudongyixue">
+                    <div class="right-item-caption">运动医学</div>
+                    <div class="right-item-cons">
+                        <a href="">血管内科</a>
+                    </div>
+                </div>
+                <div class="right-item" id="mazuiyixue">
+                    <div class="right-item-caption">麻醉医学科</div>
+                    <div class="right-item-cons">
+                        <a href="">血管内科</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="content"><div class="wrap">按疾病挂号内容</div></div>
+<div class="content"><div class="wrap">最新公告内容</div></div>
+<div class="content"><div class="wrap">社会知名医院内容</div></div>
+<!-- jQuery代码 -->
+<script>
+    //此处填写jQuery代码
+    //ui-search定义
+    $.fn.uiSearch=function(){
+        var ui=$(this);
+        $('.ui-search-selected',ui).click(function(){
+            $('.ui-search-list',ui).show();
+            return false;
+        });
+        $('.ui-search-list a').click(function(){
+            $('.ui-search-selected',ui).text($(this).text());
+            $('.ui-search-list',ui).hide();
+            return false;
+        });
+        $('body').click(function(){
+            $('.ui-search-list',ui).hide();
+            return false
+        });
+
+    }
+    //定义回到顶部
+    $.fn.uiBackTop=function(){
+        var ui=$(this);
+        var el=$('<a class="ui-backtop" href="#"></a>')
+        ui.append(el);
+        var windowHeight=$(window).height();
+        $(window).scroll(function(){
+            var top=$(document).scrollTop();
+            if(top>windowHeight){
+                el.show();
+            }else{
+                el.hide();
+            }
+        })
+        $('.ui-backtop').click(function(){
+            $(window).scrollTop(0);
+        })
+    }
+    //页面脚本逻辑
+    $(function(){
+        $('.ui-search').uiSearch();
+        //nav导航切换
+        $('.nav a').click(function(){
+            var index=$(this).index();
+            console.log(index)
+            $('.nav a').removeClass('a_focus').eq(index).addClass('a_focus');
+            $('.content').removeClass('content_fouse').eq(index).addClass('content_fouse');
+        });
+        //展开全部
+        $('.whole').click(function(){
+
+            if($(this).text()=='展开全部'){
+                $('.content-long').slideToggle();
+                $(this).text('收起全部');
+            }else if($(this).text()=='收起全部'){
+                $('.content-long').slideToggle();
+                $(this).text('展开全部');
+            }
+        })
+        //回到顶部
+        $('body').uiBackTop();
+
+
+    })
+</script>
+</body>
+</html>

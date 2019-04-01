@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flex</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            border: none;
+        }
+        .conter{
+            /*background-color: red;*/
+            color: purple;
+            line-height: 100px;
+            text-align: center;
+            /*display: inline-flex;*/
+            display: flex;
+            border: 10px solid blue;
+            /*flex-wrap: wrap-reverse;*/
+            justify-content: space-around;
+
+            /*width: 300px;*/
+        }
+        .flex-item{
+            flex-basis: 300px;
+            flex-grow: 1;
+            /*width: 150px;*/
+        }
+        .flex-item:first-child{
+             background-color: yellow;
+        }
+        .flex-item:nth-child(2){
+            /*width: 150px;*/
+            background-color: #eee;
+        }
+        .flex-item:nth-child(3){
+            /*width: 150px;*/
+            background-color: deeppink;
+        }
+        .flex-item:last-child{
+            background-color: orange;
+        }
+        ul {
+            list-style: none;
+            background-color: orange;
+            margin: 0;
+            padding: 0;
+            height: 150px;
+            width: 390px;
+            /*此处补充代码*/
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: space-around;
+        }
+
+        li {
+            font-size: 24px;
+            width: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+<div class="conter">
+    <div class="flex-item">A小乔</div>
+    <div class="flex-item">B虞姬</div>
+    <div class="flex-item">C白起</div>
+    <div class="flex-item">D东皇太一一条小蛟龙</div>
+</div>
+<span>ddd</span>
+<ul>
+    <li>第一个li</li>
+    <li>第二个li</li>
+    <li>第三个li</li>
+    <li>第四个li</li>
+    <li>第五个li</li>
+    <li>第六个li</li>
+</ul>
+</body>
+</html>

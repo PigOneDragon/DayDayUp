@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .out{width: 200px;height: 150px;background-color: #9a6e3a;margin: 10px;}
+        .inner{width: 100px;height: 80px;background-color: #0077aa;}
+    </style>
+
+</head>
+<body>
+<div class="out" id="out1">
+    out1
+    <div class="inner" id="in1">in1</div>
+</div>
+<div class="out" id="out2">
+    out2
+    <div class="inner" id="in2">in2</div>
+</div>
+    <ul>
+        <li>li1 <b>dfdff</b></li>
+        <li>li2</li>
+        <li>li3</li>
+        <li>li4</li>
+        <li>li5</li>
+        <li>li6</li>
+        <li>li7</li>
+        <li>li8</li>
+        <li>li9</li>
+        <li>li10</li>
+    </ul>
+    <button class="even">标记偶数项</button>
+    <button class="odd">标记奇数项</button>
+    <button>全部标记为已读</button>
+    <script src="../jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            var lis=$('li'),
+
+                btn=$('button');
+            //绑定click事件
+            // lis.on('click',function () {
+            //     console.log('已读 %o',this);
+            //     return '返回我'
+            // });
+            // btn.on('click',function () {
+            //     lis.triggerHandler('click');// 不触发事件冒泡跟默认事件，只触发集合中的第一个元素
+            //     console.log(lis.trigger('click'));  //返回一个jQuery对象 可以使用链式语法多次调用
+            //     console.log(lis.triggerHandler('click')); // 返回事件触发函数的返回值
+            // });
+            // //绑定自定义事件  利用on(自定义事件，执行函数)  配合trigger(自定义事件)触发
+            // lis.on('read',function () {
+            //     console.log('已读 %o',$(this));
+            // }).on('click',function () {
+            //     $(this).trigger('read');
+            // });
+            //命名空间 事件后加空间名 例 click.xx
+            $('li:even').on('click.odd',function () {
+                console.log('命名空间奇数 %o',$(this));
+            });
+            $('li:odd').on('click.even',function () {
+                console.log('命名空间偶数 %o',$(this));
+            });
+            $('li:odd').on('click.even.1',function () {
+                console.log('命名空间 1 %o',$(this));
+            });
+            $('.even').on('click',function () {
+                $('li').trigger('click.even');  //执行所有.even跟.even.xx的事件  所有even空间的事件
+            });
+            $('.odd').on('click',function () {
+                $('li').trigger('click.odd');
+            });
+
+
+            function rr(event){
+                event.stopPropagation();
+                console.log(event.type +'--'+'on'+event.target.id);
+            }
+            // $('#out1').mouseover(rr);
+            // $('#out1').mouseout(rr);
+            // $('#in1').mouseover(rr);
+            // $('#in1').mouseout(rr);
+            $('#out1').on('mouseover mouseout',rr);//进入in1的同时触发leave out1
+            $('#in1').on('mouseover mouseout',rr);
+            $('#out2').hover(rr);  //hover 在进入in2的同时不会触发out1的leave  mouseenter mouseleave事件组合
+            $('#in2').hover(rr);
+     })
+    </script>
+</body>
+</html>

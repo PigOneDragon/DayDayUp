@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Document</title>
+</head>
+<body>
+<ul>
+    <li>第一个li</li>
+    <li>第二个li</li>
+</ul>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    //第一步：在第一个li内容的前面添加a标签，内容是“点我”
+    //第二步：在第二个li内容的后面添加a标签，内容是“快点我”
+    //第三步：在ul中添加第三个li
+    //第四步：在body中添加h3标签，内容是“我是标题”，该标签在ul标签的前面
+    $(function () {
+        var body = $('body'),
+            lis=$('li'),
+            ul = $('ul');
+        lis.first().prepend('<a href="#">点我</a>')  //在x最前面添加 y
+            .end().last().append('<a href="#">快点我</a>');  //在x最后面添加 y
+        // ul.prepend('<a href="#">点我</a>');
+        // ul.append('<a href="#">快点我</a>');
+        ul.append('<li>第三个li</li>');
+        // body.prepend('<h2>我是标题</h2>');
+        $('<h2>我是标题</h2>').prependTo(body);  //把 xjQuery对象添加到 body的最前面
+
+
+    })
+</script>
+</body>
+</html>

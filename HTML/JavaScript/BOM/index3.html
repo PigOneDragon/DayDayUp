@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>index3</title>
+</head>
+<body>
+    <input type="button" value="回到第一个页面">
+    <input type="button" value="回到第二个页面">
+	<p>第三个页面</p>
+    <script>
+        var btn=document.getElementsByTagName("input")[0],
+        	btn2=document.getElementsByTagName("input")[1];
+        btn.onclick=function () {
+        	//回到前两步
+        	history.back();
+           
+        }
+        btn2.onclick=function (){
+        	//或history.go(-1);
+          	history.go(-2);
+        }
+    </script>
+</body>
+</html>

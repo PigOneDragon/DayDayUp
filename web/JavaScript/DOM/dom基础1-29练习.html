@@ -1,0 +1,65 @@
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head lang="en">-->
+    <!--<meta charset="UTF-8">-->
+    <!--<title>dom属性setattribute</title>-->
+    <!--<style type="text/css">-->
+    <!--.purple{color:purple;background-color:pink;}-->
+    <!--.yellow{color:yellow;background-color:orange;}-->
+    <!--</style>-->
+<!--</head>-->
+<!--<body>-->
+    <!--<h2>网络游戏排名</h2>-->
+    <!--<ul>-->
+       <!--<li>英雄联盟</li>-->
+    	<!--<li>魔兽世界</li>-->
+    	<!--<li>DOTA</li>-->
+    	<!--<li>仙剑奇侠传</li>-->
+    	<!--<li>穿越火线</li>-->
+    	<!--<li>梦幻西游</li>-->
+    <!--</ul>-->
+    <!--<script type="text/javascript">-->
+    	<!--// 补充代码-->
+        <!--var list1=document.getElementsByTagName("li");-->
+        <!--for (var i=0;i<list1.length;i++){-->
+            <!--if (i%2==0){-->
+                <!--list1[i].setAttribute("class","purple");-->
+            <!--} else {-->
+                <!--list1[i].setAttribute("class","yellow");-->
+            <!--}-->
+        <!--}-->
+    <!--</script>-->
+<!--</body>-->
+<!--</html>-->
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>dom属性的移除removeattribute</title>
+    <style type="text/css">
+       .p1{background-color:pink;}
+       #p1{color:green;}
+       #p2{color:orange;}
+       #p3{color:blue;}
+    </style>
+</head>
+<body>
+    <p class="p1" id="p1">
+        一个人的快乐，不是因为他拥有的多，而是因为他计较的少。
+    </p>
+    <p class="p1" id="p2">
+        静坐常思己过，闲谈莫论人非，能受苦乃为志士，肯吃亏不是痴人，敬君子方显有德，怕小人不算无能，退一步天高地阔，让三分心平气和，欲进步需思退步，若着手先虑放手，如得意不宜重往，凡做事应有余步。
+    </p>
+    <p class="p1" id="p3">
+       持黄金为珍贵，知安乐方值千金，事临头三思为妙，怒上心忍让最高。切勿贪意外之财，知足者人心常乐。若能以此去处事，一生安乐任逍遥。
+    </p>
+    <script type="text/javascript">
+        // 补充代码
+        //移除属性使用removeattribute方法
+        var p_list=document.getElementsByTagName("p");
+        for (var i=0;i<p_list.length;i++){
+            p_list[i].removeAttribute("class")
+        }
+    </script>
+</body>
+</html>

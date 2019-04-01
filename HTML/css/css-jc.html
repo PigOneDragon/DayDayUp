@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>css继承</title>
+    <style type="text/css">
+    /* div,table   {font-size: 30px;
+            color: red;
+            border: 6px solid rebeccapurple;
+            }
+    div {
+        color: red;
+    }
+    #id1 {
+        color: green;
+    }
+    .c2 {
+        color: blue;
+    }
+     .c3 {
+        color: gray;
+    }*/
+    span{color:yellow;} /*权值1*/
+    p.p1 span{color: red;font-size:20px;}  /*权值1+10+1*/
+
+    </style>
+</head>
+
+<body>
+    <div id="div">
+            <p class="p1"> 
+                <span>权值相同，</span>就近原则
+            </p>
+            <p class="p2">
+                <span>权值不同，</span>哪个权值高，就用哪个
+            </p>
+    </div>
+
+
+
+
+
+
+
+
+    <!--id选择器>类选择器>标签选择器 同级选择器，类型冲突时采用就近原则-->
+    <!--
+    <div>朝发白帝彩云间</div>
+    <div id="id1">朝发白帝彩云间"ID属性"</div>
+    <div class="c2">朝发白帝彩云间"类属性"</div>
+    <div class="c2" id="id1">朝发白帝彩云间"类+id属性"</div>
+    <div class="c2 c3">朝发白帝彩云间"类+类属性"</div>-->
+    <!--
+ <div>
+     <P>css<span>继承</span></P> 
+     <h1>不是默认字体</h1>
+ </div>
+<table>
+    <tr><td>css层叠继承</td></tr>
+</table>
+<h1>默认字体</h1>
+-->
+</body>
+
+</html>

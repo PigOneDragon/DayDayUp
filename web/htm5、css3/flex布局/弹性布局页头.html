@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        /*在此处补充代码*/
+        *{
+            margin: 0;
+            padding: 0;
+            border: none;
+        }
+        header{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 65px;
+            background-color: #000;
+            min-width: 800px;
+        }
+        .logo img{
+            display: block;
+        }
+        /*导航项*/
+        .nav{
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            width: 500px;
+
+        }
+        .nav li{
+            color: #fff;
+            font-size: 20px;
+        }
+        /*登录*/
+        .login{
+            display: flex;
+            justify-content: space-between;
+            width: 100px;
+        }
+        .login input{
+            background-color: yellow;
+            border-radius: 3px;
+            width:40px;
+            height: 20px;
+        }
+        /*卡片购物车*/
+        .container{
+            display: flex;
+            justify-content: space-between;
+            /*align-content: center;*/
+            margin: 40px 80px 0;
+            min-width: 1250px;
+        }
+        .container .box{
+            background-color: #eee;
+            border-radius: 8px;
+            width: 600px;
+            height: 150px;
+            padding: 20px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        /*文字样式*/
+        .container .box .box-body{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            height: 150px;
+        }
+        .container .box .box-body > p{
+            font-size: 20px;
+        }
+        .container .box .box-btn{
+            background-color: orange;
+            width: 130px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        .container .box .box-btn:hover{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="logo">
+        <img src="http://climg.mukewang.com/59feb59700019dab01910057.png" alt="">
+    </div>
+    <ul class="nav">
+        <li>课程</li>
+        <li>路径</li>
+        <li>猿问</li>
+        <li>手记</li>
+    </ul>
+    <div class="login">
+        <input type="button" value="登录">
+        <input type="button" value="注册">
+    </div>
+</header>
+<section class="container">
+    <div class="box">
+        <div class="box-body">
+            <p class="title">《前端小白入门手册》</p>
+            <p class="range">适合人群：没有任何前端基础的小白</p>
+            <p class="price">费用：￥499</p>
+        </div>
+        <div class="box-btn">
+            加入购物车
+        </div>
+    </div>
+    <div class="box">
+        <div class="box-body">
+            <p class="title">《前端小白入门手册》</p>
+            <p class="range">适合人群：没有任何前端基础的小白</p>
+            <p class="price">费用：￥499</p>
+        </div>
+        <div class="box-btn">
+            加入购物车
+        </div>
+    </div>
+</section>
+<section class="container">
+    <div class="box">
+        <div class="box-body">
+            <p class="title">《前端小白入门手册》</p>
+            <p class="range">适合人群：没有任何前端基础的小白</p>
+            <p class="price">费用：￥499</p>
+        </div>
+        <div class="box-btn">
+            加入购物车
+        </div>
+    </div>
+    <div class="box">
+        <div class="box-body">
+            <p class="title">《前端小白入门手册》</p>
+            <p class="range">适合人群：没有任何前端基础的小白</p>
+            <p class="price">费用：￥499</p>
+        </div>
+        <div class="box-btn">
+            加入购物车
+        </div>
+    </div>
+</section>
+</body>
+</html>

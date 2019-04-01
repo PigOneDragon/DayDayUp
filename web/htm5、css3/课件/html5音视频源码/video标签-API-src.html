@@ -1,0 +1,44 @@
+<!doctype html> 
+<html> 
+<head> 
+    <meta charset="utf-8"> 
+    <title></title> 
+</head>
+<body>
+	<!-- video 标签 -API- src -->
+	<video controls id='myVideo' src='data/imooc.mp4'></video>
+	<div id='playNode'>播放</div>
+	<div id='stopNode'>暂停</div>
+	<div id='gogogo'>快进</div>
+	<script type="text/javascript">
+		//选中video标签
+		var VideoNode = document.getElementById('myVideo');
+		//src控制视频的来源
+		VideoNode.src = 'data/imooc.ogv';
+
+
+		/* 快进 */
+		gogogo.onclick = function(){
+			VideoNode.currentTime = VideoNode.currentTime + 3;
+		};
+		
+
+		/* 给playNode-div一个暂停video的事件 */
+		stopNode.onclick = function(){
+			VideoNode.pause();
+		};
+
+		/* 给playNode-div一个播放video的事件 */
+		playNode.onclick = function(){
+			VideoNode.play();
+		};
+		
+
+	</script>
+</body>
+</html>
+
+
+
+
+

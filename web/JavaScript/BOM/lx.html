@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>setInterval()</title>
+        <style type="text/css">
+            div{
+                width:300px;
+                height:300px;
+                border:1px solid #333;
+            }
+        </style>
+    </head>
+    <body>
+        <input type="button" value="开始">
+        <br><br>
+        <div></div>
+        <script type="text/javascript">
+            //当点击“开始”按钮时，div里面每隔一秒就有一个“hello”，”hello”依次累加，每个“hello”之间有一个空格分开
+            var Div=document.getElementsByTagName("div")[0],
+                btn=document.getElementsByTagName("input")[0],
+                i=1,
+                timer=null;
+            btn.onclick=function () {
+                timer=setInterval(function () {
+                    Div.innerHTML+="hello ";
+                    if (i>=15){
+                        clearInterval(timer);
+                    }
+                    i++;
+                },1000)
+            }
+        </script>
+    </body>
+</html>

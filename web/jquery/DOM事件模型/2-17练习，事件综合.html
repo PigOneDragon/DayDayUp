@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>标签页切换</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .tabList {
+            width: 552px;
+            height: 42px;
+            margin: 20px 0 20px 0;
+            overflow: hidden;
+        }
+
+        .tab {
+            width: 80px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background-color: yellow;
+            border: 1px solid;
+            border-bottom: none;
+            border-top-right-radius: 8px;
+            border-top-left-radius: 8px;
+            margin-left: 5px;
+            float: left;
+            z-index: 5;
+            position: relative;
+        }
+
+        .ml30 {
+            margin-left: 30px;
+        }
+
+        .active {
+            background-color: #fff;
+            border-bottom: 1px solid #fff;
+        }
+
+        .box {
+            width: 550px;
+            height: 150px;
+            border: 1px solid;
+            position: absolute;
+            top: 61px;
+            left: 20px;
+        }
+    </style>
+
+</head>
+<body>
+<div class="tabList">
+    <div class="ml30 tab active">DOM0</div>
+    <div class="tab">DOM1</div>
+    <div class="tab">jQuery</div>
+</div>
+<div class="box">DOM0</div>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    //点击标签切换
+    $(function () {
+        var text = $('.box'),
+            tab = $('.tab');
+        //方法1 利用siblings()所有同级元素
+        tab.on('click', function () {
+            if ($(this).hasClass("active")) {
+                // $(this).removeClass('active');
+                return true;
+            } else {
+                $(this).addClass('active')
+                       .siblings().removeClass('active'); //链式语法，该元素的所有同级元素添加一个类
+                // text.get(0).innerHTML=this.innerHTML; //DOM
+                text.text($(this).text()); //jQuery
+            }
+
+        });
+        //方法2  利用each() 遍历div子元素
+
+
+    })
+</script>
+</body>
+</html>

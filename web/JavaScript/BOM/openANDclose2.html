@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>打开/关闭页面</title>
+    </head>
+    <body>
+       <input type="button" name="" value="打开页面">
+       <script type="text/javascript">
+           //通过确认框，确定打开新窗口，取消关闭本窗口
+           var btn=document.getElementsByTagName("input")[0];
+           btn.onclick=function () {
+               var results=confirm("确定打开新窗口？");
+               if (results){
+                   window.open("newPage.html","newwindow",
+                       "width=300px,height=300px,top=200,left=600,scrollbars=no,toolbar=no,menubar=no,status=no,location=no")
+               } else{
+                   window.close();
+               }
+           }
+           
+       </script>
+    </body>
+</html>

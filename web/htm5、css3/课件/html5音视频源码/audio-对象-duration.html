@@ -1,0 +1,39 @@
+<!doctype html> 
+<html> 
+<head> 
+    <meta charset="utf-8"> 
+    <title></title> 
+    <style type="text/css">
+    	
+
+
+    </style>
+    <input type="button" id='ipt' name="" value='播放'>
+    <input type="button" id='pauseNode' name="" value='暂停'>
+    <div id='durationNode'></div>
+</head>
+<body>
+	<!-- audio 标签 duration -->
+	<script type="text/javascript">
+		//生成出一个音频对象
+		var myAudio = new Audio();
+		//音频地址
+		myAudio.src = 'data/imooc.mp3';
+		//音频播放按钮
+		ipt.onclick = function(){
+			myAudio.play();
+		};
+		//音频暂停按钮
+		pauseNode.onclick = function(){
+			myAudio.pause();
+		};
+
+		//返回音频的长度
+		myAudio.addEventListener('canplay',function(){
+			durationNode.innerHTML = myAudio.duration;
+		});
+
+
+	</script>
+</body>
+</html>

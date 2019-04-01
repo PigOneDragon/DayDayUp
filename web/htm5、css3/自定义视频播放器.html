@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自定义视频播放器</title>
+    <link rel="stylesheet" href="css/player.css">
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.js"></script>
+</head>
+<body>
+<!--<div class="out">-->
+    <div class="wrap">
+        <div class="in">
+            <video id="video" src="img/imooc.mp4" width="540" poster="img/poster.jpg"></video>
+            <div class="controls">
+                <!--播放\暂停按钮-->
+                <div class="play"></div>
+                <!--<div class="pause" style="display: none;"></div>-->
+                <!--播放进度条-->
+                <div class="videobar">
+                    <!--最左边的弧度-->
+                    <div class="left"></div>
+                    <!--拖动点-->
+                    <div class="dot"></div>
+                    <!--缓存进度条-->
+                    <div class="lineNode"></div>
+                    <!--最右边的弧度-->
+                    <div class="right"></div>
+                </div>
+                <!--播放时间-->
+                <div class="time">
+                    <span class="now">0:00</span>
+                    <span> - </span>
+                    <span class="all">5:30</span>
+                </div>
+                <!--声音小喇叭-->
+                <div class="voice">
+                    <!--声音进度条-->
+                    <div class="voice-bar"></div>
+                    <!--声音小圆点-->
+                    <div class="voice-dot"></div>
+                </div>
+                <!--全屏-->
+                <div class="fullscreen"></div>
+            </div>
+        </div>
+    </div>
+<!--</div>-->
+<script src="js/player.js"></script>
+</body>
+</html>

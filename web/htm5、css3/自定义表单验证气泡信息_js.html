@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .box{
+            line-height: 30px;
+            margin: 40px;
+        }
+        .box>input{
+            width: 60%;
+            height: 30px;
+            border-radius: 6px;
+        }
+        .box>label{
+            display: inline-block;
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+        }
+        .box .submit{
+            margin-left: 100px;
+            display: block;
+            width: 100px;
+            background-color: #0077aa;
+        }
+        .error-msg{
+            color: red;
+            margin-left: 100px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+<form action="" id="forms">
+    <div class="box">
+        <label for="name">用户名:</label>
+        <input type="text" id="name" required />
+    </div>
+    <div class="box">
+        <label for="email">邮箱:</label>
+        <input type="email" id="email" required />
+    </div>
+    <div class="box">
+        <input class="submit" type="submit" value="提交" id="submit"/>
+    </div>
+</form>
+<script>
+    //阻止默认事件，1、当input框验证失败时阻止默认事件
+    function replaceValidationUI(form) {
+        //监听验证不通过信息，
+        form.addEventListener("invalid", function(event) {
+            event.preventDefault();
+        }, true);
+
+        form.addEventListener("submit", function(event) {
+            //监听表单提交信息，验证不通过，阻止默认事件发生
+            if (!this.checkValidity()) {
+                event.preventDefault();
+            }
+        }, true);
+
+        //给提交按钮绑定事件
+        var btn = document.getElementById('submit');
+        btn.addEventListener('click',function () {
+            //去除添加的自定义信息  然后给验证不通过的input的父级元素添加自定义信息框
+            var errorMsg = form.querySelectorAll('.error-msg'),
+                //利用表单的伪类获取未通过验证的输入框
+                invalidOBbj = form.querySelectorAll(':invalid');
+
+            for(var i =0;i<errorMsg.length;i++){
+                //移除之前添加的错误信息
+                errorMsg[i].parentNode.removeChild(errorMsg[i]);
+            }
+            for(var j =invalidOBbj.length-1;j>=0;j--){
+                //获取兄弟节点 invalidOBbj[j].previousSibling 为何不起作用？
+                var bros =invalidOBbj[j].parentNode.childNodes[1];
+                //添加自定义的错误信息
+                invalidOBbj[j].parentNode.parentNode.insertAdjacentHTML("afterBegin","<div class='error-msg'>"+ bros.innerHTML + invalidOBbj[j].validationMessage +"</div>");
+            }
+        });
+    }
+    var form = document.getElementById("forms");
+    replaceValidationUI(form);
+
+</script>
+</body>
+</html>

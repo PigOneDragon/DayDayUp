@@ -1,0 +1,325 @@
+a{
+    text-decoration: none;
+}
+/*清除输入框聚焦时的边框*/
+select,input{
+    border: none;
+    outline: none;
+}
+/*顶部信息*/
+.top{
+    line-height: 30px;
+    font-size: 13px;
+    color: #868686;
+}
+.iphone{
+    background:url(../img/icon-call.png) no-repeat center left;/*url 不重复 垂直居中  水平靠左*/
+    float: left;
+    padding-left: 20px;
+}
+.welcome{
+    float: right;
+}
+.welcome a{
+    color: #5bb8e8;
+}
+/*导航logo区*/
+.header .logo{
+    display: inline-block;
+    width: 403px;
+    height: 74px;
+    padding: 9px 0;
+}
+.header a img{
+    width: 100%;
+    height: 100%;
+}
+.header .search{
+    width: 326px;
+    height: 38px;
+    position: absolute;
+    right: 0;
+    top: 29px;
+    background:url("../img/ui-search.jpg") no-repeat center;
+
+}
+
+/*nav区*/
+
+.nav .link{
+    min-width: 80px;
+    height: 36px;
+    line-height: 36px;
+    padding-left:30px;
+    font-size: 16px;
+    color: #fff;
+    display: inline-block;
+    float: left;
+    text-align: center;
+
+}
+.nav .menu{
+    width: 130px;
+    padding: 0 30px;
+    background-color: #1fa4f0;
+    position: relative;
+}
+.menu-list{
+    width: 100%;
+    height: 422px;
+    position: absolute;
+    left: 0;
+    top: 36px;
+    background-color: #1fa4f0;
+}
+.nav a.right{
+    float: right;
+}
+/*banner右侧搜索区跟帮助中心*/
+.banner-help .title,
+.banner-select .title{
+    /*width: 98px;*/
+    height: 22px;
+    margin: 0 auto;
+    text-align: center;
+    padding:15px 0 13px 0;
+}
+
+.banner-help .title .text,
+.banner-select .title .text{
+    display: inline-block;
+    width: 73px;
+    height: 22px;
+    line-height: 22px;
+    color: #fecd09;
+    font-size: 16px;
+    padding-left: 28px;
+    background: url("../img/icon-help.png") no-repeat 0 0;
+}
+.banner-select .row{
+
+    padding-bottom: 10px;
+    text-align: center;
+}
+.banner-select .row select{
+    width: 170px;
+    height: 26px;
+    line-height: 26px;
+    font-size: 12px;
+    padding: 2px 0;
+}
+.banner-select .submit{
+    text-align: center;
+    padding-top: 16px;
+}
+.banner-select .button{
+    width: 108px;
+    height: 32px;
+    line-height: 32px;
+    color: #fff;
+    border-radius: 3px;
+    background-color: #fecd09;
+}
+.banner-help .title .text{
+    color: #00b3ea;
+    background-position: 0 -23px;
+}
+.banner-help .link{
+    display: inline-block;
+    color: #00b3ea;
+    width: 86px;
+    height: 26px;
+    padding: 0 0 8px 26px;
+}
+/*医院列表*/
+.content-main-caption{
+    background-color: #f4f6fa;
+}
+
+.content-main-caption a{
+    display: inline-block;
+    width: 112px;
+    height: 34px;
+    line-height: 34px;
+    color: #00b3ea;
+    text-align: center;
+}
+/*激活态下的tab*/
+.content-main-caption .item_focus{
+    background-color: #60bff2;
+    color: #fff;
+}
+/*医院图文*/
+.content-main-body{
+    border: 1px solid #f4f6fa;
+    height: 452px;
+    padding-top: 7px;
+}
+.content-main-body-area{
+    height: 26px;
+    line-height: 26px;
+    padding: 8px;
+    border-bottom:  1px solid #f4f6fa;
+}
+.content-main-body-area-item{
+    display: inline-block;
+    /*height: 26px;*/
+    font-size: 12px;
+    color: #4c4948;
+    padding: 0 10px ;
+}
+.area-item_focus{
+    background-color: #60bff2;
+    color: #fff;
+}
+.content-main-body-hospitals{
+    padding: 17px 0 12px 10px;
+}
+.content-main-body-hospital{
+    float: left;
+    width:356px;
+    height: 100px;
+    padding-bottom: 12px;
+
+}
+.content-main-body-hospital img{
+    width: 100px;
+    height: 98px;
+    /*display: inline;*/
+    float: left;
+}
+.content-main-body-hospital .text{
+    padding: 8px 12px 0 10px;
+    width: 224px;
+    height: 90px;
+    float: left;
+    font-size: 12px;
+    /*background-color: #fecd09;*/
+}
+.content-main-body-hospital .text .name{
+    color: #036eb7;
+    line-height: 21px;
+    padding-top: 13px;
+    font-size: 14px;
+}
+.level{
+    float: right;
+    font-size: 12px;
+    color: #979797;
+}
+.content-main-body-hospital .text .phone,
+.content-main-body-hospital .text .address
+{
+    line-height: 18px;
+    padding-bottom: 4px;
+    color: #666;
+}
+/*医院列表链接区*/
+.content-main-list{
+    height: 98px;
+    padding-top: 10px;
+}
+.content-main-list .item{
+    display: block;
+    float: left;
+    width: 353px;
+    height: 26px;
+    line-height: 26px;
+    font-size: 12px;
+    color: #666;
+    border-bottom: 1px dashed #dcdddd;
+}
+.content-main-list .item:nth-child(odd){
+    margin-right: 18px;
+    width: 335px;
+}
+.content-main-more{
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 742px;
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    font-size: 14px;
+    color: #5084c4;
+}
+/*最新公告 停诊公告*/
+.content-close,
+.content-news{
+    background-color: #fff;
+    border: 1px solid #f4f6fa;
+}
+.content-close-title,
+.content-news-title{
+    /*width: 100px;*/
+    line-height: 38px;
+    height: 38px;
+    /*border: 1px #ccc solid;*/
+    /*text-align: center;*/
+    text-indent: 20px;
+    font-size: 15px;
+    color: #fec009;
+    background-color: #f4f6fa;
+    position: relative;
+}
+.content-close-title{
+    color: #4ab4ed;
+}
+.content-close-title-more,
+.content-news-title-more{
+    display: inline-block;
+    /*width: 30px;*/
+    /*height: 15px;*/
+    /*line-height: 15px;*/
+    font-size: 12px;
+    color: #868686;
+    float: right;
+    padding-right: 22px;
+}
+ /*公告下的链接*/
+.content-close-list,
+.content-news-list{
+    padding: 14px 20px 13px 35px;
+    line-height: 29px;
+    font-size: 13px;
+    background: url("../img/list-yellow.jpg") no-repeat 17px 20px;
+}
+.content-close-list{
+    background: url("../img/list-blue.jpg") no-repeat 17px 20px;
+}
+.content-news-list .link{
+    display: block;
+    color: #969696;
+    /*padding-top: 13px;*/
+    /*padding-left: 15px;*/
+}
+/*页脚*/
+.footer{
+    text-align: center;
+    font-size: 14px;
+    color: #bdbdbe;
+    line-height: 70px;
+}
+/*返回顶部*/
+.backtop{
+    display: none;
+    width: 40px;
+    height: 40px;
+    line-height: 20px;
+    position: fixed;
+    right: 2px;
+    bottom: 2px;
+    color: #fff;
+    background: rgb(102, 102, 102) url(../img/icon-go-up.png) center no-repeat;
+}
+.backtop:hover{
+    background: rgba(102, 102, 102,.9);
+}
+/*移动时添加一个伪类 添加文字*/
+.backtop:hover:after{
+    content: '回到顶部';
+    display: block;
+    line-height: 20px;
+    text-align: center;
+}

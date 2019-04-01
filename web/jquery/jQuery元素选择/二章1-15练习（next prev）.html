@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>next prev方法</title>
+</head>
+<body>
+<ul>
+    <li class="li1">第1个li</li>
+    <li class="li2">第2个li</li>
+    <li class="li3">第3个li</li>
+    <li class="li4">第4个li</li>
+    <li class="li5">第5个li</li>
+    <li class="li6">第6个li</li>
+    <li class="li7">第7个li</li>
+    <li class="li8">第8个li</li>
+    <li class="li9">第9个li</li>
+</ul>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+
+<script>
+    //1、已获取到第5个li，通过nextUntil（）获取到第6个li，并将这个li由JQ元素转换为DOM元素，并将其标签内容改为“我被改变了”
+
+    //2、已获取到第5个li，通过prev（）获取到第4个li，将其也转换为DOM元素，并将标签内容改为“我也被改变了”
+
+    var li5=$(".li5");
+    console.log(li5.nextUntil('.li7').get(0).innerHTML="我被改变了");
+    console.log(li5.prev().get(0).innerHTML="我也被改变了");//向上找第一个同级元素
+    console.log(li5.siblings());//siblings返回所有同级元素，不包含自身
+    console.log('dsfdsgg'.substring(-3,5));
+    //each方法：遍历匹配元素，不需要返回值，返回原数组  若其中有if函数，返回为true时相当于continue false相当于break
+    // console.log($('li').each(function (index,domElement){
+    //     console.log(index);
+    //     console.log(domElement);
+    // }));
+    //map方法：将一组元素转换成其他数组（不论是否是元素数组），需要返回值，返回成一组新数组,内部的函数包含2个参数（index，domelement）当前元素索引 跟dom元素
+    // console.log($('li').map(function (index,domElement){
+    //     console.log(index);
+    //     console.log(domElement);
+    //     return this.className
+    // }));
+    console.log($('li').map(function () {
+        return null;//为空集合
+    }))
+</script>
+</body>
+</html>

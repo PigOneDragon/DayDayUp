@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>蓝天白云</title>
+    <style type="text/css">
+        .bg{
+            width: 500px;
+            height: 300px;
+            /*position: relative;*/
+            margin: 20px auto;
+            background: linear-gradient(rgb(196, 228, 253) 0%,rgb(255, 255, 255) 60%, rgb(148, 190, 89) 100%);
+            overflow: hidden;
+        }
+        .baiyun{
+            width: 300px;
+            height: 100px;
+            margin: 20px 50px 0 180px;
+            /*怎样修改代码让白云更有层次感呢？ */
+            /*transform-style: preserve-3d;*/
+            /*perspective:500px;*/
+        }
+        /*云朵的拼接 一个圆形，加2个两边是圆角的矩形*/
+
+        .baiyun > div[class^="b"]{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #fff;
+            position: relative;
+            float: left;
+        }
+        /*圆角矩形*/
+        .baiyun > div[class^="b"]::before{
+            content: "";
+            width: 55px;
+            height: 15px;
+            position: absolute;
+            top: 13px;
+            left: -20px;
+            border-radius: 15px;
+            background-color: #fff;
+        }
+        .baiyun > div[class^="b"]::after{
+            content: "";
+            width: 28px;
+            height: 20px;
+            position: absolute;
+            top: 9px;
+            left: -15px;
+            border-radius: 10px;
+            background-color: #fff;
+            transform: rotate(40deg);
+        }
+        /*云朵的定位与缩放*/
+        .baiyun > .b1{
+            top: -15px;
+            left: 10px;
+            /*transform: rotateZ(45deg);*/
+        }
+        .baiyun > .b2{
+            top: 35px;
+            left: 9px;
+            transform: scale(.8);
+        }
+        .baiyun > .b3{
+            top: 10px;
+            left: 30px;
+            transform: scale(1.2);
+        }
+        .baiyun > .b4{
+            /*top: 30px;*/
+            /*left: 50px;*/
+            transform: scale(.6) translate(90px,50px);
+        }
+        .baiyun > .b5{
+            top: 0;
+            left: 90px;
+        }
+    </style>
+</head>
+<body>
+<div class="bg">
+    <div class="baiyun">
+        <div class="b1"></div>
+        <div class="b2"></div>
+        <div class="b3"></div>
+        <div class="b4"></div>
+        <div class="b5"></div>
+    </div>
+</div>
+</body>
+</html>

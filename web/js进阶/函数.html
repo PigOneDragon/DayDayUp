@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            overflow: hidden;
+        }
+
+        #box {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin: 10px auto;
+        }
+
+        #close {
+            position: absolute;
+            right: 0;
+            top: -4px;
+            color: yellow;
+        }
+        #btn {
+            display: block;
+            width: 100px;
+            margin: 0 auto;
+        }
+    </style>
+
+</head>
+<body>
+<pre>1\我们家(family)有我(me)小明和老婆(wife)小花，10个月后还要再添个小盆友(baby)。
+
+   我们希望通过一个方法(setBaby)根据性别(sex)来为小屁孩取名：
+
+   如果是男孩(male)，就叫牛牛；
+
+   如果是女孩（female），就叫妞妞</pre>
+<pre>2写出一个加法(add)函数，并在其内部定义一个函数(isNumber)，用来判断add的参数是否可以转化为数字类型进行相加，
+
+如果可以，就在页面中输出结果；
+
+如果不能就退出add，给出提示“请传入数字类型的参数”</pre>
+<hr>
+<p>现有一个矩形的盒子和按钮，盒子的右上角有一个表示关闭的X当点击按钮和X号时，矩形的盒子会消失。</p>
+<div id="box">
+    <span id="close">X</span>
+</div>
+<button id="btn">关闭</button>
+<script>
+    // debugger;
+    var family = {
+        me: 'xm',
+        wife: 'xh',
+        setBody: function (sex) {
+            if (sex === 'male') {
+                //为对象添加body属性
+                this.body = "牛牛";
+            } else {
+                this.body = "妞妞";
+            }
+        }
+    };
+    family.setBody('male');
+    console.log(family);
+
+    //    2
+    function add(a, b) {
+        function isNan(a, b) {
+            if (isNaN(a) || isNaN(b)) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+
+        if (isNan(a, b)) {
+            return parseInt(a) + parseInt(b);
+        } else {
+            alert('请输入数字！');
+        }
+
+    }
+
+    console.log(add('3', 3));
+    //    匿名函数自执行   当以function打头，js预解析时不会执行后面的()调用
+    //    1、
+    var fn = function () {
+        console.log("方法1");
+    }();
+    //    2、
+    (function () {
+        console.log("方法2");
+    }());
+    //    3、
+    (function () {
+        console.log("同方法2");
+    })();
+    //    4、合法的一元运算符
+    !+-function () {
+        console.log("方法3");
+    }();
+
+
+    (function (a, b) {
+        var c = a + b;
+        console.log(c);
+    })(1, 31);
+    //    递归函数
+    //    例 阶乘
+    //     debugger;
+    function dg(i) {
+        // i--;
+        if (i == 1) {
+            return 1;
+        } else {
+            return i * dg(i - 1);
+        }
+
+    }
+
+    console.log(dg(4));
+
+    var btn = document.getElementById('btn');
+    var box = document.getElementById('box');
+    var colse = document.getElementById('close');
+    // var None  = function(){
+    //     box.style.display='none';
+    // };
+    // btn.onclick = None;
+    //绑定事件相当于 var add = 函数
+    btn.onclick = function(){
+             box.style.display='none';
+         };
+
+    colse.onclick = btn.onclick;
+
+    //对象中的函数传参设置属性时只能用this['p']这种形式，不能用.  用.相当于加的属性是字符p 不是p参数
+    var person ={
+        setPerson : function(p,v){
+            this[p] = v;
+            console.log(p,v);
+            return this;
+        }
+    };
+    person.setPerson('name','xm').setPerson('age','18').setPerson('sex','male');
+    // console.log(person);
+    var person = new Object();
+    person.name = 'xm';
+    var arr = new Array(111);
+    console.log(person,arr);
+
+    var data = [3,4,2,1];
+    var multiply = function(a,b,c,d){
+        return a * b *c *d;
+    };
+    // debugger;
+    var t = Math.min.apply(Math,[2,3,4,1]);
+    var tt = Math.min(data);
+    // alert(tt);
+    // alert(multiply.apply(window,data));
+
+
+
+//    参数个数知识
+    function Min() {
+        if (arguments.length == 0) return;
+        var min =arguments[0];
+        for (var i=1;i<arguments.length;i++){
+            min = Math.min(arguments[i],min);
+        }
+        return min;
+    }
+    console.log(Min());
+    console.log(Min(5,4,1,2,0,-3));
+    function calcuate(a,b){
+        return [a+b,a-b,a*b,a/b];
+    }
+    console.log(calcuate(5,2));
+
+
+
+</script>
+<script src="test1.js" language="JavaScript"></script>
+<script language="JavaScript">
+    // alertAbc();
+
+</script>
+</body>
+</html>

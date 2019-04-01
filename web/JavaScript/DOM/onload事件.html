@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Onload</title>
+    <!--当点击按钮时，按钮的字体颜色变成红色,当鼠标离开按钮时，字体颜色变成灰色-->
+    <script>
+        //omload在页面加载完毕后执行onload后的函数，利用匿名函数封装
+        window.onload=function () {
+            var cl=document.getElementsByTagName("input")[0];
+            cl.onclick=ck;
+            function ck(){
+                this.style.color="red";
+            }
+            cl.onmouseover=mv;
+            function mv() {
+                this.style.color="yellow";
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <input type="button" value="点击改变按钮字体颜色" >
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+	    <meta charset="UTF-8">
+	    <title>mouse滚动条</title>
+	    <style type="text/css">
+		    #div{overflow:auto;width:200px;height:200px;border:2px solid gray;margin-bottom:20px;}
+		    #content{width:200px;height:100px;border:2px solid gray;}
+	    </style>
+	</head>
+	<body>
+		<div id="div">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod,tempor incididunt ut labore et
+			   dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+			   ea commodo,consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse,cillum dolore eu
+			   fugiat nulla pariatur. Excepteur sint occaecat cupidatat non,proident, sunt in culpa qui officia deserunt
+			   mollit anim id est laborum.
+			</p>
+		</div>
+		<div id="content"></div>
+		<script type="text/javascript">
+         //当鼠标在带滚动条的文本框上滑动时，字体颜色变成红色,当鼠标移出带滚动条的文本框时，字体颜色变成绿色,当鼠标移动文本框的滚动条时，空白的文本框出现文本“内容滚动了”
+			var Div=document.getElementById("div");
+			var Con=document.getElementById("content");
+			//给Div添加鼠标移动事件
+			Div.onmousemove=function () {
+				Div.style.color="red";
+			}
+			//给Div添加移出事件
+			Div.onmouseout=function () {
+				Div.style.color="green";
+			}
+			//鼠标移入清空con内容
+		 	Div.onmouseover=function(){
+				Con.innerHTML="";
+			}
+			//给Div添加滚动事件,改变content的文本内容
+			Div.onscroll=function () {
+				Con.innerHTML="内容滚动了";
+			}
+		</script>
+	</body>
+</html>

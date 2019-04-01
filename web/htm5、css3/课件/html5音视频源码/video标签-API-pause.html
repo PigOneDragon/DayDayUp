@@ -1,0 +1,44 @@
+<!doctype html> 
+<html> 
+<head> 
+    <meta charset="utf-8"> 
+    <title></title> 
+</head>
+<body>
+	<!-- video 标签 -API- pause -->
+	<video controls src='data/imooc.mp4' id='myVideo'></video>
+	<div id='playNode'>播放</div>
+	<div id='stopNode'>暂停</div>
+	<script type="text/javascript">
+		//选中video标签
+		var VideoNode = document.getElementById('myVideo');
+
+		/*
+		window.onclick = function(){
+			VideoNode.play();
+		};
+		*/
+		/*
+		setTimeout(function(){
+			VideoNode.pause();
+		},3000);
+		*/
+		/* 给stopNode-div一个暂停video的事件 */
+		stopNode.onclick = function(){
+			VideoNode.pause();
+		};
+
+		/* 给playNode-div一个播放video的事件 */
+		playNode.onclick = function(){
+			VideoNode.play();
+		};
+		
+
+	</script>
+</body>
+</html>
+
+
+
+
+

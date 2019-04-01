@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>工厂模式</title>
+</head>
+
+<body>
+    <script>
+        // 字面式声明对象
+        var obj = {
+            name: "xm",
+            sex: 'male',
+            say: function () {
+                return "hello!";
+            }
+        };
+        // new 操作符后跟构造函数
+        var obj1 = new Object();
+        obj1.name = "xh";
+        obj1.sex = "fomale";
+        obj1.say = function () {
+            return "helloworld!";
+        };
+        // 构造方法声明对象
+        function obj2(name, sex, say) {
+            this.name = name;
+            this.sex = sex;
+            this.say = say;
+        }
+        var obj3 = new obj2("xw", "male", function () {
+            return "构造方法";
+        });
+        // 工厂模式
+        function ceraterObject(name, sex) {
+            var obj4 = new Object();
+            obj4.name = name;
+            obj4.sex = sex;
+            obj4.say = function () {
+                return this.name + this.sex + "运行中。。。";
+            };
+            return obj4
+        }
+        var box1 = ceraterObject("ld", "24");
+        // 原型模式
+        // prototype 是object的子对象
+        function test(){}
+        test.prototype.name="ls";
+        test.prototype.sex="male";
+        var obj6=new test();
+        alert(ceraterObject.prototype);
+    </script>
+</body>
+
+</html>

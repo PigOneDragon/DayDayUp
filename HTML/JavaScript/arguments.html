@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>arguments练习</title>
+</head>
+<body>
+	<script>
+		// function funAvg(){
+		// 	var len=arguments.length,sum=0;
+		// 	for(var i=0;i<len;i++){
+		// 		sum+=arguments[i]
+		// 	}
+		// 	return sum/len;
+		// }
+		// var s=funAvg(1,5,22,655);
+		// document.write(s);
+		// var s=new Data().r
+		// document.write(s)
+
+		/**
+		 * @return {number}
+		 */
+		function Datedif(year_,mon_,day_){
+	
+			var year_=parseInt(prompt("请输入年份")),
+				mon_=parseInt(prompt("请输入月份")),
+				day_=parseInt(prompt("请输入日期")),
+				sum=0,d=null,f=null;
+			//想对输入的数字进行一个判断，是否在合理范围中，调用函数
+			f=Judge(year_,mon_,day_);
+			if (f==0){
+				return "输入有误，请按格式再次输入";
+			}
+			//对年进行判断,闰年
+			else if(year_%4==0){
+				for(var i=1;i<mon_;i++){
+					if(i==1||i==3||i==5||i==7||i==8||i==10||i==12){
+						d=31;
+					}else if(i==2){
+						d=29;
+					}else{d=30;}
+					sum+=d;
+				}
+			//平年
+			}else{
+				for(var i=1;i<mon_;i++){
+					if(i==1||i==3||i==5||i==7||i==8||i==10||i==12){
+						d=31;
+					}else if(i==2){
+						d=28;
+					}else{d=30;}
+					sum+=d;
+				}
+			}
+			return sum+day_;
+
+		}
+
+		//定义判别函数
+			function Judge(n,y,r) {
+				var flag=null,str="";
+				//对输入的年月日进行简单格式判断
+				if (n<=0||isNaN(n)){
+					str=str+"年份不正确，请重新输入有效的数字年份！";
+				}
+				if (y<=0||y>12||isNaN(y)){
+					str=str+"月份不正确，请重新输入有效的数字月份！";
+				}
+				if (r<=0||r>31||isNaN(r)){
+					str=str+"日期不正确，请重新输入有效的数字日期！";
+				}
+				if (str!=""){
+					alert(str);
+					flag=0;
+				} else {
+					flag=1;
+				}
+				return flag;
+			}
+
+		var da=Datedif();
+		document.write(da);
+
+	</script>
+</body>
+</html>

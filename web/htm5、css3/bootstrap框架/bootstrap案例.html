@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>bootstrap</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index2.css">
+</head>
+<body>
+<!--返回顶部锚点-->
+<div id="backtop"></div>
+<a class="back-up-btn btn btn-default btn-lg" href="#backtop">
+    <span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span>
+</a>
+<!--页头-->
+<header id="page-head">
+    <div class="container full-padding">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <!--导航条logo-->
+                <div class="head-logo pull-left">
+                    <img src="images/index_05.png" alt="logo" />
+                </div>
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!--<a class="navbar-brand" href="#">Brand</a>-->
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse full-padding" id="bs-example-navbar-collapse-1">
+
+                    <ul class="nav navbar-nav navbar-left">
+                        <li class="active"><a href="#qwe" data-toggle="tab">首页 <span class="sr-only">(current)</span></a></li>
+                        <li><a href="#ewq" data-toggle="tab">产品</a></li>
+                        <li><a href="#ewq1" data-toggle="tab">我们</a></li>
+                    </ul>
+                    <div class="nav-tell hidden-sm hidden-xs">4007-888888</div>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+    </div>
+
+</header>
+<!--banner-->
+<div class="tab-content">
+    <div id="qwe" class="tab-pane active">
+        <section class="banner">
+            <img src="images/index_12.png" alt="banner" />
+        </section>
+        <!--body -one-->
+        <div class="container">
+            <div class="page-title">
+                <h3>bootstrap</h3>
+                <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+            </div>
+            <div class="row one-pic">
+                <div class="col-md-4 col-xs-6 col-sm-6">
+                    <img src="images/index_15.png" />
+                </div>
+                <div class="col-md-4 col-xs-6 col-sm-6">
+                    <img src="images/index_17.png" />
+                </div>
+                <div class="col-md-4 col-xs-6 col-sm-6">
+                    <img src="images/index_19.png" />
+                </div>
+            </div>
+        </div>
+        <!--body two-->
+        <section class="page-two">
+            <div class="container">
+                <div class="page-title">
+                    <h3>bootstrap</h3>
+                    <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+                </div>
+                <div class="row two-pic">
+                    <div class="col-md-3 col-xs-6 col-sm-6">
+                        <!--整体可点击-->
+                        <a href="#2">
+                            <div class="two-pic-item">
+                                <h3>编码规范</h3>
+                                <button class="btn btn-danger center-block">查看更多</button>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-xs-6 col-sm-6">
+                        <!--整体可点击-->
+                        <a href="#">
+                            <div class="two-pic-item">
+                                <h3>编码规范</h3>
+                                <button class="btn btn-danger center-block">查看更多</button>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-xs-6 col-sm-6">
+                        <!--整体可点击-->
+                        <a href="#">
+                            <div class="two-pic-item">
+                                <h3>编码规范</h3>
+                                <button class="btn btn-danger center-block">查看更多</button>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-xs-6 col-sm-6">
+                        <!--整体可点击-->
+                        <a href="#">
+                            <div class="two-pic-item">
+                                <h3>编码规范</h3>
+                                <button class="btn btn-danger center-block">查看更多</button>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--body three-->
+        <section class="page-three">
+            <div class="container">
+                <div class="page-title">
+                    <h3>Bootstrap 是最受欢迎的 HTML、CSS 和 JS 框架</h3>
+                    <p>Bootstrap 是最受欢迎的 HTML、CSS 和 JS 框架，用于开发响应式布局、移动设备优先的 WEB 项目。</p>
+                    <img src="images/index_38.png" />
+                </div>
+            </div>
+        </section>
+        <section class="page-four">
+            <div class="container">
+                <div class="page-title">
+                    <h3>Bootstrap 让前端开发更快速、简单</h3>
+                </div>
+
+                <!--一个图片  一个列表文字-->
+                <div class="row page-four-info">
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <img src="images/index_42.png" />
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <ul class="info-text">
+                            <li>● 预处理脚本</li>
+                            <li>● 一个框架、多种设备</li>
+                            <li>● Bootstrap 提供了全面、美观的文档。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="container">
+                <div class="row footer-pic">
+                    <div class="col-md-6">
+                        <img src="images/index_49.png" class="leftpic">
+                    </div>
+                    <div class="col-md-6">
+                        <img src="images/index_46.png" class="rightpic">
+                    </div>
+                </div>
+            </div>
+            <div class="copy-info">
+                <span>电话:4008-000000&nbsp;</span><span>固话:022-6666666&nbsp;</span>
+                <span>邮箱:kf@imooc.com&nbsp;</span><span>传真:022-6666666</span><br>
+                地址：北京市西城区德外大街10号<br><br>
+                Copyright © 2017 imooc.com All Rights Reserved | 京ICP备 13046642号-2
+            </div>
+
+        </footer>
+    </div>
+    <div id="ewq" class="tab-pane">
+       这是第二个页面
+    </div>
+    <div id="ewq1" class="tab-pane">
+        这是第san个页面
+    </div>
+</div>
+<script src="js/jquery-3.1.1.js"></script>
+<script src="bootstrap/js/bootstrap.js"></script>
+</body>
+</html>

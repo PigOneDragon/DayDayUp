@@ -1,0 +1,34 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+.box{
+	margin: 0 auto;
+	max-width: 6.4rem;	
+}
+.footer{
+	position: fixed;
+	bottom: 0;
+	height: 54px;
+	width: 100%;
+	display: flex;
+	text-align: center;
+	font-size: 12px;
+	border-top: 1px solid #ccc;
+	background: #fff;
+}
+.footericon{
+	flex: 1;
+}
+.icon_a{
+	display: block;
+	margin:8px 0;
+	/*background:red;*/
+}
+.iconactive{
+	color:#c9394a;
+}

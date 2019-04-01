@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>闪烁的文字</title>
+        <style type="text/css">
+            div{
+                width:200px;
+                height:200px;
+                line-height:200px;
+                border:2px solid gray;
+                text-align:center;
+                color:red;
+            }
+        </style>
+    </head>
+<body>
+    <h3>会闪烁的文字</h3>
+        <div id="text"></div>
+        <script type="text/javascript">
+            //☆☆☆今日特卖☆☆☆ ”和“★★★今日特卖★★★”这两个文本每0.5秒互相切换一次
+            var Div=document.getElementById("text"),
+                text1="☆☆☆今日特卖☆☆☆",
+                text2="★★★今日特卖★★★",
+                flag=1;
+            //0.5s后变成text1,1s后变成text2  这样写效果会叠加
+            // setInterval(fun1,500);
+            // setInterval(fun2,1000);
+            // function fun1() {
+            //     Div.innerHTML=text1;
+            // }
+            // function fun2() {
+            //     Div.innerHTML=text2;
+            // }
+            //利用周期函数实现
+            // setInterval(f,500);
+            // function f() {
+            //     if(flag==1){
+            //         flag=0;
+            //         Div.innerHTML=text1;
+            //     }else {
+            //         flag=1;
+            //         Div.innerHTML=text2;
+            //     }
+            // }
+            //利用定时函数实现
+            var timer=setTimeout(f,500);
+            function f() {
+                if(flag==1){
+                    flag=0;
+                    Div.innerHTML=text1;
+                    setTimeout(f,500);
+                }else {
+                    flag=1;
+                    Div.innerHTML=text2;
+                    setTimeout(f,500);
+                }
+            }
+            
+        </script>
+    </body>
+</html>

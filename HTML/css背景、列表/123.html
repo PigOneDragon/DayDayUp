@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		div{width: 100px;
+			height: 100px;
+			border:1px solid;
+			
+			position: static;
+			line-height: 100px;
+			text-align: center;}
+		.ba{background-color: red;top:20px;}
+		.bb{background-color: blue;position:relative;border:2px red double;left: 50px;z-index: 1;}
+		.bc{background-color: green;position: relative;top:-20px;}
+		.bd{background-color: orange;position: relative; top: -50px;right: -50px;}
+		.t{width: 80px;
+			height: 80px;
+			background-color: black;
+			}
+		.tt{width: 80px;
+			height: 80px;
+			background-color: #fff;
+			}
+	</style>
+</head>
+<body>
+	<!--<div class="ba">aa</div>-->
+	<div class="bb">bb<div class="t">bbbb-1</div></div>
+	<div class="bc">cc<div class="tt">cccc-1</div></div>
+	<!--<div class="bd">dd</div>-->
+
+</body>
+</html>

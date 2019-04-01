@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>表格布局</title>
+</head>
+
+<body>
+    <table width="100%" align="center">
+        <tr bgcolor="pink">
+            <!--页眉-->
+            <td height="80px"></td>
+        </tr>
+        <tr>
+            <!--上空行-->
+            <td height="10px"></td>
+        </tr>
+        <tr bgcolor="orange">
+            <!--内容-->
+            <td>
+                <table align="center">
+                    <tr valign="top">
+                        <td width="240px">
+                        	<!--嵌套的表格在父级表格单元格中宽带100%<，注意颜色的设置，应将颜色设置在嵌套的table中，若设置在父级单元格中，左侧背景色高度会随着右边内容变化-->
+                        	<table width="100%" bgcolor=#fffff> 
+                        		<tr><td align="center"><u>关于我们</u></td></tr>
+                        		<tr><td align="center"><u>帮助中心</u></td></tr>
+                        		<tr><td align="center"><u>友情链接</u></td></tr>
+                        		<tr><td align="center"><u>意见反馈</u></td></tr>
+
+
+
+                        	</table>
+
+
+
+
+                        </td>
+                        <td width="20px"></td>
+                        <td width="764px" bgcolor=#fffff>
+                        	<pre>
+                        		表格简述
+表格是在制作网页的重要武器。诸如让自己的页面有底色、底图
+之类的修饰，只能通过表格来实现。表格是一个可自定义的容器，因
+而它就是我们用以实现页面构设的利器。
+把表格称作容器缘于表格的装载特性。表格是用于装载数据的，
+与我们现实中所看到和理解的表格非常一致。表格不仅仅只能装载数
+据，它还被广泛地应用于网页的布局，这与表格可以将其所在区域划
+分为行和列即诸多单元格密切相关。页面布局将因使用了表格而可以
+随心所欲地排版。
+在 HTML 里，表格有表头、表体、单元格、行、列等等概念，通
+过学习、领会和实践，是能够逐渐掌握的。
+◆表格标签基本代码构成表达式
+以下是一个完整的表格标签代码框架，为了能够一目了然，各元
+素尚未引入它们的属性：
+
+◆认识基本表格
+一个表由＜table＞开始， ＜/table＞结束，表的内容由 ＜tr
+＞,＜th＞和＜td＞定义。＜tr＞说明表的一个行，表有多少行就有多
+少个＜tr＞；＜th＞说明表的列数和相应栏目的名 称，有多少个栏
+就有多少个＜th＞；＜td＞则填充由＜tr＞和 ＜th＞组成的表格。
+表格重要的基本标记不多，但每个标记都有很多的属性，所以还
+是从表格的外观(即浏览器中显示的表格的样式)来了解最基本的属
+性。
+先来看看表格的基本构造。 下图是一个 3 行 3 列的表格：
+
+
+
+                        	</pre>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <!--下空行-->
+            <td height="10px"></td>
+        </tr>
+        <tr bgcolor="black">
+            <!--页脚-->
+            <td height="80px"></td>
+        </tr>
+    </table>
+</body>
+
+</html>

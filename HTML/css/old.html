@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>遮罩层</title>
+    <style type="text/css">
+        *{margin: 0;padding: 0;}
+        .pic{width: 500px;height: 500px;background-color: #07CBC9;position: relative;float: left;}
+        .pic img{
+            width: 500px;height: 500px;display: inline-block;}
+        .mask{width: 500px;
+            height: 500px;
+            background-color: #333333;
+            position: absolute;
+            top:0;
+            opacity: 0.3}
+        .menu{position: absolute;
+            width: 200px;
+            height: 30px;
+
+            top:50%;
+            left:50%;
+            margin-top: -15px;
+            margin-left: -100px;
+            z-index: 1;
+            }
+        input{ background-color: transparent;}
+    </style>
+</head>
+<body>
+
+<div class="pic">
+    <img src="..\1.jpg" alt="s">
+    <div class="menu">
+    <form>
+        <input type="text" placeholder="电话" />
+    </form>
+</div>
+</div>
+<div class="mask"></div>
+<ul>
+    <li>
+        <ul>
+            <li></li>
+            <li></li>
+        </ul>
+    </li>
+    <li></li>
+    <li></li>
+</ul>
+</body>
+</html>

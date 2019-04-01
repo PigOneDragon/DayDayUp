@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Navigate事件</title>
+</head>
+<body>
+	<script>
+		//判断浏览器类型，根据navigate属性判断
+		var Get=navigator.userAgent.toLowerCase();
+		if (Get.indexOf("msie")>-1){
+			console.log("IE");
+		} else if (Get.indexOf("firefox")>-1){
+			console.log("火狐");
+		} else if (Get.indexOf("chrome")==-1 && Get.indexOf("safari")>-1) {
+			console.log("safari");
+		}else {
+			console.log("谷歌");
+		}
+	</script>
+</body>
+</html>

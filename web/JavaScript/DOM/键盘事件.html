@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+	    <meta charset="UTF-8">
+	    <title>输入文本，判断长度</title>
+	</head>
+	<body>
+		<p>字数限制在30字内，<span>您还可以输入<b>30</b> 字</span></p>
+		<textarea cols="50"  rows="7"  id="text"></textarea>
+		<script type="text/javascript">
+			//补充代码
+            var tip=document.getElementsByTagName("span")[0],
+                Txt=document.getElementById("text"),
+                maxl=30;
+            //根据键盘事件判断文本框的输入字数
+            Txt.onkeyup=function () {
+                var len=Txt.value.length;
+                if ((maxl-len)<0){
+                    tip.innerHTML="您已超出<b>"+(len-maxl)+"</b>字";
+                    
+                } else{
+                    
+                    tip.innerHTML="您还可以输入<b>"+(maxl-len)+"</b>字";
+                }
+               
+                
+            }
+		</script>
+	</body>
+</html>

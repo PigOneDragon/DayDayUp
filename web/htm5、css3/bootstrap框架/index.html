@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>栅格布局案例</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/index.js"></script>
+</head>
+<body>
+<div class="container">
+    <div id="head" class="row">
+        <!--宽度小于768 12列；>=768 4列<=992；>1200 8列 -->
+        <div id="headtext" class="col-xs-12 col-sm-4 col-md-3 col-lg-8">
+            welcome
+        </div>
+        <!--左边 pull-left  pull-right快速浮动-->
+        <div id="headleft" class="pull-left col-xs-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="lefttext">
+                <button class="both-btn">
+                    DOLLAR
+                </button>
+                <!--bootstrap内置的三角符号-->
+                <button class="both-btn">
+                    <span class="caret"></span>
+                </button>
+            </div>
+        </div>
+        <!--右边-->
+        <div id="headright" class="pull-right col-xs-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="righttext pull-right">
+                <!--bootstrap内置的三角符号-->
+                <button class="both-btn">
+                    <span class="caret"></span>
+                </button>
+                <button class="both-btn">
+                    DOLLAR
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--轮播图-->
+    <div class="row">
+        <div id="box" class="col-xs-12 col-sm-12 col-md-12 col-lg-12"></div>
+    </div>
+    <!--第一块图片区域-->
+    <div class="row">
+        <div class="pic-item col-xs-4 col-sm-6 col-md-4 col-lg-4">
+            <img src="image/abt-1.jpg" width="100%">
+        </div>
+        <div class="pic-item col-xs-4 col-sm-6 col-md-4 col-lg-4">
+            <img src="image/abt-2.jpg" width="100%">
+        </div>
+        <div class="pic-item col-xs-4 col-sm-12 col-md-4 col-lg-4">
+            <img src="image/abt-3.jpg" width="100%">
+        </div>
+    </div>
+    <!--第二块图片-->
+    <div class="row">
+        <div class="pic-item col-xs-6 col-sm-6 col-md-3 col-lg-3">
+            <img src="image/bnr-1.jpg" width="100%">
+        </div>
+        <div class="pic-item col-xs-6 col-sm-6 col-md-3 col-lg-3">
+            <img src="image/bnr-1.jpg" width="100%">
+        </div>
+        <div class="pic-item col-xs-6 col-sm-6 col-md-3 col-lg-3">
+            <img src="image/bnr-1.jpg" width="100%">
+        </div>
+        <div class="pic-item col-xs-6 col-sm-6 col-md-3 col-lg-3">
+            <img src="image/bnr-1.jpg" width="100%">
+        </div>
+    </div>
+</div>
+</body>
+</html>

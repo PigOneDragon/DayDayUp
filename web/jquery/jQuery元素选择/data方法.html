@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>attr removeAttr</title>
+</head>
+<body>
+<div class="div1" id="box1" title="isDiv1" data-id="html data">我是div</div>
+<div class="div2" id="box2" title="isDiv2">我是div</div>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    // //补充代码
+    $(function () {
+        // console.log($('.div1').data());//html data
+        $('.div1').data('id', 'g');
+        // console.log($('.div1').data());//g
+        $('.div1').removeData('id');
+        console.log($('.div1').data());//{}  注释掉上一步的获取data 输出HTML中的data值 html dataa
+
+
+    });
+
+</script>
+</body>
+</html>

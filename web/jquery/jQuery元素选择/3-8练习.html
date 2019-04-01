@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+        #box{width:400px;height:400px;border:1px solid red;text-align:center;}
+        .child{width:300px;height:300px;margin:0 auto 50px;}
+    </style>
+</head>
+<body>
+<div id="box">
+    <div class="child"></div>
+    <input type="button" value="按钮1" class="btn1"/>
+    <input type="button" value="按钮2" class="btn2"/>
+</div>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    //
+    $(function () {
+        var div_two=$('.child'),
+            btn1=$('.btn1').get(0),
+            btn2=$('.btn2').get(0);
+        btn1.onclick=function () { //onclick 事件
+            div_two.css({
+                backgroundColor:'pink',
+                marginBottom:50});  //属性设置完毕不加分号  属性设置驼峰形式时不用加' '，设置为横杠需要加'background-color'
+        };
+        btn2.onclick=function () {
+            div_two.css({
+                width:'-=100',
+                height:'-=100'});  //可以是表达式、函数，此处表示在原基础减100
+        }
+        // $('.btn1').click(function () {  //click()方法  语法：buttonObject.click()
+        //     div_two.css({
+        //         backgroundColor:'pink',
+        //         marginBottom:50});  //属性设置完毕不加分号  属性设置驼峰形式时不用加' '，设置为横杠需要加'background-color'
+        // });
+        // $('.btn2'.click(function () {
+        //     div_two.css({
+        //         width:'-=100',
+        //         height:'-=100'});  //可以是表达式、函数，此处表示在原基础减100
+        // });
+
+    })
+</script>
+</body>
+</html>

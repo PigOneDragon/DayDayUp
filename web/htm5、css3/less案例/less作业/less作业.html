@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>less作业</title>
+    <link rel="stylesheet" href="css/less_3-9.css">
+    <!-- <script src="js/less.min.js"></script> -->
+</head>
+<body>
+<!--header.header>.logo>img^nav.nav>a.-item{课程}+a.-item{职业路径}+a.-item{实战}+a.-item{猿问}+a.-item{手记}^.profile>a.-item_i_$^.serach>input.-input+a.-submit|bem-->
+<header class="header">
+    <div class="logo">
+        <a href="www.imooc.com"><img src="image/logo.png" /></a>
+    </div>
+    <nav class="nav">
+        <a href="" class="nav__item">课程</a>
+        <a href="" class="nav__item">
+            <!--上标sup  下标sub-->
+            职业路径<sup><img src="image/icon-new.png" /></sup>
+        </a>
+        <a href="" class="nav__item">实战</a>
+        <a href="" class="nav__item">猿问</a>
+        <a href="" class="nav__item">手记</a>
+    </nav>
+    <div class="profile">
+        <a href="" class="profile__item profile__item_i_1"></a>
+        <a href="" class="profile__item profile__item_i_2"></a>
+        <a href="" class="profile__item profile__item_i_3"></a>
+    </div>
+    <div class="serach">
+        <!--搜索提示框-->
+        <div class="serach__tips">
+            前端入门
+        </div>
+        <input type="text" class="serach__input" />
+        <a href="" class="serach__submit"></a>
+    </div>
+</header>
+<!--banner-->
+<div class="banner"></div>
+<!--content-->
+<!--.content>.-list>.list-item>.-cover+.-plan>.-title+.-text+.-price>i|bem-->
+<div class="content">
+    <div class="content__list">
+        <div class="list-item">
+            <div class="list-item__cover">
+                <img src="image/course1.jpg" />
+            </div>
+            <div class="list-item__plan">
+                <div class="list-item__plan__title">前端小白入门系列课程</div>
+                <div class="list-item__plan__times">24课时<span>366人在学</span></div>
+                <div class="list-item__plan__text">
+                    简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介
+                    简介简介简介简介简介简介简介简介简介
+                </div>
+            </div>
+            <div class="list-item__price"><i>￥</i>499.00</div>
+        </div>
+        <div class="list-item">
+            <div class="list-item__cover">
+                <img src="image/course2.jpg" />
+            </div>
+            <div class="list-item__plan">
+                <div class="list-item__plan__title">前端小白入门系列课程</div>
+                <div class="list-item__plan__times">24课时<span>366人在学</span></div>
+                <div class="list-item__plan__text">简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简</div>
+            </div>
+            <div class="list-item__price"><i>￥</i>499.00</div>
+        </div>
+        <div class="list-item">
+            <div class="list-item__cover">
+                <img src="image/course3.jpg" />
+            </div>
+            <div class="list-item__plan">
+                <div class="list-item__plan__title">HTML5与CSS3实现动态网页系列课程</div>
+                <div class="list-item__plan__times">24课时<span>366人在学</span></div>
+                <div class="list-item__plan__text">简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简</div>
+            </div>
+            <div class="list-item__price"><i>￥</i>499.00</div>
+        </div>
+        <div class="list-item">
+            <div class="list-item__cover">
+                <img src="image/course4.jpg" />
+            </div>
+            <div class="list-item__plan">
+                <div class="list-item__plan__title">前端小白入门系列课程</div>
+                <div class="list-item__plan__times">24课时<span>366人在学</span></div>
+                <div class="list-item__plan__text">简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简</div>
+            </div>
+            <div class="list-item__price"><i>￥</i>499.00</div>
+        </div>
+        <div class="list-item">
+            <div class="list-item__cover">
+                <img src="image/course5.jpg" />
+            </div>
+            <div class="list-item__plan">
+                <div class="list-item__plan__title">前端小白入门系列课程</div>
+                <div class="list-item__plan__times">24课时<span>366人在学</span></div>
+                <div class="list-item__plan__text">简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简</div>
+            </div>
+            <div class="list-item__price"><i>￥</i>499.00</div>
+        </div>
+        <div class="list-item">
+            <div class="list-item__cover">
+                <img src="image/course6.jpg" />
+            </div>
+            <div class="list-item__plan">
+                <div class="list-item__plan__title">前端小白入门系列课程</div>
+                <div class="list-item__plan__times">24课时<span>366人在学</span></div>
+                <div class="list-item__plan__text">简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简</div>
+            </div>
+            <div class="list-item__price"><i>￥</i>499.00</div>
+        </div>
+        <div class="list-item">
+            <div class="list-item__cover">
+                <img src="image/course7.jpg" />
+            </div>
+            <div class="list-item__plan">
+                <div class="list-item__plan__title">前端小白入门系列课程</div>
+                <div class="list-item__plan__times">24课时<span>366人在学</span></div>
+                <div class="list-item__plan__text">简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简</div>
+            </div>
+            <div class="list-item__price"><i>￥</i>499.00</div>
+        </div>
+        <div class="list-item">
+            <div class="list-item__cover">
+                <img src="image/course8.jpg" />
+            </div>
+            <div class="list-item__plan">
+                <div class="list-item__plan__title">前端小白入门系列课程</div>
+                <div class="list-item__plan__times">24课时<span>366人在学</span></div>
+                <div class="list-item__plan__text">简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简</div>
+            </div>
+            <div class="list-item__price"><i>￥</i>499.00</div>
+        </div>
+        <div class="list-item list-item__center">
+            <div class="list-item__cover">
+                <img src="image/course9.jpg" />
+            </div>
+            <div class="list-item__plan">
+                <div class="list-item__plan__title">前端小白入门系列课程</div>
+                <div class="list-item__plan__times">24课时<span>366人在学</span></div>
+                <div class="list-item__plan__text">简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简</div>
+            </div>
+            <div class="list-item__price"><i>￥</i>499.00</div>
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    <div class="footer__wrap">
+        <nav class="footer-nav">
+            <a href="" class="footer-nav__link">网站首页</a>
+            <a href="" class="footer-nav__link">网站首页</a>
+            <a href="" class="footer-nav__link">网站首页</a>
+            <a href="" class="footer-nav__link">网站首页</a>
+            <a href="" class="footer-nav__link">网站首页</a>
+            <a href="" class="footer-nav__link">网站首页</a>
+            <a href="" class="footer-nav__link">网站首页</a>
+            <a href="" class="footer-nav__link">网站首页</a>
+            <a href="" class="footer-nav__link">网站首页</a>
+        </nav>
+        <div class="footer-copy">
+            Copyright © 2019 imooc.com All Rights Reserved | 京ICP备 13046642号-2
+        </div>
+        <div class="footer-share">
+            <a href="" class="footer-share__item footer-share__item_i_1"></a>
+            <a href="" class="footer-share__item footer-share__item_i_4"></a>
+            <a href="" class="footer-share__item footer-share__item_i_2"></a>
+            <a href="" class="footer-share__item footer-share__item_i_3"></a>
+        </div>
+    </div>
+</footer>
+<script>
+    <!--头部搜索框提示-->
+    var input = document.getElementsByClassName('serach__input')[0];
+    var tips = document.getElementsByClassName('serach__tips')[0];
+
+    input.onfocus = function () {
+        tips.style.display = 'none';
+        return false;
+    };
+
+    input.onblur = function () {
+        var str = input.value;
+        if (str.length > 1){
+            tips.style.display = 'none';
+        } else{
+            tips.style.display = 'block';
+        }
+        return false;
+    };
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>当点击“录入”按钮时，循环弹出输入框，使用户输入信息，直到用户输入-1，停止弹出输入框，然后将用户输入的信息输出在页面上。</title>
+</head>
+<body>
+    <input type="button" value="录入">
+    <script>
+        var Load=document.getElementsByTagName("input")[0];
+        var msgs=[],msg="";
+        Load.onclick=load;
+        function load() {
+            while(true){
+                msg=prompt("请输入员工信息，输入-1退出");
+                if (msg=='-1'){
+                    for (var i=0;i<msgs.length;i++){
+                       document.write("输入的第"+(i+1)+"个员工是"+msgs[i]+"<br />");
+                    }
+                    break;
+                } else {
+                     msgs.push(msg);
+                }
+
+            }
+        }
+
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+
+</head>
+<body>
+<table class="table table-bordered table-striped table-hover">
+    <tr>
+        <th>a</th>
+        <th>aa</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>11</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>22</td>
+    </tr>
+</table>
+<form class="form-inline">
+    <div class="form-group">
+        <label for="">邮箱</label>
+        <input class="form-control" type="email">
+    </div>
+    <div class="form-group">
+        <label for="">密码</label>
+        <input class="form-control" type="password">
+        <p class="form-control-static">ddd</p>
+    </div>
+    <input type="search" name="baidu">
+</form>
+<a class="center-block text-center" style="width: 500px;">333</a>
+<!--按钮样式，适用超链接a标签-->
+<button>不加</button>
+<button class="btn">默认</button>
+<button class="btn btn-default">默认</button>
+<button class="btn btn-primary">首选项</button>
+<button class="btn btn-success">成功</button>
+<button class="btn btn-warning">警告</button>
+<button class="btn btn-danger">危险</button>
+<button class="btn active">激活</button>
+<a class="btn btn-link"> 链接</a>
+<a class="btn btn-danger glyphicon glyphicon-alert"> 危险</a>
+<a class="btn btn-default">默认</a>
+<a class="btn btn-primary">首选项</a>
+<button class="btn btn-toolbar">sss</button>
+<br/>
+<!--响应式隐藏菜单-->
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Brand</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+                <li><a href="#">Link</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">Dropdown <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">One more separated link</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="navbar-form navbar-left">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Link</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">Dropdown <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+<!--下拉菜单-->
+<ul>
+    <li>一</li>
+    <li class="dropdown">
+        <a href="" id="dropdownMenu1" data-toggle="dropdown">二
+        </a> <span class="caret"></span>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li>子菜单</li>
+            <li>子菜单</li>
+            <li>子菜单</li>
+        </ul>
+    </li>
+    <li>三</li>
+</ul>
+
+<div class="dropdown">
+    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="true">
+        Dropdown
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+        <li><a href="#">Action</a></li>
+        <li><a href="#">Another action</a></li>
+        <li><a href="#">Something else here</a></li>
+        <li role="separator" class="divider"></li>
+        <li><a href="#">Separated link</a></li>
+    </ul>
+</div>
+<div class="dropdown">
+    <button href="" class="dropdown-toggle btn btn-default" data-toggle="dropdown">
+        ssss
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+    </ul>
+</div>
+<br>
+<br>
+<!--
+按钮组(a标签亦可)
+两边的按钮有圆角其余没有，并且按钮紧邻
+-->
+<div class="btn-group">
+    <button class="btn btn-default">首页</button>
+    <button class="btn btn-info">首页</button>
+    <button class="btn btn-info">首页</button>
+    <button class="btn btn-info">首页</button>
+    <button class="btn btn-success">首页</button>
+</div>
+<br>
+<br>
+<!--按钮组的嵌套-->
+<div class="btn-group">
+    <button class="btn btn-default">首页</button>
+    <button class="btn btn-info">首页</button>
+    <button class="btn btn-info">首页</button>
+    <div class="btn-group">
+        <button class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+            dropdown
+            <b class="caret"></b>
+        </button>
+        <ul class="dropdown-menu">
+            <li>1</li>
+            <li>1</li>
+            <li>1</li>
+            <li>1</li>
+        </ul>
+        <button class="btn btn-default">首页</button>
+        <button class="btn btn-info">首页</button>
+        <button class="btn btn-info">首页</button>
+    </div>
+    <button class="btn btn-info">首页</button>
+    <button class="btn btn-success">首页</button>
+</div>
+<!--按钮下拉菜单-->
+<div class="btn-group">
+    <button class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+        ggg
+        <b class="caret"></b>
+    </button>
+    <ul class="dropdown-menu">
+        <li>test</li>
+        <li>test</li>
+        <!--分割线-->
+        <li class="divider"></li>
+        <li>test</li>
+    </ul>
+</div>
+<br>
+<br>
+<!--分裂式按钮下拉菜单-->
+<!-- Split button -->
+<div class="btn-group">
+    <button type="button" class="btn btn-danger">Action</button>
+    <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+        <span class="caret"></span>
+        <!--裁切-->
+        <span class="sr-only">Toggle Dropdown</span>
+    </button>
+    <ul class="dropdown-menu">
+        <li><a href="#">Action</a></li>
+        <li><a href="#">Another action</a></li>
+        <li><a href="#">Something else here</a></li>
+        <li role="separator" class="divider"></li>
+        <li><a href="#">Separated link</a></li>
+    </ul>
+</div>
+<!--两端对齐排列的按钮组，可适配移动端-->
+<!--对于a标签来说只须将一系列 .btn 元素包裹到 .btn-group.btn-group-justified 中即可。-->
+<div class="btn-group btn-group-justified">
+    <a class="btn btn-default">首页</a>
+    <a class="btn btn-info">首页</a>
+    <a class="btn btn-info">首页</a>
+    <a class="btn btn-info">首页</a>
+    <a class="btn btn-success">首页</a>
+</div>
+<br>
+<br>
+<!--对于button标签来说必须将每个按钮包裹进一个按钮组中-->
+<div class="btn-group btn-group-justified">
+    <div class="btn-group">
+        <button class="btn btn-default">首页</button>
+    </div>
+    <div class="btn-group">
+        <button class="btn btn-info">首页</button>
+    </div>
+    <div class="btn-group">
+        <button class="btn btn-info">首页</button>
+    </div>
+    <div class="btn-group">
+        <button class="btn btn-success">首页</button>
+    </div>
+</div>
+<!--输入框组，通过在文本输入框 <input> 前面、后面或是两边加上文字或按钮，可以实现对表单控件的扩展。为 .input-group
+赋予 .input-group-addon 或 .input-group-btn 类，可以给 .form-control 的前面或后面添加额外的元素。-->
+<div class="input-group">
+    <span class="input-group-addon" id="basic-addon1">@</span>
+    <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+</div>
+
+<div class="input-group">
+    <input type="text" class="form-control" placeholder="Recipient's username" aria-describedby="basic-addon2">
+    <span class="input-group-addon" id="basic-addon2">@example.com</span>
+</div>
+
+<div class="input-group">
+    <span class="input-group-addon">$</span>
+    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+    <span class="input-group-addon">.00</span>
+</div>
+
+<label for="basic-url">Your vanity URL</label>
+<div class="input-group">
+    <span class="input-group-addon" id="basic-addon3">https://example.com/users/</span>
+    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+</div>
+<br>
+<br>
+<br>
+<!--nav导航-->
+
+<ul class="nav nav-tabs">
+    <li class="active"><a href="">首页</a></li>
+    <li><a href="">分类</a></li>
+    <li><a href="">推荐</a></li>
+</ul>
+<br>
+<br>
+<br>
+<!--nav导航 胶囊形状-->
+<ul class="nav nav-pills">
+    <li class="active"><a href="">首页</a></li>
+    <li><a href="">分类</a></li>
+    <li><a href="">推荐</a></li>
+</ul>
+<br>
+<br>
+<br>
+<!--nav导航 竖直排列-->
+
+<ul class="nav nav-stacked">
+    <li class="active"><a href="">首页</a></li>
+    <li><a href="">分类</a></li>
+    <li><a href="">推荐</a></li>
+</ul>
+<br>
+<br>
+<!--nav导航 两端对齐-->
+
+<ul class="nav nav-pills nav-justified">
+    <li class="active"><a href="">首页</a></li>
+    <li><a href="">分类</a></li>
+    <!--不可选-->
+    <li class="disabled"><a href="">推荐</a></li>
+</ul>
+<br>
+<br>
+<!--导航添加下拉菜单-->
+<ul class="nav nav-tabs">
+    <li class="active"><a href="">首页</a></li>
+    <li><a href="">分类</a></li>
+    <li class="dropdown">
+        <a href="" class="dropdown-toggle" data-toggle="dropdown">
+            Dropdown
+            <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+            <li><a href="">x</a></li>
+            <li><a href="">x</a></li>
+            <li><a href="">x</a></li>
+            <li class="divider"></li>
+            <li><a href="">x</a></li>
+        </ul>
+    </li>
+</ul>
+<br>
+<br>
+<!--导航条-->
+<nav class="navbar navbar-default">
+    <div class="navbar-header">
+        <a href="" class="navbar-brand">test</a>
+    </div>
+    <ul class="nav navbar-nav">
+        <li><a href="">111</a></li>
+        <li><a href="">111</a></li>
+        <li><a href="">111</a></li>
+    </ul>
+</nav>
+<nav class="navbar navbar-default">
+    <a href="" class="navbar-brand">a</a>
+    <a href="" class="navbar-brand">a</a>
+    <a href="" class="navbar-brand">a</a>
+</nav>
+<!---->
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <!--响应式按钮，当菜单栏导航项换行时触发，显示按钮-->
+            <!--data-toggle  规定由collapse事件触发-->
+            <!--data-target  规定由#test数据触发-->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#test">
+                <!--此处的span只是按钮里面的横线-->
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#1" class="navbar-brand">菜单</a>
+        </div>
+        <!--响应式下隐藏的菜单，当宽度过小时，隐藏li,点击按钮，li转换为block。
+            id名需与button下的data-target命名一致,类名需调用collapse-->
+        <div class="collapse navbar-collapse" id="test">
+            <ul class="nav navbar-nav">
+                <li><a href="">1</a></li>
+                <li><a href="">2</a></li>
+                <li><a href="">3</a></li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
+
+    <ul class="nav">
+        <li><a href="">22</a></li>
+        <li><a href="">22</a></li>
+        <li><a href="">22</a></li>
+    </ul>
+<!--分页-->
+<ul class="pagination" id="pagin">
+    <li class="pp">
+        <a href="#">
+            <span>&laquo;</span>
+        </a>
+    </li>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li class="pp">
+        <a href="#">
+            <span>&raquo;</span>
+        </a>
+    </li>
+</ul>
+<!--标签-->
+<span class="label label-default">Default</span>
+<span class="label label-primary">Primary</span>
+<span class="label label-success">Success</span>
+<span class="label label-info">Info</span>
+<span class="label label-warning">Warning</span>
+<span class="label label-danger">Danger</span>
+<!--徽章，给链接、导航等元素嵌套 <span class="badge"> 元素，可以很醒目的展示新的或未读的信息条目。-->
+<a href="#">
+    ddd
+    <span class="badge">2</span>
+</a>
+<button class="btn btn-primary" type="button">
+    Messages <span class="badge">4</span>
+</button>
+<!--没有新的或未读的信息条目，也就是说不包含任何内容，徽章组件能够自动隐藏（通过CSS的 :empty 选择符实现) 。-->
+<!--徽章在ie8下会失效，因为 IE8 不支持 :empty 选择符-->
+<!--适配导航元素的激活状态:Bootstrap 提供了内置的样式，让胶囊式导航内处于激活状态的元素所包含的徽章展示相匹配的样式。-->
+<ul class="nav nav-pills" role="tablist">
+    <li role="presentation" class="active"><a href="#">Home <span class="badge">42</span></a></li>
+    <li role="presentation"><a href="#">Profile</a></li>
+    <li role="presentation"><a href="#">Messages <span class="badge">3</span></a></li>
+</ul>
+<!--巨幕，如果需要让巨幕组件的宽度与浏览器宽度一致并且没有圆角，请把此组件放在所有 .container 元素的外面，并在组件内部添加一个
+.container 元素。div.jumbotron>div.container-->
+<div class="jumbotron">
+    <h1>Hello, world!</h1>
+    <p>
+        This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or
+        information.
+    </p>
+    <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+</div>
+<!--警告框-->
+<div class="alert alert-success" role="alert">...</div>
+<div class="alert alert-info" role="alert">...</div>
+<div class="alert alert-warning" role="alert">...</div>
+<div class="alert alert-danger" role="alert">...</div>
+<!--可关闭的警告框-->
+<div class="alert alert-warning alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <strong>Warning!</strong> Better check yourself, you're not looking too good.
+</div>
+<!--列表组-->
+<ul class="list-group">
+    <li class="list-group-item">a</li>
+    <li class="list-group-item">a</li>
+    <li class="list-group-item">a</li>
+    <li class="list-group-item">a</li>
+</ul>
+<div class="list-group">
+    <a href="" class="list-group-item active">b</a>
+    <a href="" class="list-group-item list-group-item-success">b</a>
+    <a href="" class="list-group-item disabled">b</a>
+    <a href="" class="list-group-item">b</a>
+</div>
+<div class="list-group">
+    <button href="" class="list-group-item">c</button>
+    <button href="" class="list-group-item">c</button>
+    <button href="" class="list-group-item list-group-item-warning">c</button>
+    <button href="" class="list-group-item">c</button>
+</div>
+<div class="list-group">
+    <a href="#" class="list-group-item active">
+        <h4 class="list-group-item-heading">List group item heading</h4>
+        <p class="list-group-item-text">List group item text List group item text</p>
+    </a>
+    <a href="#" class="list-group-item">
+        <h4 class="list-group-item-heading">List group item heading</h4>
+        <p class="list-group-item-text">List group item text List group item text</p>
+    </a>
+</div>
+
+<script>
+    var ui = $('#pagin');
+    var sss=$("li:not(':first,:last')",ui);
+    sss.find('a').css('color','red');
+    console.log(sss);
+</script>
+</body>
+</html>

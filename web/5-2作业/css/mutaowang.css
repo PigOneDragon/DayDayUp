@@ -1,0 +1,789 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+}
+body{
+
+    font-family: "Microsoft YaHei";
+}
+.header{
+    width: 100%;
+    background-color: #f3f5f7;
+}
+/*top区设置*/
+.top,.logo{
+    width: 1200px;
+    height: 50px;
+
+    margin: 0 auto;
+    /*position: relative;*/
+    /*overflow: hidden;*/
+}
+/*登录菜单*/
+.nav-login{
+    float: left;
+}
+/*下滑线*/
+/*hr{*/
+    /*position: absolute;*/
+    /*top: 45px;*/
+/*}*/
+.top a{
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    display: inline-block;
+    margin: 10px 10px;
+}
+.top .nav-login a span{
+    color: red;
+}
+.top .nav-login a:hover{
+    color: red;
+    /*font-weight: bold;*/
+}
+/*top下的导航菜单*/
+.top ul{
+    float: right;
+    width: 600px;
+}
+.top ul li{
+    float: left;
+    list-style: none;
+    position: relative;
+}
+/*导航二级菜单*/
+.nav-item,.nav-main{
+    width: 110px;
+}
+.clear{clear: both;}
+
+li.active{
+    background-color: #fff;
+}
+
+.top .nav-item{
+    display: none;
+    position: absolute;
+    z-index: 10;
+    top: 35px;
+    background-color: #fff;
+}
+
+/*top下导航栏的二级菜单移动时背景填充变化*/
+.nav-item a{
+    display: inline-block;
+    margin: 0;
+    padding: 0 0 0 10px;
+    width: 100px;
+    height: 30px;
+    text-align: left;
+    line-height: 30px;
+}
+.nav-item a:hover{
+    background-color: #cdd0d4;
+}
+
+/*logo区*/
+.logo{
+    padding: 25px 0;
+    height: 80px;
+    position: relative;
+}
+
+.logo_pic{
+    /*overflow: hidden;*/
+    /*width: 80%;*/
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+}
+.logo .picimg{
+    float: left;
+    height: 40px;
+
+}
+
+/*搜索框*/
+.logo .ssk{
+    width: 500px;
+    height: 40px;
+    float: left;
+    margin-left: 200px;
+
+}
+.ssk input{
+    width: 400px;
+    height: 100%;
+}
+/*购物车*/
+
+.logo .gwc{
+    float: right;
+    width: 170px;
+    height: 40px;
+    margin-left: 100px;
+    background-color: red;
+    text-align: center;
+    position: relative;
+    /*position: absolute;*/
+    /*right: 0;*/
+}
+.gwc_z a,.gwc_z span{
+    color: #fff;
+    font-size: 14px;
+    line-height:40px;
+    margin-left: 8px;
+    text-decoration: none;
+}
+
+#gwc_t{
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    margin-top: -8px;
+}
+.pl25{padding-left: 25px;}
+/*购物车商品*/
+.gwc_sp{background-color: #fff;}
+.gwc_sp .title{
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    text-align: left;
+    padding-left: 10px;
+}
+.gwc_sp ul{
+    /*background: #fff;*/
+    width: 300px;
+    height: 300px;
+    overflow: auto;
+    border: 1px #f3f5f7 solid;
+    /*position: relative;*/
+}
+
+.single-del{
+    height: 60px;
+}
+.single-del a{line-height: 60px;}
+.single-name-lk a,.single-price{
+    font-size: 12px;
+    /*line-height: 30px;*/
+    display: inline-block;
+    width: 180px;
+    text-align: left;
+}
+.single-img img{
+    display: inline-block;
+    margin-top: 5px;
+}
+/*鼠标移入下拉框中时，下拉框中的内容项的背景及字体颜色变化*/
+/*问题:a链接的字体在我移到a标签上颜色才会变红？*/
+li.single-item :hover{
+    background-color: #f3f5f7;
+    color: red;
+}
+.gwc_sp .single-item{
+    overflow: hidden;
+}
+.item{
+    margin: 0 8px;
+    border-bottom: #999 1px solid;
+    overflow: hidden;
+}
+.gwc_sp a,.gwc_sp span{
+    color: #000;
+}
+
+.single-img,.single-name,.single-info{
+    float: left;
+}
+.single-name{padding-left:10px;}
+.single-name-lk,.single-price{
+    width: 100%;
+    height: 30px;
+}
+/*该块的意义在于使goto购物车实现固定定位*/
+.xddw{
+    position: relative;
+    width: 300px;
+    height: 340px;
+    z-index: 18;
+}
+.goto_gwc{
+    position: absolute;
+    width: 300px;
+    height: 50px;
+    bottom: -50px;
+    left: 0;
+    z-index: 18;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.gwc_sum{
+    float: left;
+    padding: 0 8px;
+}
+.gwc_sum,.gwc_sum span{
+    line-height: 50px;
+    font-size: 14px;
+    margin-left: 0;
+}
+.goto_gwc a{
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    width: 80px;
+    height: 30px;
+    font-size: 14px;
+    line-height: 30px;
+    color: #fff;
+    background-color: red;
+}
+/*导航栏*/
+.nav{
+    width: 100%;
+    height: 40px;
+    background-color: #07111b;
+    /*position: relative;*/
+}
+.nav-list{padding-left: 400px;}
+.nav-list a{
+    line-height: 40px;
+    color: #fff;
+    font-size: 14px;
+    margin-right: 20px;
+}
+.nav-list a:hover{
+    color: red;
+}
+/*banner区设置*/
+.banner{
+    width: 1200px;
+    height: 500px;
+    margin: 0 auto;
+    position: relative;
+    /*background-color: #0077aa;*/
+}
+/*采用双飞翼布局*/
+.banner-menu,.banner-slide,.banner-right{
+    float: left;
+}
+/*banner下的左列表*/
+.banner .banner-menu{
+    background-color: red;
+    width: 200px;
+    height: 465px;
+    margin-left: -100%;
+    overflow: hidden;
+    /*position: absolute;*/
+    /*top: -50px;*/
+    /*z-index: 999999;*/
+}
+.banner-slide{
+    width: 100%;
+    height: 480px;
+    /*position: relative;*/
+    /*background-color: #9a6e3a;*/
+}
+.banner-body{
+    /*width: 100%;*/
+    height: 480px;
+    overflow: hidden;
+    margin: 0 250px 0 200px;
+    position: relative;
+    /*background-color: #63a35c;*/
+}
+/*慕快报*/
+.banner-right{
+    width: 250px;
+    height: 500px;
+    /*background-color: #3498db;*/
+    margin-top: 10px;
+    margin-left: -255px;  /*这里多出的5px还没找到原因*/
+}
+.right-content{
+    margin: 0 5px;
+}
+.mkb{
+    border: 1px #ccc solid;
+    width: 219px;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+}
+/*慕快报文字列表*/
+.mkb-title{
+    display: inline-block;
+    color: red;
+    font-size: 18px;
+}
+#mkb-more{
+    color: #999;
+    font-size: 14px;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+.mkb-new li{
+    font-size: 12px;
+    margin-top: 10px;
+}
+.mkb-new a,.mkb-new span{
+    color: #000;
+}
+.mkb-new span{font-weight: bold;}
+/*慕快报下的生活服务*/
+.mkb-fwzx{
+    width: 240px;
+    border-left: 1px #ccc solid;
+    overflow: hidden;
+}
+
+.mkb-fwzx li{
+    width: 59px;
+    height: 64px;
+    float: left;
+    text-align: center;
+    border-bottom: 1px #ccc solid;
+    border-right: 1px #ccc solid;
+}
+.mkb-fwzx a{
+    font-size: 12px;
+    color: rgb(246,114,114);
+    position: relative;
+}
+.mkb-fwzx a img{
+    display: block;
+    width: 25px;
+    height: 25px;
+    /*position: absolute;*/
+    margin: 12px auto 0;
+}
+/*轮播图*/
+.banner-body .pic{
+    width: 730px;
+    height: 470px;
+    margin: 10px 10px 0;
+    display: none;
+}
+.banner-body .one{
+    background: url("../img/focus-carousel/1.jpg") no-repeat;
+}
+.banner-body .two{
+    background: url("../img/focus-carousel/2.jpg") no-repeat;
+}
+.banner-body .three{
+    background: url("../img/focus-carousel/3.jpg") no-repeat;
+}
+.banner-body .four{
+    background: url("../img/focus-carousel/4.jpg") no-repeat;
+}
+.banner-body .five{
+    background: url("../img/focus-carousel/5.jpg") no-repeat;
+}
+.banner-body .six{
+    background: url("../img/focus-carousel/6.jpg") no-repeat;
+}
+.banner-body .active{
+    display: block;
+}
+/*图片按钮*/
+.button{
+    width: 30px;
+    height: 50px;
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    margin-top: -25px;
+    z-index: 2; /*防止点击按钮是点到图片*/
+}
+
+.button img{
+    position: absolute;
+    width: 12px;
+    height: 20px;
+    top: 50%;
+    left:50%;
+    margin-top: -10px;
+    margin-left: -6px;
+    z-index: 1;
+}
+.banner-body .right{
+    right: 20px;
+    margin-left: auto;
+}
+/*鼠标移动按钮变色*/
+.button:hover{
+    background-color: rgba(0,0,0,0.3);
+}
+.dots{
+    width: 120px;
+    height: 20px;
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    z-index: 2;
+}
+.dots span{
+    display: inline-block;
+    margin: 0 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #a9a9a9;
+    box-shadow: 0 0 0 1px rgba(255,255,255,0.8);
+}
+span.Active{
+    background-color: #fff;
+    box-shadow: 0 0 0 2px rgba(169,169,169,0.8);
+}
+/*banner区左侧主菜单*/
+.main-menu{
+    color: #fff;
+    position: absolute; /* z-index不起作用：1、父标签 position属性为relative；*
+* 2、问题标签含有浮动(float)属性；*
+解决方法也很简单：
+1、position:relative改为position:absolute；
+3、去除浮动。 */
+    /*top: -20px;*/
+    /*z-index: 29;*/
+}
+.main-menu a{
+    color: #fff;
+    font-size: 12px;
+    line-height: 33px;
+}
+.main-list{width: 200px;}
+.main-menu li{
+    padding: 0 15px;
+    height: 33px;
+    overflow: hidden;
+}
+/*鼠标移动字体  背景变化*/
+.m_hover{
+    background-color: #fff;
+}
+#color_red{
+    color: red;
+}
+.menu-nav{
+    width: 180px;
+    height:40px ;
+    padding: 5px 10px;
+    background-color: rgba(255,0,0,0.8);
+    position: absolute;
+    z-index: 30;
+    top: -45px;
+    left: 0;
+}
+.menu-nav img{
+    position: absolute;
+    top: 50%;
+    margin-top: -8px;
+    left: 8px;
+}
+.menu-nav a{
+    line-height: 40px;
+    margin-left: 28px;
+    font-size: 14px;
+}
+/*banner区左侧列表指示箭头*/
+.menu-jt{
+    display: inline-block;
+    float: right;
+    line-height: 33px;
+    font-size: 12px;
+    position: relative;
+}
+/*banner区二级菜单*/
+.sub-menu{
+    position: absolute;
+    left: 200px;
+    width: 748px;
+    height: 498px;
+    background-color: #fff;
+    z-index: 3;
+    overflow: hidden;
+    border: 1px #ccc solid;
+}
+.sub-item{
+    /*width: 740px;*/
+    height: 500px;
+    display: none;
+}
+.sub-row{
+    /*overflow: hidden;*/
+    /*width: 740px;*/
+    /*height: 25px;*/
+    margin: 10px 0;
+}
+/*二级菜单的标题 各项链接  有缺陷，当dd过多，行数会变： 因为浮动 并且dd设置了inline模式 */
+.sub-row dt {
+    float: left;
+    text-align: right;
+    width: 80px;
+    /*height: 25px;*/
+    /*display: inline-block;*/
+    /*overflow: hidden;*/
+}
+.sub-row dd {
+    /*width: 750px;*/
+    /*display: inline-block;*/
+    overflow: hidden;
+}
+.sub-row dt>a,.sub-row dd>a{
+    color: #000;
+    font-size: 14px;
+    line-height: 25px;
+}
+
+.sub-row dt>a{
+    font-weight: bold;
+    padding-right: 8px;
+    /*text-align: right;*/
+}
+.sub-row dd>a{
+    /*display: inline-block;*/
+    padding: 0 8px;
+    border-left: 1px #ccc solid;
+}
+/*楼层区*/
+.cont_top{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/*楼层导航区*/
+.top-title{
+    width: 100%;
+    height: 30px;
+    /*overflow: hidden;*/
+    border-bottom: 1px red solid;
+    padding: 10px 0;
+    position: relative;
+    z-index: 1;
+
+}
+.cont-jtzs{
+    display: block;
+    /*width: 14px;*/
+    /*height: 10px;*/
+    /*background-color: red;*/
+    position: absolute;
+    bottom: -1px;
+    border-bottom: 1px #fff solid;
+    right: 200px;
+    z-index: 999;
+}
+.title-index{
+    float: left;
+    position: relative;
+    /*margin-left: 30px;*/
+}
+
+
+/*1F 2F标志*/
+.title-tb{
+    color: #fff;
+    font: bold 16px "黑体";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #000;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 20px;
+    /*margin-right: 10px;*/
+    position: absolute;
+    top: 50%;
+    margin-top: -10px;
+}
+
+/*商品分类*/
+.title-fl{
+    color: #000;
+    font-size:24px;
+    margin-left: 30px;
+    line-height: 32px;
+}
+.title-nav{
+    float: right;
+    color: #999;
+}
+.title-nav span{
+    display: inline-block;
+    width: 80px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+}
+.title-nav span.lr-brd{
+    border-left: 1px #999 solid;
+    border-right: 1px #999 solid;
+}
+.goods-list{
+    width: 1200px;
+    /*overflow: hidden;*/
+    display: none;
+    margin-top: 20px;
+}
+.goods-list ul{overflow: hidden;}
+.goods-list-act{display: block;}
+.goods-list li{
+    width:160px ;
+    height: 200px;
+    margin:0 20px 20px;
+    float: left;
+}
+.goods-list a,.goods-list img,.goods-list span{
+    display: block;
+
+    text-align: center;
+}
+.goods-list img{
+    width: 114px;
+    margin: 0 20px 20px;
+}
+.goods-list a,.goods-list span{
+    /*margin-left: 20px;*/
+    font-size: 14px;
+    color: #000;
+    width: 160px;
+}
+.goods-list span{
+    color: red;
+    font-weight: bold;
+}
+/*友情链接*/
+.Link{
+    width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-top: 1px #ccc solid;
+}
+.Link .link-b{
+    width: 300px;
+    height: 80px;
+    /*background-color: #63a35c;*/
+    float: left;
+    padding: 30px 0;
+}
+.link-b p{
+    margin: 5px 0;
+}
+.link-b a{
+    font-size: 12px;
+    color: #ccc;
+    margin-right:20px;
+}
+.link-b a:hover{
+    color: red;
+}
+/*页脚区*/
+.footer{
+    width: 100%;
+    height: 80px;
+    background-color: #f3f5f7;
+    text-align: center;
+    overflow: hidden;
+}
+.footer div{
+    margin: 30px auto 0;
+}
+.footer div a{
+    margin: 0 5px;
+    color: #999;
+}
+.footer div a:hover{
+    color:#07111b;
+}
+.footer p{
+    /*width: 250px;*/
+    height: 26px;
+    font-size: 12px;
+    line-height: 26px;
+    margin: 0 auto;
+    color: #999;
+}
+/*右侧导航*/
+.cb-nav{
+    width: 32px;
+    height: 170px;
+    /*background-color: #9a6e3a;*/
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.cb-nav-item{
+    /*width: 100px;*/
+    height:34px;
+    overflow: hidden;
+    /*margin-left: 68px;*/
+    /*position: absolute;*/
+    /*right: 0;*/
+}
+.cb-nav-pic{
+    width: 32px;
+    height: 32px;
+    /*float: right;*/
+    margin-bottom: 2px;
+    background-color: #b7bbbf;
+    cursor: pointer;
+    position: relative;
+    z-index: 6;
+}
+/*鼠标滑过背景颜色变化*/
+#cb-nav-bg{
+    background-color: #71777d;
+}
+/*.cb-nav li{*/
+    /*!*width: 100px;*!*/
+    /*height: 32px;*/
+    /*overflow: hidden;*/
+    /*margin-bottom: 2px;*/
+    /*cursor: pointer;*/
+/*}*/
+.cb-nav-lk{
+    /*float: left;*/
+    width: 68px;
+    height: 32px;
+    text-align: center;
+    background-color: #71777d;
+    position: absolute;
+    right: -36px;
+    z-index: 5;
+}
+/*#cb-nav-lk-hide{*/
+    /*right:-36px ;*/
+/*}*/
+.cb-nav-lk a{
+    line-height: 32px;
+    font-size: 12px;
+    color: #fff;
+}
+.cb-nav-pic img{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-left: 6px;
+    margin-top: 6px;
+}
+#cb-nav-lk-show{
+    right: 32px !important;
+}

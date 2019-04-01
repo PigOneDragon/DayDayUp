@@ -1,0 +1,334 @@
+/*伪类清除浮动*/
+.clear:after{
+    content: ' ';
+    display: block;
+    height: 0;
+    line-height: 0;
+    clear: both;
+    zoom: 1;
+}
+input{
+    border: none;
+    outline: none;
+}
+a{
+    text-decoration: none;
+}
+*{
+    font-family: '宋体';
+}
+/*top区*/
+.top{
+    line-height: 30px;
+    color: #868686;
+    font-size: 14px;
+}
+.top-call{
+    float: left;
+    padding-left: 20px;
+    background: url("http://climg.mukewang.com/58c61b9d0001e02d00170017.png") left no-repeat;
+}
+.top-welcome{
+    float: right;
+}
+.top-welcome>a{
+    color: #2da5e1;
+    padding-left: 16px;
+}
+.top-welcome>a#help{
+    padding-left: 70px;
+}
+/*logo区*/
+/*.logo{*/
+    /*line-height: 90px;*/
+/*}*/
+.logo .wrap{
+    height: 100%;
+}
+#logo{
+    width: 360px;
+    height: 60px;
+    display: inline-block;
+    /*float: left;*/
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -30px;
+}
+/*logo区右边的搜索框*/
+.search{
+    width: 328px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -20px;
+    background: url("http://climg.mukewang.com/58c61b7e00012b9303260038.jpg") no-repeat;
+}
+.search .select{
+    width: 60px;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 10px;
+    color: #fff;
+    font-size: 16px;
+    display: inline-block;
+    cursor: pointer;
+}
+/*搜索条件*/
+.classified{
+    position: absolute;
+    top:38px;
+    z-index: 1;
+    background-color: #fff;
+    text-align: center;
+}
+.classified>a{
+    display: block;
+    color: #A5a2a2;
+    width: 70px;
+    /*background-color: #fecd09;*/
+}
+.classified>a:hover{
+    background-color: #ebeef5;
+}
+.search .input{
+    position: absolute;
+    top: 2px;
+    left: 70px;
+    width: 216px;
+    height: 34px;
+    font-size: 14px;
+    color: #868686;
+}
+/*搜索提交按钮*/
+.search>a{
+    display: inline-block;
+    width: 40px;
+    height: 100%;
+    border-radius: 3px;
+    position: absolute;
+    right: 1px;
+}
+/*导航栏*/
+.nav .item{
+    display: inline-block;
+    line-height: 36px;
+    font-size: 17px;
+    color: #fff;
+    text-align: center;
+    padding: 0 15px;
+}
+.item-f_right{
+    float: right;
+    display: inline-block;
+    line-height: 36px;
+    font-size: 17px;
+    color: #fff;
+    text-align: center;
+    padding: 0;
+}
+.item_focus{
+    background-color: #1fa4f0;
+}
+/*科室分类导航菜单*/
+.content-header-content{
+    border: 1px solid #dcdddd;
+    border-top: 2px solid #49a6d8;
+    position: relative;
+}
+/*1、菜单导航表头图片*/
+.content-header-title{
+    width: 130px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    font-size: 16px;
+    background: url("http://climg.mukewang.com/58c61a4f0001967a01380030.jpg")  left no-repeat;
+}
+/*2、菜单导航科室分类*/
+.content-header-content-items{
+    width: 768px;
+    padding-left: 20px;
+    display: inline-block;
+}
+.content-header-content-items>.item{
+    display: inline-block;
+    float: left;
+    width: 128px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 14px;
+    color: #555;
+    text-align: left;
+    /*background-color: red;*/
+}
+.content-header-all_btn{
+    color: #0000ff;
+    font-size: 15px;
+    position: absolute;
+    right: 45px;
+    bottom: 20px;
+    text-decoration: underline;
+}
+/*content-body*/
+.content-body{
+    position: relative;
+    font-size: 13px;
+}
+.content-body-left{
+    width: 210px;
+    /*height: 640px;*/
+    float: left;
+    border: 1px solid #dcdddd;
+}
+.content-body-left-item{
+    display: inline-block;
+    padding: 0 7px 0 32px;
+    width: 174px;
+    height: 25px;
+    text-align: left;
+    line-height: 25px;
+    font-size: 13px;
+    color: #555;
+    position: relative;
+    margin-bottom: 9px;
+    /*background: url("http://climg.mukewang.com/58c61b610001c58300440638.jpg")  22px -22px no-repeat ;*/
+}
+.content-body-left span{
+    float: right;
+    color: #999;
+}
+.content-body-left-item:before{
+    content:' ';
+    display: block;
+    width: 22px;
+    height: 21px;
+    position: absolute;
+    left: 7px;
+    top: 1px;
+    background: url("http://climg.mukewang.com/58c61b610001c58300440638.jpg") 0 0 no-repeat;
+}
+/*利用伪类添加图标？如何利用js动态实现呢*/
+.content-body-left li:nth-child(2) .content-body-left-item:before{
+    background-position: 0 -22px;
+}
+.content-body-left li:nth-child(3) .content-body-left-item:before{
+    background-position: 0 -44px;
+}
+.content-body-left li:nth-child(4) .content-body-left-item:before{
+    background-position: 0 -66px;
+}
+.content-body-left li:nth-child(5) .content-body-left-item:before{
+    background-position: 0 -88px;
+}
+.content-body-left li:nth-child(6) .content-body-left-item:before{
+    background-position: 0 -110px;
+}
+.content-body-left li:nth-child(7) .content-body-left-item:before{
+    background-position: 0 -132px;
+}
+.content-body-left li:nth-child(8) .content-body-left-item:before{
+    background-position: 0 -154px;
+}
+.content-body-left li:nth-child(9) .content-body-left-item:before{
+    background-position: 0 -176px;
+}
+.content-body-left li:nth-child(10) .content-body-left-item:before{
+    background-position: 0 -198px;
+}
+.content-body-left li:nth-child(11) .content-body-left-item:before{
+    background-position: 0 -220px;
+}
+.content-body-left li:nth-child(12) .content-body-left-item:before{
+    background-position: 0 -242px;
+}
+.content-body-left li:nth-child(13) .content-body-left-item:before{
+    background-position: 0 -264px;
+}
+.content-body-left li:nth-child(14) .content-body-left-item:before{
+    background-position: 0 -286px;
+}
+.content-body-left li:nth-child(15) .content-body-left-item:before{
+    background-position: 0 -308px;
+}
+.content-body-left li:nth-child(16) .content-body-left-item:before{
+    background-position: 0 -330px;
+}
+.content-body-left li:nth-child(17) .content-body-left-item:before{
+    background-position: 0 -352px;
+}
+.content-body-left li:nth-child(18) .content-body-left-item:before{
+    background-position: 0 -374px;
+}
+.content-body-left li:nth-child(19) .content-body-left-item:before{
+    background-position: 0 -396px;
+}
+.content-body-left li:nth-child(20) .content-body-left-item:before{
+    background-position: 0 -418px;
+}
+.content-body-left li:nth-child(21) .content-body-left-item:before{
+    background-position: 0 -440px;
+}
+.content-body-left li:nth-child(22) .content-body-left-item:before{
+    background-position: 0 -462px;
+}
+.content-body-left li:nth-child(23) .content-body-left-item:before{
+    background-position: 0 -484px;
+}
+.content-body-left li:nth-child(24) .content-body-left-item:before{
+    background-position: 0 -506px;
+}
+.content-body-left li:nth-child(25) .content-body-left-item:before{
+    background-position: 0 -528px;
+}
+.content-body-left li:nth-child(26) .content-body-left-item:before{
+    background-position: 0 -550px;
+}
+.content-body-left li:nth-child(27) .content-body-left-item:before{
+    background-position: 0 -572px;
+}
+.content-body-left li:nth-child(28) .content-body-left-item:before{
+    background-position: 0 -594px;
+}
+.content-body-left li:nth-child(29) .content-body-left-item:before{
+    background-position: 0 -616px;
+}
+.content-body-left li:nth-child(30) .content-body-left-item:before{
+    background-position: 0 -638px;
+}
+
+/*右边的二级菜单*/
+.content-body-right{
+    margin-left: 16px;
+    width: 770px;
+    /*position: absolute;*/
+    /*left: 212px;*/
+    /*top: 0;*/
+    float: right;
+    border: 1px solid #dcdddd;
+}
+.content-body-right-title{
+    margin: 32px 14px 0;
+    padding-bottom: 12px;
+    padding-left: 20px;
+    border-bottom: 1px  dashed #dcdddd;
+    color: #00b3ea;
+}
+/*二级菜单下的各级链接*/
+.content-body-right-items{
+    padding-left:42px;
+}
+.content-body-right-item{
+    display: inline-block;
+    color: #777;
+    margin-top: 12px;
+    width: 146px;
+}
+/*页脚*/
+.footer{
+    text-align: center;
+    line-height: 70px;
+    color: #acacac;
+}

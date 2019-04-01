@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>attr removeAttr</title>
+</head>
+<body>
+<div class="div1" id="box1" title="isDiv1" data-id="html data">我是div</div>
+<div class="div2" id="box2" title="isDiv2" >我是div</div>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    // //补充代码
+     $(function () {
+        $('#box1').removeAttr('class title');
+        $('div').attr({
+            title:'newTitle',
+            name:'divs',
+            alt:'new'
+        });
+        $('.div2').data('data-index',3);
+        $('.div2').attr('data-index',3);
+        $('.div1').data('id','g');
+        // console.log($('.div2').data('data-index'));
+        console.log($('.div1').data());
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css3渐变</title>
+    <style type="text/css">
+        div{
+            width: 300px;
+            height: 200px;
+            float: left;
+            border: none;
+        }
+        .div1{
+            background: -webkit-linear-gradient(yellow,red);
+            background: -moz-linear-gradient(yellow,red);
+            background: -0-linear-gradient(yellow,red);
+            background: -webkit-linear-gradient(yellow,red);
+        }
+        .div2{
+            background: -webkit-linear-gradient(left,yellow,red);
+            background: -moz-linear-gradient(right,yellow,red);
+            background: -o-linear-gradient(right,yellow,red);
+            background: linear-gradient(to right,yellow,red);
+        }
+        .div3{
+            background: -webkit-linear-gradient(left top,yellow,red);
+            background: -moz-linear-gradient(right bottom,yellow,red);
+            background: -o-linear-gradient(right bottom,yellow,red);
+            background: linear-gradient(to right bottom,yellow,red);
+        }
+        .div4{
+            /*background: linear-gradient(90deg,#fff 20%,red 50%,green 90%);*/
+            background: linear-gradient(90deg,rgba(255,0,0,0) 0%,rgba(255,0,0,0) 20%,rgba(255,0,0,1) 50%,rgba(0,255,0,1) 90%);
+        }
+        .div5{
+            background: linear-gradient(90deg,#fff 20%,red 50%,green 90%);
+        }
+        .div6{
+            background: repeating-linear-gradient(90deg,red 0%,orange 5%,yellow 10%,green 15%,blue 20%,indigo 25%,violet 30%);
+        }
+        .div7{
+            background: -webkit-radial-gradient(60% 40%,closest-side circle,red,yellow,green,blue);
+            background:    -moz-radial-gradient(60% 40%,closest-side circle,red,yellow,green,blue);
+            background:      -o-radial-gradient(60% 40%,closest-side circle,red,yellow,green,blue);
+            background:         radial-gradient(60% 40%,closest-side circle,red,yellow,green,blue);
+        }
+        .div8{
+            background: -webkit-radial-gradient(60% 40%,farthest-side circle,red,yellow,green,blue);
+            background:    -moz-radial-gradient(60% 40%,farthest-side circle,red,yellow,green,blue);
+            background:      -o-radial-gradient(60% 40%,farthest-side circle,red,yellow,green,blue);
+            background:         radial-gradient(60% 40%,farthest-side circle,red,yellow,green,blue);
+        }
+        .div9{
+            background: -webkit-radial-gradient(60% 40%,closest-corner circle,red,yellow,green,blue);
+            background:    -moz-radial-gradient(60% 40%,closest-corner circle,red,yellow,green,blue);
+            background:      -o-radial-gradient(60% 40%,closest-corner circle,red,yellow,green,blue);
+            background:         radial-gradient(60% 40%,closest-corner circle,red,yellow,green,blue);
+        }
+        .div10{
+            background: -webkit-radial-gradient(60% 40%,farthest-corner circle,red,yellow,green,blue);
+            background:    -moz-radial-gradient(60% 40%,farthest-corner circle,red,yellow,green,blue);
+            background:      -o-radial-gradient(60% 40%,farthest-corner circle,red,yellow,green,blue);
+            background:         radial-gradient(60% 40%,farthest-corner circle,red,yellow,green,blue);
+        }
+        .div11{
+             background: -webkit-repeating-radial-gradient(circle,red 0%,orange 5%,yellow 10%,green 15%,blue 20%,cyan 25%,purple 30%);
+             background: -moz-repeating-radial-gradient(circle,red 0%,orange 5%,yellow 10%,green 15%,blue 20%,indigo 25%,violet 30%);
+             background: -o-repeating-radial-gradient(circle,red 0%,orange 5%,yellow 10%,green 15%,blue 20%,indigo 25%,violet 30%);
+             background: repeating-radial-gradient(circle,red 0%,orange 5%,yellow 10%,green 15%,blue 20%,indigo 25%,violet 30%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="green",endColorstr="red", GradientType=0);
+         }
+        .div12{
+            width: 400px;
+            height: 400px;
+            text-overflow: ellipsis;
+            background-color: yellow;
+            background-size: 100px 100px;
+            background-image:-webkit-linear-gradient(45deg,violet 25%,transparent 25%),
+            -webkit-linear-gradient(-45deg,violet 25%,transparent 25%),
+            -webkit-linear-gradient(45deg,transparent 75%,violet 75%),
+            -webkit-linear-gradient(-45deg,transparent 75%,violet 75%);
+            background-image:-moz-linear-gradient(45deg,violet 25%,transparent 25%),
+            -moz-linear-gradient(-45deg,violet 25%,transparent 25%),
+            -moz-linear-gradient(45deg,transparent 75%,violet 75%),
+            -moz-linear-gradient(-45deg,transparent 75%,violet 75%);
+            background-image:-o-linear-gradient(45deg,violet 25%,transparent 25%),
+            -o-linear-gradient(-45deg,violet 25%,transparent 25%),
+            -o-linear-gradient(45deg,transparent 75%,violet 75%),
+            -o-linear-gradient(-45deg,transparent 75%,violet 75%);
+            background-image:linear-gradient(45deg,violet 25%,transparent 25%),
+                             linear-gradient(-45deg,violet 25%,transparent 25%),
+                             linear-gradient(45deg,transparent 75%,violet 75%),
+                             linear-gradient(-45deg,transparent 75%,violet 75%);
+        }
+
+        p { width: 500px;font-size:20px; margin: 10px auto; background: #abcdef;overflow:hidden;}
+        /*此处写代码*/
+        .p1{
+            text-overflow:clip;
+        }
+        .p2{
+            text-overflow:ellipsis;
+        }
+        p:hover{
+            overflow:visible;
+        }
+    </style>
+</head>
+<body>
+<!--<div class="div1">div1</div>-->
+<!--<div class="div2">div2</div>-->
+<!--<div class="div3">div3</div>-->
+<!--<div class="div4">div4</div>-->
+<!--<div class="div5">div5</div>-->
+<!--<div class="div6">div6</div>-->
+<!--<div class="div7">div7</div>-->
+<!--<div class="div8">div8</div>-->
+<!--<div class="div9">div9</div>-->
+<!--<div class="div10">div10</div>-->
+<!--<div class="div11">div11</div>-->
+<!--<div class="div12">div12</div>-->
+<p class="p1">bababadalgharaghtakamminarronnkonnbronntonne,rronntuonnthunn,trovarrhounawnskawntoohoohoordenenthurnuk</p>
+<p class="p2">bababadalgharaghtakamminarronnkonnbronntonne,rronntuonnthunn,trovarrhounawnskawntoohoohoordenenthurnuk</p>
+</body>
+</html>

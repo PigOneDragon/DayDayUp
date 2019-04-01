@@ -1,0 +1,285 @@
+*{margin: 0;padding: 0;list-style: none;text-decoration: none;}
+body{font-family:"Microsoft YaHei UI";min-width: 700px;}
+.header{
+	width: 100%;
+	height: 50px;
+	background-color: #07CBC9;
+	position: fixed;
+	top:0;
+	z-index: 10;
+	overflow: hidden;}
+/*.clear{clear: both;zoom:1;}*/
+.header .logo{
+	float: left;
+	height: 50px;
+	line-height: 50px;
+	padding-left: 100px;}
+.header .nav{
+	float: right;
+	margin-right: 50px;}
+
+.header .nav li{
+	float: left;
+	line-height: 50px;
+	padding: 0 10px;}
+.header .nav li:hover{
+	background-color: black;}				
+.header .nav li a{
+	font-weight: bold;
+	color: #fff;}
+/*给banner图的遮罩层*/
+.mask{
+	width: 100%;
+	height: 600px;
+	background-color: #000;
+	position: absolute;
+	top:50px;
+	left: 0;
+	opacity: 0.5;}
+
+.banner{
+	width: 100%;
+	height: 600px;
+	margin-top:50px;
+	overflow: hidden;}
+ .banner img{
+	width: 100%;
+	height: 600px;}
+/*表单样式设置*/
+.banner .menu{
+	width: 500px;
+	height: 500px;
+	position: absolute;
+	top:100px;
+	left:50%; 
+	margin-left: -250px;
+
+	z-index: 2;
+	/*background-color: blue;*/
+	text-align: center;
+}	
+.banner .menu input,textarea{
+	margin-top: 30px;
+	width: 496px;
+	height: 40px;
+	color: #fff;
+	border:2px solid #fff;
+	background-color: transparent; /*透明*/
+}	
+/*鼠标滑过表单效果*/
+.banner .menu textarea:hover{
+	border-color: #07CBC9;
+}
+.banner .menu input:hover{
+	border-color: #07CBC9;
+}
+
+#to:hover{
+	border-style: none;
+	background-color: #07CBC9;
+	cursor:pointer;
+}
+
+/*about样式设置*/
+.about_t{
+	width: 510px;
+	/*height: 200px;*/
+	text-align: center;
+	margin:20px auto;
+	overflow: hidden;
+}
+
+.about_t .tag{
+	font-size:40px;
+	color: #000;
+	font-weight: bold;
+}
+
+.text_pw{
+	color: #07CBC9;
+	font-weight: bold;
+}
+
+.about_t .text{
+	padding-top: 10px;
+	color: #07CBC9;
+}
+/*about下的图文*/
+
+.about_m{
+	margin:0 auto;
+	width: 960px;
+	overflow:hidden; }
+.c_left,.c_middle,.c_right{
+	float: left;
+	margin:0 15px;
+	text-align: center;
+}
+.c_middle img{
+	width: 510px;}
+.c_left_1{
+	width: 180px;
+	height: 80px;
+	font-size:30px;
+	color: #000;
+}
+/*给.c_left设置定位，让.Mask子元素在此容器内绝对定位*/
+.c_left{position:relative;}
+/*.Mask的遮罩层*/
+.mask_1{
+	width:350px;
+	height: 220px;
+	position: absolute;
+	left:0;
+	opacity: 0.4;
+	background-color: #fff;
+}
+.c_left .Mask{
+	width:350px;
+	height: 220px;
+	position: absolute;
+	left:0;
+	border: 1px solid #07CBC9; }
+
+.c_left .Mask .c_left_text{
+	text-align: left;
+	padding: 15px;
+	line-height:25px;
+	
+}
+.button button{
+	width: 85px;
+	height: 35px;
+	position: absolute;
+	bottom: 30px;
+	left:15px;
+	background-color: #000;
+	color: #fff;
+	border:2px solid #000;
+	cursor:pointer;
+	/*z-index: 15;同时设置绝对定位优先级按顺序*/
+}
+
+.c_right{
+	width: 180px;
+	height: 260px;}
+.c_r_1,.c_r_2{
+	border:2px solid #07CBC9;
+	width: 180px;
+	height: 120px;
+	font-weight: bold; 
+	font-size: 22px;
+	display: table;
+}
+.c_r_1 ,.c_r_2 dl{
+	display: table-cell;
+	vertical-align: middle;}
+
+.new{font-size: 18px;
+font-weight: normal;}
+
+.c_r_2{margin-top: 30px;}
+
+/*两行四列的块，页面缩放是还是有问题，暂没想到好方法？*/
+.about_b{
+	width: 100%;
+	min-width: 1000px;
+	height: 800px;
+	margin-top: 100px;
+	overflow: hidden;}
+.about_m1{
+	width: 100%;
+	height: 400px;
+	overflow: hidden;
+}
+.about_m1 .m1_img{
+	width: 25%;
+	height: 400px;
+	float: left;}
+
+.m1_img img{
+	display: block;
+	float: left;
+	width: 100%;
+	height: 400px;}
+.about_m1 .m1_text{
+	width: 25%;
+	min-width: 300px;
+	height: 400px;
+	background-color: #07CBC9;
+	float: left;
+	text-align: left;
+	/*设置定位，实现下方按钮定位*/
+	position: relative;}
+
+.about_m1 .m1_text .title,.intro,.into{
+	margin: 30px;
+}
+.about_m1 .m1_text .title{
+	color: #fff;
+	font-size: 30px;	
+}
+.about_m1 .m1_text .intro,.into{
+	color: #fff;
+}
+
+.about_m1 .m1_text .into{
+	font-size: 12px;
+	line-height: 2em;
+}
+.button1 button{
+	
+	width: 85px;
+	height: 35px;
+	/*给按钮设置绝对定位后，当页面缩小时，按钮会覆盖文字，给父元素设置最小宽度*/
+	position: absolute;
+	bottom: 50px;
+	left: 50%;
+	margin-left: -42px;
+	background-color: #000;
+	color: #fff;
+	border:2px solid #000;
+	cursor:pointer;
+}
+button:hover{
+	background-color:transparent;	
+	color: #000;
+}
+
+/*gallery*/
+
+.gallery_b{
+	width: 1170px;/*360*3+30*3*/
+	height: 340px;
+	margin:0 auto;
+	overflow: hidden;
+}
+.gallery_b .gb_1{
+	width: 360px;
+	height: 240px;
+	margin:0 15px;
+	float: left;
+
+}
+.pic img{display:block;}/*消除img行内元素与块元素空隙*/
+.gallery_b .zm{
+	width: 340px;
+	height: 70px;
+	text-align: left;
+	line-height: 70px;
+	color: #fff;
+	padding-left: 20px;
+	background-color: #000;
+}
+.footer{
+	width: 100%;
+	height:50px;
+	margin-top: 50px;
+	text-align: center;
+	background-color: #07CBC9;
+}
+.footer p{
+	font-size: 15px;
+	color: #fff;
+	line-height: 50px;
+}

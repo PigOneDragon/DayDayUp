@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bootstrap插件调用</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+</head>
+<body>
+<!--模态框   弹出层-->
+<!--使用方法
+    1、data属性：不需写 JavaScript 代码也可激活模态框。通过在一个起控制器作用的元素（例如：按钮）上添加 data-toggle="modal" 属性，
+    或者 data-target="#foo" 属性，再或者 href="#foo" 属性，用于指向被控制的模态框。
+    类、参数作用
+    .modal声明该容器为modal
+    fade 调用动画，淡入淡出效果
+    .close 关闭按钮样式
+    data-dismiss="modal" 调用bs关闭事件
+    .modal-dialog 弹出框
+    .modal-content 内容框
+    .modal-header 头部内容
+        .modal-title 头部标题
+     .modal-body 主要内容
+     .modal-footer 页脚
+     2、使用jq调用  （不推荐）
+     $('#mymodal).modal();
+-->
+<!--点击控制元素-->
+<button class="btn btn-primary" data-toggle="modal" data-target="#mymodal">模态框</button>
+<!--模态框容器-->
+<div class="modal fade" id="mymodal">
+    <!--弹出框-->
+    <div class="modal-dialog">
+        <!--内容框-->
+        <div class="modal-content">
+            <!--内容的头部-->
+            <div class="modal-header">
+                <!--关闭按钮-->
+                <button type="button" class="close" data-dismiss="modal">x</button>
+                <!--弹出层标题-->
+                <h4 class="modal-title">Modal title</h4>
+            </div>
+
+            <!---->
+            <div class="modal-body">
+                <p>One fine body&hellip;</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!--动态监听-->
+<!--涉及2个参数  data-target="#id名"  data-spy="scroll" 监听滚动事件-->
+<nav class="navbar navbar-default" id="test1">
+    <div class="container">
+        <ul class="nav navbar-nav">
+            <!--该处锚点与监听的id一致-->
+            <li><a href="#oppo">oppo</a></li>
+            <li><a href="#vivo">vivo</a></li>
+            <li><a href="#iphone">iphone</a></li>
+        </ul>
+    </div>
+</nav>
+<div data-target="#test1" data-spy="scroll" style="width:500px;height: 50px;overflow: auto;position: relative;">
+    <h4 id="oppo">oppo</h4>
+    <p>这是OPPO的内容这是OPPO的内容这是OPPO的内容这是OPPO的内容这是OPPO的内容这是OPPO的内容</p>
+    <h4 id="vivo">vivo</h4>
+    <p>这是OPPO的内容这是OPPO的内容这是OPPO的内容这是OPPO的内容这是OPPO的内容这是OPPO的内容</p>
+    <h4 id="iphone">iphone</h4>
+    <p>这是OPPO的内容这是OPPO的内容这是OPPO的内容这是OPPO的内容这是OPPO的内容这是OPPO的内容</p>
+</div>
+<br>
+<br>
+<!--tab标签
+tab-content bs中用来规定选项卡的父容器
+fade 动画的淡入淡出效果
+fade in 专门调整透明度
+tab-pane 隐藏元素
+active 激活元素
+data-toggle="tab" 谁 触发事件
+-->
+<!--首先需要一个导航,herf链接对应下级的id-->
+<ul class="nav nav-tabs">
+    <li class="active"><a href="#q" data-toggle="tab">a</a></li>
+    <li><a href="#w" data-toggle="tab">b</a></li>
+    <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown">
+            c
+            <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+            <li><a href="#e" data-toggle="tab">c1</a></li>
+            <li><a href="#e1" data-toggle="tab">c2</a></li>
+        </ul>
+
+    </li>
+</ul>
+<div class="tab-content">
+    <div class="tab-pane fade in active" id="q">选项卡一的内容</div>
+    <div class="tab-pane fade" id="w">选项卡二的内容</div>
+    <div class="tab-pane fade" id="e">选项卡三的内容</div>
+    <div class="tab-pane fade" id="e1">选项卡三-1的内容</div>
+</div>
+<br>
+<br>
+<br>
+<!--小弹出框提示-->
+<!--
+data-toggle="popover" 执行弹出框事件
+title 弹出框的标题
+data-content 弹出框的内容
+data-placement 弹出框的方向（top right bottom left）
+data-container="body" 向指定元素添加弹出框？如果父级有overflow:hidden属性，超出容器的部分会显示不出 此时该属性可解决
+data-trigger="focus" 点击按钮以外部分，弹出框消失
+-->
+<!--<button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title"-->
+<!--data-content="And here's some amazing content. It's very engaging. Right?" data-placement="right" data-trigger="focus">-->
+<!--点我弹出/隐藏弹出框-->
+<!--</button>-->
+
+<button type="button" class="btn btn-lg btn-danger" data-toggle="popover"  data-placement="right"
+        data-trigger="focus">
+    点我弹出/隐藏弹出框
+</button>
+<header class="header"></header>
+<div class="banner"></div>
+<div class="content"></div>
+<footer class="footer"></footer>
+<script>
+    // $('[data-toggle="popover"]').popover();
+    function f3() {
+        var hhh = $('<div id="testt">\n' +
+            '    <a class="btn btn-danger">\n' +
+            '        你看到我了吗？\n' +
+            '        <span class="caret"></span>\n' +
+            '    </a>\n' +
+            '</div>');
+        return hhh;
+    }
+
+    // $('[data-toggle="popover"]').popover(
+    //     {
+    //         trigger: 'click', //触发方式
+    //         template: '', //你自定义的模板
+    //         title: "标题",//设置 弹出框 的标题
+    //         html: true, // 为true的话，data-content里就能放html代码了
+    //         content: "",//这里可以直接写字符串，也可以 是一个函数，该函数返回一个字符串；
+    //     }
+    // );
+    $('[data-toggle="popover"]').popover({
+        html:true,
+        content:f3()
+    });
+
+
+
+
+</script>
+</body>
+</html>

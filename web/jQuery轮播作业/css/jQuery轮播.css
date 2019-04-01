@@ -1,0 +1,92 @@
+*{margin: 0;padding: 0;}
+body{min-width: 700px;font-family: "Microsoft YaHei";}
+h2{
+    width: 300px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    margin: 10px auto;
+}
+/*给轮播图设置样式*/
+.pics{
+    width: 1200px;
+    height: 460px;
+    margin: 0 auto;
+    border: 5px solid #bbb;
+    overflow: hidden;
+    position: relative;
+}
+
+.pics .pic{
+    width: 1200px;
+    height: 460px;
+    display: none;
+}
+.pics .active{display: block;}
+.pics .one{
+    background-image: url("../img/1.jpg");
+}
+.pics .two{
+    background-image: url("../img/2.jpg");
+}
+.pics .three{
+    background-image: url("../img/3.jpg");
+}
+.pics .four{
+    background-image: url("../img/4.jpg");
+}
+.pics .five{
+    background-image: url("../img/5.jpg");
+}
+/*图片两边按钮*/
+.pics .button{
+    width: 30px;
+    height: 70px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -35px;
+    text-align: center;
+    cursor: pointer;
+    z-index: 5;
+}
+/*给按钮加入鼠标滑过效果*/
+.pics .button:hover{background-color: rgba(0,0,0,0.3)}
+/*图片右边的按钮*/
+.pics .right{
+    right: 0;
+    margin-left: auto;
+}
+/*img居中，使用了display：table-cell方法未能实现？有什么比较好的一个块在另一个块中垂直居中方法？*/
+.button img{
+    position: absolute;
+    width: 16px;
+    height: 30px;
+    top: 50%;
+    left:50%;
+    margin-top: -15px;
+    margin-left: -8px;
+    z-index: 1;
+}
+/*小圆点*/
+.pics .dots{
+    width: 100px;
+    height: 20px;
+    position: absolute;
+    bottom: 15px;
+    right: 10px;
+    cursor: pointer;
+}
+.dots span{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #bbb;
+    box-shadow: 0 0 0 2px white;
+    margin-left: 10px;
+}
+span.Active{
+    box-shadow: 0 0 0 2px #bbb;
+    background-color: #fff;
+}

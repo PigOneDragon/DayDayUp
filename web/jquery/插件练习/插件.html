@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Now Amazing Webpage</title>
+
+    <link rel="stylesheet" href="../../slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="../../slick-1.8.1/slick/slick-theme.css">
+    <style>
+        .one-time{background-color: #9a6e3a;}
+    </style>
+
+</head>
+<body>
+
+<div class="one-time">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+</div>
+
+
+
+<script src="../jquery-1.12.4.js"></script>
+<script src="../../slick-1.8.1/slick/slick.js"></script>
+
+
+<script type="text/javascript">
+    $(document).ready(function(){
+
+        $('.one-time').slick({
+            dots: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            adaptiveHeight: true
+        });
+    });
+</script>
+
+</body>
+</html>
+			

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>习题3-13</title>
+    <style>
+        div {
+            position: absolute;
+            background-color: red;
+        }
+
+        .blue {
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+
+<h3>修改元素样式</h3>
+
+<div class="blue">我是div里面的内容</div>
+
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $(function () {
+        var box=$('div');
+        box.removeClass('blue');
+        box.offset({top:100,left:50});
+        console.log(box.offset());
+        box.width(200);
+        box.height(200);
+        box.append('<p>我是P标签里面的内容</p>');
+        box.html('我是div里面的内容<p>我是P标签里面的内容</p>');
+		box.children().text('我变了');
+
+    });
+</script>
+</body>
+</html>

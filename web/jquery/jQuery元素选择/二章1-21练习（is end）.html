@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>习题</title>
+</head>
+<body>
+<div class="box1">
+    <div class="box2">
+        <h3>筛选和遍历jQuery对象</h3>
+
+        <ul>
+            <li class="item1">item1</li>
+            <li class="item2">item2</li>
+            <li class="item3">item3</li>
+            <li class="item4">item4</li>
+            <li class="item5">item5</li>
+            <li class="item6">item6</li>
+            <li class="item7">item7</li>
+            <li class="item8">item8</li>
+            <li class="item9">item9</li>
+        </ul>
+        <input id="check" type="text" title="check me" style="background-color: #9a6e3a;width:50px;" checked/>
+    </div>
+</div>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    //所谓的"破坏性"就是指任何改变所匹配的jQuery对象的操作。filter，find、map，not，next、parent，children等方法，他们会改变
+    // 最开始的jquery对象，所以可能会对jQuery对象产生破坏性操作，而css只是对样式的改变，不会产生破坏性操作。
+    // $(function () {
+    //     console.log($('.box1').find('div').find('li').end());
+    //     console.log($('.box2').children().children().is('li'));//是否有li返回值为布尔值
+    //     console.log($('.box2').find('li').is('li'));
+    //     console.log($('.item4').nextUntil('.item6').end().css('color','red'));  //只将上个元素样式更改，不包含item5
+    //     console.log($('.item4').nextUntil('.item6').addBack().css('color','red'));  //将自身及上个元素样式更改
+    //
+    // })
+    //元素的特性使用attribute去获取，返回值是字符串,元素的属性使用ele. properties这种方式去获取去获取，返回值可以是字符串，也可以是数组等
+    //如果attributes是本来在DOM对象中就存在的,attributes和properties的值会同步
+    //如果attributes是本来在DOM对象中就存在的，但是类型为Boolean，那么attributes和properties的值不会同步
+    // 如果attributes不是DOM对象内建的属性，attributes和properties的值不会同步
+    //有的属性在设置的时候，和特性虽然同步，但是并不完全相等，比如 img 的 src 特性，设置之后，作为属性会返回绝对地址。
+    console.log(document.getElementById('check').getAttribute('style'));  //特性
+    console.log(document.getElementById('check').style);//属性
+    console.log(document.getElementById('check').getAttribute('checked'));
+    console.log(document.getElementById('check').checked);
+    document.getElementById('check').setAttribute('title','hello');
+    console.log(document.getElementById('check').title);
+    document.getElementById('check').getAttribute('title');
+    console.log(document.getElementById('check').title='again');
+    console.log(document.getElementById('check').title===document.getElementById('check').getAttribute('title')); //true
+
+</script>
+</body>
+</html>

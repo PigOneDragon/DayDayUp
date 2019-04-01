@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>css布局</title>
+    <style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    .header {
+        width: 100%;
+        height: 100px;
+        background-color: black;
+        position: fixed;
+        top: 0;
+    }
+ 
+    .logo {
+        float: left;
+    }
+
+    .list1 {
+        float: right;
+    }
+
+    .list1 li {
+        float: left;
+        padding: 0 20px;
+        line-height: 100px;
+        margin-right: 20px;
+    }
+
+    a {
+        text-decoration: none;
+        color: #fff;
+    }
+    a:hover {
+        color: #666;
+    }
+
+    .content {
+        position:relative;top:100px; /*为什么这样设置顶部header块不会固定*/
+       /* margin-top: 100px;*/
+    }
+
+
+    .content img {
+        width: 100%;
+        display: block;
+    }
+
+    .footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 50px;
+        background: black;
+        text-align: center;
+    }
+
+    .list2 li {
+        display: inline-block;
+        margin: 0 80px;
+        line-height: 50px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo"><a href="#"><img src="http://climg.mukewang.com/58c0d2d900016ce303000100.png" alt"logo" title="logo" /></a></div>
+        <ul class="list1">
+            <li><a href="#">课程</a></li>
+            <li><a href="#">职业规划</a></li>
+            <li><a href="#">实战</a></li>
+            <li><a href="#">猿问</a></li>
+            <li><a href="#">手计</a></li>
+        </ul>
+      
+    </div>
+    <div class="content">
+        <img src="http://climg.mukewang.com/58c0eda50001e12416000480.jpg" alt="body1"/>
+        <img src="http://climg.mukewang.com/58c0edb80001c9f216000480.jpg" alt="body2"/>
+        <img src="http://climg.mukewang.com/58c0edc9000100d516000480.jpg" alt="body3"/>
+    </div>
+    <div class="footer">
+        <ul class="list2">
+            <li><a href="#">网站首页</a></li>
+            <li><a href="#">企业合作</a></li>
+            <li><a href="#">人才招聘</a></li>
+            <li><a href="#">联系我们</a></li>
+            <li><a href="#">常见问题</a></li>
+            <li><a href="#">友情链接</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>

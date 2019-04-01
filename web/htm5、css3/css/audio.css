@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.out{
+    width: 502px;
+    height: 400px;
+    border: 1px solid #7e7670;
+    border-radius: 8px;
+    box-shadow: 0 0 12px #a29da3;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    /*margin: 50px;*/
+    /*position: relative;*/
+    z-index: 5;
+}
+.in{
+    width: 500px;
+    height: 398px;
+    border: 1px solid #d6c5d4;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.top-pic{
+    width: 500px;
+    height: 200px;
+    background: url("../img/top_bg.jpg") no-repeat;
+    transition: .7s;
+}
+/*图片遮罩*/
+.top-mask{
+    width: 236px;
+    height: 200px;
+    background:  url("../img/mask.png") no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/*进度条容器*/
+.bar{
+    width: 440px;
+    height: 20px;
+    background: url("../img/audiobar_bg.png") repeat-x;
+    /*position: relative;*/
+    padding: 15px 30px;
+}
+
+/*进度条外侧*/
+.bar-now{
+    width:440px;
+    height: 16px;
+    border-radius: 8px;
+    background: url("../img/bar-now_bg.png") repeat-x;
+    position: relative;
+}
+/*进度条内侧*/
+.bar-load{
+    width:0;  /*动态调整*/
+    height: 14px;
+    border-radius: 7px;
+    background: url("../img/bar-load_bg.png") repeat-x;
+    position: absolute;
+    left: 2px;
+    top: 1px;
+}
+/*控制台容器*/
+.controls{
+    width: 500px;
+    height: 148px;
+    background: url("../img/bottom_bg.png") repeat-x;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    position: relative;
+}
+/*按钮容器*/
+.controls-box{
+    width: 250px;
+    height: 94px;
+    margin: 30px 0 0 124px;
+    float: left;
+    position: relative;
+}
+/*上一首*/
+.controls-box>.prev,
+.controls-box>.next{
+    width: 75px;
+    height: 74px;
+    margin-top: 10px;
+    float: left;
+    background: url("../img/lastBg.png") no-repeat;
+    cursor: pointer;
+}
+.controls-box>.play{
+    width: 95px;
+    height: 94px;
+    float: left;
+    background: url("../img/playNode.png") no-repeat;
+    cursor: pointer;
+}
+.controls-box>.next
+{
+    background: url("../img/rightbg.png") no-repeat;
+}
+/*音量*/
+.controls>.volume,
+.controls>.no_volume{
+    width: 37px;
+    height: 28px;
+    position: absolute;
+    top: 50%;
+    right: 44px;
+    margin-top: -14px;
+    background: url("../img/volume.png") no-repeat;
+    cursor: pointer;
+}
+.controls>.no_volume{
+    background: url("../img/no_volume.png") no-repeat;
+}

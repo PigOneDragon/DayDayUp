@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>onchange事件</title>
+    <style>
+        div{
+            width:300px ;
+            height: 300px;
+            border: 1px solid;}
+    </style>
+</head>
+<body>
+    <b>请选择背景色</b>
+    <select id="menu">
+        <option value="">-请选择-</option>
+        <option value="blue">蓝色</option>
+        <option value="red">红色</option>
+        <option value="yellow">黄色</option>
+        <option value="green">绿色</option>
+    </select>
+    <br><br><br>
+    <div>div</div>
+
+<script>
+    var menu=document.getElementById("menu"),
+        div=document.getElementsByTagName("div")[0];
+
+        menu.onchange=function () {
+            if (menu.value!=""){
+                div.style.backgroundColor=menu.value;
+            } else{
+                div.style.backgroundColor="#fff";
+            }
+        }
+</script>
+
+</body>
+</html>

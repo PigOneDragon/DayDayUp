@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>bootstrap</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/2-7index.css">
+</head>
+<body>
+<!--头部-->
+<header class="header">
+    <div class="container">
+        <nav class="navbar navbar-default head-nav">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header pull-right">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <!--head-logo-->
+                <div class="head-logo pull-left">
+                    <img src="img/logo.png" alt="logo"/>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse head-nav" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">首页 <span class="sr-only">(current)</span></a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                               aria-haspopup="true" aria-expanded="false">生日 <span class="caret"></span></a>
+                            <ul class="dropdown-menu menu-items">
+                                <li class="col1 pull-left">
+                                    <h3>关系</h3>
+                                    <p>朋友</p>
+                                    <p>朋友</p>
+                                    <p>朋友</p>
+                                </li>
+                                <li class="col1 pull-left">
+                                    <h3>关系</h3>
+                                    <p>朋友</p>
+                                    <p>朋友</p>
+                                    <p>朋友</p>
+                                </li>
+                                <li class="col1 pull-left">
+                                    <h3>关系</h3>
+                                    <p>朋友</p>
+                                    <p>朋友</p>
+                                    <p>朋友</p>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                               aria-haspopup="true" aria-expanded="false">婚礼 <span class="caret"></span></a>
+                            <ul class="dropdown-menu menu-items">
+                                <li class="col1 pull-left">
+                                    <h3>关系</h3>
+                                    <p>朋友</p>
+                                    <p>朋友</p>
+                                    <p>朋友</p>
+                                </li>
+                                <li class="col1 pull-left">
+                                    <h3>关系</h3>
+                                    <p>朋友</p>
+                                    <p>朋友</p>
+                                    <p>朋友</p>
+                                </li>
+                                <li class="col1 pull-left">
+                                    <h3>关系</h3>
+                                    <p>朋友</p>
+                                    <p>朋友</p>
+                                    <p>朋友</p>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                               aria-haspopup="true" aria-expanded="false">专用 <span class="caret"></span></a>
+                            <ul class="dropdown-menu menu-items">
+                                <li class="col1 pull-left">
+                                    <h3>关系</h3>
+                                    <p>朋友</p>
+                                    <p>朋友</p>
+                                    <p>朋友</p>
+                                </li>
+                                <li class="col1 pull-left">
+                                    <h3>关系</h3>
+                                    <p>朋友</p>
+                                    <p>朋友</p>
+                                    <p>朋友</p>
+                                </li>
+                                <li class="col1 pull-left">
+                                    <h3>关系</h3>
+                                    <p>朋友</p>
+                                    <p>朋友</p>
+                                    <p>朋友</p>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                               aria-haspopup="true" aria-expanded="false">商铺 <span class="caret"></span></a>
+                            <ul class="dropdown-menu menu-items">
+                                <li class="col1 pull-left">
+                                    <h3>关系</h3>
+                                    <p>朋友</p>
+                                    <p>朋友</p>
+                                    <p>朋友</p>
+                                </li>
+                                <li class="col1 pull-left">
+                                    <h3>关系</h3>
+                                    <p>朋友</p>
+                                    <p>朋友</p>
+                                    <p>朋友</p>
+                                </li>
+                                <li class="col1 pull-left">
+                                    <h3>关系</h3>
+                                    <p>朋友</p>
+                                    <p>朋友</p>
+                                    <p>朋友</p>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </div><!-- /.navbar-collapse -->
+                <!--搜索警告栏-->
+                <div class="alertbar pull-right">
+                    <button id="alertbar-seach" type="button" class="btn btn-info pull-left" data-toggle="popover"
+                            data-placement="bottom">
+                        <span class="glyphicon glyphicon-search"></span>
+                    </button>
+                    <button id="alertbar-form" type="button" class="btn btn-info pull-left" data-toggle="popover"
+                            data-placement="bottom">
+                        <span class="glyphicon glyphicon-user"></span>
+                    </button>
+                    <!--警告框的表单-->
+                    <!--<form>-->
+                    <!--<div class="form-group">-->
+                    <!--<label for="exampleInputEmail1">Email</label>-->
+                    <!--<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">-->
+                    <!--</div>-->
+                    <!--<div class="form-group">-->
+                    <!--<label for="exampleInputPassword1">Password</label>-->
+                    <!--<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">-->
+                    <!--</div>-->
+                    <!--<div class="form-group">-->
+                    <!--<label for="exampleInputFile">File input</label>-->
+                    <!--<input type="file" id="exampleInputFile">-->
+                    <!--<p class="help-block">Example block-level help text here.</p>-->
+                    <!--</div>-->
+                    <!--<button type="submit" class="btn btn-default">登录</button>-->
+                    <!--<div class="checkbox">-->
+                    <!--<label>-->
+                    <!--<input type="checkbox"> 记住-->
+                    <!--</label>-->
+                    <!--</div>-->
+                    <!--<div class="form-text">-->
+                    <!--新用户？<a href="#">注册</a> | 忘记密码？-->
+                    <!--</div>-->
+                    <!--</form>-->
+                    <button type="button" class="btn btn-info pull-left" data-toggle="popover" data-placement="bottom">
+                        <span class="glyphicon glyphicon-shopping-cart"></span>
+                    </button>
+                    <!--购物车数据模板-->
+                    <script type="text/template" id="alert-catr">
+
+                        <div class="alert-catr">
+                            <div class="hospital-item-pic"><img src="{imgUrl}" alt="医院a"/></div>
+                            <div class="hospital-item-intro">
+                                <div class="hospital-item-intro-name">{name} <span>{level}</span></div>
+                                <div class="hospital-item-intro-time">放号时间: {time}</div>
+                                <div class="hospital-item-intro-tel">电话：{phone}</div>
+                                <div class="hospital-item-intro-address">地址：{address}</div>
+                            </div>
+                            <a href="" class="hospital-item-btn"></a>
+                        </div>
+
+                    </script>
+                </div>
+            </div><!-- /.container-fluid -->
+        </nav>
+    </div>
+</header>
+<!--banner-->
+<section class="banner">
+    <div class="container">
+        <div class="row banner-body">
+            <div class="col-xs-6 col-sm-6 col-md-6 banner-text">
+                <h1>IMOOC <span>蛋糕</span></h1>
+                <p>特别的日子,特别的你</p>
+                <div class="text-btn">
+                    SHOW NOW
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6  banner-pic">
+                <div class="picbox">
+                    <img src="img/2.png" width="100%;"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--shop区-->
+
+<!--subscribe-->
+<section class="subscribe">
+    <div class="container">
+        <div class="subscribe-body">
+            <h2>Newsletter</h2>
+            <div class="subscribe-input">
+                <input class="subscribe-input1" type="text" placeholder="Email"/><input class="subscribe-input2"
+                                                                                        type="submit"
+                                                                                        value="Subscribe"/>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!--友情链接-->
+<section class="blogroll">
+    <div class="container">
+        <div class="blogroll-items">
+            <div class="item">
+                <h3>COMPANY</h3>
+                <ul>
+                    <li><a href="#2">ppp</a></li>
+                    <li><a href="#2">ppp</a></li>
+                    <li><a href="#2">ppp</a></li>
+                    <li><a href="#2">ppp</a></li>
+                    <li><a href="#2">ppp</a></li>
+                </ul>
+            </div>
+            <div class="item">
+                <h3>SERVICE</h3>
+                <ul>
+                    <li><a href="#2">ppp</a></li>
+                    <li><a href="#2">ppp</a></li>
+                    <li><a href="#2">ppp</a></li>
+                    <li><a href="#2">ppp</a></li>
+                    <li><a href="#2">ppp</a></li>
+                </ul>
+            </div>
+            <div class="item">
+                <h3>OPDER&</h3>
+                <ul>
+                    <li><a href="#2">ppp</a></li>
+                    <li><a href="#2">ppp</a></li>
+                    <li><a href="#2">ppp</a></li>
+                    <li><a href="#2">ppp</a></li>
+                    <li><a href="#2">ppp</a></li>
+                </ul>
+            </div>
+            <div class="item">
+                <h3>LEGAL</h3>
+                <ul>
+                    <li><a href="#2">ppp</a></li>
+                    <li><a href="#2">ppp</a></li>
+                    <li><a href="#2">ppp</a></li>
+                    <li><a href="#2">ppp</a></li>
+                    <li><a href="#2">ppp</a></li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</section>
+<!--页脚-->
+<footer class="footer">
+    Copyright © 2017慕课网版权所有
+</footer>
+<script src="js/jquery-3.1.1.js"></script>
+<script src="bootstrap/js/bootstrap.js"></script>
+<script src="js/2-7index.js"></script>
+</body>
+</html>

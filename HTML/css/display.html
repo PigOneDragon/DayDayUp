@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>display属性</title>
+	<style type="text/css">
+		div{background-color: pink;
+			border:2px red solid;
+			display: inline;
+			margin: 10px;
+			padding:20px;
+			}
+		span{background-color: yellow;
+			width: 100px;
+			height: 30px;
+			border:1px blue solid;
+			display: block;
+			margin: 15px;
+			padding:20px;}
+	</style>
+</head>
+<body>
+	<div>块级元素-div</div>
+	<div>块级元素-div</div>
+	<div>块级元素-div</div>
+	<hr/>
+	<!--行内元素不放在一行时元素之间会有空格，块级元素转换内联元素后消除元素间隙的方法是将转换成行内元素的整体放入一个块级元素内，设置父块级元素的font-size为0-->
+	<span>行内元素-span</span><span>行内元素-span</span><span>行内元素-span</span>
+	
+</body>
+</html>

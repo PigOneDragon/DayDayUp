@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浮动2-14练习</title>
+    <style>
+    /*清除浏览器默认样式*/
+       *{margin: 0;padding: 0;}
+       a{text-decoration: none;}
+       ul{list-style: none;}
+
+     /*设置自定义样式*/
+     	.content{background-color:gray;
+     			width: 1500px;
+     			margin: 0 auto;
+     			overflow: hidden;
+     			zoom:1;}
+     	.logo{float: left;
+     		 margin: 0 40px;}
+		.content .nav{float: right;overflow: hidden;}
+		.content .nav li{float: left;margin-right: 20px;
+							padding-right: 30px;
+						}
+		.content .nav li a{display: block;
+			padding: 0 15px;
+			height: 80px;/*跟logo高度一致*/
+			line-height: 80px;
+			font-size:16px;
+			font-family: "微软雅黑";
+			color: #333;
+		}
+		.content .nav li a:hover{color:#fff}
+		.main{margin: 0 auto;overflow: hidden;border:1px blue dashed;width: 1500px;}
+		.contone,p{width: 240px;text-align: center;}
+		.contone{float: left;
+				margin: 10px 128px;
+				border:1px gray solid;}
+		
+    </style>
+</head>
+<body>
+   <div class="content">
+		<div class="logo">
+			<a href="#"><img src="file://E:\HTML\web前端就业班-html网页结构3-10作业\素材\images\logo.png"/></a>
+		</div> 
+		<ul class="nav">
+			<li><a href="#">免费咨询</a></li>
+			<li><a href="#">课程</a></li>
+			<li><a href="#">快速通道</a></li>
+			<li><a href="#">关于我们</a></li>
+		</ul>  	
+	</div>
+	<br/>
+	<div class="main">
+		<div class="contone">
+			<img src="http://climg.mukewang.com/590fe9770001e63102400135.jpg" alt="dd"/>
+			<P>欢迎到慕课网学习新知识！</P>
+		</div>
+		<div class="contone">
+			<img src="http://climg.mukewang.com/590fe97d00011bda02400135.jpg" alt="dd"/>
+			<P>欢迎到慕课网学习新知识！</P>
+		</div>
+		<div class="contone">
+			<img src="http://climg.mukewang.com/590fe982000150ba02400135.jpg" alt="dd"/>
+			<P>欢迎到慕课网学习新知识！</P>
+		</div>
+
+		<div class="contone">
+			<img src="http://climg.mukewang.com/590fe9770001e63102400135.jpg" alt="dd"/>
+			<P>欢迎到慕课网学习新知识！</P>
+		</div>
+		<div class="contone">
+			<img src="http://climg.mukewang.com/590fe97d00011bda02400135.jpg" alt="dd"/>
+			<P>欢迎到慕课网学习新知识！</P>
+		</div>
+		<div class="contone">
+			<img src="http://climg.mukewang.com/590fe982000150ba02400135.jpg" alt="dd"/>
+			<P>欢迎到慕课网学习新知识！</P>
+		</div>
+	</div>	
+</body>
+</html>

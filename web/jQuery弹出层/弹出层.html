@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>弹出层案例</title>
+    <link rel="stylesheet" href="css/pop.css">
+
+
+
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img class="mr30" src="images/003.png" alt="logo" width="150" height="44" />
+            <span><a href="http://coding.imooc.com/">实战</a></span>
+            <span><a href="http://www.imooc.com/course/program">路径</a></span>
+            <span><a href="http://www.imooc.com/wenda">猿问</a></span>
+            <span><a href="http://www.imooc.com/article">手记</a></span>
+        </div>
+        <div class="loginbtn">
+            <a href="#" id="loginbtn">登录</a>
+            <a href="#" id="regebtn">注册</a>
+        </div>
+    </div>
+    <div class="banner">
+        <ul class="lists">
+            <li class="mt15">前端开发</li>
+            <li>Html/Css JavaScript Html5</li>
+            <li>后端开发</li>
+            <li>PHP/Nodejs Java c#</li>
+            <li>移动开发</li>
+            <li>Android ios cocos</li>
+            <li>数据处理</li>
+            <li>Mysql Oracle MongoDB</li>
+        </ul>
+    </div>
+    <div class="lessions">
+        <p class="title">❤ 热门课程</p>
+        <ul>
+            <li>
+                <img src="images/004.jpg">
+                <p>JavaScript快速入门</p>
+            </li>
+            <li>
+                <img src="images/005.jpg">
+                <p>玩转Photoshop</p>
+            </li>
+            <li>
+                <img src="images/006.jpg">
+                <p>代码编写规范</p>
+            </li>
+
+            <li style="margin-right:0;">
+                <img src="images/004.jpg">
+                <p>JavaScript快速入门</p>
+            </li>
+            <li>
+                <img src="images/005.jpg">
+                <p>玩转Photoshop</p>
+            </li>
+            <li>
+                <img src="images/006.jpg">
+                <p>代码编写规范</p>
+            </li>
+            <li>
+                <img src="images/004.jpg">
+                <p>JavaScript快速入门</p>
+            </li>
+            <li style="margin-right:0;">
+                <img src="images/005.jpg">
+                <p>玩转Photoshop</p>
+            </li>
+        </ul>
+    </div>
+
+    <div class="lessions">
+        <p class="title">☆ 最新发布</p>
+        <ul>
+            <li>
+                <img src="images/004.jpg">
+                <p>JavaScript快速入门</p>
+            </li>
+            <li>
+                <img src="images/005.jpg">
+                <p>玩转Photoshop</p>
+            </li>
+            <li>
+                <img src="images/006.jpg">
+                <p>代码编写规范</p>
+            </li>
+
+            <li style="margin-right:0;">
+                <img src="images/004.jpg">
+                <p>JavaScript快速入门</p>
+            </li>
+            <li>
+                <img src="images/005.jpg">
+                <p>玩转Photoshop</p>
+            </li>
+            <li>
+                <img src="images/006.jpg">
+                <p>代码编写规范</p>
+            </li>
+            <li>
+                <img src="images/004.jpg">
+                <p>JavaScript快速入门</p>
+            </li>
+            <li style="margin-right:0;">
+                <img src="images/005.jpg">
+                <p>玩转Photoshop</p>
+            </li>
+        </ul>
+    </div>
+
+    <div class="footer">
+        <div class="site">
+            <span>关于我们</span>
+            <span>人才招聘</span>
+            <span>讲师招募</span>
+            <span>联系我们</span>
+            <span>意见反馈</span>
+            <span>友情链接</span>
+        </div>
+        <div class="author">
+            © 2016 imooc.com  京ICP备13046642号
+        </div>
+    </div>
+<!--遮罩层-->
+<div id="mask" style="display: none;"></div>
+<!--弹出层-->
+    <div class="pop" style="display: none;">
+    <div class="content">
+
+    </div>
+        <!--关闭按钮-->
+        <div class="close">x</div>
+
+    </div>
+<!--登录窗口-->
+    <div id="loginHtml" style="display:none;">
+    <div class="login">
+        <h4 class="title">登 录</h4>
+        <div class="item">
+            <label>账号</label>
+            <input id="username" class="input" name="username" type="text"/>
+            <p class="error-msg"></p>
+        </div>
+        <div class="item">
+            <label>密码</label>
+            <input id="password" class="input" name="password" type="password"/>
+        </div>
+        <div class="item">
+            <label>&nbsp;</label>
+            <input id="loginSubmitBtn" type="submit" class="submit" value="填写好了"/>
+        </div>
+    </div>
+    </div>
+<!--注册窗口-->
+    <div id="regeHtml" style="display:none;">
+    <div class="login">
+        <h4 class="title">注 册</h4>
+        <div class="item">
+            <label>账号</label>
+            <input id="rusername" class="input" name="username" type="text"/>
+            <p class="error-msg"></p>
+        </div>
+        <div class="item">
+            <label>密码</label>
+            <input id="rpassword" class="input" name="password" type="password"/>
+        </div>
+        <div class="item">
+            <label>重复密码</label>
+            <input id="repassword" class="input" name="repassword" type="password"/>
+        </div>
+        <div class="item">
+            <label>&nbsp;</label>
+            <input id="regeSubmitBtn" type="submit" class="submit" value="填写好了"/>
+        </div>
+    </div>
+    </div>
+    <script src="../jquery/jquery-1.12.4.js"></script>
+    <script src="JS/pop.js"></script>
+</body>
+</html>

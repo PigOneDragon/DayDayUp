@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM属性</title>
+</head>
+<body>
+    <!--<div id="a">第一个元素</div>-->
+	<!--<div id="b">第二个元素</div>-->
+	<!--<div id="c">第三个元素</div>-->
+    <!--<h3>前端书籍</h3>-->
+    <!--<ul id="listWeb">-->
+		<!--<li>htmll基础</li>-->
+		<!--<li>CSS基础</li>-->
+		<!--<li>JavaScript基础</li>-->
+		<!--<li>Jquery框架</li>-->
+		<!--<li>bootStrap框架</li>-->
+	<!--</ul>-->
+	<!--<h3>JAVA书籍</h3>-->
+	<!--<ul id="listJava">-->
+		<!--<li>JAVA语言基础</li>-->
+		<!--<li>三大框架</li>-->
+		<!--<li>JAVA深入浅出</li>-->
+	<!--</ul>-->
+    <!--<div id="div1">第一个div里的内容</div>-->
+	<!--<div id="div2">第二个div里的内容</div>-->
+	<!--<div id="div3">第三个div里的内容</div>-->
+	<!--<div id="div4">第四个div里的内容</div>-->
+    <h3>前端知识点</h3>
+    <ul id="listWeb">
+		<li>JavaScript基础</li>
+		<li>CSS基础</li>
+		<li>HTML基础</li>
+		<li>CSS3</li>
+		<li>HTML5</li>
+		<li>jQuery</li>
+		<li>Bootstrap</li>
+		<li>WebApp</li>
+	</ul>
+<script>
+	//补充代码
+	// var aa=document.getElementById("a"),
+	//     bb=document.getElementById("b"),
+	//     cc=document.getElementById("c");
+	//     console.log(aa,bb,cc);
+    // var listWeb=document.getElementById("listWeb").getElementsByTagName("li");
+    // var listlen=listWeb.length;
+    // for (var i=0;i<listlen;i++){
+    //     alert("前端书籍第"+(i+1)+"本"+listWeb[i]);
+    // }
+    // alert("共"+listlen+"本");
+    // var a=document.getElementById("div1"),
+    //     b=document.getElementById("div2"),
+    //     c=document.getElementById("div3"),
+    //     d=document.getElementById("div4");
+    // a.style.color="red";
+    // b.style.backgroundColor="green";
+    // c.style.fontWeight="bold";
+    // d.style.fontSize="30px";
+    var a=document.getElementById("listWeb").getElementsByTagName("li");
+    for (var i=0,len=a.length;i<len;i+=2){
+        a[i].style.backgroundColor="yellow";
+    }
+</script>
+</body>
+</html>

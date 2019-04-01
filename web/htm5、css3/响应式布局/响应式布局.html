@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <title>简单的响应式</title>
+    <style type="text/css">
+        #test{
+            font-size: 18px;
+            color: #9a6e3a;
+            width: 100%;
+            height: 200px;
+            border: 3px solid red;
+        }
+        /*设备屏幕宽度>370px 执行以下样式，and跟括号之间必须有空格隔开*/
+        @media screen and (min-width: 370px){
+            #test {
+                font-size: 36px;
+                color: #00ff00;
+                border: 3px solid yellow;
+            }
+        }
+        /*设备屏幕宽度<370px 执行以下样式*/
+       @media screen and (max-width: 370px){
+           #test {
+               font-size: 9px;
+               color: #0000ff;
+               border: 3px solid brown;
+           }
+       }
+</style>
+</head>
+<body>
+<div id="test">
+    测试响应式布局
+</div>
+</body>
+</html>

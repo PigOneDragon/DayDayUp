@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        div{float: left;}
+        .bg{
+            width: 600px;
+            height: 400px;
+            margin: 100px;
+            background-color:red;
+            position: relative;
+        }
+        .bg > div{
+            width: 0;
+            height: 0;
+            margin: 20px 80px;
+            /*background-color: red;*/
+            border-bottom:80px solid yellow;
+            border-left:30px solid transparent;
+            border-right:30px solid transparent;
+            position: relative;
+        }
+        .bg > div::before{
+            content: "";
+            width: 0;
+            height: 0;
+            border-bottom:70px solid yellow;
+            border-left:100px solid transparent;
+            border-right:100px solid transparent;
+            transform: rotate(35deg);
+            position: absolute;
+            top: 65px;
+            left: -100px;
+        }
+        .bg > div::after{
+            content: "";
+            width: 0;
+            height: 0;
+            border-bottom:70px solid yellow;
+            border-left:100px solid transparent;
+            border-right:100px solid transparent;
+            transform: rotate(-35deg);
+            position: absolute;
+            top: 65px;
+            left: -100px;
+        }
+        .bg div:nth-child(2){
+            transform:scale(0.15) rotate(-45deg);
+            position: absolute;
+            top: -40px;
+            left:160px;
+        }
+        .bg div:nth-child(3){
+            transform:scale(0.15)  rotate(-91deg);
+            position: absolute;
+            top: 20px;
+            left:190px;
+        }
+        .bg div:nth-child(4){
+            transform:scale(0.15) rotate(-74deg);
+            position: absolute;
+            top: 70px;
+            left:200px;
+        }
+        .bg div:nth-child(5){
+            transform:scale(0.15) translate(582px,-1740px) rotate(-45deg);
+            position: absolute;
+            top: 400px;
+            left:90px;
+        }
+    </style>
+</head>
+<body>
+<div class="bg">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+</body>
+</html>

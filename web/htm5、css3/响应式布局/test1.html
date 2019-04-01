@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        p{
+            color:red;
+            text-align:center;
+        }
+        /*此处写代码*/
+        @media screen and (max-width: 1100px) and (min-width: 960px){
+            p {
+                color: orange;
+            }
+        }
+        @media screen and (max-width: 960px) and (min-width: 800px){
+            p {
+                color: yellow;
+            }
+        }
+        @media screen and (max-width: 800px) and (min-width: 750px){
+            p {
+                color: green;
+            }
+        }
+        @media screen and (max-width: 750px) and (min-width: 600px){
+            p {
+                color: greenyellow;
+            }
+        }
+        @media screen and (max-width: 600px) and (min-width: 450px){
+            p {
+                color: blue;
+            }
+        }
+        @media screen and (max-width: 450px){
+            p {
+                color: purple;
+            }
+        }
+    </style>
+</head>
+<body>
+<p>
+    我的颜色会随着屏幕大小的变化而变化。
+</p>
+</body>
+</html>

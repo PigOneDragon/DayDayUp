@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>2-5、定位回到顶部</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            font-size: 14px;
+        }
+
+        header {
+            height: 35px;
+            background: #666;
+        }
+
+        header a {
+            line-height: 35px;
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        .container {
+            height: 200%;
+        }
+
+        /*此处写代码*/
+        .Top{
+            width: 40px;
+            height: 40px;
+            position: fixed;
+            bottom: 50px;
+            right: 20px;
+            background-color: rgba(0,0,0,0.3);
+        }
+        .Top a{
+            color: #000;
+            text-decoration: none;
+        }
+    </style>
+
+</head>
+<body>
+<header>
+    <!-- 此处写代码 -->
+    <!--利用a标签锚点-->
+    <!--<a name="#top"></a>-->
+    <!--利用jQuery的offset方法-->
+    <a href="">首页</a>
+    <a href="">新课程</a>
+    <a href="">热门课程</a>
+</header>
+<div class="container"></div>
+<!-- 方法一 a name属性-->
+<div class="Top">
+    <!--<a href="#top">返回顶部</a>-->
+    返回顶部
+</div>
+<!--方法二 offset-->
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script>
+    $(function () {
+        $('.Top').click(function (){
+            $('html,body').scrollTop(0);
+        })
+    });
+</script>
+</body>
+</html>
