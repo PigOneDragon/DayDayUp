@@ -46,12 +46,50 @@
         }
         var box1 = ceraterObject("ld", "24");
         // 原型模式
-        // prototype 是object的子对象
-        function test(){}
-        test.prototype.name="ls";
-        test.prototype.sex="male";
-        var obj6=new test();
-        alert(ceraterObject.prototype);
+        // prototype 是object的子对象  所添加的属性、方法，在其他类型为对象的对象上都可以调用
+        function test() {}
+        test.prototype.name = "ls";
+        test.prototype.sex = "male";
+        var obj6 = new test();
+        // alert(ceraterObject.prototype);
+
+        // 对象练习
+        // 1、工厂模式
+        function Imooc(name) {
+            var imooc = new Object();
+            imooc.name = name;
+            imooc.action = function () {
+                alert("前端！");
+            }
+            // ***工厂模式最后需return 创建的obj对象
+            return imooc;
+        }
+        var box4 = Imooc("imooc");
+        box4.action();
+        console.log(box4.name);
+        // 2、原型模式
+        function test1() {}
+        test1.prototype.name = "imooc1";
+        test1.prototype.action = function () {
+            alert("前端！前端！");
+        };
+        var test3 = new test1();
+        test3.action();
+        console.log(test3.name);
+        // 3、混合模式
+        // 构造模式
+        function blog(name) {
+            this.name = name;
+        }
+        // 原型模式
+        blog.prototype = {
+            action: function () {
+                alert("前端");
+            }
+        }
+        var obj8 = new blog('imooc2');
+        obj8.action();
+        console.log(obj8.name);
     </script>
 </body>
 
