@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>继承</title>
+</head>
+
+<body>
+    <!-- 继承 类似python中的对象的继承，继承父对象的一些属性、方法 -->
+    <!-- js中的原型继承需要利用对象的属性__proto__  对象 -->
+    <!-- 每个对象的__proto__指向 创建它的函数对象的原型对象 prototype -->
+    <script>
+        var a = function () {}
+        var aa = new a();
+        // 原型继承 ：用prototype对象 来添加属性和方法  分三个阶段
+        // 1   var  aa ={} 定义一个对象  2   aa.__proto__  = a.prototype    3 创建一个对象 aa  a.call(aa) 调用 
+        console.log(aa.__proto__ instanceof Object); //true
+        console.log(a.prototype instanceof Object); //true
+        console.log(a.prototype == aa.__proto__); //true
+
+        /* 原型的值可以是一个对象,也可以是null。通过”Object.prototype._proto_”获取Object原型的原型的时候，
+        将会得到”null”，也就是说”Object {}”原型对象就是原型链的终点了。 */
+        // js 继承：
+        // 原型继承：用到原型链的概念
+        function person(name, age) { //父
+            this.name = name;
+            this.age = age;
+        }
+        person.prototype.sayhello = function () {
+            alert("属性name值" + this.name);
+        }
+        /*
+        var per = new person("zhangsan",20);
+        per.sayhello();
+        */
+        function student() {}; //子
+        student.prototype = new person("李四", 18); // 原型继承 必须定义为继承对象的名称
+        student.prototype.grade = 3;
+        student.prototype.test = function () {
+            alert(this.grade);
+        }
+        var s = new student();
+        // s.sayhello();
+        // alert(s.grade);
+        //过程分析：
+        // s.__proto__ = student.prototype = p1    p1.__proto__ = person.protype.sayhello();
+
+        // 例2
+        function pTest() {
+            this.say = function () {
+                alert("我不是原型定义的方法");
+            };
+        }
+        pTest.prototype.play = function () {
+            alert("父对象定义的一个原型方法");
+        }
+        pTest.prototype.name = "one";
+
+        function cTest() {
+            this.eat = function () {
+                alert("子对象自己的方法");
+            };
+        }
+        cTest.prototype.name = "two";
+        cTest.prototype = new pTest();
+        var p = new cTest();
+        //p.say(); //父对象的方法都会继承给子对象，不止是使用原型定义的。
+        //p.eat();
+        // p.play();
+        alert(p.name); //打印 one 属性的值与代码执行顺序有关，后继承的父级的，会覆盖住先定义的自己的
+
+        // 6-4习题 创建一个动物类的对象 ,对象中有动物名称和数量的属性 。创建一个猫的对象并继承动物类对象 ，并为猫对象定义一个方法
+        function Animal(name,count){
+            this.name=name;
+            this.count=count;
+        }
+
+        function Cat(){
+            // this.info=function(){
+            //     alert('名称'+this.name+'数量'+this.count);
+            // }
+        }
+        // 继承父类的方法属性
+        Cat.prototype = new Animal('cat','1');
+        // 要在继承后定义info
+        Cat.prototype.info=function(){
+                alert('名称'+this.name+'数量'+this.count);
+            }
+        var cat=new Cat();
+        cat.info();
+    </script>
+</body>
+
+</html>
