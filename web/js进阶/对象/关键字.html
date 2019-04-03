@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>关键字</title>
+</head>
+
+<body>
+
+    <script>
+        // 关键字
+        /*instanceof  变量是否是对象的实例*/
+        var arr = new Array();
+        alert(arr instanceof Array); //true
+        alert(arr instanceof Object);
+        true
+
+        function test() {}
+        var obj = new test();
+        //alert(obj instanceof test);true
+        alert(obj instanceof Object);
+        true
+
+        /*delete 删除对象的属性，不能删除对象的方法*/
+        function fun() {
+            this.name = "zhangsan";
+            this.say = function () {
+                alert(this.name);
+            }
+        }
+        var obj = new fun();
+        /*
+        alert(obj.name);
+        delete obj.name; //删除name属性
+        alert(obj.name);//undefined 
+        */
+
+        var demo = "lisi";
+        alert(demo);
+        delete demo; //删除不了变量
+        alert(demo);
+        //注意：delete 不能删除原型链中的属性和变量
+        /*call apply*/
+        /*
+        function add(a,b){
+        	alert(a+b);
+        }
+        function subs(a,b){
+        	alert(a-b);
+        }
+        //add.call(subs,5,3); // subs-->add  ===>add(5,3)  subs只能引用一个存在的对象
+        add.apply(subs,[5,3]);
+        */
+        function animal() {
+            this.name = "ani";
+            this.showName = function () {
+                alert(this.name);
+            }
+        }
+
+        function cat() {
+            this.name = "cat";
+        }
+        var an = new animal();
+        var c = new cat();
+        //an.showName.call(c,","); // 通过call方法，将showName--》cat使用了
+        an.showName.apply(c, []); //同 call 打印cat 
+    </script>
+</body>
+
+</html>

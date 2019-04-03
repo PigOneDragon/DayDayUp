@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>构造继承</title>
+</head>
+
+<body>
+    <script>
+        // 构造函数内部继承
+        function parentObj(name, age, sex) {
+            this.name = name;
+            this.age = age;
+            this.sex = sex;
+
+        }
+
+        function childObj(name, age, sex) {
+            this.Obj = parentObj;
+            this.Obj(name, age, sex);
+            this.say = function () {
+                console.log(this.name + this.age + this.sex);
+            }
+        }
+
+        var c = new childObj("洛洛", "2岁", "male");
+        c.say();
+        // js 继承：
+        // call apply
+        //call --》 obj.call(方法,var1,var2,var3....)
+        //apply--> obj.apply(方法,[var1,var2,var3]);
+        function person(name, age, len) {
+            this.name = name;
+            this.age = age;
+            this.len = len;
+            this.say = function () {
+                alert(this.name + ":" + this.age + ":" + this.len);
+            }
+        }
+        //call继承
+        function student(name, age) {
+            person.call(this, name, age);
+        }
+        //apply继承
+        function teacher(name, age, len) {
+            person.apply(this, [name, age, len])
+        }
+
+        var per = new person("张三", 25, "170");
+        per.say();
+        var stu = new student("李四", 18);
+        stu.say(); // 李四 18 undefined
+        var tea = new teacher("王武", 20, "180");
+        tea.say();
+        //构造函数继承：
+        function parents(name) {
+            this.name = name;
+            this.say = function () {
+                alert("父亲的名字:" + this.name);
+            }
+        }
+
+        function child(name, age) { //继承parents
+            this.pObj = parents; //用父对象来创建子对象
+            this.pObj(name);
+            this.age = age;
+            this.sayC = function () {
+                alert("child:" + this.name + "---" + "age:" + this.age);
+            }
+        }
+
+        var p = new parents("zhangsan");
+        p.say();
+        var c = new child("李四", 20);
+        c.sayC();
+        //  李四---》 this.pObj(name); ---》 parents（name） ---> this.name=name="李四"
+        // this.sayC --->this.name--->parents-->this.name
+        //父对象 被子对象继承   所有的属性和方法，都将传递到子对象中*****
+
+
+        // 习题练习
+        function Animal(name, count) {
+            this.name = name;
+            this.count = count;
+        }
+
+        function cat(name, count) {
+            // this(cat)借用 Animal的属性、方法
+            Animal.call(this, name, count);
+            this.getInfo = function () {
+                alert("名称" + this.name + "--" + this.count);
+            }
+        }
+
+        function dog(name, count) {
+            Animal.apply(this, [name, count]);
+            this.getInfo = function () {
+                alert("名称" + this.name + "--" + this.count);
+            }
+        }
+
+        var Cat = new cat('cat', '15');
+        Cat.getInfo();
+        var Dog = new dog('dog', '25');
+        Dog.getInfo();
+        // 习题练习创建两个数组 ，并运用apply实现两个数组的拼接
+        var arr=[];
+        var arr1=[1,2,3];
+        var arr2=[4,5,6];
+        // arr1调用 数组对象的push方法  开头是arr [] arr1 arr2 没影响 只要是数组对象即可
+        // 注意此时使用apply不能apply(this,arr2)，此时的this指的是window对象
+        arr1.push.apply(arr1,arr2);
+        console.log(arr1);
+    </script>
+</body>
+
+</html>
