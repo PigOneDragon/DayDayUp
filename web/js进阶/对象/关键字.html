@@ -68,6 +68,35 @@
         var c = new cat();
         //an.showName.call(c,","); // 通过call方法，将showName--》cat使用了
         an.showName.apply(c, []); //同 call 打印cat 
+        var y =0;
+        function Call(){
+            alert(this.y);
+        }
+        var O={};
+        O.y=1;
+        O.m=Call;
+        O.m.call();  //0 打印全局的0
+        O.m.call(O);//1 打印O对象的y = 1
+        function t(){
+            this.name="zzz";
+            this.age="18";
+        }
+        var name="jjj";
+        var tt=new t();
+        alert(name); //jjj  在对象内部  this替换此对象
+        alert(tt.name);//zzz
+        
+        var x=9;
+        function ppp(){
+            this.x=5; //该函数中没有x属性，向上找到全局变量x，更改了全局变量
+            alert(x);
+        }
+        ppp();//5
+        console.log(x);//5
+
+
+        
+
     </script>
 </body>
 

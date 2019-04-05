@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>传统的单例模型</title>
+</head>
+
+<body>
+    <p>单例模式，是一种常用的软件设计模式。在它的核心结构中只包含一个被称为单例的特殊类。
+        通过单例模式可以保证系统中，应用该模式的一个类只有一个实例。即一个类只有一个对象实例。</p>
+    <script>
+        function person() {
+            this.name = "zhangsan";
+        }
+        person.prototype.say = function () {
+            alert("sss");
+        };
+        person.get = function () {
+            alert("OK？");
+        };
+        person.get(); //ok 不用实例化直接可以调用？ why  相当于 var person =fn  person.get =fn  
+        //person.say(); //报错
+        // 习题 使对象person1 == person2
+        var Person = (function () {
+            var Obj = null;
+            return function () {
+                if (Obj) {
+                    return Obj;
+                }
+                this.name = 'zhangsan';
+                this.id = Math.random();
+                return Obj = this;
+            }
+        })();
+        var Person1 = new Person();
+        var Person2 = new Person();
+        console.log(Person1 == Person2);
+
+
+        // 例子 单例模式
+        /*不使用单例模式  每次的大王相当于一个新对象*/
+        function c(name) { //大臣
+            this.name = name;
+            this.say = function () {
+                console.log(this.name + ":大王，冤枉啊！");
+            }
+        }
+
+        function w() { //大王
+            this.name = "嘉靖";
+            // 相当于替代内存地址，检测生成的后代是否为同一对象
+            this.id = Math.random();
+            this.say = function () {
+                console.log(this.name + this.id + "滚......");
+            }
+        }
+
+        var c1 = new c('张三');
+        c1.say();
+        var w1 = new w();
+        w1.say();
+        var c2 = new c('李四');
+        c2.say();
+        var w2 = new w();
+        w2.say();
+        var c3 = new c('王麻子');
+        c3.say();
+        var w3 = new w();
+        w3.say();
+        /*使用单例模式  方法1*/
+
+        function ww() { //大王
+            this.name = "嘉靖";
+            // 相当于替代内存地址，检测生成的后代是否为同一对象
+            this.id = Math.random();
+            this.say = function () {
+                console.log(this.name + this.id + "滚......");
+            }
+            // 该对象用于返回值，若以创建了就返回已存在的实例对象
+            this.ins = null;
+        }
+
+        // 新建一个方法，存储W对象
+        ww.getId = function () {
+            if (!this.ins) {
+                this.ins = new ww();
+            }
+            return this.ins;
+        };
+        // 此时创建的w对象为同一ID
+        var c4 = new c('张三');
+        c4.say();
+        var w4 = ww.getId();
+        w4.say();
+        var c5 = new c('李四');
+        c5.say();
+        var w5 = ww.getId();
+        w5.say();
+        var c6 = new c('王麻子');
+        c6.say();
+        var w6 = ww.getId();
+        w6.say();
+
+        /*使用单例模式  方法2*/
+
+        function www() { //大王
+            this.name = "嘉靖";
+            // 相当于替代内存地址，检测生成的后代是否为同一对象
+            this.id = Math.random();
+            this.say = function () {
+                console.log(this.name + this.id + "滚......");
+            };
+            // 该对象用于返回值，若以创建了就返回已存在的实例对象
+            // this.ins = null;
+        }
+
+
+        // 将ins封装，防止在外部进行修改  返回的是以一个函数
+        www.getId = (function () {
+            var ins = null;
+            return function () {
+                // 此处创建对象 
+                if (!ins) return ins = new www();
+                return ins;
+            }
+        })();
+
+        var c7 = new c('张三');
+        c7.say();
+        var w7 = www.getId();
+        w7.say();
+        var c8 = new c('李四');
+        c8.say();
+        var w8 = www.getId();
+        w8.say();
+        var c9 = new c('王麻子');
+        c9.say();
+        var w9 = www.getId();
+        w9.say();
+        /*使用单例模式  方法3*/
+
+        var wwww = (function () {
+
+            // 该对象用于返回值，若以创建了就返回已存在的实例对象
+            var ins = null;
+
+            /* function w() { //大王
+                if (ins) {
+                    return ins;
+                }
+                this.name = "嘉靖";
+                // 相当于替代内存地址，检测生成的后代是否为同一对象
+                this.id = Math.random();
+                this.say = function () {
+                    console.log(this.name + this.id + "滚......");
+                };
+                
+                return ins = this;
+            }
+ 
+            
+            return w; */
+            // or
+            return function w() { //大王
+                if (ins) {
+                    return ins;
+                }
+                this.name = "嘉靖";
+                // 相当于替代内存地址，检测生成的后代是否为同一对象
+                this.id = Math.random();
+                this.say = function () {
+                    console.log(this.name + this.id + "滚......");
+                };
+                
+                return ins = this;
+            }
+        })();
+
+        var c10 = new c('张三');
+        c10.say();
+        var w10 = new wwww();
+        w10.say();
+        var c11 = new c('李四');
+        c11.say();
+        var w11 = new wwww();
+        w11.say();
+        var c12 = new c('王麻子');
+        c12.say();
+        var w12 = new wwww();
+        w12.say();
+    </script>
+</body>
+
+</html>

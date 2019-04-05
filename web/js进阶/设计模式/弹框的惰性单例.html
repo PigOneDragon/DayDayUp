@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background-color: #f0f0f0;
+        }
+
+        /*注册框*/
+        #registLayer {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -150px;
+            margin-left: -150px;
+            width: 400px;
+            height: 300px;
+            text-align: center;
+            background-color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="registBtn">注册</button>
+    <script type="text/javascript">
+        // 此处添加代码
+        // 点击按钮时加载节点  创建立即执行函数 返回一个对象
+        var reg = (function () {
+            var regLayer = null;
+            return function () {
+                if (!regLayer) {
+                    regLayer = document.createElement('div');
+                    regLayer.id = "registLayer";
+                    regLayer.innerHTML='注册窗口';
+                    regLayer.style.display="block";
+                    document.body.appendChild(regLayer);
+                }
+                return regLayer;
+            }
+        })();
+        document.getElementById("registBtn").onclick = function () {
+            reg();
+            return false;
+            // 如何阻止冒泡？实现点击body隐藏注册窗口
+            /* event.preventDefault();
+            event.stopPropagation(); */
+        };
+        document.body.onclick=function(){
+            // reg().style.display='none';
+            reg().style.color="red";
+        }
+    </script>
+</body>
+
+</html>

@@ -62,7 +62,10 @@
                 alert("父亲的名字:" + this.name);
             }
         }
-
+        // 注意：构造继承只能继承父对象的特权属性跟方法 ，定义在原型链的属性方法不能被继承
+        parents.prototype.sayHi=function(){
+            alert("父对象上prototype对象的方法");
+        }
         function child(name, age) { //继承parents
             this.pObj = parents; //用父对象来创建子对象
             this.pObj(name);
@@ -76,6 +79,13 @@
         p.say();
         var c = new child("李四", 20);
         c.sayC();
+        try{
+            c.sayHi();//报错c.sayHi is not a function
+        }
+        catch(err){
+            alert(err.message);
+        }
+        
         //  李四---》 this.pObj(name); ---》 parents（name） ---> this.name=name="李四"
         // this.sayC --->this.name--->parents-->this.name
         //父对象 被子对象继承   所有的属性和方法，都将传递到子对象中*****
