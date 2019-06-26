@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="app">
+        <child content="<h1>dell</h1>"></child>
+        <child>
+            <h1>solt插槽</h1>
+        </child>
+    </div>
+    <!-- 具名插槽  写了slot="xx"的，在模板里必须写name="xx"，否则无法绑定，会被认为插槽为空-->
+    <div id="app1">
+        <child1>
+            <div class="header" slot="head">header slot</div>
+            <div class="footer" slot="foot">footer slot</div>
+            <!-- 作用域插槽固定语法  template标签 slot-scope="某自定义属性" 接收插槽传递的值-->
+            <template slot-scope="props">
+                <!-- <h1>{{props}}</h1>  结果 {item:1...}-->
+                <h1>{{props.item}}</h1>
+            </template>
+        </child1>
+    </div>
+    <script src="./vue.js"></script>
+    <script>
+        Vue.component('child', {
+            props: ['content'],
+            // 这样传递过来的不是htmltemplate:"<div>{{content}}</div>"
+            // v-html指令转换成html，但是其外面会多了层div,在组件里使用<template>标签无效，页面无法加载，这时候可以直接在组件里插值
+            // template:"<div v-html='this.content'></div>"
+            template: `<div>
+                <slot>默认值（当组件中没有传递值时，显示模板里的默认值）</slot>
+            </div>`
+        });
+        var vm = new Vue({
+            el: "#app",
+
+        });
+
+        Vue.component('child1', {
+            // props:['content'],
+            data:function(){
+                return {
+                    list:[1,2,3,4]
+                }
+            },
+            // template:`<div v-for="item of list">{{item}}</div>` 错误语法v-for不能用于根元素（root element）。因为v-for是个循环，它返回更多的元素。导致无法渲染。
+            // 作用域插槽 场景：做循环或由外部控制子组件显示某部分时 子组件模板里以slot插槽定义标签，同时绑定一个变量用于外部接收
+            template:`<div>
+                <slot v-for="item of list" :item="item"></slot>
+            </div>`
+            /* template: `<div>
+                            <slot name="head"></slot>
+                            <p>中间内容</p>
+                            <slot name="foot"></slot>
+                        </div>` */
+        });
+        var vm1 = new Vue({
+            el: "#app1",
+
+        });
+    </script>
+</body>
+
+</html>

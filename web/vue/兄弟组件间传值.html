@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="app">
+        <child content="item1"></child>
+        <child content="item2"></child>
+    </div>
+    <script src="./vue.js"></script>
+    <script>
+        // 创建通信
+        Vue.prototype.bus = new Vue();
+        // 创建组件
+        Vue.component("child",{
+            // 接收父组件传值
+            props:["content"],
+            // 组件里的data必须是一个函数，且返回一个对象
+            data:function(){
+                return {
+                    // 后续要对父组件传递过来的值进行修改，若直接修改传过来的值会报错，父子组件间数据流单向传递
+                    con : this.content
+                }
+            },
+            template:"<div @click='childClick'>{{con}}</div>",
+            methods:{
+                childClick:function(){
+                    // 点击该子组件时触发事件，下一步要其他组件接收事件
+                    this.bus.$emit('change',this.con);
+                }
+            },
+            mounted:function(){
+                // 数据加载钩子函数，子组件触发点击后，所有的子组件都监听到了；change事件的发生  这里的this是所有的子组件
+                var _this = this;
+                _this.bus.$on('change',function(msg){
+                    //console.log(this);//vue
+                    // console.log(_this);vuecompoent
+                    _this.con = msg;
+                })
+            }
+        });
+        var app = new Vue({
+            el:"#app"
+        });
+    </script>
+</body>
+</html>

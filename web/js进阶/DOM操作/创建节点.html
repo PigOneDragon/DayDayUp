@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>创建节点</title>
+    <style>
+        .li {
+            list-style: none;
+            height: 50px;
+            line-height: 50px;
+            width: 100px;
+            background-color: lightblue;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        <input type="hidden">
+        <script>
+            // alert('hi');
+        </script>
+    </p>
+    <p> this is text</p>
+    <p id="p"></p>
+    <p id="p1"></p>
+    <script>
+        var ul = document.createElement("ul");
+        var com = document.createComment('创建节点');
+        for (var i = 0; i < 4; i++) {
+            var li = document.createElement("li");
+            li.className = "li";
+            var txt = document.createTextNode("第" + (i + 1) + "个li");
+            li.appendChild(txt);
+            ul.appendChild(li);
+        }
+        document.body.appendChild(com);
+        document.body.appendChild(ul);
+        // 2、使用innerHTML的限制
+        // 文本左边的空白在IE8以下会被删除
+        var str = "<p>  this is text</p>";
+        var p = document.getElementById('p');
+        var p1 = document.getElementById('p1');
+        p.innerHTML = str;
+        // 插入script标签不会执行 在ie8以下可以执行，添加defer声明，并需在script添加作用域 一般的解决办法是添加input type=‘hidden
+        var str1 = '_<script defer>alert("hello");<\/script>';
+        p1.innerHTML = str1;
+
+    </script>
+</body>
+
+</html>

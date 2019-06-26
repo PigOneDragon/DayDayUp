@@ -148,7 +148,7 @@ $.fn.Uicascading = function(){
         var val = $(this).val();
         //获取传入后台对象函数的参数，多级联动，
         var where = $(this).attr('data-where');
-        where = where ? where.split(','):[];  //若为空，返回空数组，不为空，将几个条件用，连接成条件参数数组
+        where = where ? where.split(','):[];  //若为空，返回空数组，不为空，将几个条件用，分割成条件参数数组
         where.push(val); //把用户选择的选项值放入条件数组最后
 
         //将下一个更新

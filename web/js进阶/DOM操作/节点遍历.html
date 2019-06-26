@@ -1,44 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>节点遍历</title>
 </head>
+
 <body>
-<div>
-    <p>
-      <span>
-        <a href=""></a>
-        <a href=""></a>
-        <a href=""></a>
-      </span>
-        <span>
-        <a href=""></a>
-        <a href=""></a>
-        <a href=""></a>
-      </span>
-        <span>
-        <a href=""></a>
-        <a href=""></a>
-        <a href=""></a>
-      </span>
-    </p>
-</div>
-<script>
+    <div id="wrap">
+        <ul id="list">
+            <li>第一个li</li>
+            <li>第二个li</li>
+            <li>第三个li</li>
+        </ul>
+    </div>
+    <div>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+        <p>
+            <span>
+                <a href=""></a>
+                <a href=""></a>
+                <a href=""></a>
+            </span>
+            <span>
+                <a href=""></a>
+                <a href=""></a>
+                <a href=""></a>
+            </span>
+            <span>
+                <a href=""></a>
+                <a href=""></a>
+                <a href=""></a>
+            </span>
+        </p>
+    </div>
+    <script>
     // 此处补充代码
-    var s= "";
-    debugger;
-    function bl(space,node){
-        if(node.tagName){
-            s+=space+node.tagName+"<br />";
+    var s = "";
+
+    function bl(space, node) {
+        if (node.tagName) {
+            s += space + node.tagName + "<br />";
         }
-        var len=node.childNodes.length;
-        for(var i =0;i<len;i++){
-            bl(space+"*_",node.childNodes[i]);
+        var len = node.childNodes.length;
+        for (var i = 0; i < len; i++) {
+            bl(space + "*_", node.childNodes[i]);
         }
     }
-    bl(" ",document);
-    document.write(s);
-</script>
+    bl(" ", document);
+    //  指定insertBefore
+    /* var li2 = document.getElementsByTagName('ul')[0].children.item(1);
+    var i = document.createElement('p');
+    var t = document.createTextNode('text');
+    i.appendChild(t);
+    console.log(li2);
+    document.getElementsByTagName('ul')[0].insertBefore(i, li2); */
+    var newUl = document.createElement('ul');
+    for (var i = 0; i < 4; i++) {
+        var li = document.createElement('li');
+        var txt = document.createTextNode(i);
+        li.appendChild(txt);
+        newUl.appendChild(li);
+    }
+    console.log(newUl, oldUl);
+    var oldUl = document.getElementById('list');
+    var wp = document.getElementById('wrap');
+    wp.replaceChild(newUl, oldUl);
+    </script>
 </body>
+
 </html>

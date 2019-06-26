@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .col {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 1、利用绑定表达式，当act为true时，类col绑定 -->
+    <!-- <div id="app" :class="{act:col}" @click="change">点击改变颜色</div> -->
+    <!-- 2、利用【】相当于变量 -->
+    <div id="app" :class="[col]" @click="change">
+        点击改变颜色
+        <div v-if="show">
+            用户名：<input type="text" key="name" />
+        </div>
+        <div v-else>邮箱：<input type="text" key="email" /></div>
+        <!-- 列表渲染 不能直接新增对象或列表的内容，要想实现内容更新需要改变引用（数组可以利用提供的数组方法进行更新）  或者利用Vue.set(对象，增加或删除的属性，newvalue)-->
+        <!-- Vue.set(vm.listObj,"address","luoyang") = vm.$set(vm.listObj,"address","luoyang") (vue实例的$set方法) 新增一个address属性-->
+        <div v-for="(item,key) of listObj">
+            value值{{item}} ---{{key}}键
+        </div>
+        <div ref="div">{{show}}</div>
+        <!-- 利用ref 获取组件的值给父组件 -->
+        <item ref="one" @changeq="changes"></item>
+        <item ref="two" @changeq="changes"></item>
+        <div>{{sumC}}</div>
+    </div>
+    <script src="./vue.js"></script>
+    <script>
+        // 全局组件
+        Vue.component('item',{
+            props:[],
+            data:function(){
+                return {
+                    num:0
+                }
+            },
+            template:"<div @click='click'>{{num}}</div>",
+            methods:{
+                click:function(){
+                    this.num ++;
+                    this.$emit('changeq');
+                }
+            }
+        });
+
+
+        var vm = new Vue({
+            el: "#app",
+            data: {
+                col:"col",
+                act: false,
+                show:false,
+                listObj:{
+                    name:"cai",
+                    age:"22",
+                    sex:"male"
+                },
+                sumC:0
+            },
+            methods: {
+                change: function () {
+                    this.col = !this.col;
+                    // ref被用来向元素或子组件注册引用信息。此处ref指向的是Dom实例，其绑定在DOM实例上
+                    console.log(this.$refs.div.innerHTML);
+                },
+                changes:function () {
+                    // $refs 引用注册过的子组件实例
+                    this.sumC = this.$refs.one.num + this.$refs.two.num;
+                }
+            }
+        });
+       
+    </script>
+</body>
+
+</html>

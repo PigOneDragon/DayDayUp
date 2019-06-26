@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+<div class="app">{{fullName + age}}</div>
+  <script src="./vue.js"></script>
+  <script>
+    //   计算属性  会有缓存，当参与计算的对象没有改变时不再次加载
+    var vm = new Vue({
+        el:'.app',
+        data:{
+            firstName:"feiyue",
+            lsatName:"cai",
+            age:'33',
+            fullName:"feiyue cai"
+        },
+        // 计算属性 在页面中使用不用写成fullName() 也无需写在methods对象中
+       /*  computed:{
+            fullName:function(){
+                console.log("参与计算的值改变了，更新一次");
+                return this.firstName + " " + this.lsatName;
+            }
+        }, */
+        // 侦听  与计算属性类似，不同的是在data中会用冗余的FULLNAME数据。参与计算的对象不改变时使用缓存
+        watch:{
+            // 侦听参与计算的第一个对象
+            firstName:function(){
+                console.log("改变了一次");
+                this.fullName = this.firstName + " " + this.lsatName;
+            },
+            // 侦听参与计算的第二个对象
+            lastName:function(){
+                console.log("改变了一次");
+                this.fullName = this.firstName + " " + this.lsatName;
+            }
+        }
+    });
+  </script>
+</body>
+</html>

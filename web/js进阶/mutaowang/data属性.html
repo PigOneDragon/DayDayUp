@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{
+            width: 100px;
+            height: 100px;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+<div id="box"></div>
+<!--<script src="js/jquery-1.12.4.js"></script>-->
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script>
+    $('#box').data('act','active');
+    console.log($('#box').data('act'));
+    $('#box').attr('data-act1','active1');
+    console.log($('#box').attr('data-act1'));
+    $('#box').mouseenter(function(event) {
+        /* Act on the event */
+    });
+</script>
+</body>
+</html>

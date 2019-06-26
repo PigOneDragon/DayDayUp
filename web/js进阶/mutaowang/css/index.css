@@ -1,0 +1,24 @@
+* {margin: 0; padding: 0; }
+ul {list-style: none; }
+a {text-decoration: none; }
+input {outline: 0; }
+.wp {max-width: 1200px; margin: 0 auto; }
+.clearfix::after {display: block; clear: both; zoom: 1; height: 0; content: ''; }
+.header {background-color: #f3f5f7; }
+.header .top {line-height: 44px; border-bottom: 1px solid #cdd0d4; }
+.header .tl {float: left; }
+.header .tl a {font-size: 12px; display: inline-block; margin-left: 15px; color: #4d555d; }
+.header .tl a span, .header .tl a:hover {color: #f01414; }
+.header .tr {float: right; }
+.header .tr .item {position: relative; float: left; margin-right: 15px; }
+.header .tr .item a {font-size: 12px; display: block; padding: 0 16px 0 12px; color: #4d555d; border-right: 1px solid #f3f5f7; border-left: 1px solid #f3f5f7; }
+.header .tr .icon {display: inline-block; width: 8px; height: 6px; margin-left: 8px; background: url('../imgs/dropdown-arrow.png') no-repeat center; }
+/* 鼠标滑过状态改变 */
+.header .tr .on a {color: #f01414; border-right: 1px solid #cdd0d4; border-left: 1px solid #cdd0d4; background-color: #fff; }
+.header .tr .on .icon {background: url('../imgs/dropdown-arrow-active.png') no-repeat center; }
+.header .tr .m-dropdownmenu {position: absolute; top: 45px; left: 0; display: none; border-bottom: 1px solid #cdd0d4; }
+.header .tr .m-dropdownmenu li a {font-size: 12px; line-height: 2.5em; display: block; padding: 0 12px; text-align: left; white-space: nowrap; color: #4d555d; background-color: #fff; }
+.header .tr .m-dropdownmenu li a:hover {background-color: #f3f5f7; }
+.header .tr .on .m-dropdownmenu {display: block; }
+/* .header .tr .on .m-dropdownmenu li a{
+border:1px solid #cdd0d4; border-top: none; } */

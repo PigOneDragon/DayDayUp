@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <a href="#" id="s" a='b'>sss</a>
+    <script>
+        var a = document.getElementById('s');
+        console.log(a.attributes);
+        // 为元素添加自定义属性 需先创建document 属性对象，其value为设置的数据
+        var attr = document.createAttribute('data');
+        attr.value= 'wrap';
+        a.attributes.setNamedItem(attr);
+    </script>
+</body>
+</html>
