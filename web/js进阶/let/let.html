@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .big {
+            color: #f00;
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>jquery</li>
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>ES6</li>
+    </ul>
+    <script>
+        // 变量提升
+        console.log(a); //>undefined
+        var a = '先使用后定义';
+        // 上例相当于
+        var a;
+        console.log(a);
+        a = '先使用后定义';
+        // let不存在变量提升
+        /*   console.log(b); // 报错，未定义b
+          let b = '先使用后定义'; */
+        //  var不存在暂存死区
+        var c = '洛洛'; {
+            console.log(c); //洛洛
+            var c = "邓洛洛";
+        }
+        console.log(c); //"邓洛洛";
+        // let的暂存死区
+        /*  let d = '洛洛'; {
+             console.log(d); //报错，d不会向上找块级作用域外的d=洛洛
+             let d = "邓洛洛";
+         }
+         console.log(d); //不执行 */
+        // 匿名函数与let实现生成10个按钮，点击时弹出对应的数字
+        // 1、匿名函数，产生匿名函数的作用域
+        var i = 1;
+        for (i; i < 11; i++) {
+            (function (i) {
+                var btn = document.createElement('button');
+                btn.innerText = i;
+                btn.onclick = function () {
+                    alert(i);
+                }
+                document.body.appendChild(btn);
+            })(i)
+        }
+        // 匿名函数相当于执行的是
+        /*  (function (i) {
+         var btn = document.createElement('button');
+         btn.innerText = i;
+         btn.onclick = function () {
+         alert(i);
+         }
+         document.body.appendChild(btn);
+         })(1)
+         (function (i) {
+         var btn = document.createElement('button');
+         btn.innerText = i;
+         btn.onclick = function () {
+            //  当前函数中没有i,向上找，在匿名函数作用域中找到i传递过来的值，若不加匿名函数，则点击事件的i会追溯到var i=1处，循环结束后i=11，所有的弹出框都为11
+         alert(i);
+         }
+         document.body.appendChild(btn);
+         })(2) */
+        //  2、使用let定义 使用let定义，for中有两个作用域 （） 跟 {}，index在{}块级作用域中定义
+        for (let index = 1; index < 11; index++) {
+            var btn = document.createElement('button');
+            btn.innerText = index;
+            btn.onclick = function () {
+                alert(index);
+            }
+            document.body.appendChild(btn);
+        }
+
+
+        var liList = document.getElementsByTagName('li');
+        for (let i = 0; i < liList.length; i++) {
+            // 这里用let const 都行，不能用var,用var的话 始终为最后一个的值
+            let liTxt = liList[i].innerText;
+            console.log(liTxt);
+            liList[i].onmouseenter = function () {
+                this.className = 'big';
+                this.innerText = liTxt + "我是第" + (i + 1) + "个";
+            }
+            liList[i].onmouseleave = function () {
+                this.className = '';
+                this.innerText = liTxt;
+            }
+        }
+        // const 定义一个常量，定义时必须赋值，不能改变值
+        // 当const定义对象时，对象的属性可以更改，因为更改属性时对象的指针不变，故const正常 
+        // 以下代码实现对象属性的冻结以及防止扩展属性
+        const people = {
+            name: 'luoluo',
+            age: 3,
+            ani: {
+                eat: "food",
+                speck: {
+                    en: 'cn'
+                }
+            }
+        };
+        // 定义一个方法，冻结对象，使对象属性不能操作
+        // 将属性添加到对象上，或修改属性的特性
+        Object.defineProperty(Object, 'cantChange', {
+            value: function (obj) {
+                var index;
+                for (index in obj) {
+                    // 判断遍历的属性是否是对象本身的属性，去除原型链上继承的值
+                    if (obj.hasOwnProperty(index)) {
+                        // 若对象的某属性值为对象，则该属性的对象值还能修改，还需再次调用该函数
+                        if (typeof(obj[index]) == 'object') {
+                            console.log(1);
+                            Object.cantChange(obj[index]);
+                        }
+                        Object.defineProperty(obj, index, {
+                            // 定义属性只读，不可修改
+                            writable: false
+                        })
+                    }
+                }
+                // 遍历完之后冻结对象
+                Object.seal(obj);
+            }
+        })
+        Object.cantChange(people);
+    </script>
+</body>
+
+</html>
